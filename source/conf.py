@@ -24,10 +24,12 @@ copyright = '2018, Todd Smith'
 author = 'Todd Smith'
 
 # The short X.Y version
-version = ''
+version = '0.1'
 # The full version, including alpha/beta/rc tags
-release = '0'
+release = '0.1'
 
+today = '%B %d %Y'
+today_fmt = '%B %d %Y'
 
 # -- General configuration ---------------------------------------------------
 
@@ -186,6 +188,11 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
+
+numfig = True
+
+numfig_format = {'figure': 'Figure %s', 'table': 'Table %s',
+                 'code-block': 'Listing %s', 'section': 'Section %s'}
 
 # -- Options for intersphinx extension ---------------------------------------
 
