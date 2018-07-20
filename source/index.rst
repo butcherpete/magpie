@@ -13,7 +13,7 @@ Welcome to Magpie's documentation!
   notes/notes
   film/film
   vim/vim
-  javacript/javascript
+  javascript/javascript
 
 
 
