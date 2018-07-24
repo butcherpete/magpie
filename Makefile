@@ -1,6 +1,7 @@
 # Minimal makefile for Sphinx documentation
 #
 
+# Put it first so that "make" without argument is like "make help".
 
 GH_PAGES_SOURCES = source Makefile
 
@@ -11,7 +12,6 @@ SPHINXPROJ    = Magpie
 SOURCEDIR     = source
 BUILDDIR      = build
 
-# Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
