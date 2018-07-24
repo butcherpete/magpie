@@ -6,6 +6,11 @@
 # full list see the documentation:
 # http://www.sphinx-doc.org/en/master/config
 
+# Import sphinx_bootstrap_theme
+# https://github.com/ryan-roemer/sphinx-bootstrap-theme 
+import sphinx_bootstrap_theme
+
+
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
