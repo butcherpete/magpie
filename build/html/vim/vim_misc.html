@@ -1,0 +1,163 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Vim Miscellany &#8212; Magpie 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Vim Getting Around" href="vim_moving.html" />
+    <link rel="prev" title="Vim JavaScript &amp; Node" href="vim_javascript.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="vim-miscellany">
+<h1>Vim Miscellany<a class="headerlink" href="#vim-miscellany" title="Permalink to this headline">¶</a></h1>
+<p>A crib of Vim tips and tricks. <a class="reference external" href="https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_misc.html.md">Edit
+me</a></p>
+<div class="section" id="useful-commands">
+<h2>Useful Commands<a class="headerlink" href="#useful-commands" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://stackoverflow.com/questions/1276403/simple-vim-commands-you-wish-youd-known-earlier">Stackoverflow: Simple Vim commands you wish you’d known
+earlier</a></p>
+</div>
+<div class="section" id="markdown-preview">
+<h2>Markdown Preview<a class="headerlink" href="#markdown-preview" title="Permalink to this headline">¶</a></h2>
+<p>I installed grip using homebrew. Grip provides the Github flavored
+markdown formatting.</p>
+</div>
+<div class="section" id="fenced-code-blocks">
+<h2>Fenced Code Blocks<a class="headerlink" href="#fenced-code-blocks" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Esc</span></code> + <em>n</em> + <code class="docutils literal notranslate"><span class="pre">i</span></code> + <code class="docutils literal notranslate"><span class="pre">~</span></code> + <code class="docutils literal notranslate"><span class="pre">Esc</span></code></p>
+<p>For example <code class="docutils literal notranslate"><span class="pre">5i~Esc</span></code>.</p>
+</div>
+<div class="section" id="reading-microsoft-word-files">
+<h2>Reading Microsoft Word Files<a class="headerlink" href="#reading-microsoft-word-files" title="Permalink to this headline">¶</a></h2>
+<p>To view the content of <code class="docutils literal notranslate"><span class="pre">.docx</span></code> in Vim by adding the following to your
+<code class="docutils literal notranslate"><span class="pre">.vimrc</span></code>.</p>
+<p>The settings enables you to view <code class="docutils literal notranslate"><span class="pre">.docx</span></code> text specified as
+command-line argument to vim, but not of those read using
+<code class="docutils literal notranslate"><span class="pre">:r</span> <span class="pre">file.docx</span></code>.</p>
+</div>
+<div class="section" id="pandoc">
+<h2>Pandoc<a class="headerlink" href="#pandoc" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/">Vimcast 64:Using external filter commands to reformat
+HTML</a></p>
+<p>Use the bang Ex command to filter the contents of the current buffer
+through a pandoc pipeline:</p>
+</div>
+<div class="section" id="urls">
+<h2>URLs<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">gx</span></code></td>
+<td>Opens URL under cursor.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="emojis">
+<h2>Emojis<a class="headerlink" href="#emojis" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.webpagefx.com/tools/emoji-cheat-sheet/">http://www.webpagefx.com/tools/emoji-cheat-sheet/</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Vim Miscellany</a><ul>
+<li><a class="reference internal" href="#useful-commands">Useful Commands</a></li>
+<li><a class="reference internal" href="#markdown-preview">Markdown Preview</a></li>
+<li><a class="reference internal" href="#fenced-code-blocks">Fenced Code Blocks</a></li>
+<li><a class="reference internal" href="#reading-microsoft-word-files">Reading Microsoft Word Files</a></li>
+<li><a class="reference internal" href="#pandoc">Pandoc</a></li>
+<li><a class="reference internal" href="#urls">URLs</a></li>
+<li><a class="reference internal" href="#emojis">Emojis</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="vim.html">Vim</a><ul>
+      <li>Previous: <a href="vim_javascript.html" title="previous chapter">Vim JavaScript &amp; Node</a></li>
+      <li>Next: <a href="vim_moving.html" title="next chapter">Vim Getting Around</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/vim/vim_misc.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Todd Smith.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/vim/vim_misc.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

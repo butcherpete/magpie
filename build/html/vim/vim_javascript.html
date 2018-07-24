@@ -1,0 +1,201 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Vim JavaScript &amp; Node &#8212; Magpie 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Vim Miscellany" href="vim_misc.html" />
+    <link rel="prev" title="Vim HTML" href="vim_html.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="vim-javascript-node">
+<h1>Vim JavaScript &amp; Node<a class="headerlink" href="#vim-javascript-node" title="Permalink to this headline">¶</a></h1>
+<p>A crib of Vim tips and tricks. <a class="reference external" href="https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_javascript.html.md">Edit
+me</a></p>
+<p><a class="reference external" href="https://davidosomething.com/blog/vim-for-javascript/">Setting up Vim for JavaScript
+development</a></p>
+<p><a class="reference external" href="http://vimawesome.com/plugin/node">http://vimawesome.com/plugin/node</a></p>
+<div class="section" id="code-completion">
+<h2>Code Completion<a class="headerlink" href="#code-completion" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/nodejs/node/wiki/Vim-Plugins">https://github.com/nodejs/node/wiki/Vim-Plugins</a></p>
+<div class="section" id="you-complete-me">
+<h3>You Complete Me<a class="headerlink" href="#you-complete-me" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/Valloric/YouCompleteMe#mac-os-x">valloric/youcompleteme</a></p>
+<ol class="arabic">
+<li><p class="first">Install with Vundle</p>
+</li>
+<li><p class="first">Compile YCM with semantic support for C-family languages.</p>
+</li>
+<li><p class="first">Compile YCM with semantic support for JavaScript.</p>
+<p>cd ~/.vim/bundle/YouCompleteMe ./install.py –clang-complete</p>
+</li>
+</ol>
+</div>
+<div class="section" id="tern-for-vim">
+<h3>Tern for Vim<a class="headerlink" href="#tern-for-vim" title="Permalink to this headline">¶</a></h3>
+<p>TernJS parses JavaScript code and extracts symbols (e.g. function names,
+variable names, and values).</p>
+<p><a class="reference external" href="https://github.com/ternjs/tern_for_vim">ternjs/tern_for_vim</a></p>
+<p>In JavaScript files, tern_for_vim hooks into ‘omnicompletion’ to provide
+for auto-completion support.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:TernDef</span></code></td>
+<td>Jump to the definition of the
+thing under the cursor.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:TernDoc</span></code></td>
+<td>Look up the documentation of
+something.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:TernType</span></code></td>
+<td>Find the type of the thing under
+the cursor.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:TernRefs</span></code></td>
+<td>Show all references to the
+variable or property under the
+cursor.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:TernRename</span></code></td>
+<td>Rename the variable under the
+cursor.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tern-documentation">
+<h3>Tern Documentation<a class="headerlink" href="#tern-documentation" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://ternjs.net/doc/manual.html">Tern Reference Manual</a></p>
+<blockquote>
+<div><p>Tern is a stand-alone code-analysis engine for JavaScript. It is
+intended to be used with a code editor plugin to enhance the editor’s
+support for intelligent JavaScript editing. Features provided are:</p>
+<ul class="simple">
+<li>Autocompletion on variables and properties</li>
+<li>Function argument hints</li>
+<li>Querying the type of an expression</li>
+<li>Finding the definition of something</li>
+<li>Automatic refactoring</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="indentation">
+<h2>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="highlighting">
+<h2>Highlighting<a class="headerlink" href="#highlighting" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="linting">
+<h2>Linting<a class="headerlink" href="#linting" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/vim-syntastic/syntastic">vim-syntastic/syntastic</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">syntastic-checkers</span></code></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Vim JavaScript &amp; Node</a><ul>
+<li><a class="reference internal" href="#code-completion">Code Completion</a><ul>
+<li><a class="reference internal" href="#you-complete-me">You Complete Me</a></li>
+<li><a class="reference internal" href="#tern-for-vim">Tern for Vim</a></li>
+<li><a class="reference internal" href="#tern-documentation">Tern Documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indentation">Indentation</a></li>
+<li><a class="reference internal" href="#highlighting">Highlighting</a></li>
+<li><a class="reference internal" href="#linting">Linting</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="vim.html">Vim</a><ul>
+      <li>Previous: <a href="vim_html.html" title="previous chapter">Vim HTML</a></li>
+      <li>Next: <a href="vim_misc.html" title="next chapter">Vim Miscellany</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/vim/vim_javascript.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Todd Smith.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/vim/vim_javascript.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
