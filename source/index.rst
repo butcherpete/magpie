@@ -7,6 +7,8 @@
 omnibus pandemonium
 ###################
 
+https://github.com/ryan-roemer/sphinx-bootstrap-theme
+
 .. toctree::
   :maxdepth: 2
   :caption: Contents:
