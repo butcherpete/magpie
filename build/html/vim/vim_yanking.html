@@ -1,47 +1,130 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Vim Yanking &#8212; Magpie 0.1 documentation</title>
-    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="JavaScript" href="../javascript/javascript.html" />
-    <link rel="prev" title="Vim Windows" href="vim_windows.html" /> 
-  </head><body>
-    <div class="header-wrapper" role="banner">
-      <div class="header">
-        <div class="headertitle"><a
-          href="../index.html">Magpie 0.1 documentation</a></div>
-        <div class="rel" role="navigation" aria-label="related navigation">
-          <a href="vim_windows.html" title="Vim Windows"
-             accesskey="P">previous</a> |
-          <a href="../javascript/javascript.html" title="JavaScript"
-             accesskey="N">next</a> |
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a>
-        </div>
-       </div>
-    </div>
+    <link rel="prev" title="Vim Windows" href="vim_windows.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
 
-    <div class="content-wrapper">
-      <div class="content">
-        <div class="document">
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Magpie</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
             
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
             
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../notes/notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../film/film.html">Film</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="vim.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/javascript.html">JavaScript</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Vim Yanking</a><ul>
+<li><a class="reference internal" href="#system-clipboard-quoteplus-register">System Clipboard / Quoteplus Register</a></li>
+<li><a class="reference internal" href="#pasting">Pasting</a></li>
+<li><a class="reference internal" href="#alfreds-clipboard-history">Alfred’s Clipboard History</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="vim_windows.html" title="Previous Chapter: Vim Windows"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Vim Windows</span>
+    </a>
+  </li>
+  <li>
+    <a href="../javascript/javascript.html" title="Next Chapter: JavaScript"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">JavaScript &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/vim/vim_yanking.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
   <div class="section" id="vim-yanking">
 <h1>Vim Yanking<a class="headerlink" href="#vim-yanking" title="Permalink to this headline">¶</a></h1>
 <p>A crib of Vim tips and tricks. <a class="reference external" href="https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_yanking.html.md">Edit
@@ -137,84 +220,21 @@ commands:</p>
 </div>
 
 
-          </div>
-        </div>
-      </div>
-        </div>
-        <div class="sidebar">
-          <h3>Table Of Contents</h3>
-          <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../notes/notes.html">Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../film/film.html">Film</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="vim.html">Vim</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="vim_airline.html">Vim Airline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_bookmarks.html">Vim Bookmarks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_buffers.html">Vim Buffers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_command_line.html">Vim Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_explorer.html">File Explorer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_folding.html">Vim Folding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_html.html">Vim HTML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_javascript.html">Vim JavaScript &amp; Node</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_misc.html">Vim Miscellany</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_moving.html">Vim Getting Around</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_rest.html">Vim Restructured Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_search.html">Vim Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_spellcheck.html">Vim Spellchecking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_starters.html">Vim Starters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_surround.html">Vim Surround</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_text_objects.html">Vim Text Objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_unimpaired.html">Vim Unimpaired</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_visual_blocks.html">Visual Mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vim_windows.html">Vim Windows</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Vim Yanking</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../javascript/javascript.html">JavaScript</a></li>
-</ul>
-
-          <div role="search">
-            <h3 style="margin-top: 1.5em;">Search</h3>
-            <form class="search" action="../search.html" method="get">
-                <input type="text" name="q" />
-                <input type="submit" value="Go" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-            </form>
-          </div>
-        </div>
-        <div class="clearer"></div>
-      </div>
     </div>
-
-    <div class="footer-wrapper">
-      <div class="footer">
-        <div class="left">
-          <div role="navigation" aria-label="related navigaton">
-            <a href="vim_windows.html" title="Vim Windows"
-              >previous</a> |
-            <a href="../javascript/javascript.html" title="JavaScript"
-              >next</a> |
-            <a href="../genindex.html" title="General Index"
-              >index</a>
-          </div>
-          <div role="note" aria-label="source link">
-              <br/>
-              <a href="../_sources/vim/vim_yanking.rst.txt"
-                rel="nofollow">Show Source</a>
-          </div>
-        </div>
-
-        <div class="right">
-          
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2018, Todd Smith.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
-    </div>
-        </div>
-        <div class="clearer"></div>
-      </div>
-    </div>
-
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018, Todd Smith.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.<br/>
+    </p>
+  </div>
+</footer>
   </body>
 </html>
