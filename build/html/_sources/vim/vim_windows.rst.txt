@@ -1,0 +1,234 @@
+` pan·de·mo·ni·um om·ni·bus <index.html>`__
+
+-  `Design <design_landing.html>`__
+-  `Tech <notes_landing_page.html>`__
+-  `Blogs <#>`__
+
+   -  `Book Log <book_log.html>`__
+   -  `Film Log <Film_log.html>`__
+   -  `Lists <lists_landing.html>`__
+
+-  
+
+ 
+
+-  Tech Notes 1.0
+-  `Bash <#>`__
+
+   -  `ack <ack_notes.html>`__
+   -  `Data <bash_data.html>`__
+   -  `Environmental Variables <bash_envs.html>`__
+   -  `fasd <bash_fasd.html>`__
+   -  `File System <bash_files.html>`__
+   -  `ImageMagick <bash_imagemagick.html>`__
+   -  `Notes <bash_notes.html>`__
+   -  `Processes <bash_processes.html>`__
+   -  `Security <bash_security.html>`__
+   -  `Servers <bash_servers.html>`__
+   -  `Skills <bash_skills.html>`__
+
+-  `Git <#>`__
+
+   -  `Git Resources <git_resources.html>`__
+   -  `Git Aliases <git_alias.html>`__
+   -  `Git Diff <git_diff.html>`__
+   -  `.gitignore <git_gitignore.html>`__
+   -  `Git Merge <git_merge.html>`__
+
+-  `JavaScript <#>`__
+
+   -  `Bower <js_bower.html>`__
+   -  `Bundling <js_bundling.html>`__
+   -  `Browsersync <js_browsersync.html>`__
+   -  `Gulp <gulp_notes.html>`__
+   -  `Linting <js_linting.html>`__
+   -  `Node <node_notes.html>`__
+   -  `npm <npm_notes.html>`__
+   -  `Testing <js_testing.html>`__
+   -  `Transpiling <js_babel.html>`__
+   -  `Yeoman <js_yeoman.html>`__
+
+-  `Jekyll <#>`__
+
+   -  `generator-jekyllized <jekyll_generator.html>`__
+   -  `Jekyll Commands <jekyll_notes.html>`__
+   -  `Jekyll Resources <jekyll_resources.html>`__
+   -  `Jekyll Doc Theme <jekyll_doc-theme.html>`__
+
+-  `Markup <#>`__
+
+   -  `Asciidoc <asciidoc_notes.html>`__
+   -  `HTML5 <html_notes.html>`__
+   -  `Kramdown <kramdown_notes.html>`__
+   -  `Markdown <markdown_notes.html>`__
+   -  `Px to Rem Conversion <notes_rem.html>`__
+   -  `reStructuredText <rest_notes.html>`__
+   -  `Sass <sass_notes.html>`__
+
+-  `Miscellaneous <#>`__
+
+   -  `Animated Gifs <notes_gifs.html>`__
+   -  `Evernote <evernote_notes.html>`__
+   -  `Homebrew <brew_notes.html>`__
+
+-  `Python <#>`__
+
+   -  `Conda <python_conda.html>`__
+   -  `jupyter <python_jupyter.html>`__
+   -  `pip <python_pip.html>`__
+
+-  `Ruby <#>`__
+
+   -  `Bundler <ruby_bundler.html>`__
+   -  `Gems <ruby_gems.html>`__
+   -  `Rbenv <ruby.html>`__
+   -  `RVM <ruby_rvm.html>`__
+
+-  `Vim <#>`__
+
+   -  `Airline <vim_airline.html>`__
+   -  `Bookmarks <vim_bookmarks.html>`__
+   -  `Buffers <vim_buffers.html>`__
+   -  `Command Line <vim_command_line.html>`__
+   -  `File Explorer <vim_explorer.html>`__
+   -  `Folding <vim_folding.html>`__
+   -  `Git <vim_git.html>`__
+   -  `HTML <vim_html.html>`__
+   -  `JavaScript <vim_javascript.html>`__
+   -  `Miscellany <vim_misc.html>`__
+   -  `Motions <vim_moving.html>`__
+   -  `Restructured Text <vim_rest.html>`__
+   -  `Search <vim_search.html>`__
+   -  `Spellchecking <vim_spellcheck.html>`__
+   -  `Starters <vim_starters.html>`__
+   -  `Substituting <vim_substituting.html>`__
+   -  `Surround <vim_surround.html>`__
+   -  `Syntastic <vim_syntastic.html>`__
+   -  `Text Objects <vim_text_objects.html>`__
+   -  `Unimpaired <vim_unimpaired.html>`__
+   -  `Visual Mode <vim_visual_blocks.html>`__
+   -  `Windows <vim_windows.html>`__
+   -  `Yanking <vim_yanking.html>`__
+
+-  `iOS <#>`__
+
+   -  `Jazzy <jazzy_notes.html>`__
+   -  `Swift3 <ios_swift3.html>`__
+   -  `Xcode <xcode_notes.html>`__
+
+Vim Windows
+===========
+
+A crib of Vim tips and tricks. `Edit
+me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_windows.html.md>`__
+
+Opening Split Windows
+---------------------
+
++-----------------------------------+-----------------------------------+
+| Command                           | Action                            |
++===================================+===================================+
+| ``ctrl-w s``                      | Split the current window          |
+|                                   | horizontally, loading the same    |
+|                                   | file in the new window            |
++-----------------------------------+-----------------------------------+
+| ``ctrl-w v``                      | Split the current window          |
+|                                   | vertically, loading the same file |
+|                                   | in the new window                 |
++-----------------------------------+-----------------------------------+
+| ``:sp[lit]`` *filename*           | Split the current window          |
+|                                   | horizontally, loading filename in |
+|                                   | the new window                    |
++-----------------------------------+-----------------------------------+
+| :star: ``:vsp[lit]`` *filename*   | Split the current window          |
+|                                   | vertically, loading filename in   |
+|                                   | the new window                    |
++-----------------------------------+-----------------------------------+
+
+Closing Split Windows
+---------------------
+
++-------------+-------------------------------------------------------+
+| Command     | Action                                                |
++=============+=======================================================+
+| ``:q[uit]`` | Close the currently active window.                    |
++-------------+-------------------------------------------------------+
+| ``:on[ly]`` | Close all windows except the currently active window. |
++-------------+-------------------------------------------------------+
+
+Changing Focus Between Windows
+------------------------------
+
++------------+--------------+---------------------------------+
+| Shortcut   | Command      | Action                          |
++============+==============+=================================+
+| -          | ``ctrl-w w`` | Cycle between the open windows. |
++------------+--------------+---------------------------------+
+| ``ctrl-h`` | ``ctrl-w h`` | Focus the window to the left.   |
++------------+--------------+---------------------------------+
+| ``ctrl-j`` | ``ctrl-w j`` | Focus the window to the down.   |
++------------+--------------+---------------------------------+
+| ``ctrl-k`` | ``ctrl-w k`` | Focus the window to the up.     |
++------------+--------------+---------------------------------+
+| ``ctrl-l`` | ``ctrl-w l`` | Focus the window to the right.  |
++------------+--------------+---------------------------------+
+
+I included the following in my ``.vimrc`` file to enable the shortcuts:
+
+.. code:: highlight
+
+   map <C-h> <C-w>h
+   map <C-j> <C-w>j
+   map <C-k> <C-w>k
+   map <C-l> <C-w>l
+
+Resizing Windows
+----------------
+
+You can resize windows by clicking on the boundary between windows, and
+dragging it to your prefered size. The following key commands also help:
+
++--------------+----------------------------------------------+
+| Command      | Action                                       |
++==============+==============================================+
+| ``ctrl-w =`` | Makes the windows equal widths.              |
++--------------+----------------------------------------------+
+| ``ctrl-w +`` | Increase height of current window by 1 line. |
++--------------+----------------------------------------------+
+| ``ctrl-w -`` | Decrease height of current window by 1 line. |
++--------------+----------------------------------------------+
+| ``ctrl-w _`` | Maximise height of current window.           |
++--------------+----------------------------------------------+
+| ``ctrl-w |`` | Maximise width of current window.            |
++--------------+----------------------------------------------+
+
+Moving Windows
+--------------
+
++--------------+--------------------------------------------+
+| Command      | Action                                     |
++==============+============================================+
+| ``ctrl-w r`` | Rotate all windows.                        |
++--------------+--------------------------------------------+
+| ``ctrl-w x`` | Exchange current window with its neighbor. |
++--------------+--------------------------------------------+
+| ``ctrl-w H`` | Move current window to far left.           |
++--------------+--------------------------------------------+
+| ``ctrl-w J`` | Move current window to bottom.             |
++--------------+--------------------------------------------+
+| ``ctrl-w K`` | Move current window to top.                |
++--------------+--------------------------------------------+
+| ``ctrl-w L`` | Move current window to far right.          |
++--------------+--------------------------------------------+
+
+**Tags:** `vim <tag_vim>`__
+
+| ©2017 Magpie Entropy Ltd.. All rights reserved.
+
+| Page last updated: January 29, 2017
+| Site last generated: Apr 12, 2017
+
+|Company logo|
+
+.. |Company logo| image:: images/kylie.jpg
+

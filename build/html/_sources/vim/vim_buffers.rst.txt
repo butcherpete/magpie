@@ -1,0 +1,310 @@
+` pan·de·mo·ni·um om·ni·bus <index.html>`__
+
+-  `Design <design_landing.html>`__
+-  `Tech <notes_landing_page.html>`__
+-  `Blogs <#>`__
+
+   -  `Book Log <book_log.html>`__
+   -  `Film Log <Film_log.html>`__
+   -  `Lists <lists_landing.html>`__
+
+-  
+
+ 
+
+-  Tech Notes 1.0
+-  `Bash <#>`__
+
+   -  `ack <ack_notes.html>`__
+   -  `Data <bash_data.html>`__
+   -  `Environmental Variables <bash_envs.html>`__
+   -  `fasd <bash_fasd.html>`__
+   -  `File System <bash_files.html>`__
+   -  `ImageMagick <bash_imagemagick.html>`__
+   -  `Notes <bash_notes.html>`__
+   -  `Processes <bash_processes.html>`__
+   -  `Security <bash_security.html>`__
+   -  `Servers <bash_servers.html>`__
+   -  `Skills <bash_skills.html>`__
+
+-  `Git <#>`__
+
+   -  `Git Resources <git_resources.html>`__
+   -  `Git Aliases <git_alias.html>`__
+   -  `Git Diff <git_diff.html>`__
+   -  `.gitignore <git_gitignore.html>`__
+   -  `Git Merge <git_merge.html>`__
+
+-  `JavaScript <#>`__
+
+   -  `Bower <js_bower.html>`__
+   -  `Bundling <js_bundling.html>`__
+   -  `Browsersync <js_browsersync.html>`__
+   -  `Gulp <gulp_notes.html>`__
+   -  `Linting <js_linting.html>`__
+   -  `Node <node_notes.html>`__
+   -  `npm <npm_notes.html>`__
+   -  `Testing <js_testing.html>`__
+   -  `Transpiling <js_babel.html>`__
+   -  `Yeoman <js_yeoman.html>`__
+
+-  `Jekyll <#>`__
+
+   -  `generator-jekyllized <jekyll_generator.html>`__
+   -  `Jekyll Commands <jekyll_notes.html>`__
+   -  `Jekyll Resources <jekyll_resources.html>`__
+   -  `Jekyll Doc Theme <jekyll_doc-theme.html>`__
+
+-  `Markup <#>`__
+
+   -  `Asciidoc <asciidoc_notes.html>`__
+   -  `HTML5 <html_notes.html>`__
+   -  `Kramdown <kramdown_notes.html>`__
+   -  `Markdown <markdown_notes.html>`__
+   -  `Px to Rem Conversion <notes_rem.html>`__
+   -  `reStructuredText <rest_notes.html>`__
+   -  `Sass <sass_notes.html>`__
+
+-  `Miscellaneous <#>`__
+
+   -  `Animated Gifs <notes_gifs.html>`__
+   -  `Evernote <evernote_notes.html>`__
+   -  `Homebrew <brew_notes.html>`__
+
+-  `Python <#>`__
+
+   -  `Conda <python_conda.html>`__
+   -  `jupyter <python_jupyter.html>`__
+   -  `pip <python_pip.html>`__
+
+-  `Ruby <#>`__
+
+   -  `Bundler <ruby_bundler.html>`__
+   -  `Gems <ruby_gems.html>`__
+   -  `Rbenv <ruby.html>`__
+   -  `RVM <ruby_rvm.html>`__
+
+-  `Vim <#>`__
+
+   -  `Airline <vim_airline.html>`__
+   -  `Bookmarks <vim_bookmarks.html>`__
+   -  `Buffers <vim_buffers.html>`__
+   -  `Command Line <vim_command_line.html>`__
+   -  `File Explorer <vim_explorer.html>`__
+   -  `Folding <vim_folding.html>`__
+   -  `Git <vim_git.html>`__
+   -  `HTML <vim_html.html>`__
+   -  `JavaScript <vim_javascript.html>`__
+   -  `Miscellany <vim_misc.html>`__
+   -  `Motions <vim_moving.html>`__
+   -  `Restructured Text <vim_rest.html>`__
+   -  `Search <vim_search.html>`__
+   -  `Spellchecking <vim_spellcheck.html>`__
+   -  `Starters <vim_starters.html>`__
+   -  `Substituting <vim_substituting.html>`__
+   -  `Surround <vim_surround.html>`__
+   -  `Syntastic <vim_syntastic.html>`__
+   -  `Text Objects <vim_text_objects.html>`__
+   -  `Unimpaired <vim_unimpaired.html>`__
+   -  `Visual Mode <vim_visual_blocks.html>`__
+   -  `Windows <vim_windows.html>`__
+   -  `Yanking <vim_yanking.html>`__
+
+-  `iOS <#>`__
+
+   -  `Jazzy <jazzy_notes.html>`__
+   -  `Swift3 <ios_swift3.html>`__
+   -  `Xcode <xcode_notes.html>`__
+
+Vim Buffers
+===========
+
+A crib of Vim tips and tricks. `Edit
+me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_buffers.html.md>`__
+
+Navigating the Buffer List
+--------------------------
+
+`Vimcast: Working with
+Buffers <http://vimcasts.org/episodes/working-with-buffers/>`__
+
+These commands show and navigate through the buffer list:
+
++-----------------------------------+-----------------------------------+
+| Command                           | Action                            |
++===================================+===================================+
+| ``:ls``                           | Show the buffer list              |
++-----------------------------------+-----------------------------------+
+| ``:bn``                           | Open the next buffer in the       |
+|                                   | current window (cycles from the   |
+|                                   | end of the list to the            |
+|                                   | beginning).                       |
++-----------------------------------+-----------------------------------+
+| ``:bp``                           | Open the previous buffer in the   |
+|                                   | current window (cycles from the   |
+|                                   | start of the list to the end).    |
++-----------------------------------+-----------------------------------+
+| ``:b2``                           | Open buffers in the current       |
+|                                   | window by specifying the buffer   |
+|                                   | number.                           |
++-----------------------------------+-----------------------------------+
+| ``CTRL-^``                        | Switch to the alternate file.     |
++-----------------------------------+-----------------------------------+
+
+Explaining the buffer list:
+
++-----------------------------------+-----------------------------------+
+| Symbol                            | Meaning                           |
++===================================+===================================+
+| ``a``                             | Identifes the active buffer.      |
++-----------------------------------+-----------------------------------+
+| ``h``                             | Identifies a hidden buffer.       |
++-----------------------------------+-----------------------------------+
+| ``%``                             | Identfies the buffer displayed in |
+|                                   | the current window.               |
++-----------------------------------+-----------------------------------+
+| ``#``                             | Identifies the alternate buffer,  |
+|                                   | which can be accessed by pressing |
+|                                   | ``CTRL-^``.                       |
++-----------------------------------+-----------------------------------+
+
+Opening Multiple Files into Buffers
+-----------------------------------
+
+To open the contents of a directory into the buffer:
+
+.. code:: highlight
+
+   :args /path_to_dir/*
+
+To open multiple files into the buffer list:
+
+.. code:: highlight
+
+   :args a.txt b.txt c.txt 
+
+To open open files into the buffer list using globs:
+
++------------------+---------------------------------+
+| Glob             | Matching Files                  |
++==================+=================================+
+| ``:args *.*``    | ``index.html``                  |
+|                  | ``app.js``                      |
++------------------+---------------------------------+
+| ``:args *.txt``  | ``a.txt``                       |
+|                  | ``b.txt``                       |
++------------------+---------------------------------+
+| ``:args **.js``  | ``app.js``                      |
+|                  | ``lib/framework.js``            |
+|                  | ``app/controllers/mailer.js``   |
++------------------+---------------------------------+
+| ``:args **/*.*`` | ``index.html`` </br> ``app.js`` |
+|                  | ``lib/framework.js``            |
+|                  | ``lib/theme.css``               |
+|                  | ``app/controllers/mailer.js``   |
++------------------+---------------------------------+
+
+From *Practical Vim*.
+
+Closing Buffers
+---------------
+
++-----------------------------------+-----------------------------------+
+| Command                           | Action                            |
++===================================+===================================+
+| ``:bd``, ``:bdelete``             | Unloads the current buffer and    |
+|                                   | deletes if from the buffer list.  |
+|                                   | The buffer is not completely      |
+|                                   | deleted. It is removed from the   |
+|                                   | buffer list, option values,       |
+|                                   | variables, and mappings are       |
+|                                   | cleared.                          |
++-----------------------------------+-----------------------------------+
+| ``:bw``, ``:bwipeout``            | Deletes the current buffer.       |
+|                                   | Everything related to the buffer  |
+|                                   | is lost.                          |
++-----------------------------------+-----------------------------------+
+| ``:bw2``                          | Deletes buffers by specifying he  |
+|                                   | buffer number, i.e. ``:bw2``      |
++-----------------------------------+-----------------------------------+
+| ``:1,3bw``                        | Deletes a range of buffers.       |
++-----------------------------------+-----------------------------------+
+
+`vim-bdubs <https://github.com/jbranchaud/vim-bdubs>`__
+
++----------+----------------------------------------------------+
+| Command  | Action                                             |
++==========+====================================================+
+| ``:BD``  | Deletes all but the current buffer                 |
++----------+----------------------------------------------------+
+| ``:BD3`` | Deletes all but the 3 most recently used buffers   |
++----------+----------------------------------------------------+
+| ``:BW``  | Wipes out all but the current buffer               |
++----------+----------------------------------------------------+
+| ``:BW2`` | Wipes out all but the 2 most recently used buffers |
++----------+----------------------------------------------------+
+
+-  Uses ``:bdelete`` to delete all of the buffers in the buffer-list
+   except for the current buffer.
+-  Uses ``:bwipeout`` to delete all of the buffers in the buffer-list
+   except for the current buffer. Because of the way ``:bw`` works, each
+   deleted buffer will be unloaded and entirely removed from the buffer
+   list.
+
+Buffers in Airline
+------------------
+
+Tab line in airline automatically displays all buffers if only one tab
+open. Added the following to my ``.vimrc`` file:
+
+.. code:: highlight
+
+   let g:airline#extensions#tabline#enabled = 1
+
+Argdo Command
+-------------
+
+`Vimcast: Using :argdo to change multiple
+files <http://vimcasts.org/episodes/using-argdo-to-change-multiple-files/>`__
+
+Substitutions in Multiple Buffers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To make substitutions to buffers in the arglist:
+
+.. code:: highlight
+
+   :argdo %s/mydoc_sidebar/notes_sidebar/ge
+
+The ``e`` flag suppresses errors that may occur if a buffer in the
+arglist does not contain a match for the specified pattern.
+
+Reverting Changes
+~~~~~~~~~~~~~~~~~
+
+To revert changes:
+
+.. code:: highlight
+
+   :argdo edit!
+
+Saving Changes
+~~~~~~~~~~~~~~
+
+To save changes to files in arglist:
+
+.. code:: highlight
+
+   :argdo update
+
+**Tags:** `vim <tag_vim>`__
+
+| ©2017 Magpie Entropy Ltd.. All rights reserved.
+
+| Page last updated: January 29, 2017
+| Site last generated: Apr 12, 2017
+
+|Company logo|
+
+.. |Company logo| image:: images/kylie.jpg
+

@@ -1,0 +1,226 @@
+` pan·de·mo·ni·um om·ni·bus <index.html>`__
+
+-  `Design <design_landing.html>`__
+-  `Tech <notes_landing_page.html>`__
+-  `Blogs <#>`__
+
+   -  `Book Log <book_log.html>`__
+   -  `Film Log <Film_log.html>`__
+   -  `Lists <lists_landing.html>`__
+
+-  
+
+ 
+
+-  Tech Notes 1.0
+-  `Bash <#>`__
+
+   -  `ack <ack_notes.html>`__
+   -  `Data <bash_data.html>`__
+   -  `Environmental Variables <bash_envs.html>`__
+   -  `fasd <bash_fasd.html>`__
+   -  `File System <bash_files.html>`__
+   -  `ImageMagick <bash_imagemagick.html>`__
+   -  `Notes <bash_notes.html>`__
+   -  `Processes <bash_processes.html>`__
+   -  `Security <bash_security.html>`__
+   -  `Servers <bash_servers.html>`__
+   -  `Skills <bash_skills.html>`__
+
+-  `Git <#>`__
+
+   -  `Git Resources <git_resources.html>`__
+   -  `Git Aliases <git_alias.html>`__
+   -  `Git Diff <git_diff.html>`__
+   -  `.gitignore <git_gitignore.html>`__
+   -  `Git Merge <git_merge.html>`__
+
+-  `JavaScript <#>`__
+
+   -  `Bower <js_bower.html>`__
+   -  `Bundling <js_bundling.html>`__
+   -  `Browsersync <js_browsersync.html>`__
+   -  `Gulp <gulp_notes.html>`__
+   -  `Linting <js_linting.html>`__
+   -  `Node <node_notes.html>`__
+   -  `npm <npm_notes.html>`__
+   -  `Testing <js_testing.html>`__
+   -  `Transpiling <js_babel.html>`__
+   -  `Yeoman <js_yeoman.html>`__
+
+-  `Jekyll <#>`__
+
+   -  `generator-jekyllized <jekyll_generator.html>`__
+   -  `Jekyll Commands <jekyll_notes.html>`__
+   -  `Jekyll Resources <jekyll_resources.html>`__
+   -  `Jekyll Doc Theme <jekyll_doc-theme.html>`__
+
+-  `Markup <#>`__
+
+   -  `Asciidoc <asciidoc_notes.html>`__
+   -  `HTML5 <html_notes.html>`__
+   -  `Kramdown <kramdown_notes.html>`__
+   -  `Markdown <markdown_notes.html>`__
+   -  `Px to Rem Conversion <notes_rem.html>`__
+   -  `reStructuredText <rest_notes.html>`__
+   -  `Sass <sass_notes.html>`__
+
+-  `Miscellaneous <#>`__
+
+   -  `Animated Gifs <notes_gifs.html>`__
+   -  `Evernote <evernote_notes.html>`__
+   -  `Homebrew <brew_notes.html>`__
+
+-  `Python <#>`__
+
+   -  `Conda <python_conda.html>`__
+   -  `jupyter <python_jupyter.html>`__
+   -  `pip <python_pip.html>`__
+
+-  `Ruby <#>`__
+
+   -  `Bundler <ruby_bundler.html>`__
+   -  `Gems <ruby_gems.html>`__
+   -  `Rbenv <ruby.html>`__
+   -  `RVM <ruby_rvm.html>`__
+
+-  `Vim <#>`__
+
+   -  `Airline <vim_airline.html>`__
+   -  `Bookmarks <vim_bookmarks.html>`__
+   -  `Buffers <vim_buffers.html>`__
+   -  `Command Line <vim_command_line.html>`__
+   -  `File Explorer <vim_explorer.html>`__
+   -  `Folding <vim_folding.html>`__
+   -  `Git <vim_git.html>`__
+   -  `HTML <vim_html.html>`__
+   -  `JavaScript <vim_javascript.html>`__
+   -  `Miscellany <vim_misc.html>`__
+   -  `Motions <vim_moving.html>`__
+   -  `Restructured Text <vim_rest.html>`__
+   -  `Search <vim_search.html>`__
+   -  `Spellchecking <vim_spellcheck.html>`__
+   -  `Starters <vim_starters.html>`__
+   -  `Substituting <vim_substituting.html>`__
+   -  `Surround <vim_surround.html>`__
+   -  `Syntastic <vim_syntastic.html>`__
+   -  `Text Objects <vim_text_objects.html>`__
+   -  `Unimpaired <vim_unimpaired.html>`__
+   -  `Visual Mode <vim_visual_blocks.html>`__
+   -  `Windows <vim_windows.html>`__
+   -  `Yanking <vim_yanking.html>`__
+
+-  `iOS <#>`__
+
+   -  `Jazzy <jazzy_notes.html>`__
+   -  `Swift3 <ios_swift3.html>`__
+   -  `Xcode <xcode_notes.html>`__
+
+Vim JavaScript & Node
+=====================
+
+A crib of Vim tips and tricks. `Edit
+me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_javascript.html.md>`__
+
+`Setting up Vim for JavaScript
+development <https://davidosomething.com/blog/vim-for-javascript/>`__
+
+http://vimawesome.com/plugin/node
+
+Code Completion
+---------------
+
+https://github.com/nodejs/node/wiki/Vim-Plugins
+
+You Complete Me
+~~~~~~~~~~~~~~~
+
+`valloric/youcompleteme <https://github.com/Valloric/YouCompleteMe#mac-os-x>`__
+
+#. Install with Vundle
+#. Compile YCM with semantic support for C-family languages.
+
+   .. code:: highlight
+
+      $ cd ~/.vim/bundle/youcompleteme
+      $ ./install.py --clang-completer
+
+#. Compile YCM with semantic support for JavaScript.
+
+   .. code:: highlight
+
+      $ cd ~/.vim/bundle/youcompleteme
+      $ ./install.py --tern-completer
+
+   cd ~/.vim/bundle/YouCompleteMe ./install.py –clang-complete
+
+Tern for Vim
+~~~~~~~~~~~~
+
+TernJS parses JavaScript code and extracts symbols (e.g. function names,
+variable names, and values).
+
+`ternjs/tern_for_vim <https://github.com/ternjs/tern_for_vim>`__
+
+In JavaScript files, tern_for_vim hooks into ‘omnicompletion’ to provide
+for auto-completion support.
+
++-----------------------------------+-----------------------------------+
+| Command                           | Action                            |
++===================================+===================================+
+| ``:TernDef``                      | Jump to the definition of the     |
+|                                   | thing under the cursor.           |
++-----------------------------------+-----------------------------------+
+| ``:TernDoc``                      | Look up the documentation of      |
+|                                   | something.                        |
++-----------------------------------+-----------------------------------+
+| ``:TernType``                     | Find the type of the thing under  |
+|                                   | the cursor.                       |
++-----------------------------------+-----------------------------------+
+| ``:TernRefs``                     | Show all references to the        |
+|                                   | variable or property under the    |
+|                                   | cursor.                           |
++-----------------------------------+-----------------------------------+
+| ``:TernRename``                   | Rename the variable under the     |
+|                                   | cursor.                           |
++-----------------------------------+-----------------------------------+
+
+Tern Documentation
+~~~~~~~~~~~~~~~~~~
+
+`Tern Reference Manual <http://ternjs.net/doc/manual.html>`__
+
+   Tern is a stand-alone code-analysis engine for JavaScript. It is
+   intended to be used with a code editor plugin to enhance the editor’s
+   support for intelligent JavaScript editing. Features provided are:
+
+   -  Autocompletion on variables and properties
+   -  Function argument hints
+   -  Querying the type of an expression
+   -  Finding the definition of something
+   -  Automatic refactoring
+
+Indentation
+-----------
+
+Highlighting
+------------
+
+Linting
+-------
+
+`vim-syntastic/syntastic <https://github.com/vim-syntastic/syntastic>`__
+
+``:help syntastic-checkers``
+
+**Tags:** `vim <tag_vim>`__
+
+| ©2017 Magpie Entropy Ltd.. All rights reserved.
+
+| Page last updated: January 29, 2017
+| Site last generated: Apr 12, 2017
+
+|Company logo|
+
+.. |Company logo| image:: images/kylie.jpg
+

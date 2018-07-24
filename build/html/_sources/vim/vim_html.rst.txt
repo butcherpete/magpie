@@ -1,0 +1,513 @@
+` pan·de·mo·ni·um om·ni·bus <index.html>`__
+
+-  `Design <design_landing.html>`__
+-  `Tech <notes_landing_page.html>`__
+-  `Blogs <#>`__
+
+   -  `Book Log <book_log.html>`__
+   -  `Film Log <Film_log.html>`__
+   -  `Lists <lists_landing.html>`__
+
+-  
+
+ 
+
+-  Tech Notes 1.0
+-  `Bash <#>`__
+
+   -  `ack <ack_notes.html>`__
+   -  `Data <bash_data.html>`__
+   -  `Environmental Variables <bash_envs.html>`__
+   -  `fasd <bash_fasd.html>`__
+   -  `File System <bash_files.html>`__
+   -  `ImageMagick <bash_imagemagick.html>`__
+   -  `Notes <bash_notes.html>`__
+   -  `Processes <bash_processes.html>`__
+   -  `Security <bash_security.html>`__
+   -  `Servers <bash_servers.html>`__
+   -  `Skills <bash_skills.html>`__
+
+-  `Git <#>`__
+
+   -  `Git Resources <git_resources.html>`__
+   -  `Git Aliases <git_alias.html>`__
+   -  `Git Diff <git_diff.html>`__
+   -  `.gitignore <git_gitignore.html>`__
+   -  `Git Merge <git_merge.html>`__
+
+-  `JavaScript <#>`__
+
+   -  `Bower <js_bower.html>`__
+   -  `Bundling <js_bundling.html>`__
+   -  `Browsersync <js_browsersync.html>`__
+   -  `Gulp <gulp_notes.html>`__
+   -  `Linting <js_linting.html>`__
+   -  `Node <node_notes.html>`__
+   -  `npm <npm_notes.html>`__
+   -  `Testing <js_testing.html>`__
+   -  `Transpiling <js_babel.html>`__
+   -  `Yeoman <js_yeoman.html>`__
+
+-  `Jekyll <#>`__
+
+   -  `generator-jekyllized <jekyll_generator.html>`__
+   -  `Jekyll Commands <jekyll_notes.html>`__
+   -  `Jekyll Resources <jekyll_resources.html>`__
+   -  `Jekyll Doc Theme <jekyll_doc-theme.html>`__
+
+-  `Markup <#>`__
+
+   -  `Asciidoc <asciidoc_notes.html>`__
+   -  `HTML5 <html_notes.html>`__
+   -  `Kramdown <kramdown_notes.html>`__
+   -  `Markdown <markdown_notes.html>`__
+   -  `Px to Rem Conversion <notes_rem.html>`__
+   -  `reStructuredText <rest_notes.html>`__
+   -  `Sass <sass_notes.html>`__
+
+-  `Miscellaneous <#>`__
+
+   -  `Animated Gifs <notes_gifs.html>`__
+   -  `Evernote <evernote_notes.html>`__
+   -  `Homebrew <brew_notes.html>`__
+
+-  `Python <#>`__
+
+   -  `Conda <python_conda.html>`__
+   -  `jupyter <python_jupyter.html>`__
+   -  `pip <python_pip.html>`__
+
+-  `Ruby <#>`__
+
+   -  `Bundler <ruby_bundler.html>`__
+   -  `Gems <ruby_gems.html>`__
+   -  `Rbenv <ruby.html>`__
+   -  `RVM <ruby_rvm.html>`__
+
+-  `Vim <#>`__
+
+   -  `Airline <vim_airline.html>`__
+   -  `Bookmarks <vim_bookmarks.html>`__
+   -  `Buffers <vim_buffers.html>`__
+   -  `Command Line <vim_command_line.html>`__
+   -  `File Explorer <vim_explorer.html>`__
+   -  `Folding <vim_folding.html>`__
+   -  `Git <vim_git.html>`__
+   -  `HTML <vim_html.html>`__
+   -  `JavaScript <vim_javascript.html>`__
+   -  `Miscellany <vim_misc.html>`__
+   -  `Motions <vim_moving.html>`__
+   -  `Restructured Text <vim_rest.html>`__
+   -  `Search <vim_search.html>`__
+   -  `Spellchecking <vim_spellcheck.html>`__
+   -  `Starters <vim_starters.html>`__
+   -  `Substituting <vim_substituting.html>`__
+   -  `Surround <vim_surround.html>`__
+   -  `Syntastic <vim_syntastic.html>`__
+   -  `Text Objects <vim_text_objects.html>`__
+   -  `Unimpaired <vim_unimpaired.html>`__
+   -  `Visual Mode <vim_visual_blocks.html>`__
+   -  `Windows <vim_windows.html>`__
+   -  `Yanking <vim_yanking.html>`__
+
+-  `iOS <#>`__
+
+   -  `Jazzy <jazzy_notes.html>`__
+   -  `Swift3 <ios_swift3.html>`__
+   -  `Xcode <xcode_notes.html>`__
+
+Vim HTML
+========
+
+A crib of Vim tips and tricks. `Edit
+me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_html.html.md>`__
+
+HTML Cleanup
+------------
+
+Live Preview of HTML
+~~~~~~~~~~~~~~~~~~~~
+
+Run the following in the root folder:
+
+.. code:: highlight
+
+   $ python -m SimpleHTTPServer 8080
+
+Editing HTML
+~~~~~~~~~~~~
+
+To delete blank lines:
+
+.. code:: highlight
+
+   :g/^$/d
+
+To strip trailing whitespace:
+
+.. code:: highlight
+
+   :%s/\s\+$//e
+
+To remove leading whitespace from range of lines:
+
+.. code:: highlight
+
+   :19,25s/^\s\+//
+
+Tidy
+~~~~
+
+Pipe the buffer through Tidy to get clean HTML:
+
+.. code:: highlight
+
+   :%!tidy -qicbn -asxhtml
+
++--------------------------+---------------------------------------------+
+| Command                  | Action                                      |
++==========================+=============================================+
+| ``-indent``, ``-i``      | Indent element content                      |
++--------------------------+---------------------------------------------+
+| ``-clean``, ``-c``       | Replace FONT, NOBR, and CENTER tags by CSS. |
++--------------------------+---------------------------------------------+
+| ``-bare``, ``-b``        | Strip out smart quotes and em dashes, etc.  |
++--------------------------+---------------------------------------------+
+| ``-quiet``, ``-q``       | Suppress nonessential output..              |
++--------------------------+---------------------------------------------+
+| ``-asxml``, ``-asxhtml`` | Convert HTML to well formed XML.            |
++--------------------------+---------------------------------------------+
+
+Use ``tidy -h`` to view more options.
+
+Pandoc
+~~~~~~
+
+http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/
+
+Use the bang Ex command to filter the contents of the current buffer
+through a pandoc pipeline:
+
+.. code:: highlight
+
+   :%!pandoc --from=html --to=markdown | pandoc --from=markdown --to=html
+
+Emmet
+-----
+
++--------------+--------+-----------------------------+
+| Command      | Mode   | Function                    |
++==============+========+=============================+
+| ``<c-y>,``   |        | Expands abbreviations.      |
++--------------+--------+-----------------------------+
+| ``<c-y>;``   |        | Expands words.              |
++--------------+--------+-----------------------------+
+| ``<c-y>u``   |        | Expands tags.               |
++--------------+--------+-----------------------------+
+| ``v_<c-y>,`` |        | Wraps with abbreviations.   |
++--------------+--------+-----------------------------+
+| ``<c-y>d``   |        | Balance tags inward.        |
++--------------+--------+-----------------------------+
+| ``<c-y>D``   | Insert | Balance tags outward.       |
++--------------+--------+-----------------------------+
+| ``<c-y>n``   | Insert | Go to Next edit point.      |
++--------------+--------+-----------------------------+
+| ``<c-y>N``   | Insert | Go to Previous edit point.  |
++--------------+--------+-----------------------------+
+| ``<c-y>i``   |        | Update image sizes.         |
++--------------+--------+-----------------------------+
+| ``<c-y>m``   |        | Merge lines.                |
++--------------+--------+-----------------------------+
+| ``<c-y>k``   | Insert | Remove/return tags.         |
++--------------+--------+-----------------------------+
+| ``<c-y>j``   | Insert | Split/join tags.            |
++--------------+--------+-----------------------------+
+| ``<c-y>/``   | Insert | Add/remove comment tags.    |
++--------------+--------+-----------------------------+
+| ``<c-y>a``   |        | Make anchor from URLs.      |
++--------------+--------+-----------------------------+
+| ``<c-y>A``   |        | Make quoted text from URLs. |
++--------------+--------+-----------------------------+
+| ``<c-y>c``   |        | Make code pretty.           |
++--------------+--------+-----------------------------+
+
+Tutorial for Emmet.vim
+~~~~~~~~~~~~~~~~~~~~~~
+
+`Tutorial for
+Emmet.vim <https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL>`__
+
+Expand an Abbreviation
+^^^^^^^^^^^^^^^^^^^^^^
+
+Type the abbreviation as ``div>p#foo$*3>a`` and type ``<c-y>,``.
+
+.. code:: highlight
+
+   <div>
+     <p id="foo1">
+         <a href=""></a>
+     </p>
+     <p id="foo2">
+         <a href=""></a>
+     </p>
+     <p id="foo3">
+         <a href=""></a>
+     </p>
+   </div>
+
+Wrap with an Abbreviation
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Write as below.
+
+.. code:: highlight
+
+   test1
+   test2
+   test3
+
+Then do visual select (line wise) and type ``<c-y>,``.
+
+Once you get to the Tag: prompt, type ``ul>li*``.
+
+.. code:: highlight
+
+   <ul>
+       <li>test1</li>
+       <li>test2</li>
+       <li>test3</li>
+   </ul>
+
+If you type a tag, such as ``blockquote``, then you’ll see the
+following:
+
+.. code:: highlight
+
+   <blockquote>
+       test1
+       test2
+       test3
+   </blockquote>
+
+Balance Tags Inward
+~~~~~~~~~~~~~~~~~~~
+
+Type ``<c-y>d`` in Insert mode.
+
+Balance Tags Outward
+~~~~~~~~~~~~~~~~~~~~
+
+Type ``<c-y>D`` in Insert mode.
+
+Go to Next Edit Points
+~~~~~~~~~~~~~~~~~~~~~~
+
+Type ``<c-y>n`` in Insert mode.
+
+Go to Previous Edit Points
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Type ``<c-y>N`` in Insert mode.
+
+Update ``<img>`` Sizes
+~~~~~~~~~~~~~~~~~~~~~~
+
+Move cursor to the tag.
+
+.. code:: highlight
+
+   <img src="foo.png" />
+
+Type ``<c-y>i`` on the tag.
+
+.. code:: highlight
+
+   <img src="foo.png" width="32" height="48" />
+
+Merge Lines
+~~~~~~~~~~~
+
+Select the lines, which include ``<li>``.
+
+.. code:: highlight
+
+   <ul>
+     <li class="list1"></li>
+     <li class="list2"></li>
+     <li class="list3"></li>
+   </ul>
+
+Type ``<c-y>m``.
+
+.. code:: highlight
+
+   <ul>
+     <li class="list1"></li><li class="list2"></li><li class="list3"></li>
+   </ul>
+
+Remove Tags
+~~~~~~~~~~~
+
+Move cursor in block
+
+.. code:: highlight
+
+   <div class="foo">
+       <a>cursor is here</a>
+   </div>
+
+Type ``<c-y>k`` in Insert mode.
+
+.. code:: highlight
+
+   <div class="foo">
+
+   </div>
+
+And type ``<c-y>k`` in there again.
+
+Split/Join Tags
+~~~~~~~~~~~~~~~
+
+Move the cursor inside the block.
+
+.. code:: highlight
+
+   <div class="foo">
+       cursor is here
+   </div>
+
+Type ``<c-y>j`` in Insert mode.
+
+.. code:: highlight
+
+   <div class="foo"/>
+
+And then type ``<c-y>j`` in there again.
+
+.. code:: highlight
+
+   <div class="foo">
+   </div>
+
+Toggle Comments
+~~~~~~~~~~~~~~~
+
+Move cursor inside the block.
+
+.. code:: highlight
+
+   <div>
+       hello world
+   </div>
+
+Type ``<c-y>/`` in Insert mode.
+
+.. code:: highlight
+
+   <!-- <div>
+       hello world
+   </div> -->
+
+Type ``<c-y>/`` in there again.
+
+.. code:: highlight
+
+   <div>
+       hello world
+   </div>
+
+Make Anchors from URLs
+~~~~~~~~~~~~~~~~~~~~~~
+
+Move cursor to the URL.
+
+.. code:: highlight
+
+   http://www.google.com/
+
+Type ``<c-y>a``
+
+.. code:: highlight
+
+   <a href="http://www.google.com/">Google</a>
+
+Make Quoted Text from URLs
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Move cursor to the URL
+
+.. code:: highlight
+
+   http://github.com/
+
+Type ``<c-y>A``.
+
+.. code:: highlight
+
+   <blockquote class="quote">
+     <a href="http://github.com/">Secure source code hosting and collaborative development - GitHub</a><br />
+     <p>How does it work? Get up and running in seconds by forking a project, pushing an existing repository...</p>
+     <cite>http://github.com/</cite>
+   </blockquote>
+
+Enable emmet.vim for the language you using
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can customize the behavior of the languages you are using.
+
+.. code:: highlight
+
+   let g:user_emmet_settings = {
+     'php' : {
+       'extends' : 'html',
+       'filters' : 'c',
+     },
+     'xml' : {
+       'extends' : 'html',
+     },
+     'haml' : {
+       'extends' : 'html',
+     },
+   }
+
+HTML Page
+~~~~~~~~~
+
+``html5:_``
+
+Matchit
+-------
+
+To do, install machit
+
+The ``%`` command jumps between matching parentheses. Matchit expands
+this behavior to include jumps between paired ``< >``, HTML tags, or
+regex expressions.
+
+Vim-Ragtag
+----------
+
+https://github.com/tpope/vim-ragtag
+
+   A set of mappings for HTML, XML, PHP, ASP, eRuby, JSP, and more
+   (formerly allml)
+
+..
+
+   This plugin started out as a set of personal mappings, but there was
+   enough enjoyment among those I shared it with for me to clean it up
+   and release it.
+
+**Tags:** `vim <tag_vim>`__
+
+| ©2017 Magpie Entropy Ltd.. All rights reserved.
+
+| Page last updated: January 29, 2017
+| Site last generated: Apr 12, 2017
+
+|Company logo|
+
+.. |Company logo| image:: images/kylie.jpg
+

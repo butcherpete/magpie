@@ -1,0 +1,408 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Vim Windows &#8212; Magpie 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Vim Yanking" href="vim_yanking.html" />
+    <link rel="prev" title="Visual Mode" href="vim_visual_blocks.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p><a class="reference external" href="index.html">&nbsp;pan·de·mo·ni·um om·ni·bus</a></p>
+<ul class="simple">
+<li><a class="reference external" href="design_landing.html">Design</a></li>
+<li><a class="reference external" href="notes_landing_page.html">Tech</a></li>
+<li><a class="reference external" href="#">Blogs</a><ul>
+<li><a class="reference external" href="book_log.html">Book Log</a></li>
+<li><a class="reference external" href="Film_log.html">Film Log</a></li>
+<li><a class="reference external" href="lists_landing.html">Lists</a></li>
+</ul>
+</li>
+<li></li>
+<li>Tech Notes 1.0</li>
+<li><a class="reference external" href="#">Bash</a><ul>
+<li><a class="reference external" href="ack_notes.html">ack</a></li>
+<li><a class="reference external" href="bash_data.html">Data</a></li>
+<li><a class="reference external" href="bash_envs.html">Environmental Variables</a></li>
+<li><a class="reference external" href="bash_fasd.html">fasd</a></li>
+<li><a class="reference external" href="bash_files.html">File System</a></li>
+<li><a class="reference external" href="bash_imagemagick.html">ImageMagick</a></li>
+<li><a class="reference external" href="bash_notes.html">Notes</a></li>
+<li><a class="reference external" href="bash_processes.html">Processes</a></li>
+<li><a class="reference external" href="bash_security.html">Security</a></li>
+<li><a class="reference external" href="bash_servers.html">Servers</a></li>
+<li><a class="reference external" href="bash_skills.html">Skills</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#">Git</a><ul>
+<li><a class="reference external" href="git_resources.html">Git Resources</a></li>
+<li><a class="reference external" href="git_alias.html">Git Aliases</a></li>
+<li><a class="reference external" href="git_diff.html">Git Diff</a></li>
+<li><a class="reference external" href="git_gitignore.html">.gitignore</a></li>
+<li><a class="reference external" href="git_merge.html">Git Merge</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#">JavaScript</a><ul>
+<li><a class="reference external" href="js_bower.html">Bower</a></li>
+<li><a class="reference external" href="js_bundling.html">Bundling</a></li>
+<li><a class="reference external" href="js_browsersync.html">Browsersync</a></li>
+<li><a class="reference external" href="gulp_notes.html">Gulp</a></li>
+<li><a class="reference external" href="js_linting.html">Linting</a></li>
+<li><a class="reference external" href="node_notes.html">Node</a></li>
+<li><a class="reference external" href="npm_notes.html">npm</a></li>
+<li><a class="reference external" href="js_testing.html">Testing</a></li>
+<li><a class="reference external" href="js_babel.html">Transpiling</a></li>
+<li><a class="reference external" href="js_yeoman.html">Yeoman</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#">Jekyll</a><ul>
+<li><a class="reference external" href="jekyll_generator.html">generator-jekyllized</a></li>
+<li><a class="reference external" href="jekyll_notes.html">Jekyll Commands</a></li>
+<li><a class="reference external" href="jekyll_resources.html">Jekyll Resources</a></li>
+<li><a class="reference external" href="jekyll_doc-theme.html">Jekyll Doc Theme</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#">Markup</a><ul>
+<li><a class="reference external" href="asciidoc_notes.html">Asciidoc</a></li>
+<li><a class="reference external" href="html_notes.html">HTML5</a></li>
+<li><a class="reference external" href="kramdown_notes.html">Kramdown</a></li>
+<li><a class="reference external" href="markdown_notes.html">Markdown</a></li>
+<li><a class="reference external" href="notes_rem.html">Px to Rem Conversion</a></li>
+<li><a class="reference external" href="rest_notes.html">reStructuredText</a></li>
+<li><a class="reference external" href="sass_notes.html">Sass</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#">Miscellaneous</a><ul>
+<li><a class="reference external" href="notes_gifs.html">Animated Gifs</a></li>
+<li><a class="reference external" href="evernote_notes.html">Evernote</a></li>
+<li><a class="reference external" href="brew_notes.html">Homebrew</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#">Python</a><ul>
+<li><a class="reference external" href="python_conda.html">Conda</a></li>
+<li><a class="reference external" href="python_jupyter.html">jupyter</a></li>
+<li><a class="reference external" href="python_pip.html">pip</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#">Ruby</a><ul>
+<li><a class="reference external" href="ruby_bundler.html">Bundler</a></li>
+<li><a class="reference external" href="ruby_gems.html">Gems</a></li>
+<li><a class="reference external" href="ruby.html">Rbenv</a></li>
+<li><a class="reference external" href="ruby_rvm.html">RVM</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#">Vim</a><ul>
+<li><a class="reference external" href="vim_airline.html">Airline</a></li>
+<li><a class="reference external" href="vim_bookmarks.html">Bookmarks</a></li>
+<li><a class="reference external" href="vim_buffers.html">Buffers</a></li>
+<li><a class="reference external" href="vim_command_line.html">Command Line</a></li>
+<li><a class="reference external" href="vim_explorer.html">File Explorer</a></li>
+<li><a class="reference external" href="vim_folding.html">Folding</a></li>
+<li><a class="reference external" href="vim_git.html">Git</a></li>
+<li><a class="reference external" href="vim_html.html">HTML</a></li>
+<li><a class="reference external" href="vim_javascript.html">JavaScript</a></li>
+<li><a class="reference external" href="vim_misc.html">Miscellany</a></li>
+<li><a class="reference external" href="vim_moving.html">Motions</a></li>
+<li><a class="reference external" href="vim_rest.html">Restructured Text</a></li>
+<li><a class="reference external" href="vim_search.html">Search</a></li>
+<li><a class="reference external" href="vim_spellcheck.html">Spellchecking</a></li>
+<li><a class="reference external" href="vim_starters.html">Starters</a></li>
+<li><a class="reference external" href="vim_substituting.html">Substituting</a></li>
+<li><a class="reference external" href="vim_surround.html">Surround</a></li>
+<li><a class="reference external" href="vim_syntastic.html">Syntastic</a></li>
+<li><a class="reference external" href="vim_text_objects.html">Text Objects</a></li>
+<li><a class="reference external" href="vim_unimpaired.html">Unimpaired</a></li>
+<li><a class="reference external" href="vim_visual_blocks.html">Visual Mode</a></li>
+<li><a class="reference external" href="vim_windows.html">Windows</a></li>
+<li><a class="reference external" href="vim_yanking.html">Yanking</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#">iOS</a><ul>
+<li><a class="reference external" href="jazzy_notes.html">Jazzy</a></li>
+<li><a class="reference external" href="ios_swift3.html">Swift3</a></li>
+<li><a class="reference external" href="xcode_notes.html">Xcode</a></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="vim-windows">
+<h1>Vim Windows<a class="headerlink" href="#vim-windows" title="Permalink to this headline">¶</a></h1>
+<p>A crib of Vim tips and tricks. <a class="reference external" href="https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_windows.html.md">Edit
+me</a></p>
+<div class="section" id="opening-split-windows">
+<h2>Opening Split Windows<a class="headerlink" href="#opening-split-windows" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">s</span></code></td>
+<td>Split the current window
+horizontally, loading the same
+file in the new window</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">v</span></code></td>
+<td>Split the current window
+vertically, loading the same file
+in the new window</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:sp[lit]</span></code> <em>filename</em></td>
+<td>Split the current window
+horizontally, loading filename in
+the new window</td>
+</tr>
+<tr class="row-odd"><td><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">star:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">:vsp[lit]</span></code> <em>filename</em></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>Split the current window
+vertically, loading filename in
+the new window</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="closing-split-windows">
+<h2>Closing Split Windows<a class="headerlink" href="#closing-split-windows" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:q[uit]</span></code></td>
+<td>Close the currently active window.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:on[ly]</span></code></td>
+<td>Close all windows except the currently active window.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="changing-focus-between-windows">
+<h2>Changing Focus Between Windows<a class="headerlink" href="#changing-focus-between-windows" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="24%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Shortcut</th>
+<th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">w</span></code></td>
+<td>Cycle between the open windows.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ctrl-h</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">h</span></code></td>
+<td>Focus the window to the left.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ctrl-j</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">j</span></code></td>
+<td>Focus the window to the down.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ctrl-k</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">k</span></code></td>
+<td>Focus the window to the up.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ctrl-l</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">l</span></code></td>
+<td>Focus the window to the right.</td>
+</tr>
+</tbody>
+</table>
+<p>I included the following in my <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> file to enable the shortcuts:</p>
+</div>
+<div class="section" id="resizing-windows">
+<h2>Resizing Windows<a class="headerlink" href="#resizing-windows" title="Permalink to this headline">¶</a></h2>
+<p>You can resize windows by clicking on the boundary between windows, and
+dragging it to your prefered size. The following key commands also help:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">=</span></code></td>
+<td>Makes the windows equal widths.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">+</span></code></td>
+<td>Increase height of current window by 1 line.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">-</span></code></td>
+<td>Decrease height of current window by 1 line.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">_</span></code></td>
+<td>Maximise height of current window.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">|</span></code></td>
+<td>Maximise width of current window.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="moving-windows">
+<h2>Moving Windows<a class="headerlink" href="#moving-windows" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">r</span></code></td>
+<td>Rotate all windows.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">x</span></code></td>
+<td>Exchange current window with its neighbor.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">H</span></code></td>
+<td>Move current window to far left.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">J</span></code></td>
+<td>Move current window to bottom.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">K</span></code></td>
+<td>Move current window to top.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ctrl-w</span> <span class="pre">L</span></code></td>
+<td>Move current window to far right.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tags:</strong> <a class="reference external" href="tag_vim">vim</a></p>
+<div class="line-block">
+<div class="line">©2017 Magpie Entropy Ltd.. All rights reserved.</div>
+</div>
+<div class="line-block">
+<div class="line">Page last updated: January 29, 2017</div>
+<div class="line">Site last generated: Apr 12, 2017</div>
+</div>
+<p><img alt="Company logo" src="vim/images/kylie.jpg" /></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Vim Windows</a><ul>
+<li><a class="reference internal" href="#opening-split-windows">Opening Split Windows</a></li>
+<li><a class="reference internal" href="#closing-split-windows">Closing Split Windows</a></li>
+<li><a class="reference internal" href="#changing-focus-between-windows">Changing Focus Between Windows</a></li>
+<li><a class="reference internal" href="#resizing-windows">Resizing Windows</a></li>
+<li><a class="reference internal" href="#moving-windows">Moving Windows</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="vim.html">Vim</a><ul>
+      <li>Previous: <a href="vim_visual_blocks.html" title="previous chapter">Visual Mode</a></li>
+      <li>Next: <a href="vim_yanking.html" title="next chapter">Vim Yanking</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/vim/vim_windows.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Todd Smith.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/vim/vim_windows.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

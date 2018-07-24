@@ -1,0 +1,219 @@
+` pan·de·mo·ni·um om·ni·bus <index.html>`__
+
+-  `Design <design_landing.html>`__
+-  `Tech <notes_landing_page.html>`__
+-  `Blogs <#>`__
+
+   -  `Book Log <book_log.html>`__
+   -  `Film Log <Film_log.html>`__
+   -  `Lists <lists_landing.html>`__
+
+-  
+
+ 
+
+-  Tech Notes 1.0
+-  `Bash <#>`__
+
+   -  `ack <ack_notes.html>`__
+   -  `Data <bash_data.html>`__
+   -  `Environmental Variables <bash_envs.html>`__
+   -  `fasd <bash_fasd.html>`__
+   -  `File System <bash_files.html>`__
+   -  `ImageMagick <bash_imagemagick.html>`__
+   -  `Notes <bash_notes.html>`__
+   -  `Processes <bash_processes.html>`__
+   -  `Security <bash_security.html>`__
+   -  `Servers <bash_servers.html>`__
+   -  `Skills <bash_skills.html>`__
+
+-  `Git <#>`__
+
+   -  `Git Resources <git_resources.html>`__
+   -  `Git Aliases <git_alias.html>`__
+   -  `Git Diff <git_diff.html>`__
+   -  `.gitignore <git_gitignore.html>`__
+   -  `Git Merge <git_merge.html>`__
+
+-  `JavaScript <#>`__
+
+   -  `Bower <js_bower.html>`__
+   -  `Bundling <js_bundling.html>`__
+   -  `Browsersync <js_browsersync.html>`__
+   -  `Gulp <gulp_notes.html>`__
+   -  `Linting <js_linting.html>`__
+   -  `Node <node_notes.html>`__
+   -  `npm <npm_notes.html>`__
+   -  `Testing <js_testing.html>`__
+   -  `Transpiling <js_babel.html>`__
+   -  `Yeoman <js_yeoman.html>`__
+
+-  `Jekyll <#>`__
+
+   -  `generator-jekyllized <jekyll_generator.html>`__
+   -  `Jekyll Commands <jekyll_notes.html>`__
+   -  `Jekyll Resources <jekyll_resources.html>`__
+   -  `Jekyll Doc Theme <jekyll_doc-theme.html>`__
+
+-  `Markup <#>`__
+
+   -  `Asciidoc <asciidoc_notes.html>`__
+   -  `HTML5 <html_notes.html>`__
+   -  `Kramdown <kramdown_notes.html>`__
+   -  `Markdown <markdown_notes.html>`__
+   -  `Px to Rem Conversion <notes_rem.html>`__
+   -  `reStructuredText <rest_notes.html>`__
+   -  `Sass <sass_notes.html>`__
+
+-  `Miscellaneous <#>`__
+
+   -  `Animated Gifs <notes_gifs.html>`__
+   -  `Evernote <evernote_notes.html>`__
+   -  `Homebrew <brew_notes.html>`__
+
+-  `Python <#>`__
+
+   -  `Conda <python_conda.html>`__
+   -  `jupyter <python_jupyter.html>`__
+   -  `pip <python_pip.html>`__
+
+-  `Ruby <#>`__
+
+   -  `Bundler <ruby_bundler.html>`__
+   -  `Gems <ruby_gems.html>`__
+   -  `Rbenv <ruby.html>`__
+   -  `RVM <ruby_rvm.html>`__
+
+-  `Vim <#>`__
+
+   -  `Airline <vim_airline.html>`__
+   -  `Bookmarks <vim_bookmarks.html>`__
+   -  `Buffers <vim_buffers.html>`__
+   -  `Command Line <vim_command_line.html>`__
+   -  `File Explorer <vim_explorer.html>`__
+   -  `Folding <vim_folding.html>`__
+   -  `Git <vim_git.html>`__
+   -  `HTML <vim_html.html>`__
+   -  `JavaScript <vim_javascript.html>`__
+   -  `Miscellany <vim_misc.html>`__
+   -  `Motions <vim_moving.html>`__
+   -  `Restructured Text <vim_rest.html>`__
+   -  `Search <vim_search.html>`__
+   -  `Spellchecking <vim_spellcheck.html>`__
+   -  `Starters <vim_starters.html>`__
+   -  `Substituting <vim_substituting.html>`__
+   -  `Surround <vim_surround.html>`__
+   -  `Syntastic <vim_syntastic.html>`__
+   -  `Text Objects <vim_text_objects.html>`__
+   -  `Unimpaired <vim_unimpaired.html>`__
+   -  `Visual Mode <vim_visual_blocks.html>`__
+   -  `Windows <vim_windows.html>`__
+   -  `Yanking <vim_yanking.html>`__
+
+-  `iOS <#>`__
+
+   -  `Jazzy <jazzy_notes.html>`__
+   -  `Swift3 <ios_swift3.html>`__
+   -  `Xcode <xcode_notes.html>`__
+
+Vim Getting Around
+==================
+
+A crib of Vim tips and tricks. `Edit
+me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_moving.html.md>`__
+
+Up-Down Motions
+---------------
+
++-----------------------------------+-----------------------------------+
+| Key                               | Action                            |
++===================================+===================================+
+| *#* ``gk``                        | Count display lines upward.       |
+|                                   | Differs from ``k`` when lines     |
+|                                   | wrap, and when used with an       |
+|                                   | operator.                         |
++-----------------------------------+-----------------------------------+
+| *#* ``gj``                        | Count display lines upward.       |
+|                                   | Differs from ``j`` when lines     |
+|                                   | wrap, and when used with an       |
+|                                   | operator.                         |
++-----------------------------------+-----------------------------------+
+| *#* ``G``                         | Count display lines upward.       |
++-----------------------------------+-----------------------------------+
+| ``G``                             | Go to bottom of file.             |
++-----------------------------------+-----------------------------------+
+| ``gg``                            | Go to top of file.                |
++-----------------------------------+-----------------------------------+
+
+Line Motions
+------------
+
++--------+-------------------------------------+
+| Key    | Action                              |
++========+=====================================+
+| ``$``  | End of line                         |
++--------+-------------------------------------+
+| ``$p`` | Paste to end of line                |
++--------+-------------------------------------+
+| ``0``  | Start of line                       |
++--------+-------------------------------------+
+| ``A``  | End of line & Input mode            |
++--------+-------------------------------------+
+| ``C``  | Delete to the end line & Input mode |
++--------+-------------------------------------+
+
+Word Motions
+------------
+
++---------------+--------------------------+
+| Key           | Action                   |
++===============+==========================+
+| ``b`` / ``B`` | Backward one word/WORD   |
++---------------+--------------------------+
+| ``w`` / ``W`` | Forward one word/WORD    |
++---------------+--------------------------+
+| ``e``         | End of current/next word |
++---------------+--------------------------+
+| ``E``         | End of current/next WORD |
++---------------+--------------------------+
+| ``ge``        | End of previous word     |
++---------------+--------------------------+
+| ``gE``        | End of previous WORD     |
++---------------+--------------------------+
+
+WORDs are bigger than words.
+
+-  A WORD consists of a sequence of non-blank characters is separated by
+   white space. Both *we’re* and *e.g.* are WORDs.
+-  A word consists of a sequence of letters, digits, and underscores.
+
+Character Searches
+------------------
+
++-------------+-------------------------------------------------------+
+| Key         | Action                                                |
++=============+=======================================================+
+| ``f{char}`` | Forward to the next {char}.                           |
++-------------+-------------------------------------------------------+
+| ``F{char}`` | Backward to the previous {char}.                      |
++-------------+-------------------------------------------------------+
+| ``t{char}`` | Forward to the character before next {char}.          |
++-------------+-------------------------------------------------------+
+| ``T{char}`` | Backward to the characgter before the next {char}.    |
++-------------+-------------------------------------------------------+
+| ``;``       | Repeat the last character-search command (forward).   |
++-------------+-------------------------------------------------------+
+| ``,``       | Reverse the last character-search command (backward). |
++-------------+-------------------------------------------------------+
+
+**Tags:** `vim <tag_vim>`__
+
+| ©2017 Magpie Entropy Ltd.. All rights reserved.
+
+| Page last updated: January 29, 2017
+| Site last generated: Apr 12, 2017
+
+|Company logo|
+
+.. |Company logo| image:: images/kylie.jpg
+
