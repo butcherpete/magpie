@@ -24,6 +24,12 @@
 	    │   │   ├── environment.pickle
 	    │   │   └── index.doctree
 	    │   ├── _sources/
+        │   │   ├── dir1/ 
+        │   │   │   └── file.rst.txt 
+        │   │   ├── dir2/ 
+        │   │   │   └── file.rst.txt 
+        │   │   ├── dir3/ 
+        │   │   │   └── file.rst.txt 
 	    │   │   ├── notes/
 	    │   │   └── index.rst.txt
 	    │   ├── _static/ 
@@ -50,12 +56,20 @@
         │   │   ├── up.png 
         │   │   └── websupport.js 
         │   ├── doctrees/ 
-        │   │   ├── notes/ 
-        │   │   │   └── note.doctree 
+        │   │   ├── index.doctree
         │   │   ├── environment.pickle 
-        │   │   └── index.doctree
-        │   └── notes/
-        │       └── notes.html 
+        │   │   ├── dir1/ 
+        │   │   │   └── dir1.doctree 
+        │   │   ├── dir2/ 
+        │   │   │   └── dir2.doctree 
+        │   │   └── dir3/ 
+        │   │       └── dir3.doctree 
+        │   ├── dir1/
+        │   │   └── file.html 
+        │   ├── dir2/
+        │   │   └── file.html 
+        │   └── dir3/
+        │       └── file.html 
         └── source/
             ├── conf.py
             ├── index.rst 
