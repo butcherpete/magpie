@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Vim Search &#8212; Magpie 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Vim Spellchecking" href="vim_spellcheck.html" />
+    <link rel="prev" title="Vim Restructured Text" href="vim_rest.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Magpie</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../notes/notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../film/film.html">Film</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="vim.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/javascript.html">JavaScript</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Vim Search</a><ul>
+<li><a class="reference internal" href="#ack-searches">Ack Searches</a><ul>
+<li><a class="reference internal" href="#ack-syntax">Ack Syntax</a></li>
+<li><a class="reference internal" href="#ack-options">Ack Options</a></li>
+<li><a class="reference internal" href="#other-acks">Other Acks</a></li>
+<li><a class="reference internal" href="#ack-quickfix-keyboard-shortcuts">Ack Quickfix Keyboard Shortcuts</a></li>
+<li><a class="reference internal" href="#gotchas">Gotchas</a></li>
+<li><a class="reference internal" href="#do-not-jump-first-result-automatically">Do Not Jump First Result Automatically</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vimgrep-search">Vimgrep Search</a><ul>
+<li><a class="reference internal" href="#recursive-search">Recursive Search</a></li>
+<li><a class="reference internal" href="#combining-vimgrep-and-ack">Combining :vimgrep and :Ack</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#global-searches">Global Searches</a><ul>
+<li><a class="reference internal" href="#regex-patterns">Regex Patterns</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#star-searches">Star Searches</a><ul>
+<li><a class="reference internal" href="#normal-modes">Normal Modes</a></li>
+<li><a class="reference internal" href="#visual-star-search">Visual Star Search</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#quickfix-list">Quickfix List</a><ul>
+<li><a class="reference internal" href="#navigating-quickfix-list">Navigating Quickfix List</a></li>
+<li><a class="reference internal" href="#recalling-quickfix-lists">Recalling Quickfix Lists</a></li>
+<li><a class="reference internal" href="#quickfix-window">Quickfix Window</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#location-list">Location List</a><ul>
+<li><a class="reference internal" href="#navigating-location-list">Navigating Location List</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#patterns">Patterns</a><ul>
+<li><a class="reference internal" href="#searching-for-the-last-pattern">Searching for the last pattern</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="vim_rest.html" title="Previous Chapter: Vim Restructured Text"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Vim Restructured Text</span>
+    </a>
+  </li>
+  <li>
+    <a href="vim_spellcheck.html" title="Next Chapter: Vim Spellchecking"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Vim Spellchecking &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/vim/vim_search.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="vim-search">
+<h1>Vim Search<a class="headerlink" href="#vim-search" title="Permalink to this headline">¶</a></h1>
+<p>A crib of Vim tips and tricks. <a class="reference external" href="https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_search.html.md">Edit
+me</a></p>
+<div class="section" id="ack-searches">
+<h2>Ack Searches<a class="headerlink" href="#ack-searches" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/mileszs/ack.vim">mileszs/ack.vim</a></p>
+<p><a class="reference external" href="http://beyondgrep.com/documentation/">Ack Documentation</a></p>
+<div class="section" id="ack-syntax">
+<h3>Ack Syntax<a class="headerlink" href="#ack-syntax" title="Permalink to this headline">¶</a></h3>
+<p>To search recursively in <code class="docutils literal notranslate"><span class="pre">{directories}</span></code>, which defaults to the
+current directory for the <code class="docutils literal notranslate"><span class="pre">{pattern}</span></code>.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:Ack[!] [options] {pattern} [{directories}]
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">[!]</span></code></td>
+<td>If the <code class="docutils literal notranslate"><span class="pre">[!]</span></code> flag is provided,
+the first occurence is not
+immediately returned..</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">[options]</span></code></td>
+<td>.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">{patterns}</span></code></td>
+<td>.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">[{directories}]</span></code></td>
+<td>Default is the current directory.</td>
+</tr>
+</tbody>
+</table>
+<p>Files containing the search term are listed in the quickfix window,
+along with the line number of the occurrence, once for each occurrence.
+<code class="docutils literal notranslate"><span class="pre">&lt;Enter&gt;</span></code> on a line in this window will open the file, and place the
+cursor on the matching line.</p>
+</div>
+<div class="section" id="ack-options">
+<h3>Ack Options<a class="headerlink" href="#ack-options" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-i</span></code></td>
+<td>Ignore case distinctions in
+PATTERN.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-w</span></code></td>
+<td>Force PATTERN to match only whole
+words.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-n</span></code></td>
+<td>No descending into
+subdirectories.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">-f</span></code></td>
+<td>Only print the files selected,
+without searching. The PATTERN
+must not be specified..</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">-g</span></code></td>
+<td>Same as -<code class="docutils literal notranslate"><span class="pre">f</span></code>, but only select
+files matching PATTERN.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">--type=X</span></code></td>
+<td>Include only X files, where X is
+a recognized filetype.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">--type=noX</span></code></td>
+<td>Exclude X files. See
+<code class="docutils literal notranslate"><span class="pre">ack</span> <span class="pre">--help-types</span></code> for
+supported filetypes.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="other-acks">
+<h3>Other Acks<a class="headerlink" href="#other-acks" title="Permalink to this headline">¶</a></h3>
+<p>Just like where you use <code class="docutils literal notranslate"><span class="pre">:grep</span></code>, <code class="docutils literal notranslate"><span class="pre">:grepadd</span></code>, <code class="docutils literal notranslate"><span class="pre">:lgrep</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">:lgrepadd</span></code>, you can use <code class="docutils literal notranslate"><span class="pre">:Ack</span></code>, <code class="docutils literal notranslate"><span class="pre">:AckAdd</span></code>, <code class="docutils literal notranslate"><span class="pre">:LAck</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">:LAckAdd</span></code> respectively.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:AckAdd</span></code></td>
+<td>Just like <code class="docutils literal notranslate"><span class="pre">:Ack</span></code>, but instead
+of making a new list, the matches
+are appended to the current
+<code class="docutils literal notranslate"><span class="pre">quickfix</span></code> list.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:AckFromSearch</span> <span class="pre">[{directory}]</span></code></td>
+<td>Just like <code class="docutils literal notranslate"><span class="pre">:Ack</span></code> but the
+pattern is from previous search.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:LAck</span></code></td>
+<td>Just like <code class="docutils literal notranslate"><span class="pre">:Ack</span></code> but instead of
+the <code class="docutils literal notranslate"><span class="pre">quickfix</span></code> list, matches
+are placed in the current
+<code class="docutils literal notranslate"><span class="pre">location-list</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:LAckAdd</span></code></td>
+<td>Just like <code class="docutils literal notranslate"><span class="pre">:AckAdd</span></code> but instead
+of the <code class="docutils literal notranslate"><span class="pre">quickfix</span></code> list, matches
+are added to the current
+<code class="docutils literal notranslate"><span class="pre">location-list</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:AckFile</span></code></td>
+<td>Search recursively in {directory}
+(which defaults to the current
+directory) for filenames matching
+the <code class="docutils literal notranslate"><span class="pre">{pattern}</span></code>. Behaves just
+like the <code class="docutils literal notranslate"><span class="pre">:grep</span></code> command, but
+will open the <code class="docutils literal notranslate"><span class="pre">Quickfix</span></code> window
+for you.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:AckWindow[!]</span> <span class="pre">[options]</span> <span class="pre">{patter</span>
+<span class="pre">n}</span></code></td>
+<td>Search all buffers visible in the
+screen (current tab page only)
+files for the <code class="docutils literal notranslate"><span class="pre">{pattern}</span></code>.</td>
+</tr>
+<tr class="row-even"><td><a href="#id1"><span class="problematic" id="id2">``</span></a>:LAckWindow [options] {pattern}
+``</td>
+<td>Just like <code class="docutils literal notranslate"><span class="pre">:AckWindow</span></code> but
+instead of the <code class="docutils literal notranslate"><span class="pre">quickfix</span></code> list,
+matches are placed in the current
+location-list.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ack-quickfix-keyboard-shortcuts">
+<h3>Ack Quickfix Keyboard Shortcuts<a class="headerlink" href="#ack-quickfix-keyboard-shortcuts" title="Permalink to this headline">¶</a></h3>
+<p>The quickfix list is augmented with these convenience mappings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">?</span></code></td>
+<td>A quick summary of these keys, repeat to close.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">o</span></code></td>
+<td>To open (same as Enter).</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">O</span></code></td>
+<td>To open and close the quickfix window.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">go</span></code></td>
+<td>To preview file, open but maintain focus on <code class="docutils literal notranslate"><span class="pre">ack.vim</span></code> results.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">t</span></code></td>
+<td>To open in new tab.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">T</span></code></td>
+<td>To open in new tab without moving to it.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">h</span></code></td>
+<td>To open in horizontal split.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">H</span></code></td>
+<td>To open in horizontal split, keeping focus on the results.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">v</span></code></td>
+<td>To open in vertical split.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">gv</span></code></td>
+<td>To open in vertical split, keeping focus on the results.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">q</span></code></td>
+<td>To close the quickfix window.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="gotchas">
+<h3>Gotchas<a class="headerlink" href="#gotchas" title="Permalink to this headline">¶</a></h3>
+<p>Some characters have special meaning, and need to be escaped in your
+search pattern. For instance, <code class="docutils literal notranslate"><span class="pre">#</span></code>. You need to escape it with
+<code class="docutils literal notranslate"><span class="pre">:Ack</span> <span class="pre">'\\\#define</span> <span class="pre">foo'</span></code> to search for <code class="docutils literal notranslate"><span class="pre">'#define</span> <span class="pre">foo'</span></code>.</p>
+</div>
+<div class="section" id="do-not-jump-first-result-automatically">
+<h3>Do Not Jump First Result Automatically<a class="headerlink" href="#do-not-jump-first-result-automatically" title="Permalink to this headline">¶</a></h3>
+<p>To not jump to the first result, use the bang (<code class="docutils literal notranslate"><span class="pre">!</span></code>) flag: <code class="docutils literal notranslate"><span class="pre">:Ack!</span></code>.</p>
+<p>If you want this behavior most of the time, you might like an
+abbreviation or mapping in your personal config, something like these:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>cnoreabbrev Ack Ack!
+nnoremap &lt;Leader&gt;a :Ack!&lt;Space&gt;
+</pre></div>
+</div>
+<p>Most of the <code class="docutils literal notranslate"><span class="pre">:[L]Ack*</span></code> commands support this. Note that this behavior
+follows the convention of Vim’s built-in <code class="docutils literal notranslate"><span class="pre">:grep</span></code> and <code class="docutils literal notranslate"><span class="pre">:make</span></code>
+commands.</p>
+</div>
+</div>
+<div class="section" id="vimgrep-search">
+<h2>Vimgrep Search<a class="headerlink" href="#vimgrep-search" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/">http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/</a></p>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">:vimgrep</span></code> command to populate the quickfix list with
+search results from the current file:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:vimgrep /{pattern}/ %
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">%</span></code> character is a special symbol that represents the filepath of
+the active buffer.</p>
+<blockquote>
+<div>Within out The <code class="docutils literal notranslate"><span class="pre">j</span></code> flag Vim jups to the first match. With <code class="docutils literal notranslate"><span class="pre">j</span></code>
+only the quickfix list is updated. With <code class="docutils literal notranslate"><span class="pre">[!]</span></code> all changes in the
+current buffer are abandoned.</div></blockquote>
+<div class="section" id="recursive-search">
+<h3>Recursive Search<a class="headerlink" href="#recursive-search" title="Permalink to this headline">¶</a></h3>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">**</span></code> in the file pattern to search recursively.</p>
+<p>For example, to search for all lines containing <code class="docutils literal notranslate"><span class="pre">dostuff()</span></code> in all
+<code class="docutils literal notranslate"><span class="pre">.c</span></code> files in the parent directory and all its subdirectories, use:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nv">`:vimgrep /dostuff()/j ../**/*.c`</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="combining-vimgrep-and-ack">
+<h3>Combining :vimgrep and :Ack<a class="headerlink" href="#combining-vimgrep-and-ack" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://vimcasts.org/blog/2013/03/combining-vimgrep-with-ack--f/">Combining :vimgrep with ack
+-f</a></p>
+</div>
+</div>
+<div class="section" id="global-searches">
+<h2>Global Searches<a class="headerlink" href="#global-searches" title="Permalink to this headline">¶</a></h2>
+<p>To do, document this.</p>
+<div class="section" id="regex-patterns">
+<h3>Regex Patterns<a class="headerlink" href="#regex-patterns" title="Permalink to this headline">¶</a></h3>
+<p>Some examples of <code class="docutils literal notranslate"><span class="pre">:global</span></code> usage:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Pattern</th>
+<th class="head">Returns</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:g/^$/</span> <span class="pre">d</span></code></td>
+<td>Delete all empty lines in a file</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:g/^$/,/./-j</span></code></td>
+<td>Reduce multiple blank lines to a
+single blank</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:10,20g/^/</span> <span class="pre">mo</span> <span class="pre">10</span></code></td>
+<td>Reverse the order of the lines
+starting from the line 10 up to
+the line 20.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:'a,'b</span> <span class="pre">g/^Error/</span> <span class="pre">.</span> <span class="pre">w</span> <span class="pre">&gt;&gt;</span> <span class="pre">errors.</span>
+<span class="pre">txt</span></code></td>
+<td>Here is a modified example from
+Walter Zintz vi tutorial. In the
+text block marked by ‘a and ‘b
+find all the lines starting with
+Error and copy (append) them to
+“errors.txt” file. Note: .
+(current line address) in front
+of the w is very important,
+omitting it will cause :write to
+write the whole file to
+“errors.txt” for every Error line
+found.</td>
+</tr>
+</tbody>
+</table>
+<p>You can give multiple commands after :global using <code class="docutils literal notranslate"><span class="pre">|</span></code> as a separator.
+If you want to use <code class="docutils literal notranslate"><span class="pre">|</span></code> in an argument, precede it with <code class="docutils literal notranslate"><span class="pre">\</span></code>. Another
+example from Zintz tutorial:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:g/^Error:/ copy $ | s /Error/copy of the error/
+</pre></div>
+</div>
+<p>Will copy all Error line to the end of the file and then make a
+substitution in the copied line. Without giving the line address :s will
+operate on the current line, which is the newly copied line.</p>
+<p>Here the order is reversed: first modify the string then copy to the
+end:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:g/^Error:/ s /Error/copy of the error/ | copy $
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="star-searches">
+<h2>Star Searches<a class="headerlink" href="#star-searches" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://vimcasts.org/episodes/search-for-the-selected-text/">Vimcasts #46: Search for the text
+selected</a></p>
+<div class="section" id="normal-modes">
+<h3>Normal Modes<a class="headerlink" href="#normal-modes" title="Permalink to this headline">¶</a></h3>
+<p>In Normal mode, the star (<code class="docutils literal notranslate"><span class="pre">*</span></code>) character searches for the word under
+the cursor.</p>
+</div>
+<div class="section" id="visual-star-search">
+<h3>Visual Star Search<a class="headerlink" href="#visual-star-search" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/nelstrom/vim-visual-star-search">vim-visual-star-search</a></p>
+<p>The visual-star-search plugin enables you to search for text selected in
+Visual mode.</p>
+<p>The Visual mode <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">#</span></code> mappings create a new record in the
+search history. You can use mutltple files using <code class="docutils literal notranslate"><span class="pre">:vimgrep</span></code> by pasting
+the the search pattern.</p>
+<p>To paste the last search pattern, press <code class="docutils literal notranslate"><span class="pre">&lt;C-r&gt;/</span></code>:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:vimgrep /&lt;C-r&gt;//g **
+</pre></div>
+</div>
+<p>The search patterns generated by the <code class="docutils literal notranslate"><span class="pre">*</span></code> command mapping can be used
+with any Ex command that accepts a pattern: <code class="docutils literal notranslate"><span class="pre">:substitute</span></code>,
+<code class="docutils literal notranslate"><span class="pre">:global</span></code>, and <code class="docutils literal notranslate"><span class="pre">:vimgrep</span></code>.</p>
+</div>
+</div>
+<div class="section" id="quickfix-list">
+<h2>Quickfix List<a class="headerlink" href="#quickfix-list" title="Permalink to this headline">¶</a></h2>
+<p>The quickfix list holds a collection of locations from one or more
+files.</p>
+<p>Matches returned by <code class="docutils literal notranslate"><span class="pre">:Ack</span></code>, <code class="docutils literal notranslate"><span class="pre">:grep</span></code>, and <code class="docutils literal notranslate"><span class="pre">:vimgrep</span></code> are loaded
+into a quickfix list.</p>
+<div class="section" id="navigating-quickfix-list">
+<h3>Navigating Quickfix List<a class="headerlink" href="#navigating-quickfix-list" title="Permalink to this headline">¶</a></h3>
+<p>You can navigate through the quickfix list using the following commands:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Unimpaired</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:cprev[ious]</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">[q</span></code></td>
+<td>Reverse through
+quickfix list.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:cnext</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">]q</span></code></td>
+<td>Advance through
+quickfix list.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:[count]cprev</span></code></td>
+<td>&#160;</td>
+<td>Reverse <em>n</em> lines
+through the quickfix
+list.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:[count]cnext</span></code></td>
+<td>&#160;</td>
+<td>Advance <em>n</em> lines
+through the quickfix
+list.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:cfirst</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">[Q</span></code></td>
+<td>Go to start of
+quickfix list.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:clast</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">]Q</span></code></td>
+<td>Go to end of quickfix
+list.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:cnfile</span></code></td>
+<td>&#160;</td>
+<td>Go to first item in
+the next file.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:cpfile</span></code></td>
+<td>&#160;</td>
+<td>Go to last item in
+the previous file.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:cc</span></code> N</td>
+<td>&#160;</td>
+<td>Go to the nth item.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:copen</span></code></td>
+<td>&#160;</td>
+<td>Open the quickfix
+window.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:cclose</span></code></td>
+<td>&#160;</td>
+<td>Close the quickfix
+window.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:cdo</span> <span class="pre">{cmd}</span></code></td>
+<td>&#160;</td>
+<td>Execute <code class="docutils literal notranslate"><span class="pre">{cmd}</span></code> on
+each line listed in
+the quickfix list.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:cfdo</span> <span class="pre">{cmd}</span></code></td>
+<td>&#160;</td>
+<td>Execute <code class="docutils literal notranslate"><span class="pre">{cmd}</span></code>
+once for each line
+listed in the
+quickfix list.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="recalling-quickfix-lists">
+<h3>Recalling Quickfix Lists<a class="headerlink" href="#recalling-quickfix-lists" title="Permalink to this headline">¶</a></h3>
+<p>Vim maintains the last ten quickfix lists. You can recall older versions
+of the quickfix list, using the <code class="docutils literal notranslate"><span class="pre">:colder</span></code> command.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:colder</span></code></td>
+<td>Go to an older quickfix list.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:cnewer</span></code></td>
+<td>Go to a newer quickfix list.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="quickfix-window">
+<h3>Quickfix Window<a class="headerlink" href="#quickfix-window" title="Permalink to this headline">¶</a></h3>
+<p>The :<code class="docutils literal notranslate"><span class="pre">copen</span></code> command opens a window that shows the current list of
+errors.</p>
+<p>If there already is a quickfix window, it will be made the current
+window. It is not possible to open a second quickfix window.</p>
+<p>The window will contain a special buffer, with ‘buftype’ equal to
+“quickfix”. Don’t change this! The window will have the w:quickfix_title
+variable set which will indicate the command that produced the quickfix
+list. This can be used to compose a custom status line if the value of
+‘statusline’ is adjusted properly.</p>
+</div>
+</div>
+<div class="section" id="location-list">
+<h2>Location List<a class="headerlink" href="#location-list" title="Permalink to this headline">¶</a></h2>
+<p>Matches returned by <code class="docutils literal notranslate"><span class="pre">:LAck</span></code>, <code class="docutils literal notranslate"><span class="pre">:LAckAdd</span></code>, <code class="docutils literal notranslate"><span class="pre">:lgrep</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">:lvimgrep</span></code> query are loaded into a location list.</p>
+<div class="section" id="navigating-location-list">
+<h3>Navigating Location List<a class="headerlink" href="#navigating-location-list" title="Permalink to this headline">¶</a></h3>
+<p>You can navigate through the location list using the following commands:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:lprev[ious]</span></code></td>
+<td>Reverse through location list.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:lnext</span></code></td>
+<td>Advance through location list.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:lfirst</span></code></td>
+<td>Go to start of location list.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:llast</span></code></td>
+<td>Go to end of location list.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:ll</span></code> N</td>
+<td>Go to the nth item.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">:ldo</span> <span class="pre">{cmd}</span></code></td>
+<td>Execute <code class="docutils literal notranslate"><span class="pre">{cmd}</span></code> on each line
+listed in the location list.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">:lfdo</span> <span class="pre">{cmd}</span></code></td>
+<td>Execute <code class="docutils literal notranslate"><span class="pre">{cmd}</span></code> once for each
+line listed in the location list.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="patterns">
+<h2>Patterns<a class="headerlink" href="#patterns" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Pattern</th>
+<th class="head">Returns</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/v`[^</span></code>]*``</td>
+<td>Returns strings enclosed within backticks.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">s:\s*$::</span></code></td>
+<td>Drops the blanks from the end of a line.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">s:\s\+$::</span></code></td>
+<td>Does not act on all lines.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="searching-for-the-last-pattern">
+<h3>Searching for the last pattern<a class="headerlink" href="#searching-for-the-last-pattern" title="Permalink to this headline">¶</a></h3>
+<p>To search for the last pattern the search history:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:vimgrep /&lt;C-r&gt;// %
+</pre></div>
+</div>
+<p>On the command line, <code class="docutils literal notranslate"><span class="pre">&lt;C-r&gt;/</span></code> (i.e. <code class="docutils literal notranslate"><span class="pre">CTRL-R</span></code> followed by the <code class="docutils literal notranslate"><span class="pre">/</span></code>)
+returns the last search pattern.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018, Todd Smith.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
