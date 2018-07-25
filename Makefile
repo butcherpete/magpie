@@ -20,14 +20,16 @@ help:
 
 gh-pages:
 	git checkout gh-pages
-	rm -rf build _sources _static  
+	rm -rf build _sources _static 
+	touch .nojekyll 
 	git checkout master $(GH_PAGES_SOURCES)
 	git reset HEAD
 	make html
-	mv -fv build/html/* ./
+	mv ./build/html/* ./
 	rm -rf $(GH_PAGES_SOURCES) build
 	git add -A
 	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
+	git push origin gh-pages 
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

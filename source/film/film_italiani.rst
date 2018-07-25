@@ -77,7 +77,7 @@ la memoria collettiva del Paese tra il 1942 e il 1978.
 -  *Il sorpasso*, regia di Dino Risi (1962) ★★★★
 -  *Salvatore Giuliano*, regia di Francesco Rosi (1962) ★★★★★
 -  *L’eclisse*, regia di Michelangelo Antonioni (1962) ★★★
--  *Mafioso*, regia di Alberto Lattuada (1962) ★★★★★
+-  *Mafioso*, regia di Alberto Lattuada (1962) ★★★★
 -  *I mostri*, regia di Dino Risi (1963)
 -  *Le mani sulla città*, regia di Francesco Rosi (1963) ★★★
 -  *Otto e mezzo*, regia di Federico Fellini (1963) ★★★★★
@@ -118,9 +118,17 @@ la memoria collettiva del Paese tra il 1942 e il 1978.
 Not on the list
 ---------------
 
+1940s
+=====
+
 -  *I bambini ci guardano*, regia di Vittoria De Sica (1944) FilmStruck
 -  *Germania anno zero*, regia di Robert Rossellini (1948) FilmStruck
 -  *L’Amore*, regia di Robert Rossellini (1948) FilmStruck
+
+
+1950s
+=====
+
 -  *Francesco, giullare di Dio*, regia di Robert Rossellini (1950)
    FilmStruck
 -  *Tormento*, regia di Raffaello Matarazzo (1950) FilmStruck
@@ -138,6 +146,9 @@ Not on the list
 -  *L’angelo bianco*, regia di Raffaello Matarazzo (1955) FilmStruck
 -  *Le Notte Bianche*, regia di Luchino Visconti (1957) FilmStruck
 -  *Nata di marzo*, regia di Antonio Pietrangeli (1958)
+
+1960s
+=====
 -  *Kapò*, regia di Gillo Pontecorvo (1960) FilmStruck
 -  *L’Avventura*, regia di Michelangelo Antonini (1960) ★★★★
 -  *La Notte*, regia di Michelangelo Antonini (1961) ★★★★
@@ -153,25 +164,45 @@ Not on the list
 -  *Giulietta degli spiriti*, regia di Federico Fellini (1965) ★★★
 -  *A ciascuno il suo*, regia di Elio Petri (1967) ★★
 -  *Teorema*, regia di Pier Paolo Pasolini (1968) ★★
+-  *Seduto alla sua destra*, regia di Valerio Zurlini (1968) ★★★
 -  *Il giorno della civetta*, regia di Damiano Damiani (1968) ★
 -  *Fellini Satyricon*, regia di Federico Fellini (1969) ★★
 -  *Queimada*, regia di Gillo Pontecorvo (1969) ★★★
+-  *La caduta degli dei*, regia di Luchino Visconti (1969) ★★★★
+-  *Porcile*, regia di Pier Paolo Pasolini (1969) ★★
+
+1970s
+=====
+
 -  *Strategia del ragno*, regia di Bernardo Bertolucci (1970) ★★★★
 -  *Il giardino dei Finzi-Contini*, regia di Vittorio De Sica (1970)
 -  *Il Decameron*, regia di Pier Paolo Pasolini (1971) ★★
 -  *Morte a Venezia*, regia di Luchino Visconti (1971) ★★★
 -  *I racconti di Cantebury*, regia di Pier Paolo Pasolini (1971) ★★
--  *Mimí metallurgico ferito nell’onore*, regia di Lina Wertmüller
-   (1972) ★★★★
--  *San Michele aveva un gallo*, regia di Paolo and Vittorio Taviani
-   (1972) ★★★
--  *Roma*, regia di Federico Fellini (1972) ★★
--  *Film d’amore e d’anarchia, ovvero: stamattina alle 10, in via dei
-   Fiori, nella nota casa di tolleranza…*, regia di Lina Wertmüller
-   (1973) ★★★★
--  *Travolti da un insolito destino nell’azzurro mare d’agosto* , regia
-   di Lina Wertmüller (1974) ★★★★
+- *Milano calibro 9*, regia di Franco Di Leo (1972) ★★★
+- *Mimí metallurgico ferito nell’onore*, regia di Lina Wertmüller (1972) ★★★★
+- *San Michele aveva un gallo*, regia di Paolo and Vittorio Taviani (1972) ★★★
+- *Roma*, regia di Federico Fellini (1972) ★★
+-  *Film d’amore e d’anarchia, ovvero: stamattina alle 10, in via dei Fiori, nella nota casa di tolleranza…*, regia di Lina Wertmüller (1973) ★★★★
+- *Il Boss*, regia di Franco Di Leo (1973) ★★
+-  *Travolti da un insolito destino nell’azzurro mare d’agosto* , regia di Lina Wertmüller (1974) ★★★★
 -  *Profumo di donna*, regia di Dino Risi (1974) ★★★
--  *Pasqualino Settebellezze*, regia di Lina Wertmüller (1975)
--  *Todo modo*, regia di Elio Petri (1976)
+-  *Tutto a posto e niente in ordine*, regia di Lina Wertmüller (1974) ★★
+- *Il portiere di notte*, regia di Liliana Cavani (1974) ★★
+- *Pane e cioccolata*, regia di Franco Brusati (1975)
+- *Pasqualino Settebellezze*, regia di Lina Wertmüller (1975) ★★★★
+- *Todo modo*, regia di Elio Petri (1976)
+- *Allegro Non Troppo*, regia di Bruno Bozzetto (1976) ★★
+- *Il deserto dei Tartari*, regia di Valerio Zurlini (1976)
+- Padre Padrone
+- *Una giornata particolare*, regia di Ettore Scola (1977)
+- *L'albergo degli zoccoli*, regia di Ermanno Olmi (1978) ★★★★
 -  *Cristo si è fermato a Eboli*, regia di Francesco Rosi (1979) ★★★★
+
+1982
+====
+-  *La Notte di San Lorenzo*, regia di Taviani (1982) ★★★
+
+1984
+====
+-  *Kaos*, regia di Taviani (1984) ★★★

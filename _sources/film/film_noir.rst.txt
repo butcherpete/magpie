@@ -9,7 +9,7 @@ Film Noir
 
 -  *The Letter*, directed by William Wyler (1940)
 -  *Stranger on the Third Floor*, directed by Boris Ingster (1940)
-
+-  *They Drive by Night*, directed by Raoul Walsh (1940) ★★★
 
 1941
 ----
@@ -19,8 +19,6 @@ Film Noir
 -  *I Wake Up Screaming*, directed by H. Bruce Humberstone (1941)
 -  *Maltese Falcon*, directed by John Huston (1941) ★★★★★
 -  *Suspicion*, directed by Alfred Hitchcock (1941)
-
-
 
 1942
 ----
@@ -34,9 +32,9 @@ Film Noir
 1943
 ----
 
+-  *Journey into Fear*, directed by Norman Foster (1943) ★★★★
+-  *The Seventh Victim*, directed by Mark Robson (1943) 
 -  *Shadow of a Doubt*, directed by Alfred Hitchcock (1943)
-
-
 
 1944
 ----
@@ -60,32 +58,28 @@ Film Noir
 -  *Hangover Square*, directed by John Brahm (1945)
 -  *Leave Her to Heaven*, directed by John M. Stahl (1945)
 -  *Lost Weekend*, directed by Billy Wilder (1945) ★★★
--  *Mildred Pierce*, directed by Michael Curtiz (1945) ★★★★ 
+-  *Mildred Pierce*, directed by Michael Curtiz (1945) ★★★ 
 -  *My Name Is Julia Ross*, directed by Joseph H. Lewis (1945) ★★
--  *Scarlet Street*, directed by Fritz Lang (1945) ★★★★★
+-  *Scarlet Street*, directed by Fritz Lang (1945) ★★★★
 -  *Spellbound*, directed by Alfred Hitchcock (1945)
-
-
 
 1946
 ----
 
--  *Big Sleep*, directed by Howard Hawks (1946) ★★★★★
+-  *Big Sleep*, directed by Howard Hawks (1946) ★★★★
 -  *Blue Dahlia*, directed by George Marshall (1946)
 -  *Deadline at Dawn*, directed by Harold Clurman, screenplay by
    Clifford Odets (1946)
 -  *Decoy*, directed by Jack Bernhard (1946)
 -  *Gilda*, directed by Charles Vidor (1946) ★★★
--  *So Dark the Night*, directed by Joseph H. Lewis (1946)
--  *Strange Love of Martha Ivers*, directed by Lewis Milestone (1946)
 -  *The Killers*, directed by Robert Siodmak (1946)
 -  *Lady in the Lake*, directed by Robert Montgomery (1946)
 -  *Notorious*, directed by Alfred Hitchcock (1946) ★★★★★
 -  *The Postman Always Rings Twice*, directed by Tay Garrett (1946) ★★★★
+-  *So Dark the Night*, directed by Joseph H. Lewis (1946)
+-  *Strange Love of Martha Ivers*, directed by Lewis Milestone (1946)
 -  *The Stranger*, directed by Orson Welles (1946) ★★★★★
 -  *The Verdict*, directed by Don Siegel (1946)
-
-
 
 1947
 ----
@@ -94,20 +88,18 @@ Film Noir
 -  *Born to Kill*, directed by Robert Wise (1947)
 -  *Brute Force*, directed by Jules Dassin (1947) ★★★
 -  *Crossfire*, directed by Edward Dmytryk (1947) ★★★
--  *Dark Passage*, directed by (1947) ★★
+-  *Dark Passage*, directed by Delmer Davies (1947) ★★
+-  *Dead Reckoning*, directed by John Cromwell (1947) 
 -  *Kiss of Death*, directed by Henry Hathaway (1947)
--  *Nightmare Alley*, directed by Edmund Golding (1947) ★★★★★
+-  *Nightmare Alley*, directed by Edmund Golding (1947) ★★★★
 -  *Odd Man Out*, directed by Carol Reed (1947) ★★★★
--  *Out of the Past*, directed by Jacques Tourneur (1947) ★★★★★
+-  *Out of the Past*, directed by Jacques Tourneur (1947) ★★★★
 -  *Ride the Pink Horse*, directed by Robert Montgomery (1947) ★★★
--  *Out of the Past*, directed by Jacques Tourneur (1947) ★★★★★
 -  *Ride the Pink Horse*, directed by Robert Montgomery (1947)
 -  *Secret Beyond the Door*, directed by Fritz Lang (1947)
 -  *T-Men*, directed by Anthony Mann (1947) ★★★
 -  *The Lady from Shanghai*, directed by Orson Welles (1947) ★★★★
 -  *Woman on the Beach*, directed by Jean Renior (1947)
-
-
 
 1948
 ----
@@ -128,19 +120,17 @@ Film Noir
 -  *Sorry Wrong Number*, directed by Anatole Litvak (1948)
 -  *The Big Clock*, directed by John Farrow (1948)
 -  *The Killers*, directed by Robert Siodmak (1948)
--  *They Live by Night*, directed by Nicholas Ray (1948)
-
-
+-  *The Treasure of the Sierra Madre*, directed by John Huston (1948) ★★★★
 
 1949
 ----
 
--  *Act of Violence*, directed by Fred Zinnemann (1949) ★★★★★
+-  *Act of Violence*, directed by Fred Zinnemann (1949) ★★★★
 -  *Border Incident*, directed by Anthony Mann (1949) ★★
 -  *Caught*, directed by Max Orphuls (1949)
 -  *Criss Cross*, directed by Robert Siodmak (1949) ★★★
 -  *D.O.A.*, directed by Rudolph Maté (1950) ★★★
--  *Gun Crazy*, directed by Joseph H.Lewis (1950) ★★★★★
+-  *Gun Crazy*, directed by Joseph H.Lewis (1950) ★★★★
 -  *House of Strangers*, directed by Joseph L. Mankiewicz (1949)
 -  *Knock on Any Door*, directed by Nicholas Ray (1949)
 -  *Obsession*, directed by Edward Dmytrk (1949) ★★★
@@ -161,18 +151,19 @@ Film Noir
 ----
 
 -  *A Lady Without Passport*, directed by Joseph H. Lewis (1950)
--  *Asphalt Jungle*, directed by John Huston (1950) ★★★★
+-  *Asphalt Jungle*, directed by John Huston (1950) ★★★★★
+-  *The Breaking Point*, directed by Michael Curtiz (1950) ★★★★
 -  *Caged*, directed by John Cromwell (1950)
 -  *In a Lonely Place*, directed by Nicholas Ray (1950) ★★★★★
+-  *The Lawless*, directed by Joseph Losey (1950)
 -  *Mystery Street*, directed by John Sturges (1950)
+-  *Night and the City*, directed by Jules Dassin (1950) ★★★★★
 -  *No Man of Her Own*, directed by Mitchell Leisen (1950)
 -  *No Way Out*, directed by Joseph L. Mankiewicz (1950)
 -  *Panic in the Streets*, directed by Elia Kazan (1950)
 -  *Sound of Fury* (aka *Try and Get Me*), directed by Cy Endfield
    (1950)
 -  *Sunset Boulevard*, directed by Billy Wilder (1950) ★★★★★
--  *The Breaking Point*, directed by Michael Curtiz (1950) ★★★★
--  *The Lawless*, directed by Joseph Losey (1950)
 -  *Where the Sidewalk Ends*, directed by Otto Preminger (1950) ★★★
 -  *Woman on the Run*, directed by Norman Foster (1950)
 
@@ -185,13 +176,10 @@ Film Noir
 -  *Detective Story*, directed by William Wilder (1951)
 -  *He Ran All The Way*, directed by John Berry (1951)
 -  *M*, directed by Joseph Losey (1951)
--  *Night and the City*, directed by Jules Dassin (1950) ★★★★
--  *On Dangerous Ground*, directed by Nicholas Ray, Ida Lupino (1951)
+-  *On Dangerous Ground*, directed by Nicholas Ray, Ida Lupino (1951) ★★★
 -  *The Big Night*, directed by Joseph Losey (1951) ★★★
 -  *The Prowler*, directed by Joseph Losey (1951) ★★★★★
 -  *Tomorrow Is Another Day*, directed by Felix E. Feist (1951)
-
-.. _section-12:
 
 1952
 ----
@@ -199,6 +187,7 @@ Film Noir
 -  *Angel Face*, directed by Otto Preminger (1952)
 -  *Clash By Night*, directed by Fritz Lang, screenplay by Clifford
    Odets (1952) ★★★
+-  *Deadline - U.S.A.*, directed by Richard Brooks (1952) 
 -  *Don’t Bother To Knock*, directed by Roy Ward Baker (1952) ★★★
 -  *Kansas City Confidential*, directed by Phil Karlson (1952) ★★★
 -  *Narrow Margin*, directed by Richard Fleischer (1952)
@@ -216,7 +205,7 @@ Film Noir
 -  *Cry of the Hunted*, directed by Joseph H. Lewis (1953)
 -  *Hitch-Hiker*, directed by Ida Lupino (1953) ★★★
 -  *Pickup on South Street*, directed by Samuel Fuller (1953) ★★★★
--  *99 River Street*, directed by Phil Karlson (1953)
+-  *99 River Street*, directed by Phil Karlson (1953) ★★★
 
 
 1954
@@ -244,6 +233,7 @@ Film Noir
 ----
 
 -  *The Killing*, directed by Stanley Kubrick (1956) ★★★★
+-  *The Harder They Fall*, directed by Mark Robson (1956) ★★★★
 -  *Wrong Man*, directed by Alfred Hitchcock (1956)
 
 
