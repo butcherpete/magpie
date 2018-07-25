@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Vim Surround &#8212; Magpie 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Magpie</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notes/notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="film/film.html">Film</a></li>
+<li class="toctree-l1"><a class="reference internal" href="javascript/javascript.html">JavaScript</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Vim Surround</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#mappings">Mappings</a><ul>
+<li><a class="reference internal" href="#change-surroundings">Change Surroundings</a></li>
+<li><a class="reference internal" href="#delete-surroundings">Delete Surroundings</a></li>
+<li><a class="reference internal" href="#add-surroundings">Add Surroundings</a><ul>
+<li><a class="reference internal" href="#words">Words</a></li>
+<li><a class="reference internal" href="#lines">Lines</a></li>
+<li><a class="reference internal" href="#indentation">Indentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#visual-mode-surroundings">Visual Mode Surroundings</a></li>
+<li><a class="reference internal" href="#targets">Targets</a><ul>
+<li><a class="reference internal" href="#punctuation-marks">Punctuation Marks</a></li>
+<li><a class="reference internal" href="#quotation-marks">Quotation Marks</a></li>
+<li><a class="reference internal" href="#tag-alias">Tag Alias</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/vim_surround.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="vim-surround">
+<h1>Vim Surround<a class="headerlink" href="#vim-surround" title="Permalink to this headline">¶</a></h1>
+<p>The surround-vim plugin is a tool for dealing with pairs of
+surroundings. Examples of surroundings include parentheses, quotes, and
+HTML tags. They are closely related to what Vim refers to as
+|text-objects|. Provided are mappings to allow for removing, changing,
+and adding surroundings. <a class="reference external" href="https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_surround.html.md">Edit
+me</a></p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tpope/vim-surround">surround-vim</a></p>
+</div>
+<div class="section" id="mappings">
+<h2>Mappings<a class="headerlink" href="#mappings" title="Permalink to this headline">¶</a></h2>
+<p><em>surround-mappings</em></p>
+<ul class="simple">
+<li>Delete surroundings: <code class="docutils literal notranslate"><span class="pre">ds</span></code></li>
+<li>Change surroundings: <code class="docutils literal notranslate"><span class="pre">cs</span></code> or <code class="docutils literal notranslate"><span class="pre">cS</span></code></li>
+<li>Add surroundings: <code class="docutils literal notranslate"><span class="pre">ys</span></code> , <code class="docutils literal notranslate"><span class="pre">yS</span></code> or <code class="docutils literal notranslate"><span class="pre">ySS</span></code></li>
+<li>Visual mode: <code class="docutils literal notranslate"><span class="pre">vS</span></code> or <code class="docutils literal notranslate"><span class="pre">vgS</span></code></li>
+</ul>
+<div class="section" id="change-surroundings">
+<h3>Change Surroundings<a class="headerlink" href="#change-surroundings" title="Permalink to this headline">¶</a></h3>
+<p>Change surroundings is <code class="docutils literal notranslate"><span class="pre">cs</span></code>. It takes two arguments a <em>target</em> and a
+<em>replacement</em>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="43%" />
+<col width="24%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Before</th>
+<th class="head">Action</th>
+<th class="head">After</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">*world!&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">cs&quot;'</span></code></td>
+<td>‘Hello world!’</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">*world!&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">cs&quot;&lt;q&gt;</span></code></td>
+<td>“Hello world!”</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">(123+4*56)/2</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">cs)]</span></code></td>
+<td>[123+456]/2</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">(123+4*56)/2</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">cs)[</span></code></td>
+<td>[ 123+456 ]/2</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">&lt;div&gt;Yo!*&lt;/div&gt;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">cst&lt;p&gt;</span></code></td>
+<td>&lt;p&gt;Yo!&lt;/p&gt;</td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal notranslate"><span class="pre">cS</span></code> changes surroundings, placing the surrounded text on its own
+line(s) like <code class="docutils literal notranslate"><span class="pre">yS</span></code>. Details about the second argument can be found
+below in <em>surround-replacements</em>.</p>
+<p>Description:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">cs&quot;'</span></code></td>
+<td>Replaces surrounding <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> with <code class="docutils literal notranslate"><span class="pre">'</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">cs'&lt;q&gt;</span></code></td>
+<td>Replaces surrounding <code class="docutils literal notranslate"><span class="pre">'</span></code> with <code class="docutils literal notranslate"><span class="pre">&lt;q&gt;</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">cst&quot;</span></code></td>
+<td>Replaces surrounding tag with <code class="docutils literal notranslate"><span class="pre">&quot;</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="delete-surroundings">
+<h3>Delete Surroundings<a class="headerlink" href="#delete-surroundings" title="Permalink to this headline">¶</a></h3>
+<p>Delete surroundings is <code class="docutils literal notranslate"><span class="pre">ds</span></code>. The next character given determines the
+targetted delete. The exact nature of the target is explained in
+<em>surround-targets</em> but essentially it is the last character of a
+<em>text-object</em>.</p>
+<p>This mapping deletes the difference between the “i”nner object and “a”n
+object. This is easiest to understand with some examples:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="20%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Before</th>
+<th class="head">Action</th>
+<th class="head">After</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">&quot;Hello</span> <span class="pre">*world!&quot;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">ds&quot;</span></code></td>
+<td>Hello world!</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">(123+4*56)/2</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">ds)</span></code></td>
+<td>123+456/2</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">&lt;div&gt;Yo!*\&lt;/div&gt;</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">dst</span></code></td>
+<td>Yo!</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="add-surroundings">
+<h3>Add Surroundings<a class="headerlink" href="#add-surroundings" title="Permalink to this headline">¶</a></h3>
+<p>Add surroundings: <code class="docutils literal notranslate"><span class="pre">ys</span></code> , <code class="docutils literal notranslate"><span class="pre">yS</span></code> or <code class="docutils literal notranslate"><span class="pre">ySS</span></code>.</p>
+<div class="section" id="words">
+<h4>Words<a class="headerlink" href="#words" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">ys</span></code> takes a valid Vim motion or text object as the first object, and
+wraps it using the second argument as with <code class="docutils literal notranslate"><span class="pre">cs</span></code>. (It’s a stretch, but
+a good mnemonic for <code class="docutils literal notranslate"><span class="pre">ys</span></code> is “you surround”.)</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="24%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Before</th>
+<th class="head">Action</th>
+<th class="head">After</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">w*orld!</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">ysiw)</span></code></td>
+<td>Hello (world)!</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="lines">
+<h4>Lines<a class="headerlink" href="#lines" title="Permalink to this headline">¶</a></h4>
+<p>As a special case, <em>yss</em> operates on the current line, ignoring leading
+whitespace.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="22%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Before</th>
+<th class="head">Action</th>
+<th class="head">After</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">w*orld!</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">yssB</span></code></td>
+<td>{Hello world!}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="indentation">
+<h4>Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h4>
+<p>There is also <code class="docutils literal notranslate"><span class="pre">yS</span></code> and <code class="docutils literal notranslate"><span class="pre">ySS</span></code> which indent the surrounded text and
+place it on a line of its own.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">yS</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">ySS</span></code></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="visual-mode-surroundings">
+<h2>Visual Mode Surroundings<a class="headerlink" href="#visual-mode-surroundings" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>In visual mode, a simple “S” with an argument wraps the selection.
+This is referred to as the <em>vS</em> mapping, although ordinarily there
+will be additional keystrokes between the v and S. In linewise visual
+mode, the surroundings are placed on separate lines and indented. In
+blockwise visual mode, each line is surrounded.</div></blockquote>
+<blockquote>
+<div>A “gS” in visual mode, known as <em>vgS</em> , behaves similarly. In
+linewise visual mode, the automatic indenting is suppressed. In
+blockwise visual mode, this enables surrounding past the end of the
+line with ‘virtualedit’ set (there seems to be no way in Vim Script
+to differentiate between a jagged end of line selection and a virtual
+block selected past the end of the line, so two maps were needed).</div></blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="57%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Action</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Visual select + <code class="docutils literal notranslate"><span class="pre">S&lt;p</span> <span class="pre">class=&quot;x&quot;&gt;</span></code></td>
+<td>Surround text in element.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="targets">
+<h2>Targets<a class="headerlink" href="#targets" title="Permalink to this headline">¶</a></h2>
+<p><em>surround-targets</em></p>
+<p>The Vim Surround <code class="docutils literal notranslate"><span class="pre">ds</span></code> and <code class="docutils literal notranslate"><span class="pre">cs</span></code> commands both take a target as their
+first argument. The possible targets are based closely on the
+<em>text-objects</em> provided by Vim.</p>
+<p>All targets are currently just one character.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Target</th>
+<th class="head">Lexeme</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code></td>
+<td>Parentheses</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">)</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code></td>
+<td>Parentheses, no whitespace</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">{</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code></td>
+<td>Curly braces</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">}</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code></td>
+<td>Curly braces, no whitespace</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">[</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code></td>
+<td>Brackets</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">]</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code></td>
+<td>Brackets, no whitespace</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">a</span></code></td>
+<td>Angled brackets</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">a</span></code></td>
+<td>Angled brackets, no whitespace</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">t</span></code></td>
+<td>HTML or XML tags</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">'</span></code></td>
+<td>Single quotes</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">&quot;</span></code></td>
+<td>Double quotes</td>
+</tr>
+<tr class="row-odd"><td>`</td>
+<td>Back ticks</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">w</span></code></td>
+<td>Words</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">W</span></code></td>
+<td>WORDS</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">s</span></code></td>
+<td>Sentences</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="punctuation-marks">
+<h3>Punctuation Marks<a class="headerlink" href="#punctuation-marks" title="Permalink to this headline">¶</a></h3>
+<p>Eight punctuation marks, <code class="docutils literal notranslate"><span class="pre">(</span></code>, <code class="docutils literal notranslate"><span class="pre">)</span></code>, <code class="docutils literal notranslate"><span class="pre">{</span></code>, <code class="docutils literal notranslate"><span class="pre">}</span></code>, <code class="docutils literal notranslate"><span class="pre">[</span></code>, <code class="docutils literal notranslate"><span class="pre">]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, represent themselves and their counterparts. If the
+closing mark is used, contained whitespace is also trimmed.</p>
+<p>The targets <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code>, and <code class="docutils literal notranslate"><span class="pre">a</span></code> are aliases for <code class="docutils literal notranslate"><span class="pre">)</span></code>, <code class="docutils literal notranslate"><span class="pre">}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">]</span></code>, and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>. The first two (<code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>) are standard Vim
+mappings; the second two (<code class="docutils literal notranslate"><span class="pre">r</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span></code>) are unique to vim-surround.</p>
+</div>
+<div class="section" id="quotation-marks">
+<h3>Quotation Marks<a class="headerlink" href="#quotation-marks" title="Permalink to this headline">¶</a></h3>
+<p>Three quote marks, <code class="docutils literal notranslate"><span class="pre">'</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">`</span></code>, represent themselves, in
+pairs. They are only searched for on the current line.</p>
+</div>
+<div class="section" id="tag-alias">
+<h3>Tag Alias<a class="headerlink" href="#tag-alias" title="Permalink to this headline">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">t</span></code> is a pair of HTML or XML tags. See <em>tag-blocks</em> for details.</p>
+<p>Remember that you can specify a numerical argument if you want to get to
+a tag other than the innermost one.</p>
+<p>The letters <code class="docutils literal notranslate"><span class="pre">w</span></code>, <code class="docutils literal notranslate"><span class="pre">W</span></code>, and <code class="docutils literal notranslate"><span class="pre">s</span></code> correspond to a <em>word</em>, a <em>WORD</em>,
+and a <em>sentence</em>, respectively. These are special in that they have
+nothing to delete, and used with <code class="docutils literal notranslate"><span class="pre">ds</span></code> they are a no-op. With <code class="docutils literal notranslate"><span class="pre">cs</span></code>,
+one could consider them a slight shortcut for <code class="docutils literal notranslate"><span class="pre">ysi</span></code> (<code class="docutils literal notranslate"><span class="pre">cswb</span></code> ==
+<code class="docutils literal notranslate"><span class="pre">ysiwb</span></code>, more or less).</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">p</span></code> represents a <em>paragraph</em>. This behaves similarly to <code class="docutils literal notranslate"><span class="pre">w</span></code>,
+<code class="docutils literal notranslate"><span class="pre">W</span></code>, and <code class="docutils literal notranslate"><span class="pre">s</span></code> above; however, newlines are sometimes added and/or
+removed.</p>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018, Todd Smith.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
