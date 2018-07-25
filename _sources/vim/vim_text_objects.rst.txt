@@ -10,13 +10,13 @@ HTML Tags
 
 To select the contents of a tag (``t``):
 
-.. code:: highlight
+.. code-block:: rest
 
    vit
 
 To select the content of the outer tag:
 
-.. code:: highlight
+.. code-block:: rest
 
    v_it
 

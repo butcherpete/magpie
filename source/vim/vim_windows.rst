@@ -58,7 +58,7 @@ Changing Focus Between Windows
 
 I included the following in my ``.vimrc`` file to enable the shortcuts:
 
-.. code:: highlight
+.. code-block:: rest
 
    map <C-h> <C-w>h
    map <C-j> <C-w>j

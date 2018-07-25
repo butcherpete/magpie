@@ -17,7 +17,7 @@ Ack Syntax
 To search recursively in ``{directories}``, which defaults to the
 current directory for the ``{pattern}``.
 
-.. code:: highlight
+.. code-block:: rest
 
    :Ack[!] [options] {pattern} [{directories}]
 
@@ -162,7 +162,7 @@ To not jump to the first result, use the bang (``!``) flag: ``:Ack!``.
 If you want this behavior most of the time, you might like an
 abbreviation or mapping in your personal config, something like these:
 
-.. code:: highlight
+.. code-block:: rest
 
    cnoreabbrev Ack Ack!
    nnoremap <Leader>a :Ack!<Space>
@@ -179,7 +179,7 @@ http://vimcasts.org/episodes/search-multiple-files-with-vimgrep/
 We can use the ``:vimgrep`` command to populate the quickfix list with
 search results from the current file:
 
-.. code:: highlight
+.. code-block:: rest
 
    :vimgrep /{pattern}/ %
 
@@ -198,7 +198,7 @@ You can use ``**`` in the file pattern to search recursively.
 For example, to search for all lines containing ``dostuff()`` in all
 ``.c`` files in the parent directory and all its subdirectories, use:
 
-.. code:: highlight
+.. code-block:: rest
 
    `:vimgrep /dostuff()/j ../**/*.c`
 
@@ -248,7 +248,7 @@ You can give multiple commands after :global using ``|`` as a separator.
 If you want to use ``|`` in an argument, precede it with ``\``. Another
 example from Zintz tutorial:
 
-.. code:: highlight
+.. code-block:: rest
 
    :g/^Error:/ copy $ | s /Error/copy of the error/
 
@@ -259,7 +259,7 @@ operate on the current line, which is the newly copied line.
 Here the order is reversed: first modify the string then copy to the
 end:
 
-.. code:: highlight
+.. code-block:: rest
 
    :g/^Error:/ s /Error/copy of the error/ | copy $
 
@@ -289,7 +289,7 @@ the the search pattern.
 
 To paste the last search pattern, press ``<C-r>/``:
 
-.. code:: highlight
+.. code-block:: rest
 
    :vimgrep /<C-r>//g **
 
@@ -436,7 +436,7 @@ Searching for the last pattern
 
 To search for the last pattern the search history:
 
-.. code:: highlight
+.. code-block:: rest
 
    :vimgrep /<C-r>// %
 

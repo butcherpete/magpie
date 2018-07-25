@@ -11,7 +11,7 @@ Enabling
 
 To turn on spell check.
 
-.. code:: highlight
+.. code-block:: rest
 
    :set spell
 
@@ -34,14 +34,14 @@ Configuration
 
 To set spelling language to American English.
 
-.. code:: highlight
+.. code-block:: rest
 
    :set spelllang=en_us
 
 .vimrc configurations:
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. code:: highlight
+.. code-block:: rest
 
    :set spelllang=en_us
    :set spellfile=$HOME/Dropbox/vim/spell/en.utf-8.add
@@ -55,7 +55,7 @@ Local Spellfiles
 
 Multiple spellfiles can be defined.
 
-.. code:: highlight
+.. code-block:: rest
 
    :setl spelllang=en_us
    :setl spellfile=/.vim/spell/en.utf-8.add
@@ -153,7 +153,7 @@ Updating Spellfiles and Word Lists
 
 To view the spell file:
 
-.. code:: highlight
+.. code-block:: rest
 
    `~/.vim/spell/en.utf-8.add`
 

@@ -31,7 +31,7 @@ commands:
 
 To copy text into the Mac OS register:
 
-.. code:: highlight
+.. code-block:: rest
 
    "*y
 

@@ -18,7 +18,7 @@
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Vim Surround" href="vim_surround.html" />
+    <link rel="next" title="Vim Substituting" href="vim_substituting.html" />
     <link rel="prev" title="Vim Spellchecking" href="vim_spellcheck.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -91,7 +91,7 @@
     </a>
   </li>
   <li>
-    <a href="vim_surround.html" title="Next Chapter: Vim Surround"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Vim Surround &raquo;</span>
+    <a href="vim_substituting.html" title="Next Chapter: Vim Substituting"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Vim Substituting &raquo;</span>
     </a>
   </li>
               
@@ -130,10 +130,22 @@
 <p>A crib of Vim tips and tricks. <a class="reference external" href="https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_starters.html.md">Edit
 me</a></p>
 <p>Getting Information and Help To get information:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:version
+</pre></div>
+</div>
 <div class="section" id="vimrc">
 <h2>.vimrc<a class="headerlink" href="#vimrc" title="Permalink to this headline">¶</a></h2>
 <p>To open vimrc within Vim:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:e $MYVIMRC
+</pre></div>
+</div>
 <p>To source the vimrc within Vim:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:so $MYVIMRC
+
+&quot; If the .vimrc is activ
+:so %
+</pre></div>
+</div>
 </div>
 <div class="section" id="brew">
 <h2>Brew<a class="headerlink" href="#brew" title="Permalink to this headline">¶</a></h2>
@@ -142,17 +154,35 @@ me</a></p>
 <li>Version: 8.0.52</li>
 <li>Location: <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/vim</span></code> ### Vimrc To edit:</li>
 </ul>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>$ vim ~/.vimrc
+</pre></div>
+</div>
 <p>To reload (source) changes to the <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> from within the .vimrc
 file:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:so %
+</pre></div>
+</div>
 <p>The character <code class="docutils literal notranslate"><span class="pre">%</span></code> stands for the current file name (see
 <code class="docutils literal notranslate"><span class="pre">:h</span> <span class="pre">current-file</span></code>).</p>
 <p>Otherwise:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:so $MYVIMRC
+</pre></div>
+</div>
 </div>
 <div class="section" id="vundle">
 <h2>Vundle<a class="headerlink" href="#vundle" title="Permalink to this headline">¶</a></h2>
 <p>To install in Vim, launch vim and run:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:PluginInstall
+</pre></div>
+</div>
 <p>To install from command line:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>$ vim +PluginInstall +qall
+</pre></div>
+</div>
 <p>To read docs:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:h vundle
+</pre></div>
+</div>
 </div>
 </div>
 

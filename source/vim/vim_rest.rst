@@ -20,7 +20,7 @@ You can ``:noremap`` that keystroke sequence to your taste.
 
 For example
 
-.. code:: highlight
+.. code-block:: rest
 
    " Add Heading: Control-H
    nnoremap <C-h> YpVr

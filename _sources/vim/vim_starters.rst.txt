@@ -6,7 +6,7 @@ me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/page
 
 Getting Information and Help To get information:
 
-.. code:: highlight
+.. code-block:: rest
 
    :version
 
@@ -15,13 +15,13 @@ Getting Information and Help To get information:
 
 To open vimrc within Vim:
 
-.. code:: highlight
+.. code-block:: rest
 
    :e $MYVIMRC
 
 To source the vimrc within Vim:
 
-.. code:: highlight
+.. code-block:: rest
 
    :so $MYVIMRC
 
@@ -36,14 +36,14 @@ Installed with Homebrew.
 -  Version: 8.0.52
 -  Location: ``/usr/local/bin/vim`` ### Vimrc To edit:
 
-.. code:: highlight
+.. code-block:: rest
 
    $ vim ~/.vimrc
 
 To reload (source) changes to the ``.vimrc`` from within the .vimrc
 file:
 
-.. code:: highlight
+.. code-block:: rest
 
    :so %
 
@@ -52,7 +52,7 @@ The character ``%`` stands for the current file name (see
 
 Otherwise:
 
-.. code:: highlight
+.. code-block:: rest
 
    :so $MYVIMRC
 
@@ -61,19 +61,19 @@ Vundle
 
 To install in Vim, launch vim and run:
 
-.. code:: highlight
+.. code-block:: rest
 
    :PluginInstall
 
 To install from command line:
 
-.. code:: highlight
+.. code-block:: rest
 
    $ vim +PluginInstall +qall
 
 To read docs:
 
-.. code:: highlight
+.. code-block:: rest
 
    :h vundle
 

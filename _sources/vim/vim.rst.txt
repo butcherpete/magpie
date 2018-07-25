@@ -20,7 +20,7 @@ Vim
   vim_search
   vim_spellcheck
   vim_starters
-  vim_substitution
+  vim_substituting
   vim_surround
   vim_text_objects
   vim_unimpaired

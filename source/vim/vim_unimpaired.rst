@@ -7,7 +7,7 @@ me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/page
 
 `tpope/vim-unimpaired <https://github.com/tpope/vim-unimpaired/tree/master/doc>`__
 
-.. code:: highlight
+.. code-block:: rest
 
    :help unimpaired
 

@@ -142,16 +142,28 @@ earlier</a></p>
 <h2>Markdown Preview<a class="headerlink" href="#markdown-preview" title="Permalink to this headline">¶</a></h2>
 <p>I installed grip using homebrew. Grip provides the Github flavored
 markdown formatting.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>$ grip filename.md
+</pre></div>
+</div>
 </div>
 <div class="section" id="fenced-code-blocks">
 <h2>Fenced Code Blocks<a class="headerlink" href="#fenced-code-blocks" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Esc</span></code> + <em>n</em> + <code class="docutils literal notranslate"><span class="pre">i</span></code> + <code class="docutils literal notranslate"><span class="pre">~</span></code> + <code class="docutils literal notranslate"><span class="pre">Esc</span></code></p>
 <p>For example <code class="docutils literal notranslate"><span class="pre">5i~Esc</span></code>.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Code Sample
+</pre></div>
+</div>
 </div>
 <div class="section" id="reading-microsoft-word-files">
 <h2>Reading Microsoft Word Files<a class="headerlink" href="#reading-microsoft-word-files" title="Permalink to this headline">¶</a></h2>
 <p>To view the content of <code class="docutils literal notranslate"><span class="pre">.docx</span></code> in Vim by adding the following to your
 <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code>.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>&quot;use docx2txt.pl to allow VIm to view the text content of a .docx file directly.
+
+autocmd BufReadPre *.docx set ro
+autocmd BufReadPost *.docx %!docx2txt.pl
+</pre></div>
+</div>
 <p>The settings enables you to view <code class="docutils literal notranslate"><span class="pre">.docx</span></code> text specified as
 command-line argument to vim, but not of those read using
 <code class="docutils literal notranslate"><span class="pre">:r</span> <span class="pre">file.docx</span></code>.</p>
@@ -162,6 +174,9 @@ command-line argument to vim, but not of those read using
 HTML</a></p>
 <p>Use the bang Ex command to filter the contents of the current buffer
 through a pandoc pipeline:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:%!pandoc --from=html --to=markdown | pandoc --from=markdown --to=html
+</pre></div>
+</div>
 </div>
 <div class="section" id="urls">
 <h2>URLs<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h2>

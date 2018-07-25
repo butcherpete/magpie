@@ -55,13 +55,13 @@ Opening Multiple Files into Buffers
 
 To open the contents of a directory into the buffer:
 
-.. code:: highlight
+.. code-block:: rest
 
    :args /path_to_dir/*
 
 To open multiple files into the buffer list:
 
-.. code:: highlight
+.. code-block:: rest
 
    :args a.txt b.txt c.txt 
 
@@ -139,7 +139,7 @@ Buffers in Airline
 Tab line in airline automatically displays all buffers if only one tab
 open. Added the following to my ``.vimrc`` file:
 
-.. code:: highlight
+.. code-block:: rest
 
    let g:airline#extensions#tabline#enabled = 1
 
@@ -154,7 +154,7 @@ Substitutions in Multiple Buffers
 
 To make substitutions to buffers in the arglist:
 
-.. code:: highlight
+.. code-block:: rest
 
    :argdo %s/mydoc_sidebar/notes_sidebar/ge
 
@@ -166,7 +166,7 @@ Reverting Changes
 
 To revert changes:
 
-.. code:: highlight
+.. code-block:: rest
 
    :argdo edit!
 
@@ -175,7 +175,7 @@ Saving Changes
 
 To save changes to files in arglist:
 
-.. code:: highlight
+.. code-block:: rest
 
    :argdo update
 

@@ -17,7 +17,7 @@ Markdown Preview
 I installed grip using homebrew. Grip provides the Github flavored
 markdown formatting.
 
-.. code:: highlight
+.. code-block:: rest
 
    $ grip filename.md
 
@@ -28,7 +28,7 @@ Fenced Code Blocks
 
 For example ``5i~Esc``.
 
-.. code:: highlight
+.. code-block:: rest
 
    Code Sample
 
@@ -38,7 +38,7 @@ Reading Microsoft Word Files
 To view the content of ``.docx`` in Vim by adding the following to your
 ``.vimrc``.
 
-.. code:: highlight
+.. code-block:: rest
 
    "use docx2txt.pl to allow VIm to view the text content of a .docx file directly.
 
@@ -58,7 +58,7 @@ HTML <http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-ht
 Use the bang Ex command to filter the contents of the current buffer
 through a pandoc pipeline:
 
-.. code:: highlight
+.. code-block:: rest
 
    :%!pandoc --from=html --to=markdown | pandoc --from=markdown --to=html
 

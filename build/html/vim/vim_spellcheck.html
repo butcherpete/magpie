@@ -139,6 +139,9 @@ me</a></p>
 <div class="section" id="enabling">
 <h2>Enabling<a class="headerlink" href="#enabling" title="Permalink to this headline">¶</a></h2>
 <p>To turn on spell check.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:set spell
+</pre></div>
+</div>
 <p>The spell check recognizes four types of misspelled words:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -169,8 +172,15 @@ me</a></p>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>To set spelling language to American English.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:set spelllang=en_us
+</pre></div>
+</div>
 <div class="section" id="vimrc-configurations">
 <h3>.vimrc configurations:<a class="headerlink" href="#vimrc-configurations" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:set spelllang=en_us
+:set spellfile=$HOME/Dropbox/vim/spell/en.utf-8.add
+</pre></div>
+</div>
 <p>By default, vim saves added words (<code class="docutils literal notranslate"><span class="pre">zg</span></code>) to
 <code class="docutils literal notranslate"><span class="pre">.vim/spell/en.utf-8.add</span></code>. I moved the spellfile to my Dropbox to
 enable me to use it across computers.</p>
@@ -178,6 +188,12 @@ enable me to use it across computers.</p>
 <div class="section" id="local-spellfiles">
 <h3>Local Spellfiles<a class="headerlink" href="#local-spellfiles" title="Permalink to this headline">¶</a></h3>
 <p>Multiple spellfiles can be defined.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:setl spelllang=en_us
+:setl spellfile=/.vim/spell/en.utf-8.add
+:setl spellfile+=~/Drobox/vim/spell/jargon.utf-8.add
+:setl spellfile+=~/Drobox/vim/spell/intel.utf-8.add
+</pre></div>
+</div>
 <p>If multiple spellfiles are defined, you can press <code class="docutils literal notranslate"><span class="pre">1zg</span></code> to add words
 to the default spellfile and <code class="docutils literal notranslate"><span class="pre">2zg</span></code> to add words to the jargon
 spellfile.</p>
@@ -313,6 +329,9 @@ the internal word list.</td>
 </tbody>
 </table>
 <p>To view the spell file:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nv">`~/.vim/spell/en.utf-8.add`</span>
+</pre></div>
+</div>
 </div>
 </div>
 

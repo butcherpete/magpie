@@ -11,7 +11,7 @@ https://github.com/vim-airline/vim-airline
 
 To view help:
 
-.. code:: highlight
+.. code-block:: rest
 
    :help airline
 
@@ -22,7 +22,7 @@ To ensure that Powerline fonts are displayed in MacVim (cf. `Fonts not
 working in
 MacVim <https://github.com/vim-airline/vim-airline/issues/719>`__.
 
-.. code:: highlight
+.. code-block:: rest
 
    set guifont=Source\ Code\ Pro\ for\ Powerline:h16 
 

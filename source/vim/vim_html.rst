@@ -13,7 +13,7 @@ Live Preview of HTML
 
 Run the following in the root folder:
 
-.. code:: highlight
+.. code-block:: rest
 
    $ python -m SimpleHTTPServer 8080
 
@@ -22,19 +22,19 @@ Editing HTML
 
 To delete blank lines:
 
-.. code:: highlight
+.. code-block:: rest
 
    :g/^$/d
 
 To strip trailing whitespace:
 
-.. code:: highlight
+.. code-block:: rest
 
    :%s/\s\+$//e
 
 To remove leading whitespace from range of lines:
 
-.. code:: highlight
+.. code-block:: rest
 
    :19,25s/^\s\+//
 
@@ -43,7 +43,7 @@ Tidy
 
 Pipe the buffer through Tidy to get clean HTML:
 
-.. code:: highlight
+.. code-block:: rest
 
    :%!tidy -qicbn -asxhtml
 
@@ -71,7 +71,7 @@ http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/
 Use the bang Ex command to filter the contents of the current buffer
 through a pandoc pipeline:
 
-.. code:: highlight
+.. code-block:: rest
 
    :%!pandoc --from=html --to=markdown | pandoc --from=markdown --to=html
 
@@ -125,7 +125,7 @@ Expand an Abbreviation
 
 Type the abbreviation as ``div>p#foo$*3>a`` and type ``<c-y>,``.
 
-.. code:: highlight
+.. code-block:: rest
 
    <div>
      <p id="foo1">
@@ -144,7 +144,7 @@ Wrap with an Abbreviation
 
 Write as below.
 
-.. code:: highlight
+.. code-block:: rest
 
    test1
    test2
@@ -154,7 +154,7 @@ Then do visual select (line wise) and type ``<c-y>,``.
 
 Once you get to the Tag: prompt, type ``ul>li*``.
 
-.. code:: highlight
+.. code-block:: rest
 
    <ul>
        <li>test1</li>
@@ -165,7 +165,7 @@ Once you get to the Tag: prompt, type ``ul>li*``.
 If you type a tag, such as ``blockquote``, then you’ll see the
 following:
 
-.. code:: highlight
+.. code-block:: rest
 
    <blockquote>
        test1
@@ -198,13 +198,13 @@ Update ``<img>`` Sizes
 
 Move cursor to the tag.
 
-.. code:: highlight
+.. code-block:: rest
 
    <img src="foo.png" />
 
 Type ``<c-y>i`` on the tag.
 
-.. code:: highlight
+.. code-block:: rest
 
    <img src="foo.png" width="32" height="48" />
 
@@ -213,7 +213,7 @@ Merge Lines
 
 Select the lines, which include ``<li>``.
 
-.. code:: highlight
+.. code-block:: rest
 
    <ul>
      <li class="list1"></li>
@@ -223,7 +223,7 @@ Select the lines, which include ``<li>``.
 
 Type ``<c-y>m``.
 
-.. code:: highlight
+.. code-block:: rest
 
    <ul>
      <li class="list1"></li><li class="list2"></li><li class="list3"></li>
@@ -234,7 +234,7 @@ Remove Tags
 
 Move cursor in block
 
-.. code:: highlight
+.. code-block:: rest
 
    <div class="foo">
        <a>cursor is here</a>
@@ -242,7 +242,7 @@ Move cursor in block
 
 Type ``<c-y>k`` in Insert mode.
 
-.. code:: highlight
+.. code-block:: rest
 
    <div class="foo">
 
@@ -255,7 +255,7 @@ Split/Join Tags
 
 Move the cursor inside the block.
 
-.. code:: highlight
+.. code-block:: rest
 
    <div class="foo">
        cursor is here
@@ -263,13 +263,13 @@ Move the cursor inside the block.
 
 Type ``<c-y>j`` in Insert mode.
 
-.. code:: highlight
+.. code-block:: rest
 
    <div class="foo"/>
 
 And then type ``<c-y>j`` in there again.
 
-.. code:: highlight
+.. code-block:: rest
 
    <div class="foo">
    </div>
@@ -279,7 +279,7 @@ Toggle Comments
 
 Move cursor inside the block.
 
-.. code:: highlight
+.. code-block:: rest
 
    <div>
        hello world
@@ -287,7 +287,7 @@ Move cursor inside the block.
 
 Type ``<c-y>/`` in Insert mode.
 
-.. code:: highlight
+.. code-block:: rest
 
    <!-- <div>
        hello world
@@ -295,7 +295,7 @@ Type ``<c-y>/`` in Insert mode.
 
 Type ``<c-y>/`` in there again.
 
-.. code:: highlight
+.. code-block:: rest
 
    <div>
        hello world
@@ -306,13 +306,13 @@ Make Anchors from URLs
 
 Move cursor to the URL.
 
-.. code:: highlight
+.. code-block:: rest
 
    http://www.google.com/
 
 Type ``<c-y>a``
 
-.. code:: highlight
+.. code-block:: rest
 
    <a href="http://www.google.com/">Google</a>
 
@@ -321,13 +321,13 @@ Make Quoted Text from URLs
 
 Move cursor to the URL
 
-.. code:: highlight
+.. code-block:: rest
 
    http://github.com/
 
 Type ``<c-y>A``.
 
-.. code:: highlight
+.. code-block:: rest
 
    <blockquote class="quote">
      <a href="http://github.com/">Secure source code hosting and collaborative development - GitHub</a><br />
@@ -340,7 +340,7 @@ Enable emmet.vim for the language you using
 
 You can customize the behavior of the languages you are using.
 
-.. code:: highlight
+.. code-block:: rest
 
    let g:user_emmet_settings = {
      'php' : {

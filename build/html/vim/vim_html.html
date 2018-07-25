@@ -161,16 +161,31 @@ me</a></p>
 <div class="section" id="live-preview-of-html">
 <h3>Live Preview of HTML<a class="headerlink" href="#live-preview-of-html" title="Permalink to this headline">¶</a></h3>
 <p>Run the following in the root folder:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>$ python -m SimpleHTTPServer 8080
+</pre></div>
+</div>
 </div>
 <div class="section" id="editing-html">
 <h3>Editing HTML<a class="headerlink" href="#editing-html" title="Permalink to this headline">¶</a></h3>
 <p>To delete blank lines:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:g/^$/d
+</pre></div>
+</div>
 <p>To strip trailing whitespace:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:%s/\s\+$//e
+</pre></div>
+</div>
 <p>To remove leading whitespace from range of lines:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:19,25s/^\s\+//
+</pre></div>
+</div>
 </div>
 <div class="section" id="tidy">
 <h3>Tidy<a class="headerlink" href="#tidy" title="Permalink to this headline">¶</a></h3>
 <p>Pipe the buffer through Tidy to get clean HTML:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:%!tidy -qicbn -asxhtml
+</pre></div>
+</div>
 <table border="1" class="docutils">
 <colgroup>
 <col width="37%" />
@@ -206,6 +221,9 @@ me</a></p>
 <p><a class="reference external" href="http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/">http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/</a></p>
 <p>Use the bang Ex command to filter the contents of the current buffer
 through a pandoc pipeline:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:%!pandoc --from=html --to=markdown | pandoc --from=markdown --to=html
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="emmet">
@@ -296,14 +314,46 @@ Emmet.vim</a></p>
 <div class="section" id="expand-an-abbreviation">
 <h4>Expand an Abbreviation<a class="headerlink" href="#expand-an-abbreviation" title="Permalink to this headline">¶</a></h4>
 <p>Type the abbreviation as <code class="docutils literal notranslate"><span class="pre">div&gt;p#foo$*3&gt;a</span></code> and type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;,</span></code>.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;div&gt;</span>
+  &lt;p id=&quot;foo1&quot;&gt;
+      &lt;a href=&quot;&quot;&gt;&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;p id=&quot;foo2&quot;&gt;
+      &lt;a href=&quot;&quot;&gt;&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;p id=&quot;foo3&quot;&gt;
+      &lt;a href=&quot;&quot;&gt;&lt;/a&gt;
+  &lt;/p&gt;
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="wrap-with-an-abbreviation">
 <h4>Wrap with an Abbreviation<a class="headerlink" href="#wrap-with-an-abbreviation" title="Permalink to this headline">¶</a></h4>
 <p>Write as below.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>test1
+test2
+test3
+</pre></div>
+</div>
 <p>Then do visual select (line wise) and type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;,</span></code>.</p>
 <p>Once you get to the Tag: prompt, type <code class="docutils literal notranslate"><span class="pre">ul&gt;li*</span></code>.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ul&gt;</span>
+    &lt;li&gt;test1&lt;/li&gt;
+    &lt;li&gt;test2&lt;/li&gt;
+    &lt;li&gt;test3&lt;/li&gt;
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</div>
 <p>If you type a tag, such as <code class="docutils literal notranslate"><span class="pre">blockquote</span></code>, then you’ll see the
 following:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;blockquote&gt;</span>
+    test1
+    test2
+    test3
+<span class="nt">&lt;/blockquote&gt;</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="balance-tags-inward">
@@ -325,44 +375,129 @@ following:</p>
 <div class="section" id="update-img-sizes">
 <h3>Update <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> Sizes<a class="headerlink" href="#update-img-sizes" title="Permalink to this headline">¶</a></h3>
 <p>Move cursor to the tag.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;img src=&quot;foo.png&quot; /&gt;</span>
+</pre></div>
+</div>
 <p>Type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;i</span></code> on the tag.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;img src=&quot;foo.png&quot; width=&quot;32&quot; height=&quot;48&quot; /&gt;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="merge-lines">
 <h3>Merge Lines<a class="headerlink" href="#merge-lines" title="Permalink to this headline">¶</a></h3>
 <p>Select the lines, which include <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code>.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ul&gt;</span>
+  &lt;li class=&quot;list1&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;list2&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;list3&quot;&gt;&lt;/li&gt;
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</div>
 <p>Type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;m</span></code>.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;ul&gt;</span>
+  &lt;li class=&quot;list1&quot;&gt;&lt;/li&gt;&lt;li class=&quot;list2&quot;&gt;&lt;/li&gt;&lt;li class=&quot;list3&quot;&gt;&lt;/li&gt;
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="remove-tags">
 <h3>Remove Tags<a class="headerlink" href="#remove-tags" title="Permalink to this headline">¶</a></h3>
 <p>Move cursor in block</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;div class=&quot;foo&quot;&gt;</span>
+    &lt;a&gt;cursor is here&lt;/a&gt;
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
 <p>Type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;k</span></code> in Insert mode.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;div class=&quot;foo&quot;&gt;</span>
+
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
 <p>And type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;k</span></code> in there again.</p>
 </div>
 <div class="section" id="split-join-tags">
 <h3>Split/Join Tags<a class="headerlink" href="#split-join-tags" title="Permalink to this headline">¶</a></h3>
 <p>Move the cursor inside the block.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;div class=&quot;foo&quot;&gt;</span>
+    cursor is here
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
 <p>Type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;j</span></code> in Insert mode.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;div class=&quot;foo&quot;/&gt;</span>
+</pre></div>
+</div>
 <p>And then type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;j</span></code> in there again.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;div class=&quot;foo&quot;&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="toggle-comments">
 <h3>Toggle Comments<a class="headerlink" href="#toggle-comments" title="Permalink to this headline">¶</a></h3>
 <p>Move cursor inside the block.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;div&gt;</span>
+    hello world
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
 <p>Type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;/</span></code> in Insert mode.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;!-- &lt;div&gt;</span>
+    hello world
+<span class="nt">&lt;/div&gt;</span> --&gt;
+</pre></div>
+</div>
 <p>Type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;/</span></code> in there again.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;div&gt;</span>
+    hello world
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="make-anchors-from-urls">
 <h3>Make Anchors from URLs<a class="headerlink" href="#make-anchors-from-urls" title="Permalink to this headline">¶</a></h3>
 <p>Move cursor to the URL.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>http://www.google.com/
+</pre></div>
+</div>
 <p>Type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;a</span></code></p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;a href=&quot;http://www.google.com/&quot;&gt;</span>Google&lt;/a&gt;
+</pre></div>
+</div>
 </div>
 <div class="section" id="make-quoted-text-from-urls">
 <h3>Make Quoted Text from URLs<a class="headerlink" href="#make-quoted-text-from-urls" title="Permalink to this headline">¶</a></h3>
 <p>Move cursor to the URL</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>http://github.com/
+</pre></div>
+</div>
 <p>Type <code class="docutils literal notranslate"><span class="pre">&lt;c-y&gt;A</span></code>.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;blockquote class=&quot;quote&quot;&gt;</span>
+  &lt;a href=&quot;http://github.com/&quot;&gt;Secure source code hosting and collaborative development - GitHub&lt;/a&gt;&lt;br /&gt;
+  &lt;p&gt;How does it work? Get up and running in seconds by forking a project, pushing an existing repository...&lt;/p&gt;
+  &lt;cite&gt;http://github.com/&lt;/cite&gt;
+<span class="nt">&lt;/blockquote&gt;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="enable-emmet-vim-for-the-language-you-using">
 <h3>Enable emmet.vim for the language you using<a class="headerlink" href="#enable-emmet-vim-for-the-language-you-using" title="Permalink to this headline">¶</a></h3>
 <p>You can customize the behavior of the languages you are using.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>let g:user_emmet_settings = {
+  &#39;php&#39; : {
+    &#39;extends&#39; : &#39;html&#39;,
+    &#39;filters&#39; : &#39;c&#39;,
+  },
+  &#39;xml&#39; : {
+    &#39;extends&#39; : &#39;html&#39;,
+  },
+  &#39;haml&#39; : {
+    &#39;extends&#39; : &#39;html&#39;,
+  },
+}
+</pre></div>
+</div>
 </div>
 <div class="section" id="html-page">
 <h3>HTML Page<a class="headerlink" href="#html-page" title="Permalink to this headline">¶</a></h3>

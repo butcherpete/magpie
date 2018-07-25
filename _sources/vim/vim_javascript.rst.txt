@@ -23,14 +23,14 @@ You Complete Me
 #. Install with Vundle
 #. Compile YCM with semantic support for C-family languages.
 
-   .. code:: highlight
+   .. code-block:: rest
 
       $ cd ~/.vim/bundle/youcompleteme
       $ ./install.py --clang-completer
 
 #. Compile YCM with semantic support for JavaScript.
 
-   .. code:: highlight
+   .. code-block:: rest
 
       $ cd ~/.vim/bundle/youcompleteme
       $ ./install.py --tern-completer

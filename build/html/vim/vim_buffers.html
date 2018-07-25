@@ -208,7 +208,13 @@ which can be accessed by pressing
 <div class="section" id="opening-multiple-files-into-buffers">
 <h2>Opening Multiple Files into Buffers<a class="headerlink" href="#opening-multiple-files-into-buffers" title="Permalink to this headline">¶</a></h2>
 <p>To open the contents of a directory into the buffer:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:args /path_to_dir/*
+</pre></div>
+</div>
 <p>To open multiple files into the buffer list:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:args a.txt b.txt c.txt
+</pre></div>
+</div>
 <p>To open open files into the buffer list using globs:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -319,6 +325,9 @@ list.</li>
 <h2>Buffers in Airline<a class="headerlink" href="#buffers-in-airline" title="Permalink to this headline">¶</a></h2>
 <p>Tab line in airline automatically displays all buffers if only one tab
 open. Added the following to my <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> file:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>let g:airline#extensions#tabline#enabled = 1
+</pre></div>
+</div>
 </div>
 <div class="section" id="argdo-command">
 <h2>Argdo Command<a class="headerlink" href="#argdo-command" title="Permalink to this headline">¶</a></h2>
@@ -327,16 +336,25 @@ files</a></p>
 <div class="section" id="substitutions-in-multiple-buffers">
 <h3>Substitutions in Multiple Buffers<a class="headerlink" href="#substitutions-in-multiple-buffers" title="Permalink to this headline">¶</a></h3>
 <p>To make substitutions to buffers in the arglist:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:argdo %s/mydoc_sidebar/notes_sidebar/ge
+</pre></div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">e</span></code> flag suppresses errors that may occur if a buffer in the
 arglist does not contain a match for the specified pattern.</p>
 </div>
 <div class="section" id="reverting-changes">
 <h3>Reverting Changes<a class="headerlink" href="#reverting-changes" title="Permalink to this headline">¶</a></h3>
 <p>To revert changes:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:argdo edit!
+</pre></div>
+</div>
 </div>
 <div class="section" id="saving-changes">
 <h3>Saving Changes<a class="headerlink" href="#saving-changes" title="Permalink to this headline">¶</a></h3>
 <p>To save changes to files in arglist:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>:argdo update
+</pre></div>
+</div>
 </div>
 </div>
 </div>
