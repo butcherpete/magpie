@@ -3,6 +3,7 @@
 
 ## Master
 
+...
 root/
     ├── .git/ 
     ├── .DS_Store
@@ -47,18 +48,17 @@ root/
     │   │   ├── up-pressed.png 
     │   │   ├── up.png 
     │   │   └── websupport.js 
-    │   └── modules
-    │       ├── data_acquisition_units.rst
-    │       ├── function_generators.rst
-    │       ├── gyros.rst
-    │       ├── laser_diode_drivers.rst
-    │       ├── lock_in_amplifiers.rst
-    │       ├── optical_power_meters.rst
-    │       ├── oscilloscopes.rst
-    │       ├── rotation_stages.rst
-    │       └── spectrum_analyzers.rst
+    │   ├── doctrees/ 
+    │   │   ├── notes/ 
+    │   │   │   └── note.doctree 
+    │   │   ├── environment.pickle 
+    │   │   └── index.doctree
+    │   └── notes/
+    │       └── notes.html 
     └── source/
         ├── conf.py
         ├── index.rst 
         └── notes/ 
             └── file.rst
+
+...
