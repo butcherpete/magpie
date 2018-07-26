@@ -21,7 +21,7 @@ help:
 .ONESHELL:
 gh-pages:
 	rm -rf /tmp/gh-pages 
-	cp $(BUILDDIR)/html /tmp/gh-pages 
+	cp -r $(BUILDDIR)/html ~/Desktop/gh-pages 
 	git checkout gh-pages 
 
 
