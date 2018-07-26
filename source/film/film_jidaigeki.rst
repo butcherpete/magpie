@@ -50,7 +50,7 @@ Viewed
 
 Queue
 -----
--  *Yoso*, directored by Teinosuke Kinugasa (1963)
+-  *Bronze Magician (*Yoso*), directed by Teinosuke Kinugasa (1963)
 -  *Cruel Story of the Shogunate’s Downfall*, directed by Tai Kato (1964)
 -  *Nina Hunt* (*Ninja Gari*), directed by Tetsuya Yamauchi (1964)
 -  *Samurai Assassin* (*Samurai*), directed by Kihachi Okamoto (1965)

@@ -11,12 +11,13 @@ A second change
 https://github.com/ryan-roemer/sphinx-bootstrap-theme
 
 .. toctree::
-  :maxdepth: 2
-  :caption: Contents:
+  :maxdepth: 1
+  :caption: Word Horde 
 
   notes/notes
   film/film
   vim/vim
+  sphinx/sphinx
   javascript/javascript
 
 
