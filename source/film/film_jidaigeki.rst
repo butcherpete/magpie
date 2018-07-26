@@ -5,68 +5,79 @@ Jidaigeki Film
 Viewed
 ------
 
--  *The Men Who Tread on the Tiger’s Tail* (*Tora no O o Fumu
-   Otokotachi*), directed by Akira Kurosawa (1945) ★★★
--  *Rashōmon*, directed by Akira Kurosawa (1950) ★★★★
--  *Seven Samurai* (*Shichinin no Samurai*), directed by Akira Kurosawa
-   (1954) ★★★★★
--  *Samurai I: Musahi Miyamoto* (*Musahi Miyamoto*), directed by Hiroshi
-   Inagaki (1954) ★★★★
--  *Samurai II: Duel at Ichijoji Temple* (*Zoku Miyamoto Musashi:
-   Ichijōji no Kettō*), directed by Hiroshi Inagaki (1955) ★★★
--  *Samurai III: Duel at Ganryu Island* (*Miyamoto Musashi kanketsuhen:
-   kettō Ganryūjima*), directed by Hiroshi Inagaki (1956) ★★★
--  *Throne of Blood* (*Kumonosu-jō*), directed by Akira Kurosawa (1957)
-   ★★★★★
--  *Hidden Fortress* (*Kakushi toride no san akunin*), directed by Akira Kurosawa (1958) ★★★
+- *The Men Who Tread on the Tiger’s Tail* (*Tora no O o Fumu Otokotachi*), directed by Akira Kurosawa (1945) ★★★
+- *Rashōmon*, directed by Akira Kurosawa (1950) ★★★★
+- *Vendetta for a Samurai* (*Araki Mataemon: Kettō kagiya no tsuji*), directed by Kazuo Mori (1952) ★★★
+-  *Gate of Hell* (*Jigokumon*), directored by Teinosuke Kinugasa (1953) ★★★
+- *Seven Samurai* (*Shichinin no Samurai*), directed by Akira Kurosawa (1954) ★★★★★
+- *Samurai I: Musahi Miyamoto* (*Musahi Miyamoto*), directed by Hiroshi Inagaki (1954) ★★★★
+- *Samurai II: Duel at Ichijoji Temple* (*Zoku Miyamoto Musashi: Ichijōji no Kettō*), directed by Hiroshi Inagaki (1955) ★★★
+- *Samurai III: Duel at Ganryu Island* (*Miyamoto Musashi kanketsuhen: kettō Ganryūjima*), directed by Hiroshi Inagaki (1956) ★★★
+- *Throne of Blood* (*Kumonosu-jō*), directed by Akira Kurosawa (1957) ★★★★★
+- *Hidden Fortress* (*Kakushi toride no san akunin*), directed by Akira Kurosawa (1958) ★★★
 - *The Night Drum* (*Yoru no tsuzumi*), directed by Tadashi Imai (1958) ★★★
--  *Yojimbo* (*Yōjinbō*), directored by Akira Kurosawa (1961) ★★★★★
--  *Sanjuro* (*Tsubaki Sanjūrō*), directored by Akira Kurosawa (1961)
-   ★★★
--  *Harakiri* (*Seppuku*), directed by Masaki Kobayashi (1962) ★★★★★
--  *Bushido zankoku monogatari*, directed by Tadashi Imai (1963) ★★★
--  *Daisan no Kagemusha*, directed by Umetsugu Inoue (1963) ★★★★
+- *Samurai Saga* (*Aru kengo no shōgai*), directed by Hiroshi Inagaki (1959)  ★★
+- *Yojimbo* (*Yōjinbō*), directored by Akira Kurosawa (1961) ★★★★★
+- *Sanjuro* (*Tsubaki Sanjūrō*), directored by Akira Kurosawa (1961) ★★★
+- *Harakiri* (*Seppuku*), directed by Masaki Kobayashi (1962) ★★★★★
+- *47 Samurai* (*Chūshingura: Hana no Maki, Yuki no Maki*), directed by Hiroshi Inagaki (1962) ★★
+- *Bushido zankoku monogatari*, directed by Tadashi Imai (1963) ★★★
+- *Daisan no Kagemusha*, directed by Umetsugu Inoue (1963) ★★★★
 - *13 Assassins* (*Jūsan-nin no shikaku*), directed by Eiichi Kudo (1963) ★★★★
--  Assassination (*Ansatsu*), directed by Mashahiro Shnoda (1964) ★★★★★
--  *Revenge* (*Adauchi*), directed by Tadashi Imai (1964) ★★★★
+- *Assassination* (*Ansatsu*), directed by Mashahiro Shnoda (1964) ★★★★★
+- *Revenge* (*Adauchi*), directed by Tadashi Imai (1964) ★★★★
 - *The Great Killing* (*Dai satusujin*), directed by Eiichi Kudo (1964) ★★★
--  *Onibaba*, directed by Kaneto Shindo (1964) ★★★
--  *Kwaidan*, directed by Masaki Kobayashi (1965) ★★★
--  *Sword of the Beast*, directed by Hideo Gosha (1965) ★★★
--  *Samurai Spy* (*Ibun Sarutobi Sasuke*), directed by Mashahiro Shnoda
-   (1965) ★★★
--  *Three Outlaw Samurai* (*Sanbiki no Samurai*), directed by Hideo
-   Gosha (1964) ★★★
--  *Sword of Doom* (*Daibosatsu Tōge*), directed by Kihachi Okamoto
-   (1966) ★★★★★
--  *Samurai Rebellion* (*Jōi-uchi: Hairyō tsuma shimatsu*), directed by
-   Masaki Kobayahsi (1967) ★★★★★
--  *Kuroneko* (*Yabu no Naka no Kuroneko*), directed by Kaneto Shindo
-   (1968) ★★★
--  *Kill!* (*Kiru*), directed by Kihachi Okamoto (1968) ★★★
--  *Double Suicide* (*Shinjū ten no Amijima*), directed by Mashahiro
-   Shnoda (1969) ★★★
--  *Zatoichi Meets Yojimbo* (*Zatōichi to Yōjinbō*), directed by Kihachi
-   Okamoto (1970) ★★
--  *Bandits vs. Samurai Squadron* (*Kumokiri Nizaemon*), directed by
-   Hideo Gosha (1978) ★★
--  *Kagemusha*, directed by Akira Kurosawa (1980) ★★★★
--  *Ran*, directed by Akira Kurosawa (1985) ★★★★★
+- *Onibaba*, directed by Kaneto Shindo (1964) ★★★
+- *Three Outlaw Samurai* (*Sanbiki no Samurai*), directed by Hideo Gosha (1964) ★★★
+- *Kwaidan*, directed by Masaki Kobayashi (1965) ★★★
+- *Sword of the Beast*, directed by Hideo Gosha (1965) ★★★
+- *Samurai Spy* (*Ibun Sarutobi Sasuke*), directed by Mashahiro Shnoda (1965) ★★★
+- *Sword of Doom* (*Daibosatsu Tōge*), directed by Kihachi Okamoto (1966) ★★★★★
+- *Samurai Rebellion* (*Jōi-uchi: Hairyō tsuma shimatsu*), directed by Masaki Kobayahsi (1967) ★★★★★
+- *11 Samurai* (*Jūichinin no Samurai*), directed by Eiichi Kudo (1967) ★★★
+- *Kuroneko* (*Yabu no Naka no Kuroneko*), directed by Kaneto Shindo (1968) ★★★
+- *Kill!* (*Kiru*), directed by Kihachi Okamoto (1968) ★★★
+- *Double Suicide* (*Shinjū ten no Amijima*), directed by Mashahiro Shinonda (1969) ★★★
+- *Zatoichi Meets Yojimbo* (*Zatōichi to Yōjinbō*), directed by Kihachi Okamoto (1970) ★★
+- *Bandits vs. Samurai Squadron* (*Kumokiri Nizaemon*), directed by Hideo Gosha (1978) ★★
+- *Kagemusha*, directed by Akira Kurosawa (1980) ★★★★
+- *Ran*, directed by Akira Kurosawa (1985) ★★★★★
+- *Ronin-gai*, directed by Kazuo Kuroki (1990) ★★★
+- *Twilight Samurai* (*Tasogare Seibel*), directed by Yōji Yamada (2002) ★★★
 
 Queue
 -----
 -  *Yoso*, directored by Teinosuke Kinugasa (1963)
--  *Cruel Story of the Shogunate’s Downfall*, directed by Tai Kato
-   (1964)
+-  *Cruel Story of the Shogunate’s Downfall*, directed by Tai Kato (1964)
 -  *Nina Hunt* (*Ninja Gari*), directed by Tetsuya Yamauchi (1964)
 -  *Samurai Assassin* (*Samurai*), directed by Kihachi Okamoto (1965)
 -  *Blazing Sword* (*Moeyo-ken*), directed by Hirokazu Ichimura (1966)
 -  *The Betrayal* (*Daisatsujin orochi*), directed by Tokuzo Tanaka
    (1966)
--  *Eleven Samurai* (*Ju-ichinin no samurai*), directed by Eiichi Kudo
-   (1967)
--  *Cruel Ghost Legend* (*Kaidan Zankoku Monogatari*), directed by Kazuo
-   Hase (1968)
+-  *Eleven Samurai* (*Ju-ichinin no samurai*), directed by Eiichi Kudo (1967)
+-  *Cruel Ghost Legend* (*Kaidan Zankoku Monogatari*), directed by Kazuo Hase (1968)
+-  *Goyokin*, directed by Hideo Gosha (1969)
+-  *Watch Out Crimson Bat*, directed by Hirokazu Ichimura (1969)
 -  *Tenchu!* (*Hitokiri*), directed by Hideo Gosha (1969)
+-  *Samurai Banners* (*Fūrin Kazan*), directed by Hiroshi Inagaki (1969)
 -  *Portrait of Hell*, directed by Shiro Toyoda (1969)
+-  *Mission: Iron Castle*, directed by Kazuo Mori (1970)
+-  *The Ambitious*, directed by Daisuke Itō (1970)
+-  *Incident at Blood Pass*, directed by Hiroshi Inagaki (1970)
 -  *Demons*, directed by Toshiro Matsumoto (1971)
+-  *Shogun's Samurai*, directed by Kinji Fukasaku (1978)
+-  *The Fall of Ako Castle*, directed by Kinji Fukasaku (1978)
+-  *The Bushido Blade*, directed by Tsugunobu Kotani (1981)
+-  *The Legend of the Eight Samurai*, directed by Kinji Fukasaku (1984)
+-  *When the Last Sword is Drawn*, directed by Yojiro Takita (2003)
+-  *Zatoichi*, directed by Beat Takeshi (2003)
+-  *The Hidden Blade*, directed by Yoji Yamada (2004)
+-  *Love and Honor*, directed by Yoji Yamada (2006)
+-  *Castle Under Fiery Skies*, directed by Mitsuoshi Tanaka (2009)
+-  *13 Assassins*, directed by Takashi Miike (2010)
+-  *Sword of Desperation*, directed by Hideyuki Hirayama (2010)
+-  *Ichimei*, directed by Takashi Miike (2011)
+-  *Rurouni Kenshin*, directed by Keishi Otomo (2012)
+-  *Kyoto Inferno*, directed by Keishi Otomo (2014)
+-  *The Legend Ends*, directed by Keishi Otomo (2014)
+
