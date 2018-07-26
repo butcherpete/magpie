@@ -110,11 +110,11 @@ Just like where you use ``:grep``, ``:grepadd``, ``:lgrep``, and
 | n}``                              | screen (current tab page only)    |
 |                                   | files for the ``{pattern}``.      |
 +-----------------------------------+-----------------------------------+
-| ``:LAckWindow [options] {pattern} | Just like ``:AckWindow`` but      |
-| ``                                | instead of the ``quickfix`` list, |
-|                                   | matches are placed in the current |
-|                                   | location-list.                    |
-+-----------------------------------+-----------------------------------+
+
+
+:code:`LAckWindow [options] {pattern}` 
+  Just like :code:`:AckWindow` but instead of the :code:`quickfix` list, matches are placed in the current location-list.                    |
+
 
 Ack Quickfix Keyboard Shortcuts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

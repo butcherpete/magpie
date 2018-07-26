@@ -6,7 +6,7 @@
 ###################
 omnibus pandemonium
 ###################
-Test change
+A second change
 
 https://github.com/ryan-roemer/sphinx-bootstrap-theme
 
