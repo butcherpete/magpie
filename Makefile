@@ -25,6 +25,7 @@ gh-pages:
 	git checkout gh-pages 
 	rm -rf *
 	cp -r ~/Desktop/gh-pages/* .
+	touch .nojekyll 
 	git add .
 	git commit -m "Update to gh-pages" 
 	git push origin gh-pages 
