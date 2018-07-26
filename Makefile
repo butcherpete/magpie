@@ -19,7 +19,7 @@ help:
 
 
 .PHONY: gh-pages
-.ONESHELL
+.ONESHELL:
   gh-pages:
   rm -rf /tmp/gh-pages
   cp -r $(BUILDDIR)/html /tmp/gh-pages
