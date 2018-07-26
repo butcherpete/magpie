@@ -12,24 +12,35 @@ SPHINXPROJ    = Magpie
 SOURCEDIR     = source
 BUILDDIR      = build
 
+.PHONY: help Makefile
+
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY: help Makefile
+
+.PHONY: gh-pages
+.ONESHELL
+  gh-pages:
+  rm -rf /tmp/gh-pages
+  cp -r $(BUILDDIR)/html /tmp/gh-pages
+  git checkout gh-pages
+  cd .. && rm -rf * && cp -r /tmp/gh-pages/* . && git add . & git commit -m "Updated gh-pages" && git push && git checkout master 
 
 
-gh-pages:
-	git checkout gh-pages
-	rm -rf build _sources _static 
-	touch .nojekyll 
-	git checkout master $(GH_PAGES_SOURCES)
-	git reset HEAD
-	make html
-	mv ./build/html/* ./
-	rm -rf $(GH_PAGES_SOURCES) build
-	git add -A
-	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
-	git push origin gh-pages 
+
+
+# gh-pages:
+# 	git checkout gh-pages
+# 	rm -rf build _sources _static 
+# 	touch .nojekyll 
+# 	git checkout master $(GH_PAGES_SOURCES)
+# 	git reset HEAD
+# 	make html
+# 	mv ./build/html/* ./
+# 	rm -rf $(GH_PAGES_SOURCES) build
+# 	git add -A
+# 	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
+# 	git push origin gh-pages 
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
