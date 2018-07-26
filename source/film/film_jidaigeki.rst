@@ -24,14 +24,14 @@ Viewed
 - *Bushido zankoku monogatari*, directed by Tadashi Imai (1963) ★★★
 - *Daisan no Kagemusha*, directed by Umetsugu Inoue (1963) ★★★★
 - *13 Assassins* (*Jūsan-nin no shikaku*), directed by Eiichi Kudo (1963) ★★★★
-- *Assassination* (*Ansatsu*), directed by Mashahiro Shnoda (1964) ★★★★★
+- *Assassination* (*Ansatsu*), directed by Mashahiro Shinonda (1964) ★★★★★
 - *Revenge* (*Adauchi*), directed by Tadashi Imai (1964) ★★★★
 - *The Great Killing* (*Dai satusujin*), directed by Eiichi Kudo (1964) ★★★
 - *Onibaba*, directed by Kaneto Shindo (1964) ★★★
 - *Three Outlaw Samurai* (*Sanbiki no Samurai*), directed by Hideo Gosha (1964) ★★★
 - *Kwaidan*, directed by Masaki Kobayashi (1965) ★★★
 - *Sword of the Beast*, directed by Hideo Gosha (1965) ★★★
-- *Samurai Spy* (*Ibun Sarutobi Sasuke*), directed by Mashahiro Shnoda (1965) ★★★
+- *Samurai Spy* (*Ibun Sarutobi Sasuke*), directed by Mashahiro Shinonda (1965) ★★★
 - *Sword of Doom* (*Daibosatsu Tōge*), directed by Kihachi Okamoto (1966) ★★★★★
 - *Samurai Rebellion* (*Jōi-uchi: Hairyō tsuma shimatsu*), directed by Masaki Kobayahsi (1967) ★★★★★
 - *11 Samurai* (*Jūichinin no Samurai*), directed by Eiichi Kudo (1967) ★★★
@@ -39,11 +39,14 @@ Viewed
 - *Kill!* (*Kiru*), directed by Kihachi Okamoto (1968) ★★★
 - *Double Suicide* (*Shinjū ten no Amijima*), directed by Mashahiro Shinonda (1969) ★★★
 - *Zatoichi Meets Yojimbo* (*Zatōichi to Yōjinbō*), directed by Kihachi Okamoto (1970) ★★
+- *Lady Snowblood* (*Shurayuki-hime*), directed by Toshiya Fujita (1973) ★★★
 - *Bandits vs. Samurai Squadron* (*Kumokiri Nizaemon*), directed by Hideo Gosha (1978) ★★
 - *Kagemusha*, directed by Akira Kurosawa (1980) ★★★★
 - *Ran*, directed by Akira Kurosawa (1985) ★★★★★
-- *Ronin-gai*, directed by Kazuo Kuroki (1990) ★★★
-- *Twilight Samurai* (*Tasogare Seibel*), directed by Yōji Yamada (2002) ★★★
+- *Ronin-gai*, directed by Kazuo Kuroki (1990) ★★
+- *Twilight Samurai* (*Tasogare Seibel*), directed by Yōji Yamada (2002) ★★★★
+- *Zatoichi*, directed by Beat Takeshi (2003) ★★★
+- *13 Assassins*, directed by Takashi Miike (2010) ★★★★
 
 Queue
 -----
@@ -54,7 +57,6 @@ Queue
 -  *Blazing Sword* (*Moeyo-ken*), directed by Hirokazu Ichimura (1966)
 -  *The Betrayal* (*Daisatsujin orochi*), directed by Tokuzo Tanaka
    (1966)
--  *Eleven Samurai* (*Ju-ichinin no samurai*), directed by Eiichi Kudo (1967)
 -  *Cruel Ghost Legend* (*Kaidan Zankoku Monogatari*), directed by Kazuo Hase (1968)
 -  *Goyokin*, directed by Hideo Gosha (1969)
 -  *Watch Out Crimson Bat*, directed by Hirokazu Ichimura (1969)
@@ -70,14 +72,38 @@ Queue
 -  *The Bushido Blade*, directed by Tsugunobu Kotani (1981)
 -  *The Legend of the Eight Samurai*, directed by Kinji Fukasaku (1984)
 -  *When the Last Sword is Drawn*, directed by Yojiro Takita (2003)
--  *Zatoichi*, directed by Beat Takeshi (2003)
 -  *The Hidden Blade*, directed by Yoji Yamada (2004)
 -  *Love and Honor*, directed by Yoji Yamada (2006)
 -  *Castle Under Fiery Skies*, directed by Mitsuoshi Tanaka (2009)
--  *13 Assassins*, directed by Takashi Miike (2010)
 -  *Sword of Desperation*, directed by Hideyuki Hirayama (2010)
 -  *Ichimei*, directed by Takashi Miike (2011)
 -  *Rurouni Kenshin*, directed by Keishi Otomo (2012)
 -  *Kyoto Inferno*, directed by Keishi Otomo (2014)
 -  *The Legend Ends*, directed by Keishi Otomo (2014)
 
+Zatoichi
+--------
+- *The Tale of Zatoichi* (1962)
+- *The Tale of Zatoichi Continues* (1962)
+- *New Tale of Zatoichi* (1963)
+- *Zatoichi the Fugitive* (1963)
+- *Zatoichi on the Road* (1963)
+- *Zatoichi and the Chest of Gold* (1964)
+- *Zatoichi's Flashing Sword* (1964)
+- *Fight, Zatoichi, Fight* (1964)
+- *Adventures of Zatoichi* (1964)
+- *Zatoichi's Revenge* (1965)
+- *Zatoichi and the Doomed Man* (1965)
+- *Zatoichi and the Chess Expert* (1965)
+- *Zatoichi's Vengeance* (1966)
+- *Zatoichi's Pilgrimage* (1966)
+- *Zatoichi's Cane Sword* (1967)
+- *Zatoichi the Outlaw* (1967)
+- *Zatoichi Challenged* (1967)
+- *Zatoichi and the Fugitives* (1968)
+- *Samaritan Zatoichi* (1968)
+- *Zatoichi Meets Yojimbo* (1970)
+- *Zatoichi Meets the One-Armed Swordsman* (1971)
+- *Zatoichi at Large* (1972)
+- *Zatoichi in Desperation* (1972)
+- *Zatoichi's Conspiracty* (1972)
