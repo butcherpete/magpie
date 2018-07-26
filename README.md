@@ -105,22 +105,50 @@ Ideally, the site should include as few files as needed:
 	    ├── .git/ 
 	    ├── .DS_Store
 	    ├── .gitignore
-      └── html/ 
-          ├── _sources/ 
-          ├── _static/ 
-          ├── .buildinfo 
-          ├── .nojekyl 
-          ├── genindex.html 
-          ├── index.html 
-          ├── objects.inv 
-          ├── search.html 
-          ├── searchindex.js 
-          ├── dir1/ 
-          │   └── file.html 
-          ├── dir2/ 
-          │   └── file.html 
-          └── dir3/ 
-              └── file.html 
+	    └── html/ 
+            ├── _sources/ 
+            ├── _static/ 
+            │   ├── bootstrap-2.3.2/ 
+            │   ├── bootstrap-3.3.7/ 
+            │   ├── bootswatch-2.3.2/ 
+            │   ├── bootswatch-3.3.7/ 
+            │   ├── js/ 
+            │   ├── agogo.css 
+            │   ├── ajax-loader.gif 
+            │   ├── alabaster.css 
+            │   ├── basic.css 
+            │   ├── comment-bright.png 
+            │   ├── comment-close.png
+            │   ├── custom.css 
+            │   ├── doctools.js 
+            │   ├── documentation_option.js 
+            │   ├── down-pressed.png 
+            │   ├── down.png 
+            │   ├── file.png 
+            │   ├── jquery-3.2.1.js 
+            │   ├── jquery.js 
+            │   ├── minus.png 
+            │   ├── plus.png
+            │   ├── pygments.css 
+            │   ├── searchtools.js 
+            │   ├── underscore-1.3.1.js 
+            │   ├── underscore.js 
+            │   ├── up-pressed.png 
+            │   ├── up.png 
+            │   └── websupport.js 
+            ├── .buildinfo 
+            ├── .nojekyl 
+            ├── genindex.html 
+            ├── index.html 
+            ├── objects.inv 
+            ├── search.html 
+            ├── searchindex.js 
+            ├── dir1/ 
+            │   └── file.html 
+            ├── dir2/ 
+            │   └── file.html 
+            └── dir3/ 
+                └── file.html 
 
 
 ...
