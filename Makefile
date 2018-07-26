@@ -24,7 +24,7 @@ gh-pages:
 	cp -r $(BUILDDIR)/html ~/Desktop/gh-pages 
 	git checkout gh-pages 
 	rm -rf *
-	cp -r ~/Desktop/gh-pages/* .
+	cp -r /tmp/gh-pages/* .
 	touch .nojekyll 
 	git add .
 	git commit -m "Update to gh-pages" 
