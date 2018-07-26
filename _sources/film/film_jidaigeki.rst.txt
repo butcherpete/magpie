@@ -18,16 +18,18 @@ Viewed
    kettō Ganryūjima*), directed by Hiroshi Inagaki (1956) ★★★
 -  *Throne of Blood* (*Kumonosu-jō*), directed by Akira Kurosawa (1957)
    ★★★★★
--  *Hidden Fortress* (*Kakushi toride no san akunin*), directed by Akira
-   Kurosawa (1958) ★★★
+-  *Hidden Fortress* (*Kakushi toride no san akunin*), directed by Akira Kurosawa (1958) ★★★
+- *The Night Drum* (*Yoru no tsuzumi*), directed by Tadashi Imai (1958) ★★★
 -  *Yojimbo* (*Yōjinbō*), directored by Akira Kurosawa (1961) ★★★★★
 -  *Sanjuro* (*Tsubaki Sanjūrō*), directored by Akira Kurosawa (1961)
    ★★★
 -  *Harakiri* (*Seppuku*), directed by Masaki Kobayashi (1962) ★★★★★
 -  *Bushido zankoku monogatari*, directed by Tadashi Imai (1963) ★★★
 -  *Daisan no Kagemusha*, directed by Umetsugu Inoue (1963) ★★★★
+- *13 Assassins* (*Jūsan-nin no shikaku*), directed by Eiichi Kudo (1963) ★★★★
 -  Assassination (*Ansatsu*), directed by Mashahiro Shnoda (1964) ★★★★★
 -  *Revenge* (*Adauchi*), directed by Tadashi Imai (1964) ★★★★
+- *The Great Killing* (*Dai satusujin*), directed by Eiichi Kudo (1964) ★★★
 -  *Onibaba*, directed by Kaneto Shindo (1964) ★★★
 -  *Kwaidan*, directed by Masaki Kobayashi (1965) ★★★
 -  *Sword of the Beast*, directed by Hideo Gosha (1965) ★★★
@@ -53,11 +55,9 @@ Viewed
 
 Queue
 -----
-
 -  *Yoso*, directored by Teinosuke Kinugasa (1963)
 -  *Cruel Story of the Shogunate’s Downfall*, directed by Tai Kato
    (1964)
--  *The Great Duel* (*Dai satsujin*), directed by Eiichi Kudo (1964)
 -  *Nina Hunt* (*Ninja Gari*), directed by Tetsuya Yamauchi (1964)
 -  *Samurai Assassin* (*Samurai*), directed by Kihachi Okamoto (1965)
 -  *Blazing Sword* (*Moeyo-ken*), directed by Hirokazu Ichimura (1966)
