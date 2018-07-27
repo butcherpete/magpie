@@ -104,6 +104,16 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # so a file named "default.css" will overwrite the builtin "default.css".
 # html_static_path = ['_static']
 
+
+# If given, this must be the name of an image file (path relative to the 
+# configuration directory) that is the favicon of the docs. Modern browsers 
+# use this as the icon for tabs, windows and bookmarks. It should be a 
+# Windows-style icon file (.ico), which is 16x16 or 32x32 pixels large
+html_favicon = ['images/favicon.ico']
+
+
+
+
 html_static_path = []
 
 # Custom sidebar templates, must be a dictionary that maps document names
