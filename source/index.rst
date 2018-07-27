@@ -18,6 +18,7 @@ https://github.com/ryan-roemer/sphinx-bootstrap-theme
   vim/vim
   sphinx/sphinx
   javascript/javascript
+  glossary/glossary
 
 
 
