@@ -1,7 +1,7 @@
 .. include:: <isopub.txt>
 
 #########################
-Bootstrap Template
+Themes and Templates
 #########################
 
 **********
@@ -14,9 +14,31 @@ To Do List
 **********
 
 |check| Import docutils include files for special characters
+
 |check| Fork sphinx-bootstrap-theme.
-- Update using Bootstrap CSS.
-- Rewrite Theme Templates.
+
+Fork pyramid-sphinx-themes.
+
+Update using Bootstrap CSS.
+
+Rewrite Theme Templates.
+
+****************
+Bootstrap-Sphinx
+****************
+
+https://github.com/butcherpete/sphinx-template
+
+****************
+Pyramid
+****************
+
+- https://docs.pylonsproject.org/projects/pyramid_layout/en/latest/_themes/README.html
+- https://github.com/Pylons/pylons_sphinx_theme
+-  https://docs.pylonsproject.org/projects/pyramid_layout/en/latest/index.html#
+- https://pylonsproject.org/
+
+
 
 **********
 Resources
