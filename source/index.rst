@@ -12,7 +12,6 @@ https://github.com/ryan-roemer/sphinx-bootstrap-theme
 
 .. toctree::
   :maxdepth: 1
-  :caption: Word Horde 
 
   notes/notes
   film/film
