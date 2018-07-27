@@ -74,7 +74,19 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Glossary Hover Boxes</a></li>
+<li><a class="reference internal" href="#">Glossary Hover Boxes</a><ul>
+<li><a class="reference internal" href="#goals">Goals</a></li>
+<li><a class="reference internal" href="#to-do-list">To Do List</a></li>
+<li><a class="reference internal" href="#existing-term-role">Existing Term Role</a></li>
+<li><a class="reference internal" href="#hover-role">Hover Role</a><ul>
+<li><a class="reference internal" href="#signature">Signature</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#defining-custom-roles-in-sphinx">Defining Custom Roles in Sphinx</a></li>
+<li><a class="reference internal" href="#creating-custom-link-roles">Creating Custom Link Roles</a></li>
+<li><a class="reference internal" href="#resources">Resources</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -124,6 +136,81 @@
       
   <div class="section" id="glossary-hover-boxes">
 <h1>Glossary Hover Boxes<a class="headerlink" href="#glossary-hover-boxes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="to-do-list">
+<h2>To Do List<a class="headerlink" href="#to-do-list" title="Permalink to this headline">¶</a></h2>
+<p>Test gist <a class="reference external" href="https://gist.github.com/shimizukawa/3718712">https://gist.github.com/shimizukawa/3718712</a>
+Create custom role that copies the existing <code class="code docutils literal notranslate"><span class="pre">term</span></code> role.
+Extend custom role to specify a unique CSS class.
+Extend custom role to use JavaScript (if possible).
+Define CSS class.</p>
+</div>
+<div class="section" id="existing-term-role">
+<h2>Existing Term Role<a class="headerlink" href="#existing-term-role" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://docutils.sourceforge.net/docutils/parsers/rst/states.py">http://docutils.sourceforge.net/docutils/parsers/rst/states.py</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hover-role">
+<h2>Hover Role<a class="headerlink" href="#hover-role" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-roles.html">http://docutils.sourceforge.net/docs/howto/rst-roles.html</a></p>
+<p><a class="reference external" href="https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/">https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hover_reference_role</span><span class="p">(</span><span class="n">role</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">inliner</span><span class="p">,</span>
+            <span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="n">content</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="n">code</span><span class="o">...</span>
+
+<span class="c1"># Set function attributes for customization:</span>
+<span class="n">role_fn</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">role_fn</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="n">register_canonical_role</span><span class="p">();</span>
+</pre></div>
+</div>
+<div class="section" id="signature">
+<h3>Signature<a class="headerlink" href="#signature" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>def role_fn(name, rawtext, text, lineno, inliner,</dt>
+<dd><blockquote class="first">
+<div>options={}, content=[]):</div></blockquote>
+<p class="last">code…</p>
+</dd>
+</dl>
+<p># Set function attributes for customization:
+role_fn.options = …
+role_fn.content = …</p>
+</div>
+</div>
+<div class="section" id="defining-custom-roles-in-sphinx">
+<h2>Defining Custom Roles in Sphinx<a class="headerlink" href="#defining-custom-roles-in-sphinx" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/">https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/</a></p>
+</div>
+<div class="section" id="creating-custom-link-roles">
+<h2>Creating Custom Link Roles<a class="headerlink" href="#creating-custom-link-roles" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://protips.readthedocs.io/link-roles.html">http://protips.readthedocs.io/link-roles.html</a></p>
+<p><strong>Directory Structure</strong></p>
+<dl class="docutils">
+<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/assets">assets</a></dt>
+<dd>Image assets for use in the game.
+These assets can be referred from webpack code by <code class="docutils literal notranslate"><span class="pre">require('assets/...')</span></code>.</dd>
+<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/bin">bin</a></dt>
+<dd>Useful scripts for routine work.
+Examples include setting up Git commit hooks and releasing a new version.</dd>
+<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/config">config</a></dt>
+<dd>Configuration code for webpack and other things.</dd>
+</dl>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/">An idiot’s guide to Python documentation with Sphinx and ReadTheDocs</a>
+- <a class="reference external" href="http://docutils.sourceforge.net/docs/dev/hacking.html">Docutils Hacker’s Guide</a>
+- <a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-directives.html#specify-directive-arguments-options-and-content">Creating reStructuredText Directives</a>
+- <a class="reference external" href="http://inside.mines.edu/~jrosenth/hacking-docutils.html">http://inside.mines.edu/~jrosenth/hacking-docutils.html</a>
+- <a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-roles.html">Creating reStructuredText Interpreted Text Roles</a>
+- <cite>Gist &lt;https://gist.github.com/shimizukawa/3718712&gt;</cite></p>
+</div>
 </div>
 
 
