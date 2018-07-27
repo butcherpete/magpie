@@ -8,7 +8,6 @@ omnibus pandemonium
 ###################
 A second change
 
-https://github.com/ryan-roemer/sphinx-bootstrap-theme
 
 .. toctree::
   :maxdepth: 1

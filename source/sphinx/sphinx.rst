@@ -8,6 +8,7 @@ Sphinx Development
   bootstrap 
   custom-directive 
   extensions 
+  hover-boxes
   jinja 
   js-custom 
   multiple-repos
