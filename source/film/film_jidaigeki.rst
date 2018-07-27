@@ -24,26 +24,29 @@ Viewed
 - *Bushido zankoku monogatari*, directed by Tadashi Imai (1963) ★★★
 - *Daisan no Kagemusha*, directed by Umetsugu Inoue (1963) ★★★★
 - *13 Assassins* (*Jūsan-nin no shikaku*), directed by Eiichi Kudo (1963) ★★★★
-- *Assassination* (*Ansatsu*), directed by Mashahiro Shinonda (1964) ★★★★★
+- *Assassination* (*Ansatsu*), directed by Mashahiro Shinoda (1964) ★★★★★
 - *Revenge* (*Adauchi*), directed by Tadashi Imai (1964) ★★★★
 - *The Great Killing* (*Dai satusujin*), directed by Eiichi Kudo (1964) ★★★
 - *Onibaba*, directed by Kaneto Shindo (1964) ★★★
 - *Three Outlaw Samurai* (*Sanbiki no Samurai*), directed by Hideo Gosha (1964) ★★★
 - *Kwaidan*, directed by Masaki Kobayashi (1965) ★★★
 - *Sword of the Beast*, directed by Hideo Gosha (1965) ★★★
-- *Samurai Spy* (*Ibun Sarutobi Sasuke*), directed by Mashahiro Shinonda (1965) ★★★
+- *Samurai Spy* (*Ibun Sarutobi Sasuke*), directed by Mashahiro Shinoda (1965) ★★★
 - *Sword of Doom* (*Daibosatsu Tōge*), directed by Kihachi Okamoto (1966) ★★★★★
+- *The Secret of the Urn* (*Tange Sazen: Hien iaigiri*), directed by Hideo Gosha (1966) ★★
 - *Samurai Rebellion* (*Jōi-uchi: Hairyō tsuma shimatsu*), directed by Masaki Kobayahsi (1967) ★★★★★
 - *11 Samurai* (*Jūichinin no Samurai*), directed by Eiichi Kudo (1967) ★★★
 - *Kuroneko* (*Yabu no Naka no Kuroneko*), directed by Kaneto Shindo (1968) ★★★
 - *Kill!* (*Kiru*), directed by Kihachi Okamoto (1968) ★★★
-- *Double Suicide* (*Shinjū ten no Amijima*), directed by Mashahiro Shinonda (1969) ★★★
+- *Double Suicide* (*Shinjū ten no Amijima*), directed by Mashahiro Shinoda (1969) ★★★
 - *Zatoichi Meets Yojimbo* (*Zatōichi to Yōjinbō*), directed by Kihachi Okamoto (1970) ★★
 - *Lady Snowblood* (*Shurayuki-hime*), directed by Toshiya Fujita (1973) ★★★
 - *Bandits vs. Samurai Squadron* (*Kumokiri Nizaemon*), directed by Hideo Gosha (1978) ★★
+- *Hunter in the Dark* (*Yami no karyudo*), directed by Hideo Gosha (1979) ★★
 - *Kagemusha*, directed by Akira Kurosawa (1980) ★★★★
 - *Ran*, directed by Akira Kurosawa (1985) ★★★★★
 - *Ronin-gai*, directed by Kazuo Kuroki (1990) ★★
+- *Heatwave* (*Kagerô*), directed by Hideo Gosha (1991) 
 - *Twilight Samurai* (*Tasogare Seibel*), directed by Yōji Yamada (2002) ★★★★
 - *Zatoichi*, directed by Beat Takeshi (2003) ★★★
 - *13 Assassins*, directed by Takashi Miike (2010) ★★★★
