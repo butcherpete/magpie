@@ -1,3 +1,5 @@
+.. include:: /includes/include.txt
+
 ########
 Glossary
 ########
