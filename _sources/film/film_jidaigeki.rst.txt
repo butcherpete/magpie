@@ -46,7 +46,7 @@ Viewed
 - *Kagemusha*, directed by Akira Kurosawa (1980) ★★★★
 - *Ran*, directed by Akira Kurosawa (1985) ★★★★★
 - *Ronin-gai*, directed by Kazuo Kuroki (1990) ★★
-- *Heatwave* (*Kagerô*), directed by Hideo Gosha (1991) 
+- *Heatwave* (*Kagerô*), directed by Hideo Gosha (1991) ★★
 - *Twilight Samurai* (*Tasogare Seibel*), directed by Yōji Yamada (2002) ★★★★
 - *Zatoichi*, directed by Beat Takeshi (2003) ★★★
 - *13 Assassins*, directed by Takashi Miike (2010) ★★★★
