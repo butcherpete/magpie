@@ -9,6 +9,9 @@ Goals
 **********
 Create a custom documentation theme that utilizes Jinja templates, Bootstrap CSS, SASS, gulp, custom JavaScript.
 
+- :term:`theme`
+- :term:`template`
+
 **********
 To Do List
 **********

@@ -5,7 +5,7 @@ Sphinx Development
 .. toctree::
   :maxdepth: 1
 
-  bootstrap 
+  themes 
   custom-directive 
   extensions 
   hover-boxes
