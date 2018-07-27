@@ -1,4 +1,4 @@
-.. include:: isopub.txt
+.. include:: <isopub.txt>
 
 #########################
 Bootstrap Template
