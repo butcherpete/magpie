@@ -1,5 +1,4 @@
 #########################
-Jinja Templates 
+Custom Directives 
 #########################
 
-http://www.sphinx-doc.org/en/stable/templating.html#script_files

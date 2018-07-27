@@ -1,5 +1,4 @@
 #########################
-Jinja Templates 
+Glossary Hover Boxes 
 #########################
 
-http://www.sphinx-doc.org/en/stable/templating.html#script_files
