@@ -74,7 +74,10 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Jinja Templates</a></li>
+<li><a class="reference internal" href="#">Jinja Templates</a><ul>
+<li><a class="reference internal" href="#multiple-template-support">Multiple Template Support</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -125,6 +128,18 @@
   <div class="section" id="jinja-templates">
 <h1>Jinja Templates<a class="headerlink" href="#jinja-templates" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="http://www.sphinx-doc.org/en/stable/templating.html#script_files">http://www.sphinx-doc.org/en/stable/templating.html#script_files</a></p>
+<div class="section" id="multiple-template-support">
+<h2>Multiple Template Support<a class="headerlink" href="#multiple-template-support" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="http://www.sphinx-doc.org/en/stable/config.html#html-options">http://www.sphinx-doc.org/en/stable/config.html#html-options</a></p>
+<p><code class="code docutils literal notranslate"><span class="pre">html_additional_pages</span></code></p>
+<p>Additional templates that should be rendered to HTML pages, must be a dictionary that maps document names to template names.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>html_additional_pages = {
+    &#39;download&#39;: &#39;customdownload.html&#39;,
+}
+</pre></div>
+</div>
+<p>This will render the template customdownload.html as the page download.html.</p>
+</div>
 </div>
 
 
