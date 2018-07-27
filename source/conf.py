@@ -21,6 +21,9 @@ import sphinx_bootstrap_theme
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+sys.path.insert(0, os.path.abspath('.') + '/_extensions')
+
+
 
 # -- Project information -----------------------------------------------------
 
@@ -55,6 +58,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'bemuse'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
