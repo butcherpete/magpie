@@ -11,5 +11,6 @@ Sphinx Development
   hover-boxes
   jinja 
   js-custom 
+  metadata 
   multiple-repos
 
