@@ -7,16 +7,17 @@ Glossary Hover Boxes
 **********
 Goals
 **********
+Test.
 
 **********
 To Do List
 **********
 
-Test gist https://gist.github.com/shimizukawa/3718712 
-Create custom role that copies the existing :code:`term` role.
-Extend custom role to specify a unique CSS class.
-Extend custom role to use JavaScript (if possible).
-Define CSS class. 
+- Test gist https://gist.github.com/shimizukawa/3718712 
+- Create custom role that copies the existing :code:`term` role.
+- Extend custom role to specify a unique CSS class.
+- Extend custom role to use JavaScript (if possible).
+- Define CSS class. 
 
 
 
@@ -66,7 +67,8 @@ The article describes a six-step process:
 3. Create the extension (:code:`bemuse.py`).
 4. Add the extension to the  :code:`_extensions` directory. 
 5. Add the extension to the :code:`extensions` list in the the :code:`conf.py`.
-6 Mark up text using the custom roles.
+6. Mark up text using the custom roles.
+
 
 **Directory Structure**
 
@@ -87,7 +89,7 @@ These three roles are rather limited:
 Resources
 **********
 
--`An idiot’s guide to Python documentation with Sphinx and ReadTheDocs <https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/>`_
+- `An idiot’s guide to Python documentation with Sphinx and ReadTheDocs <https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/>`_
 - `Docutils Hacker's Guide <http://docutils.sourceforge.net/docs/dev/hacking.html>`_
 - `Creating reStructuredText Directives <http://docutils.sourceforge.net/docs/howto/rst-directives.html#specify-directive-arguments-options-and-content>`_
 - http://inside.mines.edu/~jrosenth/hacking-docutils.html
