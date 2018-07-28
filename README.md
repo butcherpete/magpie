@@ -24,14 +24,16 @@
 	    │   │   ├── environment.pickle
 	    │   │   └── index.doctree
 	    │   ├── _sources/
+	    │   ├── conf.py 
+	    │   ├── index.rst 
+        │   │   ├── _extensions/ 
+        │   │   │   └── extension.py 
         │   │   ├── dir1/ 
-        │   │   │   └── file.rst.txt 
+        │   │   │   └── file.rst 
         │   │   ├── dir2/ 
-        │   │   │   └── file.rst.txt 
-        │   │   ├── dir3/ 
-        │   │   │   └── file.rst.txt 
-	    │   │   ├── notes/
-	    │   │   └── index.rst.txt
+        │   │   │   └── file.rst 
+        │   │   └── dir3/ 
+        │   │      └── file.rst 
 	    │   ├── _static/ 
         │   │   ├── ajax-loader.gif 
         │   │   ├── alabaster.css 
