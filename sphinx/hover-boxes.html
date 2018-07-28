@@ -175,11 +175,13 @@ Define CSS class.</p>
 <h2>Creating Custom Link Roles<a class="headerlink" href="#creating-custom-link-roles" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://protips.readthedocs.io/link-roles.html">http://protips.readthedocs.io/link-roles.html</a></p>
 <p>The article describes a six-step process:</p>
-<p>1 Create an <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory to hold extensions.
-2 Add a custom search path in the <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code> that includes the <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory.
-3 Create the extension (<code class="code docutils literal notranslate"><span class="pre">bemuse.py</span></code>).
-4 Add the extension to the  <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory.
-5 Add the extension to the <code class="code docutils literal notranslate"><span class="pre">extensions</span></code> list in the the <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code>.
+<ol class="arabic simple">
+<li>Create an <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory to hold extensions.</li>
+<li>Add a custom search path in the <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code> that includes the <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory.</li>
+<li>Create the extension (<code class="code docutils literal notranslate"><span class="pre">bemuse.py</span></code>).</li>
+<li>Add the extension to the  <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory.</li>
+</ol>
+<p>5. Add the extension to the <code class="code docutils literal notranslate"><span class="pre">extensions</span></code> list in the the <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code>.
 6 Mark up text using the custom roles.</p>
 <p><strong>Directory Structure</strong></p>
 <dl class="docutils">
@@ -191,13 +193,15 @@ Examples include setting up Git commit hooks and releasing a new version.</dd>
 <dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/config">config</a></dt>
 <dd>Configuration code for webpack and other things.</dd>
 </dl>
-<p>These three roles are rather limited:
-- Each role links to a specific URL.
-- Each role is defined by the <code class="code docutils literal notranslate"><span class="pre">reference</span></code> and <code class="code docutils literal notranslate"><span class="pre">external</span></code> classes.</p>
+<p>These three roles are rather limited:</p>
+<ul class="simple">
+<li>Each role links to a specific URL.</li>
+<li>Each role is defined by the <code class="code docutils literal notranslate"><span class="pre">reference</span></code> and <code class="code docutils literal notranslate"><span class="pre">external</span></code> classes.</li>
+</ul>
 </div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/">An idiot’s guide to Python documentation with Sphinx and ReadTheDocs</a>
+<p>-<a class="reference external" href="https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/">An idiot’s guide to Python documentation with Sphinx and ReadTheDocs</a>
 - <a class="reference external" href="http://docutils.sourceforge.net/docs/dev/hacking.html">Docutils Hacker’s Guide</a>
 - <a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-directives.html#specify-directive-arguments-options-and-content">Creating reStructuredText Directives</a>
 - <a class="reference external" href="http://inside.mines.edu/~jrosenth/hacking-docutils.html">http://inside.mines.edu/~jrosenth/hacking-docutils.html</a>
