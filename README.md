@@ -24,8 +24,8 @@
 	    │   │   ├── environment.pickle
 	    │   │   └── index.doctree
 	    │   ├── _sources/
-	    │   ├── conf.py 
-	    │   ├── index.rst 
+        │   │   ├── conf.py 
+        │   │   ├── index.rst 
         │   │   ├── _extensions/ 
         │   │   │   └── extension.py 
         │   │   ├── dir1/ 
