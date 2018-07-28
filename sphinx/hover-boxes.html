@@ -78,10 +78,7 @@
 <li><a class="reference internal" href="#goals">Goals</a></li>
 <li><a class="reference internal" href="#to-do-list">To Do List</a></li>
 <li><a class="reference internal" href="#existing-term-role">Existing Term Role</a></li>
-<li><a class="reference internal" href="#hover-role">Hover Role</a><ul>
-<li><a class="reference internal" href="#signature">Signature</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#hover-role">Hover Role</a></li>
 <li><a class="reference internal" href="#defining-custom-roles-in-sphinx">Defining Custom Roles in Sphinx</a></li>
 <li><a class="reference internal" href="#creating-custom-link-roles">Creating Custom Link Roles</a></li>
 <li><a class="reference internal" href="#resources">Resources</a></li>
@@ -169,19 +166,6 @@ Define CSS class.</p>
 <span class="n">register_canonical_role</span><span class="p">();</span>
 </pre></div>
 </div>
-<div class="section" id="signature">
-<h3>Signature<a class="headerlink" href="#signature" title="Permalink to this headline">¶</a></h3>
-<dl class="docutils">
-<dt>def role_fn(name, rawtext, text, lineno, inliner,</dt>
-<dd><blockquote class="first">
-<div>options={}, content=[]):</div></blockquote>
-<p class="last">code…</p>
-</dd>
-</dl>
-<p># Set function attributes for customization:
-role_fn.options = …
-role_fn.content = …</p>
-</div>
 </div>
 <div class="section" id="defining-custom-roles-in-sphinx">
 <h2>Defining Custom Roles in Sphinx<a class="headerlink" href="#defining-custom-roles-in-sphinx" title="Permalink to this headline">¶</a></h2>
@@ -190,17 +174,26 @@ role_fn.content = …</p>
 <div class="section" id="creating-custom-link-roles">
 <h2>Creating Custom Link Roles<a class="headerlink" href="#creating-custom-link-roles" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://protips.readthedocs.io/link-roles.html">http://protips.readthedocs.io/link-roles.html</a></p>
+<p>The article describes a six-step process:</p>
+<p>1 Create an <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory to hold extensions.
+2 Add a custom search path in the <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code> that includes the <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory.
+3 Create the extension (<code class="code docutils literal notranslate"><span class="pre">bemuse.py</span></code>).
+4 Add the extension to the  <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory.
+5 Add the extension to the <code class="code docutils literal notranslate"><span class="pre">extensions</span></code> list in the the <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code>.
+6 Mark up text using the custom roles.</p>
 <p><strong>Directory Structure</strong></p>
 <dl class="docutils">
-<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/assets">assets</a></dt>
-<dd>Image assets for use in the game.
-These assets can be referred from webpack code by <code class="docutils literal notranslate"><span class="pre">require('assets/...')</span></code>.</dd>
+<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/assets">assets</a> Image assets for use in the game.</dt>
+<dd>These assets can be referred from webpack code by <code class="docutils literal notranslate"><span class="pre">require('assets/...')</span></code>.</dd>
 <dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/bin">bin</a></dt>
 <dd>Useful scripts for routine work.
 Examples include setting up Git commit hooks and releasing a new version.</dd>
 <dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/config">config</a></dt>
 <dd>Configuration code for webpack and other things.</dd>
 </dl>
+<p>These three roles are rather limited:
+- Each role links to a specific URL.
+- Each role is defined by the <code class="code docutils literal notranslate"><span class="pre">reference</span></code> and <code class="code docutils literal notranslate"><span class="pre">external</span></code> classes.</p>
 </div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
