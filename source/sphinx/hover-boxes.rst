@@ -61,11 +61,11 @@ http://protips.readthedocs.io/link-roles.html
 
 The article describes a six-step process:
 
-1 Create an :code:`_extensions` directory to hold extensions.
-2 Add a custom search path in the :code:`conf.py` that includes the :code:`_extensions` directory.
-3 Create the extension (:code:`bemuse.py`).
-4 Add the extension to the  :code:`_extensions` directory. 
-5 Add the extension to the :code:`extensions` list in the the :code:`conf.py`.
+1. Create an :code:`_extensions` directory to hold extensions.
+2. Add a custom search path in the :code:`conf.py` that includes the :code:`_extensions` directory.
+3. Create the extension (:code:`bemuse.py`).
+4. Add the extension to the  :code:`_extensions` directory. 
+5. Add the extension to the :code:`extensions` list in the the :code:`conf.py`.
 6 Mark up text using the custom roles.
 
 **Directory Structure**
@@ -79,13 +79,15 @@ The article describes a six-step process:
   Configuration code for webpack and other things.
 
 These three roles are rather limited:
+
 - Each role links to a specific URL.
 - Each role is defined by the :code:`reference` and :code:`external` classes.
 
 **********
 Resources
 **********
-`An idiot’s guide to Python documentation with Sphinx and ReadTheDocs <https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/>`_
+
+-`An idiot’s guide to Python documentation with Sphinx and ReadTheDocs <https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/>`_
 - `Docutils Hacker's Guide <http://docutils.sourceforge.net/docs/dev/hacking.html>`_
 - `Creating reStructuredText Directives <http://docutils.sourceforge.net/docs/howto/rst-directives.html#specify-directive-arguments-options-and-content>`_
 - http://inside.mines.edu/~jrosenth/hacking-docutils.html
