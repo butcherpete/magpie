@@ -48,16 +48,6 @@ https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/
 
   register_canonical_role();
 
-Signature
-=========
-
-def role_fn(name, rawtext, text, lineno, inliner,
-            options={}, content=[]):
-    code...
-
-# Set function attributes for customization:
-role_fn.options = ...
-role_fn.content = ...
 
 *******************************
 Defining Custom Roles in Sphinx
