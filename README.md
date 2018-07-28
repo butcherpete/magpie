@@ -26,6 +26,8 @@
 	    │   ├── _sources/
         │   │   ├── conf.py 
         │   │   ├── index.rst 
+        │   │   ├── includes/ 
+        │   │   │   └── include.txt 
         │   │   ├── _extensions/ 
         │   │   │   └── extension.py 
         │   │   ├── dir1/ 
