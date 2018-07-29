@@ -11,8 +11,8 @@ Glossary
   Sphinx
     Sphinx is a tool that makes it easy to create intelligent and beautiful documentation. It was originally created for the Python documentation, and it has excellent facilities for the documentation of software projects in a range of languages.
 
-interpreted text
-  Interpreted text is text that is meant to be related, indexed, linked, summarized, or otherwise processed, but the text itself is typically left alone. Interpreted text is enclosed by single backquote characters. http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#interpreted-text
+  interpreted text
+    Interpreted text is text that is meant to be related, indexed, linked, summarized, or otherwise processed, but the text itself is typically left alone. Interpreted text is enclosed by single backquote characters. http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#interpreted-text
 
   role
     Roles all have a common syntax, based on the interpreted text feature of reStructuredText. 

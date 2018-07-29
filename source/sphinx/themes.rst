@@ -1,6 +1,4 @@
 .. include:: <isopub.txt>
- 
-.. include:: <isopub.txt>
 
 #########################
 Themes and Templates
