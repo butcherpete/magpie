@@ -75,10 +75,13 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Custom Roles</a><ul>
-<li><a class="reference internal" href="#goals">Goals</a></li>
+<li><a class="reference internal" href="#goals">Goals</a><ul>
 <li><a class="reference internal" href="#to-do-list">To Do List</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#underlying-objects">Underlying Objects</a></li>
 <li><a class="reference internal" href="#defining-custom-roles-in-sphinx">Defining Custom Roles in Sphinx</a></li>
-<li><a class="reference internal" href="#creating-custom-link-roles">Creating Custom Link Roles</a></li>
+<li><a class="reference internal" href="#id1">Creating Custom Link Roles</a></li>
 <li><a class="reference internal" href="#resources">Resources</a></li>
 </ul>
 </li>
@@ -134,21 +137,59 @@
 <div class="section" id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
 <p>Define custom directives and roles.</p>
-</div>
 <div class="section" id="to-do-list">
-<h2>To Do List<a class="headerlink" href="#to-do-list" title="Permalink to this headline">¶</a></h2>
-<p>✓ <cite>Creating Custom Link Roles &lt;http://protips.readthedocs.io/link-roles.html&gt;</cite></p>
+<h3>To Do List<a class="headerlink" href="#to-do-list" title="Permalink to this headline">¶</a></h3>
+<p>✓ <a class="reference external" href="http://protips.readthedocs.io/link-roles.html">Creating Custom Link Roles</a></p>
 <ul class="simple">
 <li>Test gist <a class="reference external" href="https://gist.github.com/shimizukawa/3718712">https://gist.github.com/shimizukawa/3718712</a></li>
 <li>Create custom role that copies the existing <code class="code docutils literal notranslate"><span class="pre">term</span></code> role.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="underlying-objects">
+<h2>Underlying Objects<a class="headerlink" href="#underlying-objects" title="Permalink to this headline">¶</a></h2>
+<p><code class="code docutils literal notranslate"><span class="pre">XRefRole(object)</span></code> class in <code class="file docutils literal notranslate"><span class="pre">roles.py</span></code></p>
+<blockquote>
+<div><p>“””
+A generic cross-referencing role.  To create a callable that can be used as
+a role function, create an instance of this class.</p>
+<p>The general features of this role are:</p>
+<ul class="simple">
+<li>Automatic creation of a reference and a content node.</li>
+<li>Optional separation of title and target with <cite>title &lt;target&gt;</cite>.</li>
+<li>The implementation is a class rather than a function to make
+customization easier.</li>
+</ul>
+<p>Customization can be done in two ways:</p>
+<ul>
+<li><p class="first">Supplying constructor parameters:
+* <cite>fix_parens</cite> to normalize parentheses (strip from target, and add to</p>
+<blockquote>
+<div><p>title if configured)</p>
+</div></blockquote>
+<ul class="simple">
+<li><cite>lowercase</cite> to lowercase the target</li>
+<li><cite>nodeclass</cite> and <cite>innernodeclass</cite> select the node classes for
+the reference and the content node</li>
+</ul>
+</li>
+<li><p class="first">Subclassing and overwriting <cite>process_link()</cite> and/or <cite>result_nodes()</cite>.</p>
+</li>
+</ul>
+<p>“”“</p>
+</div></blockquote>
+<p>Two modes of customization:</p>
+<ul class="simple">
+<li>What does it mean to supply constructor parameters?</li>
+<li>What does it mean to subclass and overwrite the <code class="code docutils literal notranslate"><span class="pre">process_link()</span></code> and <code class="code docutils literal notranslate"><span class="pre">result_nodes()</span></code> metric.</li>
 </ul>
 </div>
 <div class="section" id="defining-custom-roles-in-sphinx">
 <h2>Defining Custom Roles in Sphinx<a class="headerlink" href="#defining-custom-roles-in-sphinx" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/">https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/</a></p>
 </div>
-<div class="section" id="creating-custom-link-roles">
-<h2>Creating Custom Link Roles<a class="headerlink" href="#creating-custom-link-roles" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>Creating Custom Link Roles<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://protips.readthedocs.io/link-roles.html">http://protips.readthedocs.io/link-roles.html</a></p>
 <p>The article describes a six-step process:</p>
 <ol class="arabic simple">
