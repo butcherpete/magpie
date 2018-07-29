@@ -1,14 +1,20 @@
 .. include:: <isopub.txt>
  
+##############
 Jidaigeki Film
-==============
+##############
 
-
+******
 Viewed
-------
+******
 
+1940s
+=====
 - *The Men Who Tread on the Tiger’s Tail* (*Tora no O o Fumu Otokotachi*), directed by Akira Kurosawa (1945) ★★★
-- *Rashōmon*, directed by Akira Kurosawa (1950) ★★★★
+
+1950s
+=====
+- *Rashōmon*, directed by Akira Kurosawa (1950) ★★★★★
 - *Vendetta for a Samurai* (*Araki Mataemon: Kettō kagiya no tsuji*), directed by Kazuo Mori (1952) ★★★
 -  *Gate of Hell* (*Jigokumon*), directored by Teinosuke Kinugasa (1953) ★★★
 - *Seven Samurai* (*Shichinin no Samurai*), directed by Akira Kurosawa (1954) ★★★★★
@@ -16,9 +22,12 @@ Viewed
 - *Samurai II: Duel at Ichijoji Temple* (*Zoku Miyamoto Musashi: Ichijōji no Kettō*), directed by Hiroshi Inagaki (1955) ★★★
 - *Samurai III: Duel at Ganryu Island* (*Miyamoto Musashi kanketsuhen: kettō Ganryūjima*), directed by Hiroshi Inagaki (1956) ★★★
 - *Throne of Blood* (*Kumonosu-jō*), directed by Akira Kurosawa (1957) ★★★★★
-- *Hidden Fortress* (*Kakushi toride no san akunin*), directed by Akira Kurosawa (1958) ★★★
+- *Hidden Fortress* (*Kakushi toride no san akunin*), directed by Akira Kurosawa (1958) ★★★★★
 - *The Night Drum* (*Yoru no tsuzumi*), directed by Tadashi Imai (1958) ★★★
 - *Samurai Saga* (*Aru kengo no shōgai*), directed by Hiroshi Inagaki (1959)  ★★
+
+1960s
+=====
 - *Yojimbo* (*Yōjinbō*), directored by Akira Kurosawa (1961) ★★★★★
 - *Sanjuro* (*Tsubaki Sanjūrō*), directored by Akira Kurosawa (1961) ★★★
 - *Harakiri* (*Seppuku*), directed by Masaki Kobayashi (1962) ★★★★★
@@ -41,20 +50,34 @@ Viewed
 - *Kuroneko* (*Yabu no Naka no Kuroneko*), directed by Kaneto Shindo (1968) ★★★
 - *Kill!* (*Kiru*), directed by Kihachi Okamoto (1968) ★★★
 - *Double Suicide* (*Shinjū ten no Amijima*), directed by Mashahiro Shinoda (1969) ★★★
+
+1970s
+=====
+
 - *Zatoichi Meets Yojimbo* (*Zatōichi to Yōjinbō*), directed by Kihachi Okamoto (1970) ★★
 - *Lady Snowblood* (*Shurayuki-hime*), directed by Toshiya Fujita (1973) ★★★
 - *Bandits vs. Samurai Squadron* (*Kumokiri Nizaemon*), directed by Hideo Gosha (1978) ★★
 - *Hunter in the Dark* (*Yami no karyudo*), directed by Hideo Gosha (1979) ★★
+
+1980s
+=====
 - *Kagemusha*, directed by Akira Kurosawa (1980) ★★★★
 - *Ran*, directed by Akira Kurosawa (1985) ★★★★★
+
+1990s
+=====
 - *Ronin-gai*, directed by Kazuo Kuroki (1990) ★★
 - *Heatwave* (*Kagerô*), directed by Hideo Gosha (1991) ★★
+
+2000s
+=====
 - *Twilight Samurai* (*Tasogare Seibel*), directed by Yōji Yamada (2002) ★★★★
 - *Zatoichi*, directed by Beat Takeshi (2003) ★★★
 - *13 Assassins*, directed by Takashi Miike (2010) ★★★★
 
+*****
 Queue
------
+*****
 -  *Bronze Magician (*Yoso*), directed by Teinosuke Kinugasa (1963)
 -  *Cruel Story of the Shogunate’s Downfall*, directed by Tai Kato (1964)
 -  *Nina Hunt* (*Ninja Gari*), directed by Tetsuya Yamauchi (1964)
@@ -86,11 +109,12 @@ Queue
 -  *Kyoto Inferno*, directed by Keishi Otomo (2014)
 -  *The Legend Ends*, directed by Keishi Otomo (2014)
 
+********
 Zatoichi
---------
-- *The Tale of Zatoichi* (*Zatōichi monogatari*) directed by Kenji Misumi (1962)
-- *The Tale of Zatoichi Continues* (*Zoku Zatōichi monogatari*) directed by Kazuo Mori (1962)
-- *New Tale of Zatoichi* (*Shin Zatōichi monogatari*) directed by Tokuzo Tanaka (1963)
+********
+- *The Tale of Zatoichi* (*Zatōichi monogatari*) directed by Kenji Misumi (1962) ★★★
+- *The Tale of Zatoichi Continues* (*Zoku Zatōichi monogatari*) directed by Kazuo Mori (1962) ★★
+- *New Tale of Zatoichi* (*Shin Zatōichi monogatari*) directed by Tokuzo Tanaka (1963) ★★★
 - *Zatoichi the Fugitive* (*Zatōichi kyōjō-tabi*) directed by Tokuzo Tanaka (1963)
 - *Zatoichi on the Road* (*Zatōichi kenka-tabi*) directed by Kimiyoshi Yasuda (1963)
 - *Zatoichi and the Chest of Gold* (*Zatōichi senryō-kubi*) directed by Kazuo Ikehiro (1964)
@@ -107,7 +131,7 @@ Zatoichi
 - *Zatoichi Challenged* (*Zatōichi chikemurikaidōZatoichi*) directed by Kenji Misumi (1967)
 - *Zatoichi and the Fugitives* (*Zatōichi hatashijō*) directed by Kimiyoshi Yasuda (1968)
 - *Samaritan Zatoichi* (*Zatōichi kenka-daiko*) directed by Kenji Misumi (1968)
-- *Zatoichi Meets Yojimbo* (*Zatōichi to Yōjinbō*) directed by Kihachi Okamoto (1970)
+- *Zatoichi Meets Yojimbo* (*Zatōichi to Yōjinbō*), directed by Kihachi Okamoto (1970) ★★
 - *Zatoichi Goes to the Fire Festival* (*Zatōichi abare-himatsuri*) directed by Kenji Misumi (1970)
 - *Zatoichi Meets the One-Armed Swordsman* (*Shin Zatōichi: Yabure! Tōjin-ken*) directed by Kimiyoshi Yasuda (1971)
 - *Zatoichi at Large* (*Zatōichi goyō-tabi*) directed by Kazuo Mori (1972)
