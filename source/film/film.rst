@@ -1,4 +1,4 @@
-.. include:: /includes/<isopub.txt>
+.. include:: <isopub.txt>
  
 ****
 Film

@@ -1,4 +1,4 @@
-.. include:: /includes/<isopub.txt>
+.. include:: <isopub.txt>
  
 .. Magpie documentation master file, created by
    sphinx-quickstart on Fri Jul 20 11:02:01 2018.
