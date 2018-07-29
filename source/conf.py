@@ -102,13 +102,13 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # documentation.
 #
 
-html_theme_options = {'navbar_pagenav': False, 'navbar_links': [("Vim", "vim/index"), ("Sphinx", "sphinx/sphinx", True), ], 'bootswatch_theme': "united", 'navbar_sidebarrel': False, 'navbar_class': "navbar navbar-inverse", 'source_link_position': "footer",}
+html_theme_options = {'navbar_pagenav': False, 'navbar_links': [("Vim", "vim/index"), ("Sphinx", "sphinx/sphinx", True), ], 'bootswatch_theme': "united", 'navbar_sidebarrel': False, 'source_link_position': "footer",}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 
-html_static_path = ['/_static']
+html_static_path = ['_static']
 
 def setup(app):
     app.add_stylesheet('css/my-styles-css')
@@ -121,6 +121,7 @@ def setup(app):
 # configuration directory) that is the favicon of the docs. Modern browsers 
 # use this as the icon for tabs, windows and bookmarks. It should be a 
 # Windows-style icon file (.ico), which is 16x16 or 32x32 pixels large
+
 html_favicon = 'images/favicon.ico'
 
 
