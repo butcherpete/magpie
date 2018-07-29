@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Glossary &#8212; Magpie 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/my-styles-css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="JavaScript" href="../javascript/javascript.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          Magpie</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../vim/index.html">Vim</a></li>
+                <li><a href="../sphinx/sphinx">Sphinx</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../notes/notes.html">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../film/film.html">Film</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/sphinx.html">Sphinx Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/javascript.html">JavaScript</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Glossary</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<dl class="glossary docutils">
+<dt id="term-application">application</dt>
+<dd><p class="first">The application object (usually called app) is an instance of Sphinx. It controls most high-level functionality, such as the setup of extensions, event dispatching and producing output (logging).</p>
+<p class="last">If you have the environment object, the application is available as env.app.</p>
+</dd>
+<dt id="term-environment">environment</dt>
+<dd><p class="first">The build environment object (usually called env) is an instance of BuildEnvironment. It is responsible for parsing the source documents, stores all metadata about the document collection and is serialized to disk after each build.</p>
+<p>Its API provides methods to do with access to metadata, resolving references, etc. It can also be used by extensions to cache information that should persist for incremental rebuilds.</p>
+<p class="last">If you have the application or builder object, the environment is available as app.env or builder.env.</p>
+</dd>
+<dt id="term-builder">builder</dt>
+<dd><p class="first">The builder object (usually called builder) is an instance of a specific subclass of Builder. Each builder class knows how to convert the parsed documents into an output format, or otherwise process them (e.g. check external links).</p>
+<p class="last">If you have the application object, the builder is available as app.builder.</p>
+</dd>
+<dt id="term-config">config</dt>
+<dd><p class="first">The config object (usually called config) provides the values of configuration values set in conf.py as attributes. It is an instance of Config.</p>
+<p class="last">The config is available as app.config or env.config.</p>
+</dd>
+<dt id="term-extension">extension</dt>
+<dd>An extension is simply a Python module. When an extension is loaded, Sphinx imports this module and executes its <code class="code docutils literal notranslate"><span class="pre">setup()</span></code> function, which in turn notifies Sphinx of everything the extension offers – see the extension tutorial for examples.</dd>
+<dt id="term-sphin">Sphin</dt>
+<dd>Sphinx is a tool that makes it easy to create intelligent and beautiful documentation. It was originally created for the Python documentation, and it has excellent facilities for the documentation of software projects in a range of languages.</dd>
+<dt id="term-interpreted-text">interpreted text</dt>
+<dd>Interpreted text is text that is meant to be related, indexed, linked, summarized, or otherwise processed, but the text itself is typically left alone. Interpreted text is enclosed by single backquote characters. <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#interpreted-text">http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#interpreted-text</a></dd>
+<dt id="term-role">role</dt>
+<dd>Roles all have a common syntax, based on the interpreted text feature of reStructuredText.</dd>
+<dt id="term-role-processor">role processor</dt>
+<dd>The docutils parser works by converting the input text to an internal tree representation made up of different types of nodes. The tree is traversed by a writer to create output in the desired format. To add a directive or role, you need to provide the hooks to be called to handle the markup when it is encountered in the input file. A role processor is defined with a function that takes arguments describing the marked-up text and returns the nodes to be included in the parse tree.</dd>
+<dt id="term-rst">RST</dt>
+<dd>reStructuredText is an easy-to-read, what-you-see-is-what-you-get plain text markup syntax and parser system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating simple web pages, and for standalone documents. reStructuredText is designed for extensibility for specific application domains. The reStructuredText parser is a component of Docutils.</dd>
+<dt id="term-sublime-text">Sublime Text</dt>
+<dd>Sublime Text is a sophisticated text editor for code, markup and prose. You’ll love the slick user interface, extraordinary features and amazing performance.</dd>
+<dt id="term-template">template</dt>
+<dd>Sphinx supports changing the appearance of its HTML output via themes. A theme is a collection of HTML templates, stylesheet(s) and other static files. Additionally, it has a configuration file which specifies from which theme to inherit, which highlighting style to use, and what options exist for customizing the theme’s look and feel.</dd>
+<dt id="term-theme">theme</dt>
+<dd>Sphinx supports changing the appearance of its HTML output via themes. A theme is a collection of HTML templates, stylesheet(s) and other static files. Additionally, it has a configuration file which specifies from which theme to inherit, which highlighting style to use, and what options exist for customizing the theme’s look and feel.</dd>
+</dl>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/glossary/glossary.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018, Todd Smith.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
