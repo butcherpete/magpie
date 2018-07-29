@@ -4,9 +4,9 @@
    contain the root `toctree` directive.
 
 ###################
-omnibus pandemonium
+Seventh Son
 ###################
-A sixth change
+A seventh change
 
 
 .. toctree::
