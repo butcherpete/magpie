@@ -7,7 +7,7 @@ Glossary Hover Boxes
 **********
 Goals
 **********
-Identify and implements solution for defintion hover boxes in project. The solution with include custom roles, css, and possibility custom JS.
+Identify and implement a role-based glossary term solution that using CSS-based hover boxes to display glossary term definitions. The solution with include custom roles, css, and possibility custom JS.
 
 Two options:
 
@@ -25,6 +25,7 @@ To Do List
 
 - Understand how a role specifies a new CSS class.
 - Understand how a role is built. Many improvements  can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.
+- Understand how/when substitutions occur. May effect custom role builds.
 - Extend custom role to specify a unique CSS class.
 - Extend custom role to use JavaScript (if possible).
 - Define CSS class. 

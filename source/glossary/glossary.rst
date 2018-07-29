@@ -8,7 +8,32 @@ Glossary
 
 .. glossary::
 
-  Sphinx
+  application
+    The application object (usually called app) is an instance of Sphinx. It controls most high-level functionality, such as the setup of extensions, event dispatching and producing output (logging).
+
+    If you have the environment object, the application is available as env.app.
+
+  environment
+    The build environment object (usually called env) is an instance of BuildEnvironment. It is responsible for parsing the source documents, stores all metadata about the document collection and is serialized to disk after each build.
+
+    Its API provides methods to do with access to metadata, resolving references, etc. It can also be used by extensions to cache information that should persist for incremental rebuilds.
+
+    If you have the application or builder object, the environment is available as app.env or builder.env.
+
+  builder
+    The builder object (usually called builder) is an instance of a specific subclass of Builder. Each builder class knows how to convert the parsed documents into an output format, or otherwise process them (e.g. check external links).
+
+    If you have the application object, the builder is available as app.builder.
+
+  config
+    The config object (usually called config) provides the values of configuration values set in conf.py as attributes. It is an instance of Config.
+
+    The config is available as app.config or env.config.
+
+  extension
+    An extension is simply a Python module. When an extension is loaded, Sphinx imports this module and executes its :code:`setup()` function, which in turn notifies Sphinx of everything the extension offers – see the extension tutorial for examples.    
+
+  Sphin
     Sphinx is a tool that makes it easy to create intelligent and beautiful documentation. It was originally created for the Python documentation, and it has excellent facilities for the documentation of software projects in a range of languages.
 
   interpreted text
