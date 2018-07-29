@@ -1,13 +1,15 @@
 .. include:: <isopub.txt>
  
+#############
 Film Italiani
-=============
+#############
 
 A catalog of Italian films I have seen or want to see. 
 
 
+****************************
 100 film italiani da salvare
-----------------------------
+****************************
 
 Ecco i cento film italiani da salvare. Le pellicole che hanno cambiato
 la memoria collettiva del Paese tra il 1942 e il 1978.
@@ -117,8 +119,9 @@ la memoria collettiva del Paese tra il 1942 e il 1978.
 -  *Padre padrone*, regia di Paolo and Vittorio Taviani (1977) ★★★★
 -  *L’albero degli zoccoli*, regia di Ermanno Olmi (1978) ★★★★★
 
+***************
 Not on the list
----------------
+***************
 
 1940s
 =====
