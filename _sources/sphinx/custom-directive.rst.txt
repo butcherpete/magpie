@@ -26,7 +26,7 @@ Setup Function
 
 - Add new module named :file:`todo.py`. Where is this module/file saved?
 
-..code-block:: python
+.. code-block:: python
 
   def setup(app):
       app.add_config_value('todo_include_todos', False, 'html')

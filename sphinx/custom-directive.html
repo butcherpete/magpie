@@ -29,7 +29,7 @@
 
   </head><body>
 
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -114,21 +114,20 @@
 <ul class="simple">
 <li>Add new module named <code class="file docutils literal notranslate"><span class="pre">todo.py</span></code>. Where is this module/file saved?</li>
 </ul>
-<p>..code-block:: python</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>def setup(app):</dt>
-<dd><p class="first">app.add_config_value(‘todo_include_todos’, False, ‘html’)</p>
-<p>app.add_node(todolist)
-app.add_node(todo, html=(visit_todo_node, depart_todo_node), latex=(visit_todo_node, depart_todo_node), text=(visit_todo_node, depart_todo_node))</p>
-<p>app.add_directive(‘todo’, TodoDirective)
-app.add_directive(‘todolist’, TodolistDirective)
-app.connect(‘doctree-resolved’, process_todo_nodes)
-app.connect(‘env-purge-doc’, purge_todos)</p>
-<p class="last">return {‘version’: ‘0.1’}   # identifies the version of our extension</p>
-</dd>
-</dl>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;todo_include_todos&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">)</span>
+
+    <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">todolist</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">todo</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="p">(</span><span class="n">visit_todo_node</span><span class="p">,</span> <span class="n">depart_todo_node</span><span class="p">),</span> <span class="n">latex</span><span class="o">=</span><span class="p">(</span><span class="n">visit_todo_node</span><span class="p">,</span> <span class="n">depart_todo_node</span><span class="p">),</span> <span class="n">text</span><span class="o">=</span><span class="p">(</span><span class="n">visit_todo_node</span><span class="p">,</span> <span class="n">depart_todo_node</span><span class="p">))</span>
+
+    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;todo&#39;</span><span class="p">,</span> <span class="n">TodoDirective</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;todolist&#39;</span><span class="p">,</span> <span class="n">TodolistDirective</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;doctree-resolved&#39;</span><span class="p">,</span> <span class="n">process_todo_nodes</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;env-purge-doc&#39;</span><span class="p">,</span> <span class="n">purge_todos</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span><span class="p">}</span>   <span class="c1"># identifies the version of our extension</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="resources">
