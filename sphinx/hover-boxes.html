@@ -77,6 +77,7 @@
 <li><a class="reference internal" href="#">Glossary Hover Boxes</a><ul>
 <li><a class="reference internal" href="#goals">Goals</a></li>
 <li><a class="reference internal" href="#to-do-list">To Do List</a></li>
+<li><a class="reference internal" href="#existing-abbr-role">Existing Abbr Role</a></li>
 <li><a class="reference internal" href="#existing-term-role">Existing Term Role</a></li>
 <li><a class="reference internal" href="#hover-role">Hover Role</a></li>
 <li><a class="reference internal" href="#resources">Resources</a></li>
@@ -148,10 +149,32 @@
 <div class="section" id="to-do-list">
 <h2>To Do List<a class="headerlink" href="#to-do-list" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li>Understand how a role specifies a new CSS class.</li>
+<li>Understand how a role is built. Many improvements  can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.</li>
 <li>Extend custom role to specify a unique CSS class.</li>
 <li>Extend custom role to use JavaScript (if possible).</li>
 <li>Define CSS class.</li>
 </ul>
+</div>
+<div class="section" id="existing-abbr-role">
+<h2>Existing Abbr Role<a class="headerlink" href="#existing-abbr-role" title="Permalink to this headline">¶</a></h2>
+<p><code class="file docutils literal notranslate"><span class="pre">sphinx/roles.py</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">_abbr_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\((.*)\)$&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">S</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">abbr_role</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">inliner</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="n">content</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="c1"># type: (unicode, unicode, unicode, int, Inliner, Dict, List[unicode]) -&gt; Tuple[List[nodes.Node], List[nodes.Node]]  # NOQA</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">unescape</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">_abbr_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">addnodes</span><span class="o">.</span><span class="n">abbreviation</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)],</span> <span class="p">[]</span>
+    <span class="n">abbr</span> <span class="o">=</span> <span class="n">text</span><span class="p">[:</span><span class="n">m</span><span class="o">.</span><span class="n">start</span><span class="p">()]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">expl</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">options</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">options</span><span class="p">[</span><span class="s1">&#39;explanation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">expl</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">addnodes</span><span class="o">.</span><span class="n">abbreviation</span><span class="p">(</span><span class="n">abbr</span><span class="p">,</span> <span class="n">abbr</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)],</span> <span class="p">[]</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="existing-term-role">
 <h2>Existing Term Role<a class="headerlink" href="#existing-term-role" title="Permalink to this headline">¶</a></h2>
