@@ -108,12 +108,13 @@ html_theme_options = {'navbar_pagenav': False, 'navbar_links': [("Vim", "vim/ind
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 def setup(app):
     app.add_stylesheet('css/my-styles-css')
-    # app.add_stylesheet("ANOTHER.css")
-    # app.add_stylesheet("AND ANOTHER.css")
+
+# app.add_stylesheet("ANOTHER.css")
+# app.add_stylesheet("AND ANOTHER.css")
 
 
 # If given, this must be the name of an image file (path relative to the 
