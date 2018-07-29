@@ -16,7 +16,7 @@ A second change
 
   notes/notes
   film/film
-  vim/vim
+  vim/index
   sphinx/sphinx
   javascript/javascript
   glossary/glossary

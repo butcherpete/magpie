@@ -26,7 +26,8 @@ Resources
 **********
 
 .. seealso:: 
+
   - http://www.sphinx-doc.org/en/stable/templating.html#script_files
   - https://github.com/ryan-roemer/sphinx-bootstrap-theme
-    - http://www.sphinx-doc.org/en/stable/templating.html#script_files
-    - https://github.com/ryan-roemer/sphinx-bootstrap-theme
+  - http://www.sphinx-doc.org/en/stable/templating.html#script_files
+  - ttps://github.com/ryan-roemer/sphinx-bootstrap-theme
