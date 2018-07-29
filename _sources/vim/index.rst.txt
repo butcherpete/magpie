@@ -7,7 +7,6 @@ Vim
 .. toctree::
   :maxdepth: 1
 
-  vim_airline
   vim_bookmarks
   vim_buffers
   vim_command_line

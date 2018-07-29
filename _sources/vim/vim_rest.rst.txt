@@ -3,8 +3,6 @@
 Vim Restructured Text
 =====================
 
-A crib of Vim tips and tricks. `Edit
-me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_rest.html.md>`__
 
 Marking Up Headers
 ------------------

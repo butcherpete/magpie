@@ -3,8 +3,8 @@
 Vim Yanking
 ===========
 
-A crib of Vim tips and tricks. `Edit
-me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_yanking.html.md>`__
+A crib of Vim tips and tricks. 
+
 
 System Clipboard / Quoteplus Register
 -------------------------------------

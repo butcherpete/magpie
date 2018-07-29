@@ -4,8 +4,8 @@
 Vim Unimpaired
 ==============
 
-This plugin provides several pairs of bracket maps. `Edit
-me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_unimpaired.html.md>`__
+This plugin provides several pairs of bracket maps. 
+
 
 `tpope/vim-unimpaired <https://github.com/tpope/vim-unimpaired/tree/master/doc>`__
 

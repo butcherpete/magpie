@@ -3,8 +3,6 @@
 Vim Folding
 ===========
 
-A crib of Vim tips and tricks. `Edit
-me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_folding.html.md>`__
 
 http://vimcasts.org/episodes/how-to-fold/
 
