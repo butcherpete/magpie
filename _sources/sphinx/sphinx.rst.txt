@@ -8,6 +8,7 @@ Sphinx Development
   themes 
   custom-role 
   custom-directive 
+  bootstrap 
   extensions 
   hover-boxes
   jinja 
