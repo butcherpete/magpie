@@ -105,7 +105,6 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 html_theme_options = {'navbar_pagenav': False,
     'navbar_class': "navbar navbar-inverse",
     'source_link_position': "footer",
-    'bootswatch_theme': "minty",
     }
 
 
