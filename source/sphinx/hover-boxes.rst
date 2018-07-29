@@ -23,6 +23,8 @@ Worth research:
 To Do List
 **********
 
+- Understand how a role specifies a new CSS class.
+- Understand how a role is built. Many improvements  can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.
 - Extend custom role to specify a unique CSS class.
 - Extend custom role to use JavaScript (if possible).
 - Define CSS class. 
