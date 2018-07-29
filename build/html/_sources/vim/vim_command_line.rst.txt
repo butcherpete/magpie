@@ -4,8 +4,7 @@
 Vim Command Line
 ================
 
-A crib of Vim tips and tricks. `Edit
-me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_command_line.html.md>`__
+A crib of Vim tips and tricks. 
 
 Exiting the shell returns to vim.
 

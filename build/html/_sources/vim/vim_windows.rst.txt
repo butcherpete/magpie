@@ -4,8 +4,7 @@
 Vim Windows
 ===========
 
-A crib of Vim tips and tricks. `Edit
-me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_windows.html.md>`__
+A crib of Vim tips and tricks. 
 
 Opening Split Windows
 ---------------------

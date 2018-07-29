@@ -4,8 +4,6 @@
 Vim Text Objects
 ================
 
-A crib of Vim tips and tricks. `Edit
-me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_text_objects.html.md>`__
 
 HTML Tags
 ---------

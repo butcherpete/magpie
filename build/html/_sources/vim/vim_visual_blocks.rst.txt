@@ -4,8 +4,7 @@ Visual Mode
 ===========
 
 Visual mode is a flexible and easy way to select a piece of text for an
-operator. It is the only way to select a block of text. `Edit
-me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_visual_blocks.html.md>`__
+operator. It is the only way to select a block of text. 
 
 Entering and Exiting Visual Modes
 ---------------------------------

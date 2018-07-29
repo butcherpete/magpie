@@ -7,8 +7,7 @@ The surround-vim plugin is a tool for dealing with pairs of
 surroundings. Examples of surroundings include parentheses, quotes, and
 HTML tags. They are closely related to what Vim refers to as
 \|text-objects|. Provided are mappings to allow for removing, changing,
-and adding surroundings. `Edit
-me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_surround.html.md>`__
+and adding surroundings. 
 
 Introduction
 ------------
