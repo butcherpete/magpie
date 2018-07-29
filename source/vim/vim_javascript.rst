@@ -4,8 +4,6 @@
 Vim JavaScript & Node
 =====================
 
-A crib of Vim tips and tricks. `Edit
-me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_javascript.html.md>`__
 
 `Setting up Vim for JavaScript
 development <https://davidosomething.com/blog/vim-for-javascript/>`__

@@ -3,8 +3,6 @@
 Vim Spellchecking
 =================
 
-A crib of Vim tips and tricks. `Edit
-me <https://github.com/butcherpete/documentation-theme-jekyll/blob/gh-pages/pages//_pages/vim/vim_spellcheck.html.md>`__
 
 http://vimcasts.org/episodes/spell-checking/
 
