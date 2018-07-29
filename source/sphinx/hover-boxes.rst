@@ -27,6 +27,31 @@ To Do List
 - Extend custom role to use JavaScript (if possible).
 - Define CSS class. 
 
+******************
+Existing Abbr Role
+******************
+
+:file:`sphinx/roles.py`
+
+.. code-block:: python
+
+  _abbr_re = re.compile(r'\((.*)\)$', re.S)
+  
+  
+  def abbr_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
+      # type: (unicode, unicode, unicode, int, Inliner, Dict, List[unicode]) -> Tuple[List[nodes.Node], List[nodes.Node]]  # NOQA
+      text = utils.unescape(text)
+      m = _abbr_re.search(text)  # type: ignore
+      if m is None:
+          return [addnodes.abbreviation(text, text, **options)], []
+      abbr = text[:m.start()].strip()
+      expl = m.group(1)
+      options = options.copy()
+      options['explanation'] = expl
+      return [addnodes.abbreviation(abbr, abbr, **options)], []
+
+
+
 
 ******************
 Existing Term Role
