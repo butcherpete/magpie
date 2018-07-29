@@ -120,7 +120,26 @@
   <div class="section" id="glossary">
 <h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
 <dl class="glossary docutils">
-<dt id="term-sphinx">Sphinx</dt>
+<dt id="term-application">application</dt>
+<dd><p class="first">The application object (usually called app) is an instance of Sphinx. It controls most high-level functionality, such as the setup of extensions, event dispatching and producing output (logging).</p>
+<p class="last">If you have the environment object, the application is available as env.app.</p>
+</dd>
+<dt id="term-environment">environment</dt>
+<dd><p class="first">The build environment object (usually called env) is an instance of BuildEnvironment. It is responsible for parsing the source documents, stores all metadata about the document collection and is serialized to disk after each build.</p>
+<p>Its API provides methods to do with access to metadata, resolving references, etc. It can also be used by extensions to cache information that should persist for incremental rebuilds.</p>
+<p class="last">If you have the application or builder object, the environment is available as app.env or builder.env.</p>
+</dd>
+<dt id="term-builder">builder</dt>
+<dd><p class="first">The builder object (usually called builder) is an instance of a specific subclass of Builder. Each builder class knows how to convert the parsed documents into an output format, or otherwise process them (e.g. check external links).</p>
+<p class="last">If you have the application object, the builder is available as app.builder.</p>
+</dd>
+<dt id="term-config">config</dt>
+<dd><p class="first">The config object (usually called config) provides the values of configuration values set in conf.py as attributes. It is an instance of Config.</p>
+<p class="last">The config is available as app.config or env.config.</p>
+</dd>
+<dt id="term-extension">extension</dt>
+<dd>An extension is simply a Python module. When an extension is loaded, Sphinx imports this module and executes its <code class="code docutils literal notranslate"><span class="pre">setup()</span></code> function, which in turn notifies Sphinx of everything the extension offers – see the extension tutorial for examples.</dd>
+<dt id="term-sphin">Sphin</dt>
 <dd>Sphinx is a tool that makes it easy to create intelligent and beautiful documentation. It was originally created for the Python documentation, and it has excellent facilities for the documentation of software projects in a range of languages.</dd>
 <dt id="term-interpreted-text">interpreted text</dt>
 <dd>Interpreted text is text that is meant to be related, indexed, linked, summarized, or otherwise processed, but the text itself is typically left alone. Interpreted text is enclosed by single backquote characters. <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#interpreted-text">http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#interpreted-text</a></dd>

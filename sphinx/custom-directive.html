@@ -76,7 +76,10 @@
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Custom Directives</a><ul>
 <li><a class="reference internal" href="#goals">Goals</a></li>
-<li><a class="reference internal" href="#to-do-list">To Do List</a></li>
+<li><a class="reference internal" href="#to-do-tutorial">To Do  Tutorial</a><ul>
+<li><a class="reference internal" href="#setup-function">Setup Function</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#resources">Resources</a></li>
 </ul>
 </li>
@@ -129,19 +132,52 @@
       
   <div class="section" id="custom-directives">
 <h1>Custom Directives<a class="headerlink" href="#custom-directives" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Many extensions will not have to create their own node classes and work fine with the nodes already provided by docutils and Sphinx.</li>
+</ul>
 <div class="section" id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
 <p>Define custom directives and roles.</p>
-</div>
-<div class="section" id="to-do-list">
-<h2>To Do List<a class="headerlink" href="#to-do-list" title="Permalink to this headline">¶</a></h2>
 <p>✓ Add links to documenation.</p>
+<ul class="simple">
+<li>Do Sphinx tutorial: <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/tutorial.html">Tutoral: Writing a Simple Extension</a>.</li>
+</ul>
+</div>
+<div class="section" id="to-do-tutorial">
+<h2>To Do  Tutorial<a class="headerlink" href="#to-do-tutorial" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setup-function">
+<h3>Setup Function<a class="headerlink" href="#setup-function" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Add new module named <code class="file docutils literal notranslate"><span class="pre">todo.py</span></code>. Where is this module/file saved?</li>
+</ul>
+<p>..code-block:: python</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def setup(app):</dt>
+<dd><p class="first">app.add_config_value(‘todo_include_todos’, False, ‘html’)</p>
+<p>app.add_node(todolist)
+app.add_node(todo,</p>
+<blockquote>
+<div>html=(visit_todo_node, depart_todo_node),
+latex=(visit_todo_node, depart_todo_node),
+text=(visit_todo_node, depart_todo_node))</div></blockquote>
+<p>app.add_directive(‘todo’, TodoDirective)
+app.add_directive(‘todolist’, TodolistDirective)
+app.connect(‘doctree-resolved’, process_todo_nodes)
+app.connect(‘env-purge-doc’, purge_todos)</p>
+<p class="last">return {‘version’: ‘0.1’}   # identifies the version of our extension</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/index.html">Developing Extensions for Sphinx</a></li>
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/tutorial.html">Tutorial: Writing a simple extension</a></li>
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/appapi.html">Application API</a></li>
 <li><a class="reference external" href="http://www.sphinx-doc.org/en/stable/templating.html#script_files">http://www.sphinx-doc.org/en/stable/templating.html#script_files</a></li>
-<li><a class="reference external" href="https://github.com/ryan-roemer/sphinx-bootstrap-theme">https://github.com/ryan-roemer/sphinx-bootstrap-theme</a></li>
 </ul>
 </div>
 </div>

@@ -124,7 +124,12 @@
       
   <div class="section" id="extensions">
 <h1>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h1>
+<p>An <a class="reference internal" href="../glossary/glossary.html#term-extension"><span class="xref std std-term">extension</span></a> is simply a Python module. When an extension is loaded, Sphinx imports this module and executes its setup() function, which in turn notifies Sphinx of everything the extension offers – see the extension tutorial for examples.</p>
+<p>Sphinx is extensible at several levels:</p>
 <ul class="simple">
+<li>You can add new builders to support new output formats or actions on the parsed documents.</li>
+<li>Then, it is possible to register custom reStructuredText roles and directives, extending the markup.</li>
+<li>And finally, there are so-called “hook points” at strategic places throughout the build process, where an extension can register a hook and run specialized code.</li>
 <li>Implement extensions: <a class="reference external" href="http://www.sphinx-doc.org/en/master/develop.html">http://www.sphinx-doc.org/en/master/develop.html</a></li>
 <li>Develop extensions: <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/tutorial.html#exttut">http://www.sphinx-doc.org/en/master/extdev/tutorial.html#exttut</a></li>
 </ul>
