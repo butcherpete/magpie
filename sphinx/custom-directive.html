@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>JavaScript &#8212; Magpie 0.1 documentation</title>
+    <title>Custom Directives &#8212; Magpie 0.1 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -19,8 +19,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Glossary" href="../glossary/glossary.html" />
-    <link rel="prev" title="Multiple Projects" href="../sphinx/multiple-repos.html" />
+    <link rel="next" title="Extensions" href="extensions.html" />
+    <link rel="prev" title="Custom Roles" href="custom-role.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -58,8 +58,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../notes/notes.html">Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../film/film.html">Film</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vim/vim.html">Vim</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../sphinx/sphinx.html">Sphinx Development</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">JavaScript</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sphinx.html">Sphinx Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javascript/javascript.html">JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
 </ul>
 </ul>
@@ -74,7 +74,15 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">JavaScript</a></li>
+<li><a class="reference internal" href="#">Custom Directives</a><ul>
+<li><a class="reference internal" href="#goals">Goals</a></li>
+<li><a class="reference internal" href="#to-do-tutorial">To Do  Tutorial</a><ul>
+<li><a class="reference internal" href="#setup-function">Setup Function</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#resources">Resources</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -84,11 +92,11 @@
               
                 
   <li>
-    <a href="../sphinx/multiple-repos.html" title="Previous Chapter: Multiple Projects"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Multiple Projects</span>
+    <a href="custom-role.html" title="Previous Chapter: Custom Roles"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Custom Roles</span>
     </a>
   </li>
   <li>
-    <a href="../glossary/glossary.html" title="Next Chapter: Glossary"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Glossary &raquo;</span>
+    <a href="extensions.html" title="Next Chapter: Extensions"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Extensions &raquo;</span>
     </a>
   </li>
               
@@ -98,7 +106,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="../_sources/javascript/javascript.rst.txt"
+  <a href="../_sources/sphinx/custom-directive.rst.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -122,8 +130,56 @@
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="javascript">
-<h1>JavaScript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="custom-directives">
+<h1>Custom Directives<a class="headerlink" href="#custom-directives" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Many extensions will not have to create their own node classes and work fine with the nodes already provided by docutils and Sphinx.</li>
+</ul>
+<div class="section" id="goals">
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
+<p>Define custom directives and roles.</p>
+<p>✓ Add links to documenation.</p>
+<ul class="simple">
+<li>Do Sphinx tutorial: <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/tutorial.html">Tutoral: Writing a Simple Extension</a>.</li>
+</ul>
+</div>
+<div class="section" id="to-do-tutorial">
+<h2>To Do  Tutorial<a class="headerlink" href="#to-do-tutorial" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setup-function">
+<h3>Setup Function<a class="headerlink" href="#setup-function" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Add new module named <code class="file docutils literal notranslate"><span class="pre">todo.py</span></code>. Where is this module/file saved?</li>
+</ul>
+<p>..code-block:: python</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def setup(app):</dt>
+<dd><p class="first">app.add_config_value(‘todo_include_todos’, False, ‘html’)</p>
+<p>app.add_node(todolist)
+app.add_node(todo,</p>
+<blockquote>
+<div>html=(visit_todo_node, depart_todo_node),
+latex=(visit_todo_node, depart_todo_node),
+text=(visit_todo_node, depart_todo_node))</div></blockquote>
+<p>app.add_directive(‘todo’, TodoDirective)
+app.add_directive(‘todolist’, TodolistDirective)
+app.connect(‘doctree-resolved’, process_todo_nodes)
+app.connect(‘env-purge-doc’, purge_todos)</p>
+<p class="last">return {‘version’: ‘0.1’}   # identifies the version of our extension</p>
+</dd>
+</dl>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/index.html">Developing Extensions for Sphinx</a></li>
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/tutorial.html">Tutorial: Writing a simple extension</a></li>
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/appapi.html">Application API</a></li>
+<li><a class="reference external" href="http://www.sphinx-doc.org/en/stable/templating.html#script_files">http://www.sphinx-doc.org/en/stable/templating.html#script_files</a></li>
+</ul>
+</div>
 </div>
 
 
