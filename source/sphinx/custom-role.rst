@@ -42,6 +42,7 @@ Underlying Objects
     * `nodeclass` and `innernodeclass` select the node classes for the reference and the content node
   
   * Subclassing and overwriting `process_link()` and/or `result_nodes()`.
+
   """
 
 Two modes of customization:
