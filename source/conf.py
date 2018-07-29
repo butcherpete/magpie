@@ -102,7 +102,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # documentation.
 #
 
-# html_theme_options = {'navbar_pagenav': False, 'navbar_class': "navbar navbar-inverse", 'source_link_position': "footer",}
+html_theme_options = {'navbar_pagenav': False, 'navbar_links': [("Vim", "vim"), ("Sphinx", "sphinx", True), ], 'navbar_sidebarrel': False, 'navbar_class': "navbar navbar-inverse", 'source_link_position': "footer",}
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
