@@ -1,3 +1,5 @@
+.. include:: /includes/<isopub.txt>
+ 
 Film Italiani
 =============
 

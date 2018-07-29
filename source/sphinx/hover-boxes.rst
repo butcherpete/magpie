@@ -1,3 +1,5 @@
+.. include:: /includes/<isopub.txt>
+ 
 .. include:: <isopub.txt>
 
 #########################
@@ -88,7 +90,7 @@ These three roles are rather limited:
 **********
 Resources
 **********
-
+- `Better Documentation Through Automation: Creating docutils and Sphinx Extensions <https://doughellmann.com/blog/2013/03/16/better-documentation-through-automation-creating-docutils-sphinx-extensions/>`_
 - `An idiot’s guide to Python documentation with Sphinx and ReadTheDocs <https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/>`_
 - `Docutils Hacker's Guide <http://docutils.sourceforge.net/docs/dev/hacking.html>`_
 - `Creating reStructuredText Directives <http://docutils.sourceforge.net/docs/howto/rst-directives.html#specify-directive-arguments-options-and-content>`_
