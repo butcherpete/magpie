@@ -28,7 +28,7 @@
 
   </head><body>
 
-  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -65,30 +65,6 @@
 </ul>
 </li>
               
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Custom Roles</a><ul>
-<li><a class="reference internal" href="#goals">Goals</a><ul>
-<li><a class="reference internal" href="#to-do-list">To Do List</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#underlying-objects">Underlying Objects</a></li>
-<li><a class="reference internal" href="#defining-custom-roles-in-sphinx">Defining Custom Roles in Sphinx</a></li>
-<li><a class="reference internal" href="#id1">Creating Custom Link Roles</a></li>
-<li><a class="reference internal" href="#resources">Resources</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
             
             
               
@@ -105,12 +81,6 @@
             
             
             
-            
-              <li class="hidden-sm">
-<div id="sourcelink">
-  <a href="../_sources/sphinx/custom-role.rst.txt"
-     rel="nofollow">Source</a>
-</div></li>
             
           </ul>
 
@@ -151,30 +121,22 @@
 <p><code class="code docutils literal notranslate"><span class="pre">XRefRole(object)</span></code> class in <code class="file docutils literal notranslate"><span class="pre">roles.py</span></code></p>
 <blockquote>
 <div><p>“””
-A generic cross-referencing role.  To create a callable that can be used as
-a role function, create an instance of this class.</p>
+A generic cross-referencing role.  To create a callable that can be used as a role function, create an instance of this class.</p>
 <p>The general features of this role are:</p>
 <ul class="simple">
 <li>Automatic creation of a reference and a content node.</li>
 <li>Optional separation of title and target with <cite>title &lt;target&gt;</cite>.</li>
-<li>The implementation is a class rather than a function to make
-customization easier.</li>
+<li>The implementation is a class rather than a function to make customization easier.</li>
 </ul>
 <p>Customization can be done in two ways:</p>
-<ul>
-<li><p class="first">Supplying constructor parameters:
-* <cite>fix_parens</cite> to normalize parentheses (strip from target, and add to</p>
-<blockquote>
-<div><p>title if configured)</p>
-</div></blockquote>
 <ul class="simple">
+<li>Supplying constructor parameters:<ul>
+<li><cite>fix_parens</cite> to normalize parentheses (strip from target, and add to title if configured)</li>
 <li><cite>lowercase</cite> to lowercase the target</li>
-<li><cite>nodeclass</cite> and <cite>innernodeclass</cite> select the node classes for
-the reference and the content node</li>
+<li><cite>nodeclass</cite> and <cite>innernodeclass</cite> select the node classes for the reference and the content node</li>
 </ul>
 </li>
-<li><p class="first">Subclassing and overwriting <cite>process_link()</cite> and/or <cite>result_nodes()</cite>.</p>
-</li>
+<li>Subclassing and overwriting <cite>process_link()</cite> and/or <cite>result_nodes()</cite>.</li>
 </ul>
 <p>“”“</p>
 </div></blockquote>
@@ -234,6 +196,13 @@ Examples include setting up Git commit hooks and releasing a new version.</dd>
   <div class="container">
     <p class="pull-right">
       <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/sphinx/custom-role.rst.txt"
+     rel="nofollow">Source</a>
+</div>
       
     </p>
     <p>
