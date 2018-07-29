@@ -6,6 +6,7 @@ Sphinx Development
   :maxdepth: 1
 
   themes 
+  custom-role 
   custom-directive 
   extensions 
   hover-boxes

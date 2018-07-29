@@ -1,3 +1,5 @@
+.. include:: <isopub.txt>
+ 
 Vim Getting Around
 ==================
 

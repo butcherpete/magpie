@@ -79,8 +79,6 @@
 <li><a class="reference internal" href="#to-do-list">To Do List</a></li>
 <li><a class="reference internal" href="#existing-term-role">Existing Term Role</a></li>
 <li><a class="reference internal" href="#hover-role">Hover Role</a></li>
-<li><a class="reference internal" href="#defining-custom-roles-in-sphinx">Defining Custom Roles in Sphinx</a></li>
-<li><a class="reference internal" href="#creating-custom-link-roles">Creating Custom Link Roles</a></li>
 <li><a class="reference internal" href="#resources">Resources</a></li>
 </ul>
 </li>
@@ -135,13 +133,21 @@
 <h1>Glossary Hover Boxes<a class="headerlink" href="#glossary-hover-boxes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
-<p>Test.</p>
+<p>Identify and implements solution for defintion hover boxes in project. The solution with include custom roles, css, and possibility custom JS.</p>
+<p>Two options:</p>
+<ul class="simple">
+<li>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">abbr</span></code> role. The author must specify text or a variable in the role defintion. The hover box is defined in CSS and not as a HTML tool-tip.</li>
+<li>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">term</span></code> role. The role creates a reference to the glossary definition that is handled with as a CSS hover box. Woud require JavaScript.</li>
+</ul>
+<p>Worth research:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://docutils.sourceforge.net/docutils/parsers/rst/roles.py">http://docutils.sourceforge.net/docutils/parsers/rst/roles.py</a></li>
+<li>The term role may be built in the Sphinx glossary defintion.</li>
+</ul>
 </div>
 <div class="section" id="to-do-list">
 <h2>To Do List<a class="headerlink" href="#to-do-list" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Test gist <a class="reference external" href="https://gist.github.com/shimizukawa/3718712">https://gist.github.com/shimizukawa/3718712</a></li>
-<li>Create custom role that copies the existing <code class="code docutils literal notranslate"><span class="pre">term</span></code> role.</li>
 <li>Extend custom role to specify a unique CSS class.</li>
 <li>Extend custom role to use JavaScript (if possible).</li>
 <li>Define CSS class.</li>
@@ -170,41 +176,10 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="defining-custom-roles-in-sphinx">
-<h2>Defining Custom Roles in Sphinx<a class="headerlink" href="#defining-custom-roles-in-sphinx" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/">https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/</a></p>
-</div>
-<div class="section" id="creating-custom-link-roles">
-<h2>Creating Custom Link Roles<a class="headerlink" href="#creating-custom-link-roles" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://protips.readthedocs.io/link-roles.html">http://protips.readthedocs.io/link-roles.html</a></p>
-<p>The article describes a six-step process:</p>
-<ol class="arabic simple">
-<li>Create an <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory to hold extensions.</li>
-<li>Add a custom search path in the <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code> that includes the <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory.</li>
-<li>Create the extension (<code class="code docutils literal notranslate"><span class="pre">bemuse.py</span></code>).</li>
-<li>Add the extension to the  <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory.</li>
-<li>Add the extension to the <code class="code docutils literal notranslate"><span class="pre">extensions</span></code> list in the the <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code>.</li>
-<li>Mark up text using the custom roles.</li>
-</ol>
-<p><strong>Directory Structure</strong></p>
-<dl class="docutils">
-<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/assets">assets</a> Image assets for use in the game.</dt>
-<dd>These assets can be referred from webpack code by <code class="docutils literal notranslate"><span class="pre">require('assets/...')</span></code>.</dd>
-<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/bin">bin</a></dt>
-<dd>Useful scripts for routine work.
-Examples include setting up Git commit hooks and releasing a new version.</dd>
-<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/config">config</a></dt>
-<dd>Configuration code for webpack and other things.</dd>
-</dl>
-<p>These three roles are rather limited:</p>
-<ul class="simple">
-<li>Each role links to a specific URL.</li>
-<li>Each role is defined by the <code class="code docutils literal notranslate"><span class="pre">reference</span></code> and <code class="code docutils literal notranslate"><span class="pre">external</span></code> classes.</li>
-</ul>
-</div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><a class="reference external" href="https://doughellmann.com/blog/2013/03/16/better-documentation-through-automation-creating-docutils-sphinx-extensions/">Better Documentation Through Automation: Creating docutils and Sphinx Extensions</a></li>
 <li><a class="reference external" href="https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/">An idiot’s guide to Python documentation with Sphinx and ReadTheDocs</a></li>
 <li><a class="reference external" href="http://docutils.sourceforge.net/docs/dev/hacking.html">Docutils Hacker’s Guide</a></li>
 <li><a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-directives.html#specify-directive-arguments-options-and-content">Creating reStructuredText Directives</a></li>
