@@ -28,7 +28,7 @@
 
   </head><body>
 
-  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -65,6 +65,59 @@
 </ul>
 </li>
               
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Vim Search</a><ul>
+<li><a class="reference internal" href="#ack-searches">Ack Searches</a><ul>
+<li><a class="reference internal" href="#ack-syntax">Ack Syntax</a></li>
+<li><a class="reference internal" href="#ack-options">Ack Options</a></li>
+<li><a class="reference internal" href="#other-acks">Other Acks</a></li>
+<li><a class="reference internal" href="#ack-quickfix-keyboard-shortcuts">Ack Quickfix Keyboard Shortcuts</a></li>
+<li><a class="reference internal" href="#gotchas">Gotchas</a></li>
+<li><a class="reference internal" href="#do-not-jump-first-result-automatically">Do Not Jump First Result Automatically</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#vimgrep-search">Vimgrep Search</a><ul>
+<li><a class="reference internal" href="#recursive-search">Recursive Search</a></li>
+<li><a class="reference internal" href="#combining-vimgrep-and-ack">Combining :vimgrep and :Ack</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#global-searches">Global Searches</a><ul>
+<li><a class="reference internal" href="#regex-patterns">Regex Patterns</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#star-searches">Star Searches</a><ul>
+<li><a class="reference internal" href="#normal-modes">Normal Modes</a></li>
+<li><a class="reference internal" href="#visual-star-search">Visual Star Search</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#quickfix-list">Quickfix List</a><ul>
+<li><a class="reference internal" href="#navigating-quickfix-list">Navigating Quickfix List</a></li>
+<li><a class="reference internal" href="#recalling-quickfix-lists">Recalling Quickfix Lists</a></li>
+<li><a class="reference internal" href="#quickfix-window">Quickfix Window</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#location-list">Location List</a><ul>
+<li><a class="reference internal" href="#navigating-location-list">Navigating Location List</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#patterns">Patterns</a><ul>
+<li><a class="reference internal" href="#searching-for-the-last-pattern">Searching for the last pattern</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
             
             
               
@@ -81,6 +134,12 @@
             
             
             
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/vim/vim_search.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
             
           </ul>
 
@@ -663,13 +722,6 @@ returns the last search pattern.</p>
   <div class="container">
     <p class="pull-right">
       <a href="#">Back to top</a>
-      
-        <br/>
-        
-<div id="sourcelink">
-  <a href="../_sources/vim/vim_search.rst.txt"
-     rel="nofollow">Source</a>
-</div>
       
     </p>
     <p>
