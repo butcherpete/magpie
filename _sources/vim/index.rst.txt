@@ -5,8 +5,7 @@ Vim
 ***
 
 .. toctree::
-  :maxdepth: 2
-  :caption: Contents:
+  :maxdepth: 1
 
   vim_airline
   vim_bookmarks
