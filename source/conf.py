@@ -111,12 +111,12 @@ html_theme_options = {'navbar_pagenav': False, 'navbar_links': [("Vim", "vim/ind
 html_static_path = ['_static']
 
 html_context = { 
-   'css_files': ['_static/css/custom.css'],
+   'css_files': ['_static/css/my-styles.css'],
    }
 
 
 def setup(app):
-  app.add_stylesheet('css/custom-css')
+  app.add_stylesheet('css/mystyles-css')
 
 # app.add_stylesheet("ANOTHER.css")
 # app.add_stylesheet("AND ANOTHER.css")
