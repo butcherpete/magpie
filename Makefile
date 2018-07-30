@@ -21,13 +21,11 @@ help:
 .ONESHELL:
 gh-pages:
 	rm -rf /tmp/gh-pages
-	rm -rf /tmp/static
+	cp -r $(SOURCEDIR)/_static/css $(BUILDDIR)/html/_static/css 
 	cp -r $(BUILDDIR)/html /tmp/gh-pages 
-	cp -r $(BUILDDIR)/_static/css /tmp/css 
 	git checkout gh-pages 
 	rm -rf *
 	cp -r /tmp/gh-pages/* .
-	cp -r /tmp/static/* _static/
 	touch .nojekyll 
 	git add .
 	git commit -m "Update to gh-pages" 
