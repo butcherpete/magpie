@@ -110,11 +110,17 @@ html_theme_options = {'navbar_pagenav': False, 'navbar_links': [("Vim", "vim/ind
 
 html_static_path = ['_static']
 
-def setup(app):
-    app.add_css_file('my-styles-css')
+html_context = {
+    'css_files': ['_static/my-styles-css'],
+    }
+
+
+# def setup(app):
+#    app.add_stylesheet('my-styles-css')
 
 # app.add_stylesheet("ANOTHER.css")
 # app.add_stylesheet("AND ANOTHER.css")
+
 
 
 # If given, this must be the name of an image file (path relative to the 
