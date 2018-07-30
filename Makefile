@@ -20,11 +20,14 @@ help:
 .PHONY: gh-pages
 .ONESHELL:
 gh-pages:
-	rm -rf /tmp/gh-pages 
+	rm -rf /tmp/gh-pages
+	rm -rf /tmp/static
 	cp -r $(BUILDDIR)/html /tmp/gh-pages 
+	cp -r $(BUILDDIR)/_static /tmp/static 
 	git checkout gh-pages 
 	rm -rf *
 	cp -r /tmp/gh-pages/* .
+	cp -r /tmp/static/* ./_static/
 	touch .nojekyll 
 	git add .
 	git commit -m "Update to gh-pages" 
