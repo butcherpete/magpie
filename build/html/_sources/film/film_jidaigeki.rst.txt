@@ -115,10 +115,10 @@ Zatoichi
 - *The Tale of Zatoichi* (*Zatōichi monogatari*) directed by Kenji Misumi (1962) ★★★
 - *The Tale of Zatoichi Continues* (*Zoku Zatōichi monogatari*) directed by Kazuo Mori (1962) ★★
 - *New Tale of Zatoichi* (*Shin Zatōichi monogatari*) directed by Tokuzo Tanaka (1963) ★★★
-- *Zatoichi the Fugitive* (*Zatōichi kyōjō-tabi*) directed by Tokuzo Tanaka (1963)
-- *Zatoichi on the Road* (*Zatōichi kenka-tabi*) directed by Kimiyoshi Yasuda (1963)
-- *Zatoichi and the Chest of Gold* (*Zatōichi senryō-kubi*) directed by Kazuo Ikehiro (1964)
-- *Zatoichi's Flashing Sword* (*Zatōichi abare tako*) directed by Kazuo Ikehiro (1964)
+- *Zatoichi the Fugitive* (*Zatōichi kyōjō-tabi*) directed by Tokuzo Tanaka (1963)  ★★
+- *Zatoichi on the Road* (*Zatōichi kenka-tabi*) directed by Kimiyoshi Yasuda (1963) ★★
+- *Zatoichi and the Chest of Gold* (*Zatōichi senryō-kubi*) directed by Kazuo Ikehiro (1964) ★★★
+- *Zatoichi's Flashing Sword* (*Zatōichi abare tako*) directed by Kazuo Ikehiro (1964) ★★ 
 - *Fight, Zatoichi, Fight* (*Zatōichi kesshō-tabiZatoichi*) directed by Kenji Misumi (1964)
 - *Adventures of Zatoichi* (*Zatōichi sekisho-yaburi*) directed by Kimiyoshi Yasuda (1964)
 - *Zatoichi's Revenge* (*Zatōichi nidan-giri*) directed by Akira Inoue (1965)
