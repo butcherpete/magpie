@@ -169,7 +169,7 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>My copy:</p>
+<p>First Attempt</p>
 <p>WARNING: extension ‘hover’ has no setup() function; is it really a Sphinx extension module?</p>
 <div class="literal-block-wrapper docutils container" id="id4">
 <div class="code-block-caption"><span class="caption-number">Listing 9 </span><span class="caption-text">hover.py</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
@@ -208,6 +208,13 @@
     <span class="n">options</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">options</span><span class="p">[</span><span class="s1">&#39;explanation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">expl</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">addnodes</span><span class="o">.</span><span class="n">hover</span><span class="o">-</span><span class="n">box</span><span class="p">(</span><span class="n">abbr</span><span class="p">,</span> <span class="n">abbr</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)],</span> <span class="p">[]</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>Second Attempt</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Listing 10 </span><span class="caption-text">Second Attempt</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">register_generic_role</span><span class="p">(</span><span class="s1">&#39;hover&#39;</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">abbr</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 </div>
