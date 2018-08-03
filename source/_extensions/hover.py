@@ -11,6 +11,7 @@ Copy of abbr_role with hover substituted for abbr
 """
 
 from docutils import nodes
+import re
 
 """
 Error re not defined

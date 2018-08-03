@@ -59,6 +59,7 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'bemuse',
+    'hover',
     'sphinxcontrib_roles',
 ]
 
