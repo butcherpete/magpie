@@ -56,7 +56,7 @@ Existing Abbr Role
       return [addnodes.abbreviation(abbr, abbr, **options)], []
 
 
-My copy:
+First Attempt
 
 WARNING: extension 'hover' has no setup() function; is it really a Sphinx extension module?
 
@@ -82,7 +82,15 @@ WARNING: extension 'hover' has no setup() function; is it really a Sphinx extens
       options = options.copy()
       options['explanation'] = expl
       return [addnodes.hover-box(abbr, abbr, **options)], []
-  
+
+
+Second Attempt
+
+.. code-block:: python
+  :caption: Second Attempt 
+  :linenos:
+
+  register_generic_role('hover', nodes.abbr)
 
 Test Bed
 ========
