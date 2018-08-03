@@ -1,7 +1,7 @@
 .. include:: <isopub.txt>
  
 #########################
-Custom Roles 
+Bootstrap & Sphinx
 #########################
 
 **********
@@ -27,7 +27,8 @@ Resources
 
 .. seealso:: 
 
-  - `Sphinx Bootstrap Theme <https://github.com/butcherpete/sphinx-template>`_.
-  - `Bootswatch <https://bootswatch.com/3>`_.
+  `Sphinx Bootstrap Theme <https://github.com/butcherpete/sphinx-template>`_.
+    Text
 
-
+  `Bootswatch <https://bootswatch.com/3>`_.
+    Text
