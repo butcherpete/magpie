@@ -65,7 +65,6 @@ extensions = [
 
 # Define new roles:
 
-register_generic_role('hover', nodes.abbr)
 
 
 # configuration case.2: define roles as dict (define roles and its style on HTML)
