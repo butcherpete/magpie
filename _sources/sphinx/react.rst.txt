@@ -12,9 +12,8 @@ Adaptive Modern Product Documentaiton
 Tabs Directive
 **************
 
-.. code-block::
+.. code-block:: python
   :caption: tab.py
-  :language: python
   :linenos:
 
   class TabSection(Directive):
