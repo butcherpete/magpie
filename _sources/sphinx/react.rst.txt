@@ -11,6 +11,7 @@ Adaptive Modern Product Documentaiton
 **************
 Tabs Directive
 **************
+Test script.
 
 .. code-block:: python
   :caption: tab.py
