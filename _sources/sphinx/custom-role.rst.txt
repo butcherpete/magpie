@@ -207,6 +207,13 @@ Define the role.
       app.connect("html-collect-pages", on_html_collect_pages)
       app.connect("html-page-context", html_page_context)
 
+
+An example in use:
+
+This is an :strike:`example of a strikethrough`.
+
+This is an :red:`example of a red text highlight`.
+
 **********
 Resources
 **********
