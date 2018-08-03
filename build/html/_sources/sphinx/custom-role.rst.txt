@@ -49,7 +49,34 @@ Two modes of customization:
 - What does it mean to supply constructor parameters?
 - What does it mean to subclass and overwrite the :code:`process_link()` and :code:`result_nodes()` metric.
 
+*******************
+Better Custom Roles
+*******************
+http://inside.mines.edu/~jrosenth/hacking-docutils.html#quick-dirty-custom-roles
 
+
+
+
+.. code_block:: python
+  :caption: slides.py
+
+  import docutils.parsers.rst as rst
+  import docutils.nodes as nodes
+  
+  def slides_role(role, rawtext, text, lineno, inliner, options={}, content=[]):
+      with open('source/slides/{}.rst'.format(text)) as f:
+          title = f.readline().strip()
+      return [
+          nodes.reference(rawtext, title, refuri='/slides/{}.html'.format(text), internal=True),
+          nodes.Text(', ('),
+          nodes.reference(rawtext, '4:3 PDF', refuri='/_static/slides/{}-43.pdf'.format(text), internal=True, newtab=True),
+          nodes.Text(', '),
+          nodes.reference(rawtext, '16:9 PDF', refuri='/_static/slides/{}-169.pdf'.format(text), internal=True, newtab=True),
+          nodes.Text(', '),
+          nodes.reference(rawtext, '16:10 PDF', refuri='/_static/slides/{}-1610.pdf'.format(text), internal=True, newtab=True),
+          nodes.Text(')'),
+      ], []
+  rst.roles.register_local_role('slides', slides_role)
 
 
 *******************************
