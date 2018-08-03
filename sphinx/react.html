@@ -120,56 +120,8 @@
 <li><a class="reference external" href="https://gist.github.com/hishnash/933ce146289faf88dd633c249eb5f228">https://gist.github.com/hishnash/933ce146289faf88dd633c249eb5f228</a></li>
 </ul>
 </div></blockquote>
-<p>Tabs Directive</p>
-<div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Listing 6 </span><span class="caption-text">tab.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TabSection</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
-    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>  <span class="c1"># this directive can have children</span>
-    <span class="n">required_arguments</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># has 1 arg</span>
-    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">0</span>
-
-     <span class="c1"># add a kwarg `keyworks` these are used for search</span>
-    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;keywords&#39;</span><span class="p">:</span> <span class="n">directives</span><span class="o">.</span><span class="n">unchanged</span><span class="p">}</span>
-
-    <span class="c1"># we need a new line after the args before the child content</span>
-    <span class="n">final_argument_whitespace</span> <span class="o">=</span> <span class="bp">True</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        This function is called when sphinx builds an AST out of the source files.</span>
-<span class="sd">        Should return a list of nodes for the AST that will be appended in this location.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">keywords</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;keywords&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">keywords</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">keywords</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">keywords</span> <span class="o">=</span> <span class="n">keywords</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">keywords</span> <span class="o">=</span> <span class="p">[]</span>
-
-        <span class="c1"># we need to create some things inside this AST</span>
-        <span class="n">node</span> <span class="o">=</span> <span class="n">Element</span><span class="p">()</span>
-        <span class="n">node</span><span class="o">.</span><span class="n">document</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">document</span>
-
-        <span class="c1"># build the AST for the child content</span>
-        <span class="n">nested_parse_with_titles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
-
-        <span class="c1"># get the tab&#39;s title</span>
-        <span class="n">title</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">arguments</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-        <span class="c1"># use the node we set up</span>
-        <span class="c1"># (this is another class not shown here that subclasses Frame)</span>
-        <span class="n">frame</span> <span class="o">=</span> <span class="n">TabFrameNode</span><span class="p">(</span>
-          <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
-          <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">title</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)],</span>
-          <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="n">title</span><span class="p">],</span>
-          <span class="n">index_keywords</span><span class="o">=</span><span class="n">keywords</span>
-        <span class="p">)</span>
-        <span class="n">frame</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="p">:</span>
-            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">TabNode</span><span class="p">):</span>
-                <span class="n">frame</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">frame</span><span class="p">]</span>
-</pre></div>
-</div>
+<div class="section" id="tabs-directive">
+<h2>Tabs Directive<a class="headerlink" href="#tabs-directive" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
