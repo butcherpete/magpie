@@ -37,6 +37,8 @@ Existing Abbr Role
 :file:`sphinx/roles.py`
 
 .. code-block:: python
+  :caption: sphinx/roles.py 
+  :linenos:
 
   _abbr_re = re.compile(r'\((.*)\)$', re.S)
   
@@ -53,6 +55,37 @@ Existing Abbr Role
       options['explanation'] = expl
       return [addnodes.abbreviation(abbr, abbr, **options)], []
 
+
+My copy:
+
+WARNING: extension 'hover' has no setup() function; is it really a Sphinx extension module?
+
+.. code-block:: python
+  :caption: hover.py
+  :linenos:
+
+  from docutils import nodes
+  import re
+  
+  
+  hover_re = re.compile(r'\((.*)\)$', re.S)
+  
+  
+  def hover_role(typ, rawtext, text, lineno, inliner, options={}, content=[]):
+      # type: (unicode, unicode, unicode, int, Inliner, Dict, List[unicode]) -> Tuple[List[nodes.Node], List[nodes.Node]]  # NOQA
+      text = utils.unescape(text)
+      m = _hover_re.search(text)  # type: ignore
+      if m is None:
+          return [addnodes.hover-box(text, text, **options)], []
+      abbr = text[:m.start()].strip()
+      expl = m.group(1)
+      options = options.copy()
+      options['explanation'] = expl
+      return [addnodes.hover-box(abbr, abbr, **options)], []
+  
+
+Test Bed
+========
 
 :abbr:`LIFO (last-in, first-out)`
 

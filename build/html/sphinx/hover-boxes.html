@@ -137,7 +137,22 @@
 <div class="section" id="existing-abbr-role">
 <h2>Existing Abbr Role<a class="headerlink" href="#existing-abbr-role" title="Permalink to this headline">¶</a></h2>
 <p><code class="file docutils literal notranslate"><span class="pre">sphinx/roles.py</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">_abbr_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\((.*)\)$&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">S</span><span class="p">)</span>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Listing 8 </span><span class="caption-text">sphinx/roles.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">_abbr_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\((.*)\)$&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">S</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">abbr_role</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">inliner</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="n">content</span><span class="o">=</span><span class="p">[]):</span>
@@ -152,9 +167,55 @@
     <span class="n">options</span><span class="p">[</span><span class="s1">&#39;explanation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">expl</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">addnodes</span><span class="o">.</span><span class="n">abbreviation</span><span class="p">(</span><span class="n">abbr</span><span class="p">,</span> <span class="n">abbr</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)],</span> <span class="p">[]</span>
 </pre></div>
+</td></tr></table></div>
 </div>
+<p>My copy:</p>
+<p>WARNING: extension ‘hover’ has no setup() function; is it really a Sphinx extension module?</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-number">Listing 9 </span><span class="caption-text">hover.py</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+
+<span class="n">hover_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\((.*)\)$&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">S</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">hover_role</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">inliner</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="n">content</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="c1"># type: (unicode, unicode, unicode, int, Inliner, Dict, List[unicode]) -&gt; Tuple[List[nodes.Node], List[nodes.Node]]  # NOQA</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">unescape</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">_hover_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">addnodes</span><span class="o">.</span><span class="n">hover</span><span class="o">-</span><span class="n">box</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)],</span> <span class="p">[]</span>
+    <span class="n">abbr</span> <span class="o">=</span> <span class="n">text</span><span class="p">[:</span><span class="n">m</span><span class="o">.</span><span class="n">start</span><span class="p">()]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">expl</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">options</span> <span class="o">=</span> <span class="n">options</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">options</span><span class="p">[</span><span class="s1">&#39;explanation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">expl</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">addnodes</span><span class="o">.</span><span class="n">hover</span><span class="o">-</span><span class="n">box</span><span class="p">(</span><span class="n">abbr</span><span class="p">,</span> <span class="n">abbr</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)],</span> <span class="p">[]</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="test-bed">
+<h3>Test Bed<a class="headerlink" href="#test-bed" title="Permalink to this headline">¶</a></h3>
 <p><abbr title="last-in, first-out">LIFO</abbr></p>
 <p><a href="#id1"><span class="problematic" id="id2">:hover:`LIFO (last-in, first-out)`</span></a></p>
+</div>
 </div>
 <div class="section" id="existing-term-role">
 <h2>Existing Term Role<a class="headerlink" href="#existing-term-role" title="Permalink to this headline">¶</a></h2>
