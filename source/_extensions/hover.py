@@ -12,6 +12,10 @@ Copy of abbr_role with hover substituted for abbr
 
 from docutils import nodes
 
+"""
+Error re not defined
+"""
+
 hover_re = re.compile(r'\((.*)\)$', re.S)
 
 
