@@ -15,4 +15,5 @@ Sphinx Development
   js-custom 
   metadata 
   multiple-repos
+  react
 
