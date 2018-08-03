@@ -12,7 +12,8 @@ Adaptive Modern Product Documentaiton
 Tabs Directive
 **************
 
-.. literalinclude:: tab.py 
+.. code-block::
+  :caption: tab.py
   :language: python
   :linenos:
 
