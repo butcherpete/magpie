@@ -111,27 +111,25 @@
 <div class="section" id="underlying-objects">
 <h2>Underlying Objects<a class="headerlink" href="#underlying-objects" title="Permalink to this headline">¶</a></h2>
 <p><code class="code docutils literal notranslate"><span class="pre">XRefRole(object)</span></code> class in <code class="file docutils literal notranslate"><span class="pre">roles.py</span></code></p>
-<blockquote>
-<div><p>“””
-A generic cross-referencing role.  To create a callable that can be used as a role function, create an instance of this class.</p>
-<p>The general features of this role are:</p>
-<ul class="simple">
-<li>Automatic creation of a reference and a content node.</li>
-<li>Optional separation of title and target with <cite>title &lt;target&gt;</cite>.</li>
-<li>The implementation is a class rather than a function to make customization easier.</li>
-</ul>
-<p>Customization can be done in two ways:</p>
-<ul class="simple">
-<li>Supplying constructor parameters:<ul>
-<li><cite>fix_parens</cite> to normalize parentheses (strip from target, and add to title if configured)</li>
-<li><cite>lowercase</cite> to lowercase the target</li>
-<li><cite>nodeclass</cite> and <cite>innernodeclass</cite> select the node classes for the reference and the content node</li>
-</ul>
-</li>
-<li>Subclassing and overwriting <cite>process_link()</cite> and/or <cite>result_nodes()</cite>.</li>
-</ul>
-<p>“”“</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">generic</span> <span class="n">cross</span><span class="o">-</span><span class="n">referencing</span> <span class="n">role</span><span class="o">.</span>  <span class="n">To</span> <span class="n">create</span> <span class="n">a</span> <span class="nb">callable</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="k">as</span> <span class="n">a</span> <span class="n">role</span> <span class="n">function</span><span class="p">,</span> <span class="n">create</span> <span class="n">an</span> <span class="n">instance</span> <span class="n">of</span> <span class="n">this</span> <span class="n">class</span><span class="o">.</span>
+
+<span class="n">The</span> <span class="n">general</span> <span class="n">features</span> <span class="n">of</span> <span class="n">this</span> <span class="n">role</span> <span class="n">are</span><span class="p">:</span>
+
+<span class="o">*</span> <span class="n">Automatic</span> <span class="n">creation</span> <span class="n">of</span> <span class="n">a</span> <span class="n">reference</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">content</span> <span class="n">node</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">Optional</span> <span class="n">separation</span> <span class="n">of</span> <span class="n">title</span> <span class="ow">and</span> <span class="n">target</span> <span class="k">with</span> <span class="sb">`title &lt;target&gt;`</span><span class="o">.</span>
+<span class="o">*</span> <span class="n">The</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">a</span> <span class="k">class</span> <span class="nc">rather</span> <span class="n">than</span> <span class="n">a</span> <span class="n">function</span> <span class="n">to</span> <span class="n">make</span> <span class="n">customization</span> <span class="n">easier</span><span class="o">.</span>
+
+<span class="n">Customization</span> <span class="n">can</span> <span class="n">be</span> <span class="n">done</span> <span class="ow">in</span> <span class="n">two</span> <span class="n">ways</span><span class="p">:</span>
+
+<span class="o">*</span> <span class="n">Supplying</span> <span class="n">constructor</span> <span class="n">parameters</span><span class="p">:</span>
+
+  <span class="o">*</span> <span class="sb">`fix_parens`</span> <span class="n">to</span> <span class="n">normalize</span> <span class="n">parentheses</span> <span class="p">(</span><span class="n">strip</span> <span class="kn">from</span> <span class="nn">target</span><span class="p">,</span> <span class="ow">and</span> <span class="n">add</span> <span class="n">to</span> <span class="n">title</span> <span class="k">if</span> <span class="n">configured</span><span class="p">)</span>
+  <span class="o">*</span> <span class="sb">`lowercase`</span> <span class="n">to</span> <span class="n">lowercase</span> <span class="n">the</span> <span class="n">target</span>
+  <span class="o">*</span> <span class="sb">`nodeclass`</span> <span class="ow">and</span> <span class="sb">`innernodeclass`</span> <span class="n">select</span> <span class="n">the</span> <span class="n">node</span> <span class="n">classes</span> <span class="k">for</span> <span class="n">the</span> <span class="n">reference</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">content</span> <span class="n">node</span>
+
+<span class="o">*</span> <span class="n">Subclassing</span> <span class="ow">and</span> <span class="n">overwriting</span> <span class="sb">`process_link()`</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="sb">`result_nodes()`</span><span class="o">.</span>
+</pre></div>
+</div>
 <p>Two modes of customization:</p>
 <ul class="simple">
 <li>What does it mean to supply constructor parameters?</li>
@@ -169,6 +167,27 @@ Examples include setting up Git commit hooks and releasing a new version.</dd>
 <li>Each role links to a specific URL.</li>
 <li>Each role is defined by the <code class="code docutils literal notranslate"><span class="pre">reference</span></code> and <code class="code docutils literal notranslate"><span class="pre">external</span></code> classes.</li>
 </ul>
+</div>
+<div class="section" id="define-original-roles-and-styles-in-sphinx">
+<h2>Define Original Roles and Styles in Sphinx<a class="headerlink" href="#define-original-roles-and-styles-in-sphinx" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://gist.github.com/shimizukawa/3718712">https://gist.github.com/shimizukawa/3718712</a></p>
+<p><code class="file docutils literal notranslate"><span class="pre">conf.py</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text"><a class="reference external" href="https://gist.github.com/tk0miya/9b3d28f5a1480da90acb">https://gist.github.com/tk0miya/9b3d28f5a1480da90acb</a></span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">path</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">]</span>
+<span class="n">extensions</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib_roles&#39;</span><span class="p">]</span>
+
+<span class="c1"># configuration case.1: define roles as list (define only roles)</span>
+<span class="n">roles</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;strike&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]</span>
+
+
+<span class="c1"># configuration case.2: define roles as dict (define roles and its style on HTML)</span>
+<span class="n">roles</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;strike&#39;</span><span class="p">:</span> <span class="s2">&quot;text-decoration: line-through;&quot;</span><span class="p">,</span>
+         <span class="s1">&#39;red&#39;</span><span class="p">:</span> <span class="s2">&quot;color: red;&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p><code class="file docutils literal notranslate"><span class="pre">sphinxcontrib_roles.py</span></code></p>
 </div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
