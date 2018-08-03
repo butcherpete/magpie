@@ -54,6 +54,9 @@ Existing Abbr Role
       return [addnodes.abbreviation(abbr, abbr, **options)], []
 
 
+:abbr:`LIFO (last-in, first-out)`
+
+:hover:`LIFO (last-in, first-out)`
 
 
 ******************
