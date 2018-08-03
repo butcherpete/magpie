@@ -119,6 +119,50 @@
 </ul>
 </div>
 </div>
+<div class="section" id="define-the-role-function">
+<h2>Define the Role Function<a class="headerlink" href="#define-the-role-function" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-roles.html">http://docutils.sourceforge.net/docs/howto/rst-roles.html</a></p>
+<p>The role function creates and returns inline elements (nodes) and does
+any additional processing required.  Its signature is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">role_fn</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">inliner</span><span class="p">,</span>
+            <span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="n">content</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="n">code</span><span class="o">...</span>
+
+<span class="c1"># Set function attributes for customization:</span>
+<span class="n">role_fn</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">role_fn</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>Function attributes are described below (see <a href="#id9"><span class="problematic" id="id10">`Specify Role Function
+Options and Content`_</span></a>).  The role function parameters are as follows:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The local name of the interpreted role, the role name
+actually used in the document.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rawtext</span></code>: A string containing the enitre interpreted text input,
+including the role and markup.  Return it as a <code class="docutils literal notranslate"><span class="pre">problematic</span></code> node
+linked to a system message if a problem is encountered.</li>
+<li><code class="docutils literal notranslate"><span class="pre">text</span></code>: The interpreted text content.</li>
+<li><code class="docutils literal notranslate"><span class="pre">lineno</span></code>: The line number where the interpreted text begins.</li>
+<li><code class="docutils literal notranslate"><span class="pre">inliner</span></code>: The <code class="docutils literal notranslate"><span class="pre">docutils.parsers.rst.states.Inliner</span></code> object that
+called role_fn.  It contains the several attributes useful for error
+reporting and document tree access.</li>
+<li><code class="docutils literal notranslate"><span class="pre">options</span></code>: A dictionary of directive options for customization
+(from the <a href="#id11"><span class="problematic" id="id12">`&quot;role&quot; directive`_</span></a>), to be interpreted by the role
+function.  Used for additional attributes for the generated elements
+and other functionality.</li>
+<li><code class="docutils literal notranslate"><span class="pre">content</span></code>: A list of strings, the directive content for
+customization (from the <a href="#id13"><span class="problematic" id="id14">`&quot;role&quot; directive`_</span></a>).  To be interpreted by
+the role function.</li>
+</ul>
+<p>Role functions return a tuple of two values:</p>
+<ul class="simple">
+<li>A list of nodes which will be inserted into the document tree at the
+point where the interpreted role was encountered (can be an empty
+list).</li>
+<li>A list of system messages, which will be inserted into the document tree
+immediately after the end of the current block (can also be empty).</li>
+</ul>
+</div>
 <div class="section" id="underlying-objects">
 <h2>Underlying Objects<a class="headerlink" href="#underlying-objects" title="Permalink to this headline">¶</a></h2>
 <p><code class="code docutils literal notranslate"><span class="pre">XRefRole(object)</span></code> class in <code class="file docutils literal notranslate"><span class="pre">roles.py</span></code></p>
