@@ -62,6 +62,14 @@ extensions = [
     'sphinxcontrib_roles',
 ]
 
+
+# Define new roles:
+
+# configuration case.2: define roles as dict (define roles and its style on HTML)
+roles = {'strike': "text-decoration: line-through;",
+         'red': "color: red;" }
+
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
