@@ -73,20 +73,58 @@ The article describes a six-step process:
 6. Mark up text using the custom roles.
 
 
-**Directory Structure**
+.. code-block:: python
+  :caption: conf.py
 
-:tree:`assets` Image assets for use in the game.
-  These assets can be referred from webpack code by ``require('assets/...')``.
-:tree:`bin`
-  Useful scripts for routine work.
-  Examples include setting up Git commit hooks and releasing a new version.
-:tree:`config`
-  Configuration code for webpack and other things.
+  sys.path.insert(0, os.path.abspath('.') + '/_extensions')
 
-These three roles are rather limited:
+  extensions = [
+      'sphinx.ext.autodoc',
+      'sphinx.ext.doctest',
+      'sphinx.ext.intersphinx',
+      'sphinx.ext.todo',
+      'sphinx.ext.coverage',
+      'sphinx.ext.mathjax',
+      'sphinx.ext.ifconfig',
+      'sphinx.ext.viewcode',
+      'sphinx.ext.githubpages',
+      'bemuse'
+  ]
 
-- Each role links to a specific URL.
-- Each role is defined by the :code:`reference` and :code:`external` classes.
+.. code-block:: python
+  :caption: bemuse.py
+
+  from docutils import nodes
+  
+  def setup(app):
+      app.add_role('github', autolink('https://github.com/%s'))
+      app.add_role('module', autolink('https://github.com/bemusic/bemuse/tree/master/src/%s'))
+      app.add_role('tree', autolink('https://github.com/bemusic/bemuse/tree/master/%s'))
+  
+  def autolink(pattern):
+      def role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+          url = pattern % (text,)
+          node = nodes.reference(rawtext, text, refuri=url, **options)
+          return [node], []
+      return role
+
+
+
+..
+  **Directory Structure**
+  
+  :tree:`assets` Image assets for use in the game.
+    These assets can be referred from webpack code by ``require('assets/...')``.
+  :tree:`bin`
+    Useful scripts for routine work.
+    Examples include setting up Git commit hooks and releasing a new version.
+  :tree:`config`
+    Configuration code for webpack and other things.
+  
+  These three roles are rather limited:
+  
+  - Each role links to a specific URL.
+  - Each role is defined by the :code:`reference` and :code:`external` classes.
 
 ******************************************
 Define Original Roles and Styles in Sphinx
