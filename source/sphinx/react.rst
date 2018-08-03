@@ -1,6 +1,6 @@
-*************************************
+#####################################
 Adaptive Modern Product Documentaiton
-*************************************
+#####################################
 
 .. highlights::
 
@@ -8,10 +8,13 @@ Adaptive Modern Product Documentaiton
   - https://gist.github.com/hishnash/933ce146289faf88dd633c249eb5f228
 
 
+**************
 Tabs Directive
+**************
 
-.. code-block:: python
-  :caption: tab.py
+.. literalinclude:: tab.py 
+  :language: python
+  :linenos:
 
   class TabSection(Directive):
       has_content = True  # this directive can have children
