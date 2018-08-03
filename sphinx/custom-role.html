@@ -152,28 +152,50 @@
 <li>Add the extension to the <code class="code docutils literal notranslate"><span class="pre">extensions</span></code> list in the the <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code>.</li>
 <li>Mark up text using the custom roles.</li>
 </ol>
-<p><strong>Directory Structure</strong></p>
-<dl class="docutils">
-<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/assets">assets</a> Image assets for use in the game.</dt>
-<dd>These assets can be referred from webpack code by <code class="docutils literal notranslate"><span class="pre">require('assets/...')</span></code>.</dd>
-<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/bin">bin</a></dt>
-<dd>Useful scripts for routine work.
-Examples include setting up Git commit hooks and releasing a new version.</dd>
-<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/config">config</a></dt>
-<dd>Configuration code for webpack and other things.</dd>
-</dl>
-<p>These three roles are rather limited:</p>
-<ul class="simple">
-<li>Each role links to a specific URL.</li>
-<li>Each role is defined by the <code class="code docutils literal notranslate"><span class="pre">reference</span></code> and <code class="code docutils literal notranslate"><span class="pre">external</span></code> classes.</li>
-</ul>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">conf.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/_extensions&#39;</span><span class="p">)</span>
+
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;sphinx.ext.autodoc&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.doctest&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.intersphinx&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.todo&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.coverage&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.mathjax&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.ifconfig&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.viewcode&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sphinx.ext.githubpages&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;bemuse&#39;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text">bemuse.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_role</span><span class="p">(</span><span class="s1">&#39;github&#39;</span><span class="p">,</span> <span class="n">autolink</span><span class="p">(</span><span class="s1">&#39;https://github.com/</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">))</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_role</span><span class="p">(</span><span class="s1">&#39;module&#39;</span><span class="p">,</span> <span class="n">autolink</span><span class="p">(</span><span class="s1">&#39;https://github.com/bemusic/bemuse/tree/master/src/</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">))</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">add_role</span><span class="p">(</span><span class="s1">&#39;tree&#39;</span><span class="p">,</span> <span class="n">autolink</span><span class="p">(</span><span class="s1">&#39;https://github.com/bemusic/bemuse/tree/master/</span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">autolink</span><span class="p">(</span><span class="n">pattern</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">role</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">inliner</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="n">content</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">pattern</span> <span class="o">%</span> <span class="p">(</span><span class="n">text</span><span class="p">,)</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">reference</span><span class="p">(</span><span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">refuri</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">],</span> <span class="p">[]</span>
+    <span class="k">return</span> <span class="n">role</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="define-original-roles-and-styles-in-sphinx">
 <h2>Define Original Roles and Styles in Sphinx<a class="headerlink" href="#define-original-roles-and-styles-in-sphinx" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://gist.github.com/shimizukawa/3718712">https://gist.github.com/shimizukawa/3718712</a></p>
 <p>Register the role:</p>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">conf.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">conf.py</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">path</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">]</span>
 <span class="n">extensions</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib_roles&#39;</span><span class="p">]</span>
 
@@ -188,8 +210,8 @@ Examples include setting up Git commit hooks and releasing a new version.</dd>
 </div>
 </div>
 <p>Define the role.</p>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text">sphinxcontrib_roles.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Listing 4 </span><span class="caption-text">sphinxcontrib_roles.py</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">roles</span>
