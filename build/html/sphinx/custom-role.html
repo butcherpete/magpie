@@ -189,13 +189,43 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="in-use">
+<h3>In Use<a class="headerlink" href="#in-use" title="Permalink to this headline">¶</a></h3>
+<p>These three roles (<code class="code docutils literal notranslate"><span class="pre">github</span></code>, <code class="code docutils literal notranslate"><span class="pre">module</span></code>, and <code class="code docutils literal notranslate"><span class="pre">tree</span></code>) are rather limited:</p>
+<ul class="simple">
+<li>Each role links to a specific URL.</li>
+<li>Each role is defined by the <code class="code docutils literal notranslate"><span class="pre">reference</span></code> and <code class="code docutils literal notranslate"><span class="pre">external</span></code> classes.</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">bemuse.py roles markup</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="na">:tree:</span><span class="nv">`assets`</span> Image assets for use in the game.
+  These assets can be referred from webpack code by <span class="s">``require(&#39;assets/...&#39;)``</span>.
+<span class="na">:tree:</span><span class="nv">`bin`</span>
+  Useful scripts for routine work.
+  Examples include setting up Git commit hooks and releasing a new version.
+<span class="na">:tree:</span><span class="nv">`config`</span>
+  Configuration code for webpack and other things.
+</pre></div>
+</div>
+</div>
+<p>Which are rendered as:</p>
+<dl class="docutils">
+<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/assets">assets</a> Image assets for use in the game.</dt>
+<dd>These assets can be referred from webpack code by <code class="docutils literal notranslate"><span class="pre">require('assets/...')</span></code>.</dd>
+<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/bin">bin</a></dt>
+<dd>Useful scripts for routine work.
+Examples include setting up Git commit hooks and releasing a new version.</dd>
+<dt><a class="reference external" href="https://github.com/bemusic/bemuse/tree/master/config">config</a></dt>
+<dd>Configuration code for webpack and other things.</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="define-original-roles-and-styles-in-sphinx">
 <h2>Define Original Roles and Styles in Sphinx<a class="headerlink" href="#define-original-roles-and-styles-in-sphinx" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://gist.github.com/shimizukawa/3718712">https://gist.github.com/shimizukawa/3718712</a></p>
 <p>Register the role:</p>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">conf.py</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Listing 4 </span><span class="caption-text">conf.py</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sys</span><span class="o">.</span><span class="n">path</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">]</span>
 <span class="n">extensions</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;sphinxcontrib_roles&#39;</span><span class="p">]</span>
 
@@ -210,8 +240,8 @@
 </div>
 </div>
 <p>Define the role.</p>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-number">Listing 4 </span><span class="caption-text">sphinxcontrib_roles.py</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-number">Listing 5 </span><span class="caption-text">sphinxcontrib_roles.py</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">roles</span>
