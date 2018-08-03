@@ -17,7 +17,6 @@ To Do List
 - Test gist https://gist.github.com/shimizukawa/3718712 
 - Create custom role that copies the existing :code:`term` role.
 
-
 ******************
 Underlying Objects
 ******************
@@ -108,10 +107,15 @@ The article describes a six-step process:
           return [node], []
       return role
 
+In Use
+======
+These three roles (:code:`github`, :code:`module`, and :code:`tree`) are rather limited:
 
+- Each role links to a specific URL.
+- Each role is defined by the :code:`reference` and :code:`external` classes.
 
-..
-  **Directory Structure**
+.. code-block:: rest
+  :caption: bemuse.py roles markup
   
   :tree:`assets` Image assets for use in the game.
     These assets can be referred from webpack code by ``require('assets/...')``.
@@ -120,11 +124,17 @@ The article describes a six-step process:
     Examples include setting up Git commit hooks and releasing a new version.
   :tree:`config`
     Configuration code for webpack and other things.
-  
-  These three roles are rather limited:
-  
-  - Each role links to a specific URL.
-  - Each role is defined by the :code:`reference` and :code:`external` classes.
+
+Which are rendered as:
+
+:tree:`assets` Image assets for use in the game.
+  These assets can be referred from webpack code by ``require('assets/...')``.
+:tree:`bin`
+  Useful scripts for routine work.
+  Examples include setting up Git commit hooks and releasing a new version.
+:tree:`config`
+  Configuration code for webpack and other things.
+
 
 ******************************************
 Define Original Roles and Styles in Sphinx
