@@ -24,7 +24,8 @@ Underlying Objects
 
 :code:`XRefRole(object)` class in :file:`roles.py`
 
-  """
+.. code-block:: python
+
   A generic cross-referencing role.  To create a callable that can be used as a role function, create an instance of this class.
   
   The general features of this role are:
@@ -36,14 +37,13 @@ Underlying Objects
   Customization can be done in two ways:
   
   * Supplying constructor parameters:
-
+  
     * `fix_parens` to normalize parentheses (strip from target, and add to title if configured)
     * `lowercase` to lowercase the target
     * `nodeclass` and `innernodeclass` select the node classes for the reference and the content node
   
   * Subclassing and overwriting `process_link()` and/or `result_nodes()`.
 
-  """
 
 Two modes of customization:
 
@@ -87,6 +87,78 @@ These three roles are rather limited:
 
 - Each role links to a specific URL.
 - Each role is defined by the :code:`reference` and :code:`external` classes.
+
+******************************************
+Define Original Roles and Styles in Sphinx
+******************************************
+
+https://gist.github.com/shimizukawa/3718712
+
+
+:file:`conf.py`
+
+
+.. code-block:: python
+  :caption: https://gist.github.com/tk0miya/9b3d28f5a1480da90acb
+
+  sys.path += ['.']
+  extensions += ['sphinxcontrib_roles']
+  
+  # configuration case.1: define roles as list (define only roles)
+  roles = ['strike', 'red']
+  
+  
+  # configuration case.2: define roles as dict (define roles and its style on HTML)
+  roles = {'strike': "text-decoration: line-through;",
+           'red': "color: red;" }
+
+:file:`sphinxcontrib_roles.py`
+
+.. code-block: python
+
+  # -*- coding: utf-8 -*-
+  import os
+  from docutils.parsers.rst import roles
+  
+  
+  def _define_role(name):
+      base_role = roles.generic_custom_role
+      role = roles.CustomRole(name, base_role, {'class': [name]}, [])
+  
+      roles.register_local_role(name, role)
+  
+  
+  def on_builder_inited(app):
+      for name in app.builder.config.roles:
+          _define_role(name)
+  
+  
+  def on_html_collect_pages(app):
+      if isinstance(app.builder.config.roles, dict) and app.builder.config.roles:
+          cssdir = os.path.join(app.builder.outdir, '_static')
+          cssfile = os.path.join(cssdir, 'roles.css')
+          if not os.path.exists(cssdir):
+              os.makedirs(cssdir)
+  
+          fd = open(cssfile, 'wt')
+          for name, style in app.builder.config.roles.items():
+              fd.write("span.%s { %s }\n" % (name, style))
+          fd.close()
+             
+      return ()
+  
+  
+  def html_page_context(app, pagename, templatename, context, doctree):
+      if isinstance(app.builder.config.roles, dict) and app.builder.config.roles:
+          if 'css_files' in context:
+              context['css_files'].append('_static/roles.css')
+  
+  
+  def setup(app):
+      app.add_config_value('roles', [], 'html')
+      app.connect("builder-inited", on_builder_inited)
+      app.connect("html-collect-pages", on_html_collect_pages)
+      app.connect("html-page-context", html_page_context)
 
 **********
 Resources
