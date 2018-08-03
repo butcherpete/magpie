@@ -24,6 +24,8 @@ Underlying Objects
 :code:`XRefRole(object)` class in :file:`roles.py`
 
 .. code-block:: python
+  :caption: roles-py
+  :linenos:
 
   A generic cross-referencing role.  To create a callable that can be used as a role function, create an instance of this class.
   
@@ -55,10 +57,9 @@ Better Custom Roles
 http://inside.mines.edu/~jrosenth/hacking-docutils.html#quick-dirty-custom-roles
 
 
-
-
-.. code_block:: python
+.. code-block:: python
   :caption: slides.py
+  :linenos:
 
   import docutils.parsers.rst as rst
   import docutils.nodes as nodes
