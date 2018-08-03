@@ -94,12 +94,10 @@ Define Original Roles and Styles in Sphinx
 
 https://gist.github.com/shimizukawa/3718712
 
-
-:file:`conf.py`
-
+Register the role:
 
 .. code-block:: python
-  :caption: https://gist.github.com/tk0miya/9b3d28f5a1480da90acb
+  :caption: conf.py
 
   sys.path += ['.']
   extensions += ['sphinxcontrib_roles']
@@ -112,9 +110,10 @@ https://gist.github.com/shimizukawa/3718712
   roles = {'strike': "text-decoration: line-through;",
            'red': "color: red;" }
 
-:file:`sphinxcontrib_roles.py`
+Define the role. 
 
-.. code-block: python
+.. code-block:: python
+  :caption: sphinxcontrib_roles.py
 
   # -*- coding: utf-8 -*-
   import os
