@@ -99,21 +99,158 @@
 <p><a class="reference external" href="http://www.sphinx-doc.org/en/1.5.1/extdev/tutorial.html">http://www.sphinx-doc.org/en/1.5.1/extdev/tutorial.html</a></p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">Setup function</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
 <span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;todo_include_todos&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">)</span>
 
 <span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">todolist</span><span class="p">)</span>
@@ -128,6 +265,135 @@
 <span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;env-purge-doc&#39;</span><span class="p">,</span> <span class="n">purge_todos</span><span class="p">)</span>
 
 <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span><span class="p">}</span>   <span class="c1"># identifies the version of our extension</span>
+
+<span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">Node classes</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
+
+<span class="k">class</span> <span class="nc">todo</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">Admonition</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
+  <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">todolist</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">General</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
+  <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">visit_todo_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">visit_admonition</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">depart_todo_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+  <span class="bp">self</span><span class="o">.</span><span class="n">depart_admonition</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">Directive classes</span>
+
+<span class="sd">A directive class is a class deriving usually from docutils.parsers.rst.Directive. The directive interface is also covered in detail in the docutils documentation; the important thing is that the class should have attributes that configure the allowed markup, and a run method that returns a list of nodes.</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="s2">&quot;</span>
+
+
+<span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">todolist node</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span>
+
+<span class="k">class</span> <span class="nc">TodolistDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">todolist</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)]</span>
+
+<span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">todo node</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="kn">from</span> <span class="nn">sphinx.util.compat</span> <span class="kn">import</span> <span class="n">make_admonition</span>
+<span class="kn">from</span> <span class="nn">sphinx.locale</span> <span class="kn">import</span> <span class="n">_</span>
+
+<span class="k">class</span> <span class="nc">TodoDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+
+    <span class="c1"># this enables content in the directive</span>
+    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">env</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">env</span>
+
+        <span class="n">targetid</span> <span class="o">=</span> <span class="s2">&quot;todo-</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">env</span><span class="o">.</span><span class="n">new_serialno</span><span class="p">(</span><span class="s1">&#39;todo&#39;</span><span class="p">)</span>
+        <span class="n">targetnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">target</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">targetid</span><span class="p">])</span>
+
+        <span class="n">ad</span> <span class="o">=</span> <span class="n">make_admonition</span><span class="p">(</span><span class="n">todo</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="p">[</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Todo&#39;</span><span class="p">)],</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">block_text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_machine</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s1">&#39;todo_all_todos&#39;</span><span class="p">):</span>
+            <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;docname&#39;</span><span class="p">:</span> <span class="n">env</span><span class="o">.</span><span class="n">docname</span><span class="p">,</span>
+            <span class="s1">&#39;lineno&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span>
+            <span class="s1">&#39;todo&#39;</span><span class="p">:</span> <span class="n">ad</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(),</span>
+            <span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="n">targetnode</span><span class="p">,</span>
+        <span class="p">})</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">targetnode</span><span class="p">]</span> <span class="o">+</span> <span class="n">ad</span>
+
+<span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">Event handlers</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">env-purge-doc event</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="k">def</span> <span class="nf">purge_todos</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">docname</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s1">&#39;todo_all_todos&#39;</span><span class="p">):</span>
+        <span class="k">return</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span> <span class="o">=</span> <span class="p">[</span><span class="n">todo</span> <span class="k">for</span> <span class="n">todo</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span>
+                          <span class="k">if</span> <span class="n">todo</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">docname</span><span class="p">]</span>
+
+
+<span class="sd">&quot;&quot;&quot;&quot;</span>
+<span class="sd">doctree-resolved event</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="s2">&quot;</span>
+
+<span class="k">def</span> <span class="nf">process_todo_nodes</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">doctree</span><span class="p">,</span> <span class="n">fromdocname</span><span class="p">):</span>
+  <span class="k">if</span> <span class="ow">not</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">todo_include_todos</span><span class="p">:</span>
+      <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">doctree</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">todo</span><span class="p">):</span>
+          <span class="n">node</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+  <span class="c1"># Replace all todolist nodes with a list of the collected todos.</span>
+  <span class="c1"># Augment each todo with a backlink to the original location.</span>
+  <span class="n">env</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">env</span>
+
+  <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">doctree</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">todolist</span><span class="p">):</span>
+      <span class="k">if</span> <span class="ow">not</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">todo_include_todos</span><span class="p">:</span>
+          <span class="n">node</span><span class="o">.</span><span class="n">replace_self</span><span class="p">([])</span>
+          <span class="k">continue</span>
+
+      <span class="n">content</span> <span class="o">=</span> <span class="p">[]</span>
+
+      <span class="k">for</span> <span class="n">todo_info</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span><span class="p">:</span>
+          <span class="n">para</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">()</span>
+          <span class="n">filename</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">doc2path</span><span class="p">(</span><span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">],</span> <span class="n">base</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+          <span class="n">description</span> <span class="o">=</span> <span class="p">(</span>
+              <span class="n">_</span><span class="p">(</span><span class="s1">&#39;(The original entry is located in </span><span class="si">%s</span><span class="s1">, line </span><span class="si">%d</span><span class="s1"> and can be found &#39;</span><span class="p">)</span> <span class="o">%</span>
+              <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;lineno&#39;</span><span class="p">]))</span>
+          <span class="n">para</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">description</span><span class="p">)</span>
+
+          <span class="c1"># Create a reference</span>
+          <span class="n">newnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">reference</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+          <span class="n">innernode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">emphasis</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;here&#39;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;here&#39;</span><span class="p">))</span>
+          <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refdocname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">]</span>
+          <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">get_relative_uri</span><span class="p">(</span>
+              <span class="n">fromdocname</span><span class="p">,</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">])</span>
+          <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">][</span><span class="s1">&#39;refid&#39;</span><span class="p">]</span>
+          <span class="n">newnode</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">innernode</span><span class="p">)</span>
+          <span class="n">para</span> <span class="o">+=</span> <span class="n">newnode</span>
+          <span class="n">para</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;.)&#39;</span><span class="p">,</span> <span class="s1">&#39;.)&#39;</span><span class="p">)</span>
+
+          <span class="c1"># Insert into the todolist</span>
+          <span class="n">content</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;todo&#39;</span><span class="p">])</span>
+          <span class="n">content</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">para</span><span class="p">)</span>
+
+      <span class="n">node</span><span class="o">.</span><span class="n">replace_self</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 </div>
