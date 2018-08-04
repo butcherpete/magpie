@@ -8,5 +8,7 @@
 }
 
 .red {
-  text-decoration-color: green;
+  color: red;
+  font-weight: bolder;
+  font-style: italic;
 }
