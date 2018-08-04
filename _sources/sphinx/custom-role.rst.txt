@@ -7,14 +7,17 @@ Custom Roles
 **********
 Goals
 **********
-Define custom directives and roles. 
+Define custom roles.
+
+Text line.
 
 To Do List
 ==========
 
 |check| `Creating Custom Link Roles <http://protips.readthedocs.io/link-roles.html>`_
 
-- Test gist https://gist.github.com/shimizukawa/3718712 
+|check| Test gist https://gist.github.com/shimizukawa/3718712 
+
 - Create custom role that copies the existing :code:`term` role.
 
 
@@ -24,7 +27,7 @@ Define the Role Function
 http://docutils.sourceforge.net/docs/howto/rst-roles.html
 
 The role function creates and returns inline elements (nodes) and does
-any additional processing required.  Its signature is as follows::
+any additional processing required.  Its signature is as follows:
 
 .. code-block:: python
   :caption: role signature
@@ -38,8 +41,7 @@ any additional processing required.  Its signature is as follows::
     role_fn.options = ...
     role_fn.content = ...
 
-Function attributes are described below (see `Specify Role Function
-Options and Content`_).  The role function parameters are as follows:
+The role function parameters are as follows:
 
 * ``name``: The local name of the interpreted role, the role name
   actually used in the document.
