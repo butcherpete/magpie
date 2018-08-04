@@ -26,6 +26,10 @@ http://docutils.sourceforge.net/docs/howto/rst-roles.html
 The role function creates and returns inline elements (nodes) and does
 any additional processing required.  Its signature is as follows::
 
+.. code-block:: python
+  :caption: role signature
+  :linenos:
+
     def role_fn(name, rawtext, text, lineno, inliner,
                 options={}, content=[]):
         code...

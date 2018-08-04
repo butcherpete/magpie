@@ -8,17 +8,6 @@
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/my-styles.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/roles.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/roles.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/roles.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/roles.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/roles.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/roles.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/roles.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/roles.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/roles.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/roles.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/roles.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
@@ -124,15 +113,33 @@
 <p><a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-roles.html">http://docutils.sourceforge.net/docs/howto/rst-roles.html</a></p>
 <p>The role function creates and returns inline elements (nodes) and does
 any additional processing required.  Its signature is as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">role_fn</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">inliner</span><span class="p">,</span>
-            <span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="n">content</span><span class="o">=</span><span class="p">[]):</span>
-    <span class="n">code</span><span class="o">...</span>
-
-<span class="c1"># Set function attributes for customization:</span>
-<span class="n">role_fn</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">role_fn</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">python</span>
 </pre></div>
 </div>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">caption:</th><td class="field-body"><p class="first">role signature</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">linenos:</th><td class="field-body"><dl class="first docutils">
+<dt>def role_fn(name, rawtext, text, lineno, inliner,</dt>
+<dd><blockquote class="first">
+<div><p>options={}, content=[]):</p>
+</div></blockquote>
+<p class="last">code…</p>
+</dd>
+</dl>
+<p class="last"># Set function attributes for customization:
+role_fn.options = …
+role_fn.content = …</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
 <p>Function attributes are described below (see <a href="#id9"><span class="problematic" id="id10">`Specify Role Function
 Options and Content`_</span></a>).  The role function parameters are as follows:</p>
 <ul class="simple">
