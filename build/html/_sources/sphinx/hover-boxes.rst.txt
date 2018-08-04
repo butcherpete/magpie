@@ -92,6 +92,33 @@ Second Attempt
 
   register_generic_role('hover', nodes.abbr)
 
+Third Attempt
+
+.. code-block:: python
+  :caption: Third Attempt
+  :linenos:
+
+  def rfc_reference_role(role, rawtext, text, lineno, inliner,
+                       options={}, content=[]):
+    try:
+        rfcnum = int(text)
+        if rfcnum <= 0:
+            raise ValueError
+    except ValueError:
+        msg = inliner.reporter.error(
+            'RFC number must be a number greater than or equal to 1; '
+            '"%s" is invalid.' % text, line=lineno)
+        prb = inliner.problematic(rawtext, rawtext, msg)
+        return [prb], [msg]
+    # Base URL mainly used by inliner.rfc_reference, so this is correct:
+    ref = inliner.document.settings.rfc_base_url + inliner.rfc_url % rfcnum
+    set_classes(options)
+    node = nodes.reference(rawtext, 'RFC ' + utils.unescape(text), refuri=ref,
+                           **options)
+    return [node], []
+
+register_canonical_role('rfc-reference', rfc_reference_role)
+
 Test Bed
 ========
 
