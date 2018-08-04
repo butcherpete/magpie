@@ -125,7 +125,7 @@
 <h2>Existing Abbr Role<a class="headerlink" href="#existing-abbr-role" title="Permalink to this headline">¶</a></h2>
 <p><code class="file docutils literal notranslate"><span class="pre">sphinx/roles.py</span></code></p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-number">Listing 9 </span><span class="caption-text">sphinx/roles.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 10 </span><span class="caption-text">sphinx/roles.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -159,7 +159,7 @@
 <p>First Attempt</p>
 <p>WARNING: extension ‘hover’ has no setup() function; is it really a Sphinx extension module?</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-number">Listing 10 </span><span class="caption-text">hover.py</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 11 </span><span class="caption-text">hover.py</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -200,11 +200,53 @@
 </div>
 <p>Second Attempt</p>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-number">Listing 11 </span><span class="caption-text">Second Attempt</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 12 </span><span class="caption-text">Second Attempt</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">register_generic_role</span><span class="p">(</span><span class="s1">&#39;hover&#39;</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">abbr</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 </div>
+<p>Third Attempt</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-number">Listing 13 </span><span class="caption-text">Third Attempt</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rfc_reference_role</span><span class="p">(</span><span class="n">role</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">inliner</span><span class="p">,</span>
+                     <span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="n">content</span><span class="o">=</span><span class="p">[]):</span>
+  <span class="k">try</span><span class="p">:</span>
+      <span class="n">rfcnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+      <span class="k">if</span> <span class="n">rfcnum</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="k">raise</span> <span class="ne">ValueError</span>
+  <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+      <span class="n">msg</span> <span class="o">=</span> <span class="n">inliner</span><span class="o">.</span><span class="n">reporter</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+          <span class="s1">&#39;RFC number must be a number greater than or equal to 1; &#39;</span>
+          <span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot; is invalid.&#39;</span> <span class="o">%</span> <span class="n">text</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">lineno</span><span class="p">)</span>
+      <span class="n">prb</span> <span class="o">=</span> <span class="n">inliner</span><span class="o">.</span><span class="n">problematic</span><span class="p">(</span><span class="n">rawtext</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span>
+      <span class="k">return</span> <span class="p">[</span><span class="n">prb</span><span class="p">],</span> <span class="p">[</span><span class="n">msg</span><span class="p">]</span>
+  <span class="c1"># Base URL mainly used by inliner.rfc_reference, so this is correct:</span>
+  <span class="n">ref</span> <span class="o">=</span> <span class="n">inliner</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">rfc_base_url</span> <span class="o">+</span> <span class="n">inliner</span><span class="o">.</span><span class="n">rfc_url</span> <span class="o">%</span> <span class="n">rfcnum</span>
+  <span class="n">set_classes</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+  <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">reference</span><span class="p">(</span><span class="n">rawtext</span><span class="p">,</span> <span class="s1">&#39;RFC &#39;</span> <span class="o">+</span> <span class="n">utils</span><span class="o">.</span><span class="n">unescape</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="n">refuri</span><span class="o">=</span><span class="n">ref</span><span class="p">,</span>
+                         <span class="o">**</span><span class="n">options</span><span class="p">)</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">],</span> <span class="p">[]</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>register_canonical_role(‘rfc-reference’, rfc_reference_role)</p>
 <div class="section" id="test-bed">
 <h3>Test Bed<a class="headerlink" href="#test-bed" title="Permalink to this headline">¶</a></h3>
 <p><abbr title="last-in, first-out">LIFO</abbr></p>
