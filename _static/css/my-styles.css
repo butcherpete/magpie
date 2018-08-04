@@ -2,3 +2,11 @@
   background-color: orange;
   border-top: 1px solid #ccc;
 }
+
+.strike {
+  text-decoration:line-through;
+}
+
+.red {
+  text-decoration-color: green;
+}
