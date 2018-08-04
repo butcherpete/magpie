@@ -79,11 +79,10 @@ Role functions return a tuple of two values:
 ******************
 Underlying Objects
 ******************
-
-:code:`XRefRole(object)` class in :file:`roles.py`
+https://github.com/sphinx-doc/sphinx/blob/master/sphinx/roles.py
 
 .. code-block:: python
-  :caption: roles-py
+  :caption: :code:`XRefRole(object)` class in :file:`roles.py`
   :linenos:
 
   A generic cross-referencing role.  To create a callable that can be used as a role function, create an instance of this class.
