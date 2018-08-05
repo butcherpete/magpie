@@ -112,10 +112,45 @@
 <li><code class="code docutils literal notranslate"><span class="pre">.load</span></code> - Load a file into the current REPL session. <code class="code docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">.load</span> <span class="pre">./file/to/load.js</span></code></li>
 <li><code class="code docutils literal notranslate"><span class="pre">.editor</span></code> - Enter editor mode (<code class="code docutils literal notranslate"><span class="pre">&lt;ctrl&gt;-D</span></code> to finish, <code class="code docutils literal notranslate"><span class="pre">&lt;ctrl&gt;-C</span></code> to cancel).</li>
 </ul>
-<div class="section" id="break-and-clear">
-<h3>Break and Clear<a class="headerlink" href="#break-and-clear" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="break">
+<h3>Break<a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h3>
 <p>These commands can be used to terminate and come out of a multi line session. Sometimes while copy pasting code snippet into REPL, we get stuck. We can type <code class="code docutils literal notranslate"><span class="pre">.break</span></code> to terminate a multi-line session in such cases and get back to REPL prompt.</p>
-<p>Clear is just an alias for break command.</p>
+</div>
+<div class="section" id="clear">
+<h3>Clear<a class="headerlink" href="#clear" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://stackoverflow.com/questions/18971034/the-clear-meta-command-in-the-node-js-repl">https://stackoverflow.com/questions/18971034/the-clear-meta-command-in-the-node-js-repl</a></p>
+<p>The <code class="code docutils literal notranslate"><span class="pre">.break</span></code> and <code class="code docutils literal notranslate"><span class="pre">.clear</span></code> commands behave differently depending on if you started the REPL from the node command, or used <code class="code docutils literal notranslate"><span class="pre">repl.start()</span></code>.</p>
+<p>When using the node command, <code class="code docutils literal notranslate"><span class="pre">.clear</span></code> is just an alias for <code class="code docutils literal notranslate"><span class="pre">.break</span></code>. But if you start the REPL from <code class="code docutils literal notranslate"><span class="pre">repl.start()</span></code>, <code class="code docutils literal notranslate"><span class="pre">.clear</span></code> will then clear the local context as you are expecting, and <code class="code docutils literal notranslate"><span class="pre">.break</span></code> behaves as stated.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">example.js</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">repl</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;repl&#39;</span><span class="p">);</span>
+
+<span class="kd">function</span> <span class="nx">initializeContext</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">context</span><span class="p">.</span><span class="nx">m</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">repl</span><span class="p">.</span><span class="nx">start</span><span class="p">({</span> <span class="nx">prompt</span><span class="o">:</span> <span class="s1">&#39;&gt; &#39;</span> <span class="p">});</span>
+<span class="nx">initializeContext</span><span class="p">(</span><span class="nx">r</span><span class="p">.</span><span class="nx">context</span><span class="p">);</span>
+
+<span class="nx">r</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;reset&#39;</span><span class="p">,</span> <span class="nx">initializeContext</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<p>When this code is executed, the global <code class="code docutils literal notranslate"><span class="pre">m</span></code> variable can be modified but then reset to its initial value using the <code class="code docutils literal notranslate"><span class="pre">.clear</span></code> command:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span> <span class="p">.</span><span class="o">/</span><span class="nx">node</span> <span class="nx">example</span><span class="p">.</span><span class="nx">js</span>
+<span class="o">&gt;</span> <span class="nx">m</span>
+<span class="s1">&#39;test&#39;</span>
+<span class="o">&gt;</span> <span class="nx">m</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="mi">1</span>
+<span class="o">&gt;</span> <span class="nx">m</span>
+<span class="mi">1</span>
+<span class="o">&gt;</span> <span class="p">.</span><span class="nx">clear</span>
+<span class="nx">Clearing</span> <span class="nx">context</span><span class="p">...</span>
+<span class="o">&gt;</span> <span class="nx">m</span>
+<span class="s1">&#39;test&#39;</span>
+<span class="o">&gt;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="load">
 <h3>Load<a class="headerlink" href="#load" title="Permalink to this headline">¶</a></h3>

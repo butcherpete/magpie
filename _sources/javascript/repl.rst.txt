@@ -18,12 +18,50 @@ The following special commands are supported by all REPL instances:
 - :code:`.load` - Load a file into the current REPL session. :code:`> .load ./file/to/load.js`
 - :code:`.editor` - Enter editor mode (:code:`<ctrl>-D` to finish, :code:`<ctrl>-C` to cancel).
 
-Break and Clear
+Break
 ===============
 These commands can be used to terminate and come out of a multi line session. Sometimes while copy pasting code snippet into REPL, we get stuck. We can type :code:`.break` to terminate a multi-line session in such cases and get back to REPL prompt.
 
-Clear is just an alias for break command.
 
+
+Clear
+=====
+https://stackoverflow.com/questions/18971034/the-clear-meta-command-in-the-node-js-repl
+
+The :code:`.break` and :code:`.clear` commands behave differently depending on if you started the REPL from the node command, or used :code:`repl.start()`.
+
+When using the node command, :code:`.clear` is just an alias for :code:`.break`. But if you start the REPL from :code:`repl.start()`, :code:`.clear` will then clear the local context as you are expecting, and :code:`.break` behaves as stated.
+
+.. code-block:: javascript
+  :caption: example.js
+
+  const repl = require('repl');
+  
+  function initializeContext(context) {
+    context.m = 'test';
+  }
+  
+  const r = repl.start({ prompt: '> ' });
+  initializeContext(r.context);
+  
+  r.on('reset', initializeContext);
+
+When this code is executed, the global :code:`m` variable can be modified but then reset to its initial value using the :code:`.clear` command:
+
+.. code-block:: javascript
+
+  $ ./node example.js
+  > m
+  'test'
+  > m = 1
+  1
+  > m
+  1
+  > .clear
+  Clearing context...
+  > m
+  'test'
+  >
 
 Load
 ====
