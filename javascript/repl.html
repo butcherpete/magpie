@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>JavaScript &#8212; Magpie 0.1 documentation</title>
+    <title>Node REPL &#8212; Magpie 0.1 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/my-styles.css" type="text/css" />
@@ -20,8 +20,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Node REPL" href="repl.html" />
-    <link rel="prev" title="Tutorial: Writing a Simple Extension" href="../sphinx/todolist.html" />
+    <link rel="next" title="Glossary" href="../glossary/glossary.html" />
+    <link rel="prev" title="JavaScript" href="javascript.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -63,7 +63,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../film/film.html">Film</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../vim/index.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sphinx/sphinx.html">Sphinx Development</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">JavaScript</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="javascript.html">JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
 </ul>
 </ul>
@@ -94,11 +94,55 @@
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="javascript">
-<h1>JavaScript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="repl.html">Node REPL</a></li>
+  <div class="section" id="node-repl">
+<h1>Node REPL<a class="headerlink" href="#node-repl" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="https://nodejs.org/api/repl.html">https://nodejs.org/api/repl.html</a></li>
+<li><a class="reference external" href="https://hackernoon.com/know-node-repl-better-dbd15bca0af6">https://hackernoon.com/know-node-repl-better-dbd15bca0af6</a></li>
+</ul>
+<div class="section" id="comamnds-and-special-keys">
+<h2>Comamnds and Special Keys<a class="headerlink" href="#comamnds-and-special-keys" title="Permalink to this headline">¶</a></h2>
+<p>The following special commands are supported by all REPL instances:</p>
+<ul class="simple">
+<li><code class="code docutils literal notranslate"><span class="pre">.break</span></code> - When in the process of inputting a multi-line expression, entering the .break command (or pressing the &lt;ctrl&gt;-C key combination) will abort further input or processing of that expression.</li>
+<li><code class="code docutils literal notranslate"><span class="pre">.clear</span></code> - Resets the REPL context to an empty object and clears any multi-line expression currently being input.</li>
+<li><code class="code docutils literal notranslate"><span class="pre">.exit</span></code> - Close the I/O stream, causing the REPL to exit.</li>
+<li><code class="code docutils literal notranslate"><span class="pre">.help</span></code> - Show this list of special commands.</li>
+<li><code class="code docutils literal notranslate"><span class="pre">.save</span></code> - Save the current REPL session to a file: &gt; .save ./file/to/save.js</li>
+<li><code class="code docutils literal notranslate"><span class="pre">.load</span></code> - Load a file into the current REPL session. &gt; .load ./file/to/load.js</li>
+<li><code class="code docutils literal notranslate"><span class="pre">.editor</span></code> - Enter editor mode (&lt;ctrl&gt;-D to finish, &lt;ctrl&gt;-C to cancel).</li>
+</ul>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="p">.</span><span class="nx">editor</span>
+<span class="c1">// Entering editor mode (^D to finish, ^C to cancel)</span>
+<span class="kd">function</span> <span class="nx">welcome</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="sb">`Hello </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">!`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">welcome</span><span class="p">(</span><span class="s1">&#39;Node.js User&#39;</span><span class="p">);</span>
+
+<span class="c1">// ^D</span>
+<span class="s1">&#39;Hello Node.js User!&#39;</span>
+<span class="o">&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="key-combinations">
+<h2>Key Combinations<a class="headerlink" href="#key-combinations" title="Permalink to this headline">¶</a></h2>
+<p>The following key combinations in the REPL have these special effects:</p>
+<ul class="simple">
+<li><code class="code docutils literal notranslate"><span class="pre">&lt;ctrl&gt;-C</span></code> - When pressed once, has the same effect as the .break command. When pressed twice on a blank line, has the same effect as the .exit command.</li>
+<li><code class="code docutils literal notranslate"><span class="pre">&lt;ctrl&gt;-D</span></code> - Has the same effect as the .exit command.</li>
+<li><code class="code docutils literal notranslate"><span class="pre">&lt;tab&gt;</span></code> - When pressed on a blank line, displays global and local (scope) variables. When pressed while entering other input, displays relevant autocompletion options.</li>
 </ul>
 </div>
 </div>
@@ -116,7 +160,7 @@
         <br/>
         
 <div id="sourcelink">
-  <a href="../_sources/javascript/javascript.rst.txt"
+  <a href="../_sources/javascript/repl.rst.txt"
      rel="nofollow">Source</a>
 </div>
       
