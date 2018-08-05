@@ -119,15 +119,15 @@ Zatoichi
 - *Zatoichi on the Road* (*Zatōichi kenka-tabi*) directed by Kimiyoshi Yasuda (1963) ★★
 - *Zatoichi and the Chest of Gold* (*Zatōichi senryō-kubi*) directed by Kazuo Ikehiro (1964) ★★★
 - *Zatoichi's Flashing Sword* (*Zatōichi abare tako*) directed by Kazuo Ikehiro (1964) ★★ 
-- *Fight, Zatoichi, Fight* (*Zatōichi kesshō-tabiZatoichi*) directed by Kenji Misumi (1964)
-- *Adventures of Zatoichi* (*Zatōichi sekisho-yaburi*) directed by Kimiyoshi Yasuda (1964)
-- *Zatoichi's Revenge* (*Zatōichi nidan-giri*) directed by Akira Inoue (1965)
-- *Zatoichi and the Doomed Man* (*Zatōichi sakate-giri*) directed by Kazuo Mori (1965)
-- *Zatoichi and the Chess Expert* (*Zatōichi jigoku-tabi*) directed by Kenji Misumi (1965)
-- *Zatoichi's Vengeance* (*Zatōichi no uta ga kikoeru*) directed by Tokuzo Tanaka (1966)
-- *Zatoichi's Pilgrimage* (*Zatōichi umi o wataru*) directed by Kazuo Ikehiro (1966)
-- *Zatoichi's Cane Sword* (*Zatōichi tekka-tabi*) directed by Kimiyoshi Yasuda (1967)
-- *Zatoichi the Outlaw* (*Zatōichi rōyaburi*) directed by Satsuo Yamaoto (1967)
+- *Fight, Zatoichi, Fight* (*Zatōichi kesshō-tabiZatoichi*) directed by Kenji Misumi (1964) ★★★
+- *Adventures of Zatoichi* (*Zatōichi sekisho-yaburi*) directed by Kimiyoshi Yasuda (1964) ★★
+- *Zatoichi's Revenge* (*Zatōichi nidan-giri*) directed by Akira Inoue (1965) ★★
+- *Zatoichi and the Doomed Man* (*Zatōichi sakate-giri*) directed by Kazuo Mori (1965) ★★
+- *Zatoichi and the Chess Expert* (*Zatōichi jigoku-tabi*) directed by Kenji Misumi (1965)  ★★
+- *Zatoichi's Vengeance* (*Zatōichi no uta ga kikoeru*) directed by Tokuzo Tanaka (1966)  ★★
+- *Zatoichi's Pilgrimage* (*Zatōichi umi o wataru*) directed by Kazuo Ikehiro (1966)  ★★★
+- *Zatoichi's Cane Sword* (*Zatōichi tekka-tabi*) directed by Kimiyoshi Yasuda (1967) ★★★
+- *Zatoichi the Outlaw* (*Zatōichi rōyaburi*) directed by Satsuo Yamaoto (1967) ★★
 - *Zatoichi Challenged* (*Zatōichi chikemurikaidōZatoichi*) directed by Kenji Misumi (1967)
 - *Zatoichi and the Fugitives* (*Zatōichi hatashijō*) directed by Kimiyoshi Yasuda (1968)
 - *Samaritan Zatoichi* (*Zatōichi kenka-daiko*) directed by Kenji Misumi (1968)
