@@ -100,18 +100,31 @@
 <li><a class="reference external" href="https://nodejs.org/api/repl.html">https://nodejs.org/api/repl.html</a></li>
 <li><a class="reference external" href="https://hackernoon.com/know-node-repl-better-dbd15bca0af6">https://hackernoon.com/know-node-repl-better-dbd15bca0af6</a></li>
 </ul>
-<div class="section" id="comamnds-and-special-keys">
-<h2>Comamnds and Special Keys<a class="headerlink" href="#comamnds-and-special-keys" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="commands-and-special-keys">
+<h2>Commands and Special Keys<a class="headerlink" href="#commands-and-special-keys" title="Permalink to this headline">¶</a></h2>
 <p>The following special commands are supported by all REPL instances:</p>
 <ul class="simple">
-<li><code class="code docutils literal notranslate"><span class="pre">.break</span></code> - When in the process of inputting a multi-line expression, entering the .break command (or pressing the &lt;ctrl&gt;-C key combination) will abort further input or processing of that expression.</li>
+<li><code class="code docutils literal notranslate"><span class="pre">.break</span></code> - When in the process of inputting a multi-line expression, entering the <code class="code docutils literal notranslate"><span class="pre">.break</span></code> command (or pressing the <code class="code docutils literal notranslate"><span class="pre">&lt;ctrl&gt;-C</span></code> key combination) will abort further input or processing of that expression.</li>
 <li><code class="code docutils literal notranslate"><span class="pre">.clear</span></code> - Resets the REPL context to an empty object and clears any multi-line expression currently being input.</li>
 <li><code class="code docutils literal notranslate"><span class="pre">.exit</span></code> - Close the I/O stream, causing the REPL to exit.</li>
 <li><code class="code docutils literal notranslate"><span class="pre">.help</span></code> - Show this list of special commands.</li>
-<li><code class="code docutils literal notranslate"><span class="pre">.save</span></code> - Save the current REPL session to a file: &gt; .save ./file/to/save.js</li>
-<li><code class="code docutils literal notranslate"><span class="pre">.load</span></code> - Load a file into the current REPL session. &gt; .load ./file/to/load.js</li>
-<li><code class="code docutils literal notranslate"><span class="pre">.editor</span></code> - Enter editor mode (&lt;ctrl&gt;-D to finish, &lt;ctrl&gt;-C to cancel).</li>
+<li><code class="code docutils literal notranslate"><span class="pre">.save</span></code> - Save the current REPL session to a file: <code class="code docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">.save</span> <span class="pre">./file/to/save.js</span></code></li>
+<li><code class="code docutils literal notranslate"><span class="pre">.load</span></code> - Load a file into the current REPL session. <code class="code docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">.load</span> <span class="pre">./file/to/load.js</span></code></li>
+<li><code class="code docutils literal notranslate"><span class="pre">.editor</span></code> - Enter editor mode (<code class="code docutils literal notranslate"><span class="pre">&lt;ctrl&gt;-D</span></code> to finish, <code class="code docutils literal notranslate"><span class="pre">&lt;ctrl&gt;-C</span></code> to cancel).</li>
 </ul>
+<div class="section" id="break-and-clear">
+<h3>Break and Clear<a class="headerlink" href="#break-and-clear" title="Permalink to this headline">¶</a></h3>
+<p>These commands can be used to terminate and come out of a multi line session. Sometimes while copy pasting code snippet into REPL, we get stuck. We can type <code class="code docutils literal notranslate"><span class="pre">.break</span></code> to terminate a multi-line session in such cases and get back to REPL prompt.</p>
+<p>Clear is just an alias for break command.</p>
+</div>
+<div class="section" id="load">
+<h3>Load<a class="headerlink" href="#load" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="p">.</span><span class="nx">load</span> <span class="p">.</span><span class="o">/</span><span class="nx">file</span><span class="o">/</span><span class="nx">to</span><span class="o">/</span><span class="nx">load</span><span class="p">.</span><span class="nx">js</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="editor">
+<h3>Editor<a class="headerlink" href="#editor" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -136,6 +149,7 @@
 </pre></div>
 </td></tr></table></div>
 </div>
+</div>
 <div class="section" id="key-combinations">
 <h2>Key Combinations<a class="headerlink" href="#key-combinations" title="Permalink to this headline">¶</a></h2>
 <p>The following key combinations in the REPL have these special effects:</p>
@@ -144,6 +158,43 @@
 <li><code class="code docutils literal notranslate"><span class="pre">&lt;ctrl&gt;-D</span></code> - Has the same effect as the .exit command.</li>
 <li><code class="code docutils literal notranslate"><span class="pre">&lt;tab&gt;</span></code> - When pressed on a blank line, displays global and local (scope) variables. When pressed while entering other input, displays relevant autocompletion options.</li>
 </ul>
+</div>
+<div class="section" id="underscore-variable">
+<h2>Underscore Variable<a class="headerlink" href="#underscore-variable" title="Permalink to this headline">¶</a></h2>
+<p>The default evaluator will, by default, assign the result of the most recently evaluated expression to the special variable _ (underscore). Explicitly setting _ to a value will disable this behavior.</p>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="p">[</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span> <span class="p">]</span>
+<span class="p">[</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span> <span class="p">]</span>
+<span class="o">&gt;</span> <span class="nx">_</span><span class="p">.</span><span class="nx">length</span>
+<span class="mi">3</span>
+<span class="o">&gt;</span> <span class="nx">_</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nx">Expression</span> <span class="nx">assignment</span> <span class="nx">to</span> <span class="nx">_</span> <span class="nx">now</span> <span class="nx">disabled</span><span class="p">.</span>
+<span class="mi">4</span>
+<span class="o">&gt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="mi">2</span>
+<span class="o">&gt;</span> <span class="nx">_</span>
+<span class="mi">4</span>
+</pre></div>
+</td></tr></table></div>
+<p>Similarly, _error will refer to the last seen error, if there was any. Explicitly setting _error to a value will disable this behavior.</p>
+<div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">);</span>
+<span class="nb">Error</span><span class="o">:</span> <span class="nx">foo</span>
+<span class="o">&gt;</span> <span class="nx">_error</span><span class="p">.</span><span class="nx">message</span>
+<span class="s1">&#39;foo&#39;</span>
+</pre></div>
+</td></tr></table></div>
 </div>
 </div>
 
