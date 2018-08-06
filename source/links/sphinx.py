@@ -15,4 +15,4 @@ link_name = "Sphinx External Links"
 user_text = "External Links Extension"
 url = "http://www.sphinx-doc.org/en/stable/ext/extlinks.html"
 
-links.xref_links.update({link_name: (user_text, url)})
+extlinks.update({link_name: (user_text, url)})
