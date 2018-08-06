@@ -252,3 +252,12 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
+
+# -- Set up external links
+
+import sys, os
+sys.path.append('.')
+from links.link import *
+from links import *
+
+
