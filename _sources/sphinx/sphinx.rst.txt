@@ -6,6 +6,7 @@ Sphinx Development
   :maxdepth: 1
 
   themes 
+  external-links
   custom-role 
   custom-directive 
   bootstrap 
