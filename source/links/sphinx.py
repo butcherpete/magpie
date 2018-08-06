@@ -9,7 +9,7 @@
 """
 
 """
-
+import links
 
 link_name = "Sphinx External Links"
 user_text = "External Links Extension"
