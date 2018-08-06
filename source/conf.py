@@ -256,9 +256,4 @@ todo_include_todos = True
 
 # -- Set up external links
 
-import sys, os
-sys.path.append('.')
-from links.link import *
-from links import *
-
 
