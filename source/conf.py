@@ -58,6 +58,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx.ext.extlinks',
     'bemuse',
     'sphinxcontrib_roles',
 ]
