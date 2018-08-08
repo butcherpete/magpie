@@ -1,5 +1,0 @@
-.. include:: <isopub.txt>
- 
-*****
-Notes
-*****

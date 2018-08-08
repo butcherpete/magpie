@@ -12,6 +12,8 @@ SPHINXPROJ    = Magpie
 SOURCEDIR     = source
 BUILDDIR      = build
 
+ALLSPHINXOPTS = source
+
 .PHONY: help Makefile
 
 help:
@@ -32,6 +34,14 @@ gh-pages:
 	git push origin gh-pages 
 	git checkout master  
 
+
+.PHONY: checklinks 
+checklinks:
+	$(SPHINXBUILD) -b linecheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck  
+	@echo
+	@echo "Check finished. Look for errors in output " \ 
+	@ Report is in $(BUILDDIR)/linecheck/output.txt."
+  
   
 #	cd .. && rm -rf * && cp -r /tmp/gh-pages/* . & git add . && git commit -m "Updated gh-pages" && git push && git checkout master  
 
