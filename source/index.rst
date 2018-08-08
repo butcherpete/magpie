@@ -12,7 +12,7 @@ A eightteenth change
 .. toctree::
   :maxdepth: 1
 
-  notes/notes
+  git/notes
   film/film
   vim/index
   sphinx/sphinx
