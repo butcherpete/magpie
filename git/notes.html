@@ -97,18 +97,25 @@
   <div class="section" id="git-notes">
 <h1>Git Notes<a class="headerlink" href="#git-notes" title="Permalink to this headline">¶</a></h1>
 <p>Resolve merge conflict in favor of one file or the other:</p>
-<p>1. Merge branches.
-.. code-block:: bash</p>
+<ol class="arabic simple">
+<li>Merge branches.</li>
+</ol>
 <blockquote>
-<div>$ git pull origin master
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git pull origin master
 From git.ouroath.com:tes/ydn2-docs-brightroll-dsp
 * branch              master     -&gt; FETCH_HEAD
 Auto-merging optimization/index.rst
 Auto-merging css/documentation.css
-CONFLICT (add/add): Merge conflict in css/documentation.css
-Automatic merge failed; fix conflicts and then commit the result.</div></blockquote>
-<p>2. Resolve conflict.
-To choose our file, the local copy rather than one being merged into the branch.</p>
+CONFLICT <span class="o">(</span>add/add<span class="o">)</span>: Merge conflict in css/documentation.css
+Automatic merge failed<span class="p">;</span> fix conflicts and <span class="k">then</span> commit the result.
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Resolve conflict.</li>
+</ol>
+<blockquote>
+<div><p>To choose our file, the local copy rather than one being merged into the branch.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout --ours css/documentation.css
 </pre></div>
 </div>
@@ -116,16 +123,19 @@ To choose our file, the local copy rather than one being merged into the branch.
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout --theirs css/documentation.css
 </pre></div>
 </div>
+</div></blockquote>
 <ol class="arabic simple" start="3">
 <li>Commit changed file.</li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout --ours css/documentation.css
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git checkout --ours css/documentation.css
 Unmerged paths:
 <span class="o">(</span>use <span class="s2">&quot;git add &lt;file&gt;...&quot;</span> to mark resolution<span class="o">)</span>
 
 both added:      css/documentation.css
 </pre></div>
 </div>
+</div></blockquote>
 </div>
 
 
