@@ -19,6 +19,7 @@ To Do List
 |check| Test gist https://gist.github.com/shimizukawa/3718712 
 
 - Create custom role that copies the existing :code:`term` role.
+- Find out how to write custom HTML. The role changes how HTML is written.
 
 
 ************************
@@ -79,9 +80,23 @@ Role functions return a tuple of two values:
 ****************************
 Generic Cross Reference Role
 ****************************
-A generic cross-reference role.
 
 https://github.com/sphinx-doc/sphinx/blob/master/sphinx/roles.py
+
+A generic cross-referencing role.  To create a callable that can be used as a role function, create an instance of this class.
+The general features of this role are:
+
+- Automatic creation of a reference and a content node.
+- Optional separation of title and target with `title <target>`.
+- The implementation is a class rather than a function to make customization easier.
+
+Customization can be done in two ways:
+
+- Supplying constructor parameters:
+  - `fix_parens` to normalize parentheses (strip from target, and add to title if configured)
+  - `lowercase` to lowercase the target
+  - `nodeclass` and `innernodeclass` select the node classes for the reference and the content node
+- Subclassing and overwriting `process_link()` and/or `result_nodes()`.
 
 .. code-block:: python
   :caption: :code:`XRefRole(object)` class in :file:`roles.py`
@@ -89,21 +104,6 @@ https://github.com/sphinx-doc/sphinx/blob/master/sphinx/roles.py
 
   class XRefRole(object):
       """
-      A generic cross-referencing role.  To create a callable that can be used as
-      a role function, create an instance of this class.
-      The general features of this role are:
-      * Automatic creation of a reference and a content node.
-      * Optional separation of title and target with `title <target>`.
-      * The implementation is a class rather than a function to make
-        customization easier.
-      Customization can be done in two ways:
-      * Supplying constructor parameters:
-        * `fix_parens` to normalize parentheses (strip from target, and add to
-          title if configured)
-        * `lowercase` to lowercase the target
-        * `nodeclass` and `innernodeclass` select the node classes for
-          the reference and the content node
-      * Subclassing and overwriting `process_link()` and/or `result_nodes()`.
       """
   
       nodeclass = addnodes.pending_xref  # type: Type[nodes.Node]
@@ -207,11 +207,21 @@ https://github.com/sphinx-doc/sphinx/blob/master/sphinx/roles.py
           return [node], []
 
 
+Supplying Constructor Parameters
+================================
+Supplying constructor parameters:
 
-Two modes of customization:
+- `fix_parens` to normalize parentheses (strip from target, and add to title if configured)
+- `lowercase` to lowercase the target
+- `nodeclass` and `innernodeclass` select the node classes for the reference and the content node
 
-- What does it mean to supply constructor parameters?
-- What does it mean to subclass and overwrite the :code:`process_link()` and :code:`result_nodes()` metric.
+Subclassing
+===========
+Subclassing and overwriting `process_link()` and/or `result_nodes()`.
+
+- `process_link()` 
+- `result_nodes()`
+
 
 
 ************************************
