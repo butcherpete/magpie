@@ -446,5 +446,7 @@ This is an :red:`example of a red text highlight`.
 Resources
 **********
 
-- http://www.sphinx-doc.org/en/stable/templating.html#script_files
-- https://github.com/ryan-roemer/sphinx-bootstrap-theme
+.. seealso::
+
+  - http://www.sphinx-doc.org/en/stable/templating.html#script_files
+  - https://github.com/ryan-roemer/sphinx-bootstrap-theme
