@@ -106,6 +106,7 @@
 <p>✓ Test gist <a class="reference external" href="https://gist.github.com/shimizukawa/3718712">https://gist.github.com/shimizukawa/3718712</a></p>
 <ul class="simple">
 <li>Create custom role that copies the existing <code class="code docutils literal notranslate"><span class="pre">term</span></code> role.</li>
+<li>Find out how to write custom HTML. The role changes how HTML is written.</li>
 </ul>
 </div>
 </div>
@@ -163,8 +164,22 @@ immediately after the end of the current block (can also be empty).</li>
 </div>
 <div class="section" id="generic-cross-reference-role">
 <h2>Generic Cross Reference Role<a class="headerlink" href="#generic-cross-reference-role" title="Permalink to this headline">¶</a></h2>
-<p>A generic cross-reference role.</p>
 <p><a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/master/sphinx/roles.py">https://github.com/sphinx-doc/sphinx/blob/master/sphinx/roles.py</a></p>
+<p>A generic cross-referencing role.  To create a callable that can be used as a role function, create an instance of this class.
+The general features of this role are:</p>
+<ul class="simple">
+<li>Automatic creation of a reference and a content node.</li>
+<li>Optional separation of title and target with <cite>title &lt;target&gt;</cite>.</li>
+<li>The implementation is a class rather than a function to make customization easier.</li>
+</ul>
+<p>Customization can be done in two ways:</p>
+<ul class="simple">
+<li>Supplying constructor parameters:
+- <cite>fix_parens</cite> to normalize parentheses (strip from target, and add to title if configured)
+- <cite>lowercase</cite> to lowercase the target
+- <cite>nodeclass</cite> and <cite>innernodeclass</cite> select the node classes for the reference and the content node</li>
+<li>Subclassing and overwriting <cite>process_link()</cite> and/or <cite>result_nodes()</cite>.</li>
+</ul>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">XRefRole(object)</span></code> class in <code class="file docutils literal notranslate"><span class="pre">roles.py</span></code></span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
@@ -269,38 +284,8 @@ immediately after the end of the current block (can also be empty).</li>
 100
 101
 102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">XRefRole</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+103</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">XRefRole</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    A generic cross-referencing role.  To create a callable that can be used as</span>
-<span class="sd">    a role function, create an instance of this class.</span>
-<span class="sd">    The general features of this role are:</span>
-<span class="sd">    * Automatic creation of a reference and a content node.</span>
-<span class="sd">    * Optional separation of title and target with `title &lt;target&gt;`.</span>
-<span class="sd">    * The implementation is a class rather than a function to make</span>
-<span class="sd">      customization easier.</span>
-<span class="sd">    Customization can be done in two ways:</span>
-<span class="sd">    * Supplying constructor parameters:</span>
-<span class="sd">      * `fix_parens` to normalize parentheses (strip from target, and add to</span>
-<span class="sd">        title if configured)</span>
-<span class="sd">      * `lowercase` to lowercase the target</span>
-<span class="sd">      * `nodeclass` and `innernodeclass` select the node classes for</span>
-<span class="sd">        the reference and the content node</span>
-<span class="sd">    * Subclassing and overwriting `process_link()` and/or `result_nodes()`.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">nodeclass</span> <span class="o">=</span> <span class="n">addnodes</span><span class="o">.</span><span class="n">pending_xref</span>  <span class="c1"># type: Type[nodes.Node]</span>
@@ -405,11 +390,23 @@ immediately after the end of the current block (can also be empty).</li>
 </pre></div>
 </td></tr></table></div>
 </div>
-<p>Two modes of customization:</p>
+<div class="section" id="supplying-constructor-parameters">
+<h3>Supplying Constructor Parameters<a class="headerlink" href="#supplying-constructor-parameters" title="Permalink to this headline">¶</a></h3>
+<p>Supplying constructor parameters:</p>
 <ul class="simple">
-<li>What does it mean to supply constructor parameters?</li>
-<li>What does it mean to subclass and overwrite the <code class="code docutils literal notranslate"><span class="pre">process_link()</span></code> and <code class="code docutils literal notranslate"><span class="pre">result_nodes()</span></code> metric.</li>
+<li><cite>fix_parens</cite> to normalize parentheses (strip from target, and add to title if configured)</li>
+<li><cite>lowercase</cite> to lowercase the target</li>
+<li><cite>nodeclass</cite> and <cite>innernodeclass</cite> select the node classes for the reference and the content node</li>
 </ul>
+</div>
+<div class="section" id="subclassing">
+<h3>Subclassing<a class="headerlink" href="#subclassing" title="Permalink to this headline">¶</a></h3>
+<p>Subclassing and overwriting <cite>process_link()</cite> and/or <cite>result_nodes()</cite>.</p>
+<ul class="simple">
+<li><cite>process_link()</cite></li>
+<li><cite>result_nodes()</cite></li>
+</ul>
+</div>
 </div>
 <div class="section" id="tutorial-writing-a-simple-extension">
 <h2>Tutorial: Writing a Simple Extension<a class="headerlink" href="#tutorial-writing-a-simple-extension" title="Permalink to this headline">¶</a></h2>
