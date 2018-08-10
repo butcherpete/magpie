@@ -97,6 +97,18 @@
   <div class="section" id="tutorial-writing-a-simple-extension">
 <h1>Tutorial: Writing a Simple Extension<a class="headerlink" href="#tutorial-writing-a-simple-extension" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="http://www.sphinx-doc.org/en/1.5.1/extdev/tutorial.html">http://www.sphinx-doc.org/en/1.5.1/extdev/tutorial.html</a></p>
+<p>We want the extension to add the following to Sphinx:</p>
+<ul class="simple">
+<li>A “todo” directive, containing some content that is marked with “TODO”, and only shown in the output if a new config value is set. (Todo entries should not be in the output by default.)</li>
+<li>A “todolist” directive that creates a list of all todo entries throughout the documentation.</li>
+</ul>
+<p>For that, we will need to add the following elements to Sphinx:</p>
+<ul class="simple">
+<li>New directives, called <code class="code docutils literal notranslate"><span class="pre">todo</span></code> and <code class="code docutils literal notranslate"><span class="pre">todolist</span></code>.</li>
+<li>New document tree nodes to represent these directives, conventionally also called todo and todolist. (We wouldn’t need new nodes if the new directives only produced some content representable by existing nodes.)</li>
+<li>A new config value <code class="code docutils literal notranslate"><span class="pre">todo_include_todos</span></code> (config value names should start with the extension name, in order to stay unique) that controls whether todo entries make it into the output.</li>
+<li>New event handlers: one for the <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/appapi.html#event-doctree-resolved">doctree-resolved event</a>, to replace the todo and todolist nodes, and one for <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/appapi.html#event-env-purge-doc">env-purge-doc</a> (the reason for that will be covered later).</li>
+</ul>
 <div class="section" id="important-objects">
 <h2>Important Objects<a class="headerlink" href="#important-objects" title="Permalink to this headline">¶</a></h2>
 <p>Key APIs used to write extensions:</p>
