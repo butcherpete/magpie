@@ -12,7 +12,8 @@ Identify and implement a role-based glossary term solution that using CSS-based 
 Two options:
 
 - A role based on the existing :code:`abbr` role. The author must specify text or a variable in the role defintion. The hover box is defined in CSS and not as a HTML tool-tip.
-- A role based on the existing :code:`term` role. The role creates a reference to the glossary definition that is handled with as a CSS hover box. Woud require JavaScript.
+- A role based on the existing :code:`term` role. The role creates a reference to the glossary definition that is handled with as a CSS hover box. Would require JavaScript.
+- A role based on the existing :code:`doc` role. The role creates a reference to a distinct answer page that is handled with as a CSS hover box. Would require JavaScript.
 
 Worth research:
 
@@ -24,7 +25,7 @@ To Do List
 **********
 
 - Understand how a role specifies a new CSS class.
-- Understand how a role is built. Many improvements  can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.
+- Understand how a role is built. Many improvements can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.
 - Understand how/when substitutions occur. May effect custom role builds.
 - Extend custom role to specify a unique CSS class.
 - Extend custom role to use JavaScript (if possible).
@@ -156,14 +157,48 @@ https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/
   register_canonical_role();
 
 
+**************
+Hover Box HTML
+**************
+
+CSS-Only Version
+================
+
+https://stackoverflow.com/questions/10243440/how-to-create-a-box-when-mouse-over-text-in-pure-css
+
+.. code-box:: html
+
+  <a href="#" class="info"> Term  <span>Definition</span></a>
+
+Or possibly
+
+.. code-box:: html
+
+  <a href="#" class="info"> Term  <span>|Definition|</span></a>
+
+JavaScript
+==================
+Based on Google AdWords docs:
+
+.. code-block:: html
+
+  <p>This article explains how to edit your cost-per-click (CPC) bids and your <a class="glossary-term" data-answer="6026409" href="/adwords/answer/6026409" st-ve="40">cost-per-thousand viewable impressions</a> (viewable CPM) bids.</p>
+
+The URL may point to a single page,  in which case, the role should be a variation of the :code:`doc` role.
 
 **********
 Resources
 **********
-- `Better Documentation Through Automation: Creating docutils and Sphinx Extensions <https://doughellmann.com/blog/2013/03/16/better-documentation-through-automation-creating-docutils-sphinx-extensions/>`_
-- `An idiot’s guide to Python documentation with Sphinx and ReadTheDocs <https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/>`_
-- `Docutils Hacker's Guide <http://docutils.sourceforge.net/docs/dev/hacking.html>`_
-- `Creating reStructuredText Directives <http://docutils.sourceforge.net/docs/howto/rst-directives.html#specify-directive-arguments-options-and-content>`_
-- http://inside.mines.edu/~jrosenth/hacking-docutils.html
-- `Creating reStructuredText Interpreted Text Roles <http://docutils.sourceforge.net/docs/howto/rst-roles.html>`_
-- `Gist <https://gist.github.com/shimizukawa/3718712>`
+
+.. seealso::
+
+  - `Better Documentation Through Automation: Creating docutils and Sphinx Extensions <https://doughellmann.com/blog/2013/03/16/better-documentation-through-automation-creating-docutils-sphinx-extensions/>`_
+  - `An idiot’s guide to Python documentation with Sphinx and ReadTheDocs <https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/>`_
+  - `Docutils Hacker's Guide <http://docutils.sourceforge.net/docs/dev/hacking.html>`_
+  - `Creating reStructuredText Directives <http://docutils.sourceforge.net/docs/howto/rst-directives.html#specify-directive-arguments-options-and-content>`_
+  - http://inside.mines.edu/~jrosenth/hacking-docutils.html
+  - `Creating reStructuredText Interpreted Text Roles <http://docutils.sourceforge.net/docs/howto/rst-roles.html>`_
+  - `Gist <https://gist.github.com/shimizukawa/3718712>`_
+  - `CSS Tooltip <https://www.w3schools.com/css/css_tooltip.asp>`_
+  - `How to create a box when mouse over text in pure CSS? <https://stackoverflow.com/questions/10243440/how-to-create-a-box-when-mouse-over-text-in-pure-css>`_
+
