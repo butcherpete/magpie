@@ -4,6 +4,18 @@ Tutorial: Writing a Simple Extension
 
 http://www.sphinx-doc.org/en/1.5.1/extdev/tutorial.html
 
+We want the extension to add the following to Sphinx:
+
+- A “todo” directive, containing some content that is marked with “TODO”, and only shown in the output if a new config value is set. (Todo entries should not be in the output by default.)
+- A “todolist” directive that creates a list of all todo entries throughout the documentation.
+
+For that, we will need to add the following elements to Sphinx:
+
+- New directives, called :code:`todo` and :code:`todolist`.
+- New document tree nodes to represent these directives, conventionally also called todo and todolist. (We wouldn’t need new nodes if the new directives only produced some content representable by existing nodes.)
+- A new config value :code:`todo_include_todos` (config value names should start with the extension name, in order to stay unique) that controls whether todo entries make it into the output.
+- New event handlers: one for the `doctree-resolved event <http://www.sphinx-doc.org/en/master/extdev/appapi.html#event-doctree-resolved>`_, to replace the todo and todolist nodes, and one for `env-purge-doc <http://www.sphinx-doc.org/en/master/extdev/appapi.html#event-env-purge-doc>`_ (the reason for that will be covered later).
+
 *****************
 Important Objects
 *****************
