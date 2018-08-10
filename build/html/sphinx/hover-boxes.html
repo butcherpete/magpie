@@ -122,8 +122,17 @@
 <li>Define CSS class.</li>
 </ul>
 </div>
-<div class="section" id="existing-abbr-role">
-<h2>Existing Abbr Role<a class="headerlink" href="#existing-abbr-role" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="existing-roles">
+<h2>Existing Roles<a class="headerlink" href="#existing-roles" title="Permalink to this headline">¶</a></h2>
+<p>Use the Sphinx <code class="code docutils literal notranslate"><span class="pre">abbreviation</span></code> role instead of the Docutils <code class="code docutils literal notranslate"><span class="pre">abbr</span></code> role.</p>
+<div class="section" id="sphinx-abbreviation-role">
+<h3>Sphinx Abbreviation Role<a class="headerlink" href="#sphinx-abbreviation-role" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.sphinx-doc.org/en/master/_modules/sphinx/addnodes.html#abbreviation">http://www.sphinx-doc.org/en/master/_modules/sphinx/addnodes.html#abbreviation</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">abbreviation</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">Inline</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">TextElement</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Node for abbreviations with explanations.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Where is this from?</p>
 <p><code class="file docutils literal notranslate"><span class="pre">sphinx/roles.py</span></code></p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-number">Listing 10 </span><span class="caption-text">sphinx/roles.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
@@ -248,6 +257,7 @@
 </td></tr></table></div>
 </div>
 <p>register_canonical_role(‘rfc-reference’, rfc_reference_role)</p>
+</div>
 <div class="section" id="test-bed">
 <h3>Test Bed<a class="headerlink" href="#test-bed" title="Permalink to this headline">¶</a></h3>
 <p><abbr title="last-in, first-out">LIFO</abbr></p>

@@ -32,8 +32,22 @@ To Do List
 - Define CSS class. 
 
 ******************
-Existing Abbr Role
+Existing Roles
 ******************
+Use the Sphinx :code:`abbreviation` role instead of the Docutils :code:`abbr` role.
+
+
+Sphinx Abbreviation Role
+========================
+http://www.sphinx-doc.org/en/master/_modules/sphinx/addnodes.html#abbreviation
+
+.. code-block:: python
+
+  class abbreviation(nodes.Inline, nodes.TextElement):
+    """Node for abbreviations with explanations."""
+
+
+Where is this from?
 
 :file:`sphinx/roles.py`
 
