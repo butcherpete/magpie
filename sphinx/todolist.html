@@ -100,8 +100,8 @@
 <div class="section" id="important-objects">
 <h2>Important Objects<a class="headerlink" href="#important-objects" title="Permalink to this headline">¶</a></h2>
 <p>Key APIs used to write extensions:</p>
-<table border="1" class="docutils" id="id2">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">Important Objects</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Important Objects</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="33%" />
 <col width="33%" />
@@ -110,34 +110,40 @@
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Object</th>
 <th class="head">Definition</th>
-<th class="head">API</th>
+<th class="head">APIs</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>Application</td>
-<td>An instance of Sphinx. It controls high-level functionality, such as setup of extentions, event dispatching, and logging.</td>
+<td><p class="first">An instance of Sphinx. It controls high-level functionality, such as setup of extentions, event dispatching, and logging.</p>
+<p class="last">To learn more, see <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx">Application API</a></p>
+</td>
 <td><code class="code docutils literal notranslate"><span class="pre">env.app</span></code></td>
 </tr>
 <tr class="row-odd"><td>Environment</td>
 <td><p class="first">An instance of <code class="code docutils literal notranslate"><span class="pre">BuildEnvironment</span></code>.  Parses the source documents, stores all metadata about the document collection and is serialized to disk after each build.</p>
-<p class="last">Its API provides methods to do with access to metadata, resolving references, etc. It can also be used by extensions to cache information that should persist for incremental rebuilds. To learn more, see <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx">Builder API</a></p>
+<p>Its API provides methods to do with access to metadata, resolving references, etc. It can also be used by extensions to cache information that should persist for incremental rebuilds.</p>
+<p class="last">To learn more, see <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/envapi.html#sphinx.environment.BuildEnvironment">Build Environment API</a>.</p>
 </td>
 <td><code class="code docutils literal notranslate"><span class="pre">app.env</span></code>, <code class="code docutils literal notranslate"><span class="pre">builder.env</span></code></td>
 </tr>
 <tr class="row-even"><td>Builder</td>
-<td>An instance of a specific subclass of <code class="code docutils literal notranslate"><span class="pre">Builder</span></code>. Each builder class knows how to convert the parsed documents into an output format, or otherwise process them (e.g. check external links). To learn more, see <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/builderapi.html#sphinx.builders.Builder">Builder API</a></td>
+<td><p class="first">An instance of a specific subclass of <code class="code docutils literal notranslate"><span class="pre">Builder</span></code>. Each builder class knows how to convert the parsed documents into an output format, or otherwise process them (e.g. check external links).</p>
+<p class="last">To learn mores, see <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/builderapi.html#sphinx.builders.Builder">Builder API</a>.</p>
+</td>
 <td><code class="code docutils literal notranslate"><span class="pre">app.builder</span></code></td>
 </tr>
 <tr class="row-odd"><td>Config</td>
 <td><p class="first">An instance of <code class="code docutils literal notranslate"><span class="pre">Config</span></code>. The <code class="code docutils literal notranslate"><span class="pre">config</span></code> object makes the values of alll config values available as attributes.</p>
+<p>To learn more, see <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.config.Config">Config Object</a>.</p>
 <p class="last">It is exposed via the <code class="code docutils literal notranslate"><span class="pre">sphinx.application.Application.config</span></code> and <code class="code docutils literal notranslate"><span class="pre">sphinx.environment.Environment.config</span></code> attributes. For example, to get the value of language, use either <code class="code docutils literal notranslate"><span class="pre">app.config.language</span></code> or <code class="code docutils literal notranslate"><span class="pre">env.config.language</span></code>.</p>
 </td>
 <td><code class="code docutils literal notranslate"><span class="pre">app.config</span></code>, <code class="code docutils literal notranslate"><span class="pre">env.config</span></code></td>
 </tr>
 </tbody>
 </table>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
   3
