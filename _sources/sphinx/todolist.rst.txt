@@ -4,6 +4,35 @@ Tutorial: Writing a Simple Extension
 
 http://www.sphinx-doc.org/en/1.5.1/extdev/tutorial.html
 
+*****************
+Important Objects
+*****************
+Key APIs used to write extensions:
+
+.. list-table:: Important Objects
+  :header-rows: 1
+
+  * - Object
+    - Definition
+    - API
+  * - Application
+    - An instance of Sphinx. It controls high-level functionality, such as setup of extentions, event dispatching, and logging. 
+    - :code:`env.app` 
+  * - Environment
+    - An instance of :code:`BuildEnvironment`.  Parses the source documents, stores all metadata about the document collection and is serialized to disk after each build.
+
+      Its API provides methods to do with access to metadata, resolving references, etc. It can also be used by extensions to cache information that should persist for incremental rebuilds. To learn more, see `Builder API <http://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx.application.Sphinx>`_
+
+    - :code:`app.env`, :code:`builder.env` 
+  * - Builder
+    - An instance of a specific subclass of :code:`Builder`. Each builder class knows how to convert the parsed documents into an output format, or otherwise process them (e.g. check external links). To learn more, see `Builder API <http://www.sphinx-doc.org/en/master/extdev/builderapi.html#sphinx.builders.Builder>`_
+    - :code:`app.builder` 
+  * - Config
+    - An instance of :code:`Config`. The :code:`config` object makes the values of alll config values available as attributes. 
+      
+      It is exposed via the :code:`sphinx.application.Application.config` and :code:`sphinx.environment.Environment.config` attributes. For example, to get the value of language, use either :code:`app.config.language` or :code:`env.config.language`.  
+    - :code:`app.config`, :code:`env.config` 
+
 .. code-block:: python
   :caption: todo.py
   :linenos:
