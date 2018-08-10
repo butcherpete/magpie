@@ -166,13 +166,13 @@ CSS-Only Version
 
 https://stackoverflow.com/questions/10243440/how-to-create-a-box-when-mouse-over-text-in-pure-css
 
-.. code-box:: html
+.. code-block:: html
 
   <a href="#" class="info"> Term  <span>Definition</span></a>
 
 Or possibly
 
-.. code-box:: html
+.. code-block:: html
 
   <a href="#" class="info"> Term  <span>|Definition|</span></a>
 
