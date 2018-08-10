@@ -161,44 +161,247 @@ list).</li>
 immediately after the end of the current block (can also be empty).</li>
 </ul>
 </div>
-<div class="section" id="underlying-objects">
-<h2>Underlying Objects<a class="headerlink" href="#underlying-objects" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="generic-cross-reference-role">
+<h2>Generic Cross Reference Role<a class="headerlink" href="#generic-cross-reference-role" title="Permalink to this headline">¶</a></h2>
+<p>A generic cross-reference role.</p>
 <p><a class="reference external" href="https://github.com/sphinx-doc/sphinx/blob/master/sphinx/roles.py">https://github.com/sphinx-doc/sphinx/blob/master/sphinx/roles.py</a></p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">XRefRole(object)</span></code> class in <code class="file docutils literal notranslate"><span class="pre">roles.py</span></code></span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
-<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">generic</span> <span class="n">cross</span><span class="o">-</span><span class="n">referencing</span> <span class="n">role</span><span class="o">.</span>  <span class="n">To</span> <span class="n">create</span> <span class="n">a</span> <span class="nb">callable</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="k">as</span> <span class="n">a</span> <span class="n">role</span> <span class="n">function</span><span class="p">,</span> <span class="n">create</span> <span class="n">an</span> <span class="n">instance</span> <span class="n">of</span> <span class="n">this</span> <span class="n">class</span><span class="o">.</span>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">XRefRole</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A generic cross-referencing role.  To create a callable that can be used as</span>
+<span class="sd">    a role function, create an instance of this class.</span>
+<span class="sd">    The general features of this role are:</span>
+<span class="sd">    * Automatic creation of a reference and a content node.</span>
+<span class="sd">    * Optional separation of title and target with `title &lt;target&gt;`.</span>
+<span class="sd">    * The implementation is a class rather than a function to make</span>
+<span class="sd">      customization easier.</span>
+<span class="sd">    Customization can be done in two ways:</span>
+<span class="sd">    * Supplying constructor parameters:</span>
+<span class="sd">      * `fix_parens` to normalize parentheses (strip from target, and add to</span>
+<span class="sd">        title if configured)</span>
+<span class="sd">      * `lowercase` to lowercase the target</span>
+<span class="sd">      * `nodeclass` and `innernodeclass` select the node classes for</span>
+<span class="sd">        the reference and the content node</span>
+<span class="sd">    * Subclassing and overwriting `process_link()` and/or `result_nodes()`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-<span class="n">The</span> <span class="n">general</span> <span class="n">features</span> <span class="n">of</span> <span class="n">this</span> <span class="n">role</span> <span class="n">are</span><span class="p">:</span>
+    <span class="n">nodeclass</span> <span class="o">=</span> <span class="n">addnodes</span><span class="o">.</span><span class="n">pending_xref</span>  <span class="c1"># type: Type[nodes.Node]</span>
+    <span class="n">innernodeclass</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">literal</span>
 
-<span class="o">*</span> <span class="n">Automatic</span> <span class="n">creation</span> <span class="n">of</span> <span class="n">a</span> <span class="n">reference</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">content</span> <span class="n">node</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">Optional</span> <span class="n">separation</span> <span class="n">of</span> <span class="n">title</span> <span class="ow">and</span> <span class="n">target</span> <span class="k">with</span> <span class="sb">`title &lt;target&gt;`</span><span class="o">.</span>
-<span class="o">*</span> <span class="n">The</span> <span class="n">implementation</span> <span class="ow">is</span> <span class="n">a</span> <span class="k">class</span> <span class="nc">rather</span> <span class="n">than</span> <span class="n">a</span> <span class="n">function</span> <span class="n">to</span> <span class="n">make</span> <span class="n">customization</span> <span class="n">easier</span><span class="o">.</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fix_parens</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">lowercase</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                 <span class="n">nodeclass</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">innernodeclass</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">warn_dangling</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="c1"># type: (bool, bool, Type[nodes.Node], Type[nodes.Node], bool) -&gt; None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fix_parens</span> <span class="o">=</span> <span class="n">fix_parens</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lowercase</span> <span class="o">=</span> <span class="n">lowercase</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">warn_dangling</span> <span class="o">=</span> <span class="n">warn_dangling</span>
+        <span class="k">if</span> <span class="n">nodeclass</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nodeclass</span> <span class="o">=</span> <span class="n">nodeclass</span>
+        <span class="k">if</span> <span class="n">innernodeclass</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">innernodeclass</span> <span class="o">=</span> <span class="n">innernodeclass</span>
 
-<span class="n">Customization</span> <span class="n">can</span> <span class="n">be</span> <span class="n">done</span> <span class="ow">in</span> <span class="n">two</span> <span class="n">ways</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_fix_parens</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">has_explicit_title</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="c1"># type: (BuildEnvironment, bool, unicode, unicode) -&gt; Tuple[unicode, unicode]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">has_explicit_title</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">title</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;()&#39;</span><span class="p">):</span>
+                <span class="c1"># remove parentheses</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">env</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">add_function_parentheses</span><span class="p">:</span>
+                <span class="c1"># add them back to all occurrences if configured</span>
+                <span class="n">title</span> <span class="o">+=</span> <span class="s1">&#39;()&#39;</span>
+        <span class="c1"># remove parentheses from the target too</span>
+        <span class="k">if</span> <span class="n">target</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;()&#39;</span><span class="p">):</span>
+            <span class="n">target</span> <span class="o">=</span> <span class="n">target</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">title</span><span class="p">,</span> <span class="n">target</span>
 
-<span class="o">*</span> <span class="n">Supplying</span> <span class="n">constructor</span> <span class="n">parameters</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">typ</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">inliner</span><span class="p">,</span>
+                 <span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="n">content</span><span class="o">=</span><span class="p">[]):</span>
+        <span class="c1"># type: (unicode, unicode, unicode, int, Inliner, Dict, List[unicode]) -&gt; Tuple[List[nodes.Node], List[nodes.Node]]  # NOQA</span>
+        <span class="n">env</span> <span class="o">=</span> <span class="n">inliner</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">env</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">typ</span><span class="p">:</span>
+            <span class="n">typ</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">temp_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;default_role&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">typ</span><span class="p">:</span>
+                <span class="n">typ</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">default_role</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">typ</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">SphinxError</span><span class="p">(</span><span class="s1">&#39;cannot determine default role!&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">typ</span> <span class="o">=</span> <span class="n">typ</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s1">&#39;:&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">typ</span><span class="p">:</span>
+            <span class="n">domain</span><span class="p">,</span> <span class="n">role</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">typ</span>  <span class="c1"># type: unicode, unicode</span>
+            <span class="n">classes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;xref&#39;</span><span class="p">,</span> <span class="n">role</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">domain</span><span class="p">,</span> <span class="n">role</span> <span class="o">=</span> <span class="n">typ</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">classes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;xref&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1">-</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">domain</span><span class="p">,</span> <span class="n">role</span><span class="p">)]</span>
+        <span class="c1"># if the first character is a bang, don&#39;t cross-reference at all</span>
+        <span class="k">if</span> <span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;!&#39;</span><span class="p">:</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">unescape</span><span class="p">(</span><span class="n">text</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fix_parens</span><span class="p">:</span>
+                <span class="n">text</span><span class="p">,</span> <span class="n">tgt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fix_parens</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="n">innernode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">innernodeclass</span><span class="p">(</span><span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="n">classes</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">result_nodes</span><span class="p">(</span><span class="n">inliner</span><span class="o">.</span><span class="n">document</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">innernode</span><span class="p">,</span>
+                                     <span class="n">is_ref</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="c1"># split title and target in role content</span>
+        <span class="n">has_explicit_title</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="n">split_explicit_title</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">unescape</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">unescape</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+        <span class="c1"># fix-up title and target</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">lowercase</span><span class="p">:</span>
+            <span class="n">target</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fix_parens</span><span class="p">:</span>
+            <span class="n">title</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fix_parens</span><span class="p">(</span>
+                <span class="n">env</span><span class="p">,</span> <span class="n">has_explicit_title</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+        <span class="c1"># create the reference node</span>
+        <span class="n">refnode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodeclass</span><span class="p">(</span><span class="n">rawtext</span><span class="p">,</span> <span class="n">reftype</span><span class="o">=</span><span class="n">role</span><span class="p">,</span> <span class="n">refdomain</span><span class="o">=</span><span class="n">domain</span><span class="p">,</span>
+                                 <span class="n">refexplicit</span><span class="o">=</span><span class="n">has_explicit_title</span><span class="p">)</span>
+        <span class="c1"># we may need the line number for warnings</span>
+        <span class="n">set_role_source_info</span><span class="p">(</span><span class="n">inliner</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">refnode</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+        <span class="n">title</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_link</span><span class="p">(</span>
+            <span class="n">env</span><span class="p">,</span> <span class="n">refnode</span><span class="p">,</span> <span class="n">has_explicit_title</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+        <span class="c1"># now that the target and title are finally determined, set them</span>
+        <span class="n">refnode</span><span class="p">[</span><span class="s1">&#39;reftarget&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">target</span>
+        <span class="n">refnode</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">innernodeclass</span><span class="p">(</span><span class="n">rawtext</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="n">classes</span><span class="p">)</span>
+        <span class="c1"># we also need the source document</span>
+        <span class="n">refnode</span><span class="p">[</span><span class="s1">&#39;refdoc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">docname</span>
+        <span class="n">refnode</span><span class="p">[</span><span class="s1">&#39;refwarn&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">warn_dangling</span>
+        <span class="c1"># result_nodes allow further modification of return values</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">result_nodes</span><span class="p">(</span><span class="n">inliner</span><span class="o">.</span><span class="n">document</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">refnode</span><span class="p">,</span> <span class="n">is_ref</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
-  <span class="o">*</span> <span class="sb">`fix_parens`</span> <span class="n">to</span> <span class="n">normalize</span> <span class="n">parentheses</span> <span class="p">(</span><span class="n">strip</span> <span class="kn">from</span> <span class="nn">target</span><span class="p">,</span> <span class="ow">and</span> <span class="n">add</span> <span class="n">to</span> <span class="n">title</span> <span class="k">if</span> <span class="n">configured</span><span class="p">)</span>
-  <span class="o">*</span> <span class="sb">`lowercase`</span> <span class="n">to</span> <span class="n">lowercase</span> <span class="n">the</span> <span class="n">target</span>
-  <span class="o">*</span> <span class="sb">`nodeclass`</span> <span class="ow">and</span> <span class="sb">`innernodeclass`</span> <span class="n">select</span> <span class="n">the</span> <span class="n">node</span> <span class="n">classes</span> <span class="k">for</span> <span class="n">the</span> <span class="n">reference</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">content</span> <span class="n">node</span>
+    <span class="c1"># methods that can be overwritten</span>
 
-<span class="o">*</span> <span class="n">Subclassing</span> <span class="ow">and</span> <span class="n">overwriting</span> <span class="sb">`process_link()`</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="sb">`result_nodes()`</span><span class="o">.</span>
+    <span class="k">def</span> <span class="nf">process_link</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">refnode</span><span class="p">,</span> <span class="n">has_explicit_title</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="c1"># type: (BuildEnvironment, nodes.reference, bool, unicode, unicode) -&gt; Tuple[unicode, unicode]  # NOQA</span>
+        <span class="sd">&quot;&quot;&quot;Called after parsing title and target text, and creating the</span>
+<span class="sd">        reference node (given in *refnode*).  This method can alter the</span>
+<span class="sd">        reference node and must return a new (or the same) ``(title, target)``</span>
+<span class="sd">        tuple.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">title</span><span class="p">,</span> <span class="n">ws_re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">result_nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">document</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">node</span><span class="p">,</span> <span class="n">is_ref</span><span class="p">):</span>
+        <span class="c1"># type: (nodes.document, BuildEnvironment, nodes.Node, bool) -&gt; Tuple[List[nodes.Node], List[nodes.Node]]  # NOQA</span>
+        <span class="sd">&quot;&quot;&quot;Called before returning the finished nodes.  *node* is the reference</span>
+<span class="sd">        node if one was created (*is_ref* is then true), else the content node.</span>
+<span class="sd">        This method can add other nodes and must return a ``(nodes, messages)``</span>
+<span class="sd">        tuple (the usual return value of a role function).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">],</span> <span class="p">[]</span>
 </pre></div>
 </td></tr></table></div>
 </div>
