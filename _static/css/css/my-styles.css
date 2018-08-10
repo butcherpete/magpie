@@ -1,0 +1,14 @@
+.footer {
+  background-color: orange;
+  border-top: 1px solid #ccc;
+}
+
+.strike {
+  text-decoration:line-through;
+}
+
+.red {
+  color: red;
+  font-weight: bolder;
+  font-style: italic;
+}
