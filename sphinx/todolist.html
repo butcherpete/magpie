@@ -154,8 +154,68 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="set-up-function">
+<h2>Set Up Function<a class="headerlink" href="#set-up-function" title="Permalink to this headline">¶</a></h2>
+<p>The new elements are added in the extension’s setup function. Let us create a new Python module called <code class="code docutils literal notranslate"><span class="pre">todo.py</span></code> and add the setup function:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">app</span><span class="p">):</span>
+
+<span class="c1"># Tells Sphinx to recognize the new config value `todo_include_todos`, whose default value is False. Indicates that HTML must be rebuilt</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_config_value</span><span class="p">(</span><span class="s1">&#39;todo_include_todos&#39;</span><span class="p">,</span> <span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">)</span>
+
+<span class="c1"># Adds a new node class to the build system. It also can specify visitor functions for each supported output format.</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">todolist</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">todo</span><span class="p">,</span>
+             <span class="n">html</span><span class="o">=</span><span class="p">(</span><span class="n">visit_todo_node</span><span class="p">,</span> <span class="n">depart_todo_node</span><span class="p">),</span>
+             <span class="n">latex</span><span class="o">=</span><span class="p">(</span><span class="n">visit_todo_node</span><span class="p">,</span> <span class="n">depart_todo_node</span><span class="p">),</span>
+             <span class="n">text</span><span class="o">=</span><span class="p">(</span><span class="n">visit_todo_node</span><span class="p">,</span> <span class="n">depart_todo_node</span><span class="p">))</span>
+
+<span class="c1"># Adds a new directive, given by name and class.</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;todo&#39;</span><span class="p">,</span> <span class="n">TodoDirective</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_directive</span><span class="p">(</span><span class="s1">&#39;todolist&#39;</span><span class="p">,</span> <span class="n">TodolistDirective</span><span class="p">)</span>
+
+<span class="c1"># Adds an event handler to the event whose name is given by the first argument.</span>
+<span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;doctree-resolved&#39;</span><span class="p">,</span> <span class="n">process_todo_nodes</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;env-purge-doc&#39;</span><span class="p">,</span> <span class="n">purge_todos</span><span class="p">)</span>
+
+<span class="k">return</span> <span class="p">{</span><span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span><span class="p">}</span>   <span class="c1"># identifies the version of our extension</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>The calls in this function refer to classes and functions not yet written. What the individual calls do is the following:</p>
+<ul class="simple">
+<li><code class="code docutils literal notranslate"><span class="pre">add_config_value()</span></code> lets Sphinx know that it should recognize the new config value <code class="code docutils literal notranslate"><span class="pre">todo_include_todos</span></code>, whose default value should be False (this also tells Sphinx that it is a boolean value). If the third argument was ‘html’, HTML documents would be full rebuild if the config value changed its value. This is needed for config values that influence reading (build phase 1).</li>
+<li><code class="code docutils literal notranslate"><span class="pre">add_node()</span></code> adds a new node class to the build system. It also can specify visitor functions for each supported output format. These visitor functions are needed when the new nodes stay until phase 4 – since the todolist node is always replaced in phase 3, it doesn’t need any.</li>
+</ul>
+<p>We need to create the two node classes <code class="code docutils literal notranslate"><span class="pre">todo</span></code> and <code class="code docutils literal notranslate"><span class="pre">todolist</span></code> later.</p>
+<ul class="simple">
+<li><code class="code docutils literal notranslate"><span class="pre">add_directive()</span></code> adds a new directive, given by name and class. The handler functions are created later.</li>
+<li>Finally, <code class="code docutils literal notranslate"><span class="pre">connect()</span></code> adds an event handler to the event whose name is given by the first argument. The event handler function is called with several arguments which are documented with the event.</li>
+</ul>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
   3

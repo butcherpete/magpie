@@ -54,6 +54,49 @@ Key APIs used to write extensions:
       It is exposed via the :code:`sphinx.application.Application.config` and :code:`sphinx.environment.Environment.config` attributes. For example, to get the value of language, use either :code:`app.config.language` or :code:`env.config.language`.  
     - :code:`app.config`, :code:`env.config` 
 
+
+***************
+Set Up Function
+***************
+The new elements are added in the extension’s setup function. Let us create a new Python module called :code:`todo.py` and add the setup function:
+
+.. code-block:: python
+  :caption: todo.py
+  :linenos:
+
+  def setup(app):
+
+  # Tells Sphinx to recognize the new config value `todo_include_todos`, whose default value is False. Indicates that HTML must be rebuilt
+  app.add_config_value('todo_include_todos', False, 'html')
+
+  # Adds a new node class to the build system. It also can specify visitor functions for each supported output format.
+  app.add_node(todolist)
+  app.add_node(todo,
+               html=(visit_todo_node, depart_todo_node),
+               latex=(visit_todo_node, depart_todo_node),
+               text=(visit_todo_node, depart_todo_node))
+
+  # Adds a new directive, given by name and class.
+  app.add_directive('todo', TodoDirective)
+  app.add_directive('todolist', TodolistDirective)
+
+  # Adds an event handler to the event whose name is given by the first argument.
+  app.connect('doctree-resolved', process_todo_nodes)
+  app.connect('env-purge-doc', purge_todos)
+
+  return {'version': '0.1'}   # identifies the version of our extension
+
+The calls in this function refer to classes and functions not yet written. What the individual calls do is the following:
+
+- :code:`add_config_value()` lets Sphinx know that it should recognize the new config value :code:`todo_include_todos`, whose default value should be False (this also tells Sphinx that it is a boolean value). If the third argument was 'html', HTML documents would be full rebuild if the config value changed its value. This is needed for config values that influence reading (build phase 1).
+- :code:`add_node()` adds a new node class to the build system. It also can specify visitor functions for each supported output format. These visitor functions are needed when the new nodes stay until phase 4 – since the todolist node is always replaced in phase 3, it doesn’t need any.
+
+We need to create the two node classes :code:`todo` and :code:`todolist` later.
+
+- :code:`add_directive()` adds a new directive, given by name and class. The handler functions are created later.
+- Finally, :code:`connect()` adds an event handler to the event whose name is given by the first argument. The event handler function is called with several arguments which are documented with the event.
+
+
 .. code-block:: python
   :caption: todo.py
   :linenos:
