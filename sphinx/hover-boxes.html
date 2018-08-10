@@ -102,7 +102,8 @@
 <p>Two options:</p>
 <ul class="simple">
 <li>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">abbr</span></code> role. The author must specify text or a variable in the role defintion. The hover box is defined in CSS and not as a HTML tool-tip.</li>
-<li>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">term</span></code> role. The role creates a reference to the glossary definition that is handled with as a CSS hover box. Woud require JavaScript.</li>
+<li>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">term</span></code> role. The role creates a reference to the glossary definition that is handled with as a CSS hover box. Would require JavaScript.</li>
+<li>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">doc</span></code> role. The role creates a reference to a distinct answer page that is handled with as a CSS hover box. Would require JavaScript.</li>
 </ul>
 <p>Worth research:</p>
 <ul class="simple">
@@ -114,7 +115,7 @@
 <h2>To Do List<a class="headerlink" href="#to-do-list" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Understand how a role specifies a new CSS class.</li>
-<li>Understand how a role is built. Many improvements  can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.</li>
+<li>Understand how a role is built. Many improvements can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.</li>
 <li>Understand how/when substitutions occur. May effect custom role builds.</li>
 <li>Extend custom role to specify a unique CSS class.</li>
 <li>Extend custom role to use JavaScript (if possible).</li>
@@ -276,17 +277,38 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="hover-box-html">
+<h2>Hover Box HTML<a class="headerlink" href="#hover-box-html" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="css-only-version">
+<h3>CSS-Only Version<a class="headerlink" href="#css-only-version" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://stackoverflow.com/questions/10243440/how-to-create-a-box-when-mouse-over-text-in-pure-css">https://stackoverflow.com/questions/10243440/how-to-create-a-box-when-mouse-over-text-in-pure-css</a></p>
+<p>Or possibly</p>
+</div>
+<div class="section" id="javascript">
+<h3>JavaScript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h3>
+<p>Based on Google AdWords docs:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This article explains how to edit your cost-per-click (CPC) bids and your <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;glossary-term&quot;</span> <span class="na">data-answer</span><span class="o">=</span><span class="s">&quot;6026409&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/adwords/answer/6026409&quot;</span> <span class="na">st-ve</span><span class="o">=</span><span class="s">&quot;40&quot;</span><span class="p">&gt;</span>cost-per-thousand viewable impressions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> (viewable CPM) bids.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>The URL may point to a single page,  in which case, the role should be a variation of the <code class="code docutils literal notranslate"><span class="pre">doc</span></code> role.</p>
+</div>
+</div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
 <li><a class="reference external" href="https://doughellmann.com/blog/2013/03/16/better-documentation-through-automation-creating-docutils-sphinx-extensions/">Better Documentation Through Automation: Creating docutils and Sphinx Extensions</a></li>
 <li><a class="reference external" href="https://samnicholls.net/2016/06/15/how-to-sphinx-readthedocs/">An idiot’s guide to Python documentation with Sphinx and ReadTheDocs</a></li>
 <li><a class="reference external" href="http://docutils.sourceforge.net/docs/dev/hacking.html">Docutils Hacker’s Guide</a></li>
 <li><a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-directives.html#specify-directive-arguments-options-and-content">Creating reStructuredText Directives</a></li>
 <li><a class="reference external" href="http://inside.mines.edu/~jrosenth/hacking-docutils.html">http://inside.mines.edu/~jrosenth/hacking-docutils.html</a></li>
 <li><a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-roles.html">Creating reStructuredText Interpreted Text Roles</a></li>
-<li><cite>Gist &lt;https://gist.github.com/shimizukawa/3718712&gt;</cite></li>
+<li><a class="reference external" href="https://gist.github.com/shimizukawa/3718712">Gist</a></li>
+<li><a class="reference external" href="https://www.w3schools.com/css/css_tooltip.asp">CSS Tooltip</a></li>
+<li><a class="reference external" href="https://stackoverflow.com/questions/10243440/how-to-create-a-box-when-mouse-over-text-in-pure-css">How to create a box when mouse over text in pure CSS?</a></li>
 </ul>
+</div>
 </div>
 </div>
 
