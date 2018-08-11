@@ -109,9 +109,17 @@
 <li>A new config value <code class="code docutils literal notranslate"><span class="pre">todo_include_todos</span></code> (config value names should start with the extension name, in order to stay unique) that controls whether todo entries make it into the output.</li>
 <li>New event handlers: one for the <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/appapi.html#event-doctree-resolved">doctree-resolved event</a>, to replace the todo and todolist nodes, and one for <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/appapi.html#event-env-purge-doc">env-purge-doc</a> (the reason for that will be covered later).</li>
 </ul>
+<div class="admonition" id="todo-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">A todo item.</p>
+</div>
 <div class="section" id="important-objects">
 <h2>Important Objects<a class="headerlink" href="#important-objects" title="Permalink to this headline">¶</a></h2>
 <p>Key APIs used to write extensions:</p>
+<div class="admonition" id="todo-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">A second todo item</p>
+</div>
 <table border="1" class="docutils" id="id1">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Important Objects</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -158,6 +166,10 @@
 <div class="section" id="set-up-function">
 <h2>Set Up Function<a class="headerlink" href="#set-up-function" title="Permalink to this headline">¶</a></h2>
 <p>The new elements are added in the extension’s setup function. Let us create a new Python module called <code class="code docutils literal notranslate"><span class="pre">todo.py</span></code> and add the setup function:</p>
+<div class="admonition" id="todo-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">A third todo item</p>
+</div>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -815,6 +827,21 @@
 </pre></div>
 </td></tr></table></div>
 </div>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">A todo item.</p>
+</div>
+<p>(The original entry is located in sphinx/todolist.rst, line 19 and can be found <a class="reference external" href="#todo-0"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">A second todo item</p>
+</div>
+<p>(The original entry is located in sphinx/todolist.rst, line 26 and can be found <a class="reference external" href="#todo-1"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">A third todo item</p>
+</div>
+<p>(The original entry is located in sphinx/todolist.rst, line 67 and can be found <a class="reference external" href="#todo-2"><em>here</em></a>.)</p>
 </div>
 </div>
 
