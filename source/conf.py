@@ -60,6 +60,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.extlinks',
     'bemuse',
+    'todo',
     'sphinxcontrib_roles',
 ]
 
