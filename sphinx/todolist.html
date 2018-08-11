@@ -214,8 +214,155 @@
 <li><code class="code docutils literal notranslate"><span class="pre">add_directive()</span></code> adds a new directive, given by name and class. The handler functions are created later.</li>
 <li>Finally, <code class="code docutils literal notranslate"><span class="pre">connect()</span></code> adds an event handler to the event whose name is given by the first argument. The event handler function is called with several arguments which are documented with the event.</li>
 </ul>
+</div>
+<div class="section" id="node-classes">
+<h2>Node Classes<a class="headerlink" href="#node-classes" title="Permalink to this headline">¶</a></h2>
+<p>Node classes usually don’t have to do anything except inherit from the standard docutils classes defined in <code class="code docutils literal notranslate"><span class="pre">docutils.nodes</span></code>.</p>
+<ul class="simple">
+<li><code class="code docutils literal notranslate"><span class="pre">todo</span></code> inherits from Admonition because it should be handled like a note or warning.</li>
+<li><code class="code docutils literal notranslate"><span class="pre">todolist</span></code> is just a general node.</li>
+</ul>
+<p>Can roles inherit from nodes? Are there role nodes?</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Many extensions will not have to create their own node classes and work fine with the nodes already provided by docutils and Sphinx.</p>
+</div>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">Node Class Definitions in todo.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils</span> <span class="kn">import</span> <span class="n">nodes</span>
+
+<span class="k">class</span> <span class="nc">todo</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">Admonition</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">class</span> <span class="nc">todolist</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">General</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Element</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">visit_todo_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">visit_admonition</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">depart_todo_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">node</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">depart_admonition</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="directive-classes">
+<h2>Directive Classes<a class="headerlink" href="#directive-classes" title="Permalink to this headline">¶</a></h2>
+<p>A directive class is a class deriving usually from <code class="code docutils literal notranslate"><span class="pre">docutils.parsers.rst.Directive</span></code>.</p>
+<p>The directive interface is also covered in detail in the <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">docutils documentation</a>; the important thing is that the class should have attributes that configure the allowed markup, and a run method that returns a list of nodes.</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-number">Listing 17 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">todolist</span></code> Directive Class Definitions in <code class="code docutils literal notranslate"><span class="pre">todo.py</span></code></span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span>
+
+<span class="c1"># An instance of our todolist node class is created and returned. The todolist directive has neither content nor arguments that need to be handled.</span>
+<span class="k">class</span> <span class="nc">TodolistDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">todolist</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)]</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Listing 18 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">todo</span></code> Directive Class Definitions in <code class="code docutils literal notranslate"><span class="pre">todo.py</span></code></span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sphinx.locale</span> <span class="kn">import</span> <span class="n">_</span>
+
+<span class="k">class</span> <span class="nc">TodoDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+
+    <span class="c1"># this enables content in the directive</span>
+    <span class="n">has_content</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#  You can refer to the build environment instance using self.state.document.settings.env.</span>
+        <span class="n">env</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">env</span>
+
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        To act as a link target (from the todolist), the todo directive needs to return a target node in addition to the todo node.</span>
+
+<span class="sd">        The target ID (in HTML, this will be the anchor name) is generated by using env.new_serialno which returns a new unique integer on each call and therefore leads to unique target names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">targetid</span> <span class="o">=</span> <span class="s2">&quot;todo-</span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">env</span><span class="o">.</span><span class="n">new_serialno</span><span class="p">(</span><span class="s1">&#39;todo&#39;</span><span class="p">)</span>
+
+        <span class="c1"># The target node is instantiated without any text (the first two arguments).</span>
+        <span class="n">targetnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">target</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ids</span><span class="o">=</span><span class="p">[</span><span class="n">targetid</span><span class="p">])</span>
+
+        <span class="n">todo_node</span> <span class="o">=</span> <span class="n">todo</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+        <span class="n">todo_node</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Todo&#39;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Todo&#39;</span><span class="p">))</span>
+
+        <span class="c1"># On creating admonition node, the content body of the directive are parsed using self.state.nested_parse. The first argument gives the content body, and the second one gives content offset. The third argument gives the parent node of parsed result, in our case the todo node.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">nested_parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">content_offset</span><span class="p">,</span> <span class="n">todo_node</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s1">&#39;todo_all_todos&#39;</span><span class="p">):</span>
+            <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;docname&#39;</span><span class="p">:</span> <span class="n">env</span><span class="o">.</span><span class="n">docname</span><span class="p">,</span>
+            <span class="s1">&#39;lineno&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span>
+            <span class="s1">&#39;todo&#39;</span><span class="p">:</span> <span class="n">todo_node</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(),</span>
+            <span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="n">targetnode</span><span class="p">,</span>
+        <span class="p">})</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">targetnode</span><span class="p">,</span> <span class="n">todo_node</span><span class="p">]</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="everything">
+<h2>Everything<a class="headerlink" href="#everything" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-number">Listing 19 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
   3
