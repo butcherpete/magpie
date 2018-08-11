@@ -139,7 +139,8 @@ The directive interface is also covered in detail in the `docutils documentation
 
   from docutils.parsers.rst import Directive
  
-  # An instance of our todolist node class is created and returned. The todolist directive has neither content nor arguments that need to be handled.
+  # An instance of our todolist node class is created and returned. The todolist directive has 
+  # neither content nor arguments that need to be handled.
   class TodolistDirective(Directive):
   
       def run(self):
@@ -174,20 +175,100 @@ The directive interface is also covered in detail in the `docutils documentation
           todo_node = todo('\n'.join(self.content))
           todo_node += nodes.title(_('Todo'), _('Todo'))
 
-          # On creating admonition node, the content body of the directive are parsed using self.state.nested_parse. The first argument gives the content body, and the second one gives content offset. The third argument gives the parent node of parsed result, in our case the todo node.
+          # On creating admonition node, the content body of the directive are parsed 
+          # using self.state.nested_parse. The first argument gives the content body, 
+          # and the second one gives content offset. The third argument gives the parent 
+          #node of parsed result, in our case the todo node.
           self.state.nested_parse(self.content, self.content_offset, todo_node)
-  
+
+          # The todo node is added to the environment. This is needed to be able to create a list 
+          # of all todo entries throughout the documentation, in the place where the author puts a 
+          # todolist directive.  The environment attribute todo_all_todos is used (again, the name 
+          # should be unique, so it is prefixed by the extension name). It does not exist when a new 
+          # environment is created, so the directive must check and create it if necessary.
           if not hasattr(env, 'todo_all_todos'):
               env.todo_all_todos = []
+
+          # Various information about the todo entry’s location are stored along with a copy of the node
           env.todo_all_todos.append({
               'docname': env.docname,
               'lineno': self.lineno,
               'todo': todo_node.deepcopy(),
               'target': targetnode,
           })
-  
+
+          # The nodes that should be put into the doctree are returned: the target node and the 
+          # admonition node.
           return [targetnode, todo_node]
 
+**************
+Event Handlers
+**************
+
+Since we store information from source files in the environment, which is persistent, it may become out of date when the source file changes. 
+
+Therefore, before each source file is read, the environment’s records of it are cleared, and the :code:`env-purge-doc` event gives extensions a chance to do the same. 
+
+
+.. code-block:: python
+  :caption: :code:`env-purge-doc` Event 
+  :linenos:
+
+  def purge_todos(app, env, docname):
+
+    # We clear out all todos whose docname matches the given one from the :todo_all_todos list. 
+    # If there are todos left in the document, they will be added again during parsing.
+    if not hasattr(env, 'todo_all_todos'):
+        return
+    env.todo_all_todos = [todo for todo in env.todo_all_todos
+                          if todo['docname'] != docname]
+
+The other handler belongs to the :code:`doctree-resolved` event. This event is emitted at the end of phase 3 and allows custom resolving to be done:
+
+.. code-block:: python
+  :caption: :code:`doctree-resolved` Event 
+  :linenos:
+
+  def process_todo_nodes(app, doctree, fromdocname):
+      if not app.config.todo_include_todos:
+          for node in doctree.traverse(todo):
+              node.parent.remove(node)
+  
+      # Replace all todolist nodes with a list of the collected todos.
+      # Augment each todo with a backlink to the original location.
+      env = app.builder.env
+  
+      for node in doctree.traverse(todolist):
+          if not app.config.todo_include_todos:
+              node.replace_self([])
+              continue
+  
+          content = []
+  
+          for todo_info in env.todo_all_todos:
+              para = nodes.paragraph()
+              filename = env.doc2path(todo_info['docname'], base=None)
+              description = (
+                  _('(The original entry is located in %s, line %d and can be found ') %
+                  (filename, todo_info['lineno']))
+              para += nodes.Text(description, description)
+  
+              # Create a reference
+              newnode = nodes.reference('', '')
+              innernode = nodes.emphasis(_('here'), _('here'))
+              newnode['refdocname'] = todo_info['docname']
+              newnode['refuri'] = app.builder.get_relative_uri(
+                  fromdocname, todo_info['docname'])
+              newnode['refuri'] += '#' + todo_info['target']['refid']
+              newnode.append(innernode)
+              para += newnode
+              para += nodes.Text('.)', '.)')
+  
+              # Insert into the todolist
+              content.append(todo_info['todo'])
+              content.append(para)
+  
+          node.replace_self(content)
 
 **********
 Everything
