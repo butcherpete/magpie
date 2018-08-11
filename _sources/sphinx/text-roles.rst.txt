@@ -1,3 +1,5 @@
+.. _RFCs: http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=rfc&action=Search&sourceid=Mozilla-search
+
 ##################################################
 Creating reStructuredText Interpreted Text Roles
 ##################################################
@@ -115,7 +117,7 @@ For the implementation of :code:`register_generic_role`, see the :code:`docutils
 
 RFC Reference Role
 ==================
-This role allows easy references to RFCs (Request For Comments documents) by automatically providing the base URL, :code:`http://www.faqs.org/rfcs/`, and appending the RFC document itself (rfcXXXX.html, where XXXX is the RFC number).  For example:
+This role allows easy references to RFCs_ (Request For Comments documents) by automatically providing the base URL, :code:`http://www.faqs.org/rfcs/`, and appending the RFC document itself (rfcXXXX.html, where XXXX is the RFC number).  For example:
 
 .. code-block:: rst
 
@@ -164,8 +166,7 @@ Here is the implementation of the role:
     register_canonical_role('rfc-reference', rfc_reference_role)
 
 
-
-.. _RFCs: http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=rfc&action=Search&sourceid=Mozilla-search
+See :RFC:`2822` for information about email headers.
 
 ********
 See Also
