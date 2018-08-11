@@ -280,20 +280,6 @@ Defining Custom Roles in Sphinx
 *******************************
 https://doughellmann.com/blog/2010/05/09/defining-custom-roles-in-sphinx/
 
-**************************
-Creating Custom Link Roles
-**************************
-http://protips.readthedocs.io/link-roles.html
-
-The article describes a six-step process:
-
-1. Create an :code:`_extensions` directory to hold extensions.
-2. Add a custom search path in the :code:`conf.py` that includes the :code:`_extensions` directory.
-3. Create the extension (:code:`bemuse.py`).
-4. Add the extension to the  :code:`_extensions` directory. 
-5. Add the extension to the :code:`extensions` list in the the :code:`conf.py`.
-6. Mark up text using the custom roles.
-
 
 .. code-block:: python
   :caption: conf.py
