@@ -1,19 +1,64 @@
 .. include:: <isopub.txt>
  
 #########################
-Glossary Hover Boxes 
+Term Definition Role 
 #########################
 
 **********
 Goals
 **********
 Identify and implement a role-based glossary term solution that using CSS-based hover boxes to display glossary term definitions. The solution with include custom roles, css, and possibility custom JS.
+ 
+We want the extension to add a glossary-definition role to Sphinx. 
 
-Two options:
+Three options:
 
-- A role based on the existing :code:`abbr` role. The author must specify text or a variable in the role defintion. The hover box is defined in CSS and not as a HTML tool-tip.
-- A role based on the existing :code:`term` role. The role creates a reference to the glossary definition that is handled with as a CSS hover box. Would require JavaScript.
-- A role based on the existing :code:`doc` role. The role creates a reference to a distinct answer page that is handled with as a CSS hover box. Would require JavaScript.
+Abbreviation
+============
+A role based on the existing :code:`abbreviation` role. The author must specify text or a variable in the role defintion. The hover box is defined in CSS and not as a HTML tool-tip.
+
+The role is marked up like this:
+
+.. code-block:: rest
+
+  :glossy:`term (|term-variable|)`
+
+And generates the following HTML:
+
+.. code-block:: html 
+
+  <a class= "glossy reference">
+
+
+
+Term
+============
+A role based on the existing :code:`term` role. The role creates a reference to the glossary definition that is handled with as a CSS hover box. Would require JavaScript.
+
+.. code-block:: rest
+
+  :glossy:`term`
+
+And generates the following HTML:
+
+.. code-block:: html 
+
+  <a class="reference internal" href="../../other/glossary.html#term-internal-link" id="yui_3_17_2_1_1534018420860_591"><span class="xref std std-term">term</span></a>
+
+Ref
+============
+A role based on the existing :code:`ref` role. The role accepts a number and creates a reference to a distinct answer page that is handled with as a CSS hover box. May require JavaScript.
+
+.. code-block:: rest
+
+  :glossy:`term (3456)`
+
+And generates the following HTML:
+
+.. code-block:: html 
+
+  <a class="glossy reference internal" data-answer="3456" href="/path/3456.html">term</a>
+
 
 Worth research:
 
@@ -23,22 +68,22 @@ Worth research:
 To Do Items 
 ============
 
-.. todo:: Understand how a role specifies a new CSS class.
-.. todo:: Understand how a role is built. Many improvements can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.
+.. todo:: Understand how a role specifies a new CSS class. 
+.. todo:: Understand how a directive specifies a new CSS class. How do I enable the user to specify the class of a directive?
+.. todo:: Understand how a role is built. Many improvements can be made changing how Sphinx builds a directive/role in HTML and assigns CSS. For roles, the HTML is specified by the :code:`rawtext` parameter.
 .. todo:: Understand how/when substitutions occur. May effect custom role builds.
 .. todo:: Extend custom role to specify a unique CSS class.
 .. todo:: Extend custom role to use JavaScript (if possible).
-.. todo:: Define CSS class. 
 
-******************
-Existing Roles
-******************
-Use the Sphinx :code:`abbreviation` role instead of the Docutils :code:`abbr` role.
-
-
-Sphinx Abbreviation Role
-========================
+************************
+Abbreviation-Based Role
+************************
 http://www.sphinx-doc.org/en/master/_modules/sphinx/addnodes.html#abbreviation
+
+:abbr:`LIFO (last-in, first-out)`
+
+:hover:`LIFO (last-in, first-out)`
+
 
 .. code-block:: python
 
@@ -133,12 +178,6 @@ Third Attempt
 
 register_canonical_role('rfc-reference', rfc_reference_role)
 
-Test Bed
-========
-
-:abbr:`LIFO (last-in, first-out)`
-
-:hover:`LIFO (last-in, first-out)`
 
 
 ******************

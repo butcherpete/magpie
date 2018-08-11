@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Glossary Hover Boxes &#8212; Magpie 0.1 documentation</title>
+    <title>Term Definition Role &#8212; Magpie 0.1 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/my-styles.css" type="text/css" />
@@ -94,22 +94,52 @@
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="glossary-hover-boxes">
-<h1>Glossary Hover Boxes<a class="headerlink" href="#glossary-hover-boxes" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="term-definition-role">
+<h1>Term Definition Role<a class="headerlink" href="#term-definition-role" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
 <p>Identify and implement a role-based glossary term solution that using CSS-based hover boxes to display glossary term definitions. The solution with include custom roles, css, and possibility custom JS.</p>
-<p>Two options:</p>
-<ul class="simple">
-<li>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">abbr</span></code> role. The author must specify text or a variable in the role defintion. The hover box is defined in CSS and not as a HTML tool-tip.</li>
-<li>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">term</span></code> role. The role creates a reference to the glossary definition that is handled with as a CSS hover box. Would require JavaScript.</li>
-<li>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">doc</span></code> role. The role creates a reference to a distinct answer page that is handled with as a CSS hover box. Would require JavaScript.</li>
-</ul>
+<p>We want the extension to add a glossary-definition role to Sphinx.</p>
+<p>Three options:</p>
+<div class="section" id="abbreviation">
+<h3>Abbreviation<a class="headerlink" href="#abbreviation" title="Permalink to this headline">¶</a></h3>
+<p>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">abbreviation</span></code> role. The author must specify text or a variable in the role defintion. The hover box is defined in CSS and not as a HTML tool-tip.</p>
+<p>The role is marked up like this:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="na">:glossy:</span><span class="nv">`term (|term-variable|)`</span>
+</pre></div>
+</div>
+<p>And generates the following HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span> <span class="s">&quot;glossy reference&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="term">
+<h3>Term<a class="headerlink" href="#term" title="Permalink to this headline">¶</a></h3>
+<p>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">term</span></code> role. The role creates a reference to the glossary definition that is handled with as a CSS hover box. Would require JavaScript.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="na">:glossy:</span><span class="nv">`term`</span>
+</pre></div>
+</div>
+<p>And generates the following HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference internal&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../../other/glossary.html#term-internal-link&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;yui_3_17_2_1_1534018420860_591&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;xref std std-term&quot;</span><span class="p">&gt;</span>term<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ref">
+<h3>Ref<a class="headerlink" href="#ref" title="Permalink to this headline">¶</a></h3>
+<p>A role based on the existing <code class="code docutils literal notranslate"><span class="pre">ref</span></code> role. The role accepts a number and creates a reference to a distinct answer page that is handled with as a CSS hover box. May require JavaScript.</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="na">:glossy:</span><span class="nv">`term (3456)`</span>
+</pre></div>
+</div>
+<p>And generates the following HTML:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;glossy reference internal&quot;</span> <span class="na">data-answer</span><span class="o">=</span><span class="s">&quot;3456&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/path/3456.html&quot;</span><span class="p">&gt;</span>term<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
+</div>
 <p>Worth research:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://docutils.sourceforge.net/docutils/parsers/rst/roles.py">http://docutils.sourceforge.net/docutils/parsers/rst/roles.py</a></li>
 <li>The term role may be built in the Sphinx glossary defintion.</li>
 </ul>
+</div>
 <div class="section" id="to-do-items">
 <h3>To Do Items<a class="headerlink" href="#to-do-items" title="Permalink to this headline">¶</a></h3>
 <div class="admonition" id="todo-0">
@@ -118,32 +148,31 @@
 </div>
 <div class="admonition" id="todo-1">
 <p class="first admonition-title">Todo</p>
-<p class="last">Understand how a role is built. Many improvements can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.</p>
+<p class="last">Understand how a directive specifies a new CSS class. How do I enable the user to specify the class of a directive?</p>
 </div>
 <div class="admonition" id="todo-2">
 <p class="first admonition-title">Todo</p>
-<p class="last">Understand how/when substitutions occur. May effect custom role builds.</p>
+<p class="last">Understand how a role is built. Many improvements can be made changing how Sphinx builds a directive/role in HTML and assigns CSS. For roles, the HTML is specified by the <code class="code docutils literal notranslate"><span class="pre">rawtext</span></code> parameter.</p>
 </div>
 <div class="admonition" id="todo-3">
 <p class="first admonition-title">Todo</p>
-<p class="last">Extend custom role to specify a unique CSS class.</p>
+<p class="last">Understand how/when substitutions occur. May effect custom role builds.</p>
 </div>
 <div class="admonition" id="todo-4">
 <p class="first admonition-title">Todo</p>
-<p class="last">Extend custom role to use JavaScript (if possible).</p>
+<p class="last">Extend custom role to specify a unique CSS class.</p>
 </div>
 <div class="admonition" id="todo-5">
 <p class="first admonition-title">Todo</p>
-<p class="last">Define CSS class.</p>
+<p class="last">Extend custom role to use JavaScript (if possible).</p>
 </div>
 </div>
 </div>
-<div class="section" id="existing-roles">
-<h2>Existing Roles<a class="headerlink" href="#existing-roles" title="Permalink to this headline">¶</a></h2>
-<p>Use the Sphinx <code class="code docutils literal notranslate"><span class="pre">abbreviation</span></code> role instead of the Docutils <code class="code docutils literal notranslate"><span class="pre">abbr</span></code> role.</p>
-<div class="section" id="sphinx-abbreviation-role">
-<h3>Sphinx Abbreviation Role<a class="headerlink" href="#sphinx-abbreviation-role" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="abbreviation-based-role">
+<h2>Abbreviation-Based Role<a class="headerlink" href="#abbreviation-based-role" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.sphinx-doc.org/en/master/_modules/sphinx/addnodes.html#abbreviation">http://www.sphinx-doc.org/en/master/_modules/sphinx/addnodes.html#abbreviation</a></p>
+<p><abbr title="last-in, first-out">LIFO</abbr></p>
+<p><a href="#id1"><span class="problematic" id="id2">:hover:`LIFO (last-in, first-out)`</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">abbreviation</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">Inline</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">TextElement</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;Node for abbreviations with explanations.&quot;&quot;&quot;</span>
 </pre></div>
@@ -273,12 +302,6 @@
 </td></tr></table></div>
 </div>
 <p>register_canonical_role(‘rfc-reference’, rfc_reference_role)</p>
-</div>
-<div class="section" id="test-bed">
-<h3>Test Bed<a class="headerlink" href="#test-bed" title="Permalink to this headline">¶</a></h3>
-<p><abbr title="last-in, first-out">LIFO</abbr></p>
-<p><a href="#id1"><span class="problematic" id="id2">:hover:`LIFO (last-in, first-out)`</span></a></p>
-</div>
 </div>
 <div class="section" id="existing-term-role">
 <h2>Existing Term Role<a class="headerlink" href="#existing-term-role" title="Permalink to this headline">¶</a></h2>
