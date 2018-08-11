@@ -1,6 +1,8 @@
 ##################################################
- Creating reStructuredText Interpreted Text Roles
+Creating reStructuredText Interpreted Text Roles
 ##################################################
+
+From http://docutils.sourceforge.net/docs/howto/rst-roles.html
 
 Interpreted text roles are an extension mechanism for inline markup in reStructuredText.  This document aims to make the creation of new roles as easy and understandable as possible.
 
@@ -8,9 +10,7 @@ Interpreted text roles are an extension mechanism for inline markup in reStructu
 ************************
 Define the Role Function
 ************************
-
-The role function creates and returns inline elements (nodes) and does
-any additional processing required.  Its signature is as follows:
+The :code:`role` function creates and returns inline elements (nodes) and does any additional processing required.  Its signature is as follows:
 
 .. code-block:: python
 
@@ -22,79 +22,61 @@ any additional processing required.  Its signature is as follows:
     role_fn.options = ...
     role_fn.content = ...
 
-Function attributes are described below (see `Specify Role Function
-Options and Content`_).  The role function parameters are as follows:
 
-* ``name``: The local name of the interpreted role, the role name
-  actually used in the document.
+The role function parameters are as follows:
 
-* ``rawtext``: A string containing the enitre interpreted text input,
-  including the role and markup.  Return it as a ``problematic`` node
-  linked to a system message if a problem is encountered.
+:code:`name`
+  The local name of the interpreted role, the role name actually used in the document.
 
-* ``text``: The interpreted text content.
+:code:`rawtext`
+  A string containing the enitre interpreted text input, including the role and markup.  Return it as a :code:`problematic` node linked to a system message if a problem is encountered.
 
-* ``lineno``: The line number where the interpreted text begins.
+:code:`text`
+  The interpreted text content.
 
-* ``inliner``: The ``docutils.parsers.rst.states.Inliner`` object that
-  called role_fn.  It contains the several attributes useful for error
-  reporting and document tree access.
+:code:`lineno``
+  The line number where the interpreted text begins.
 
-* ``options``: A dictionary of directive options for customization
-  (from the `"role" directive`_), to be interpreted by the role
-  function.  Used for additional attributes for the generated elements
-  and other functionality.
+:code:`inliner`
+  The :code:`docutils.parsers.rst.states.Inliner` object that called :code:`role_fn`.  It contains the several attributes useful for error reporting and document tree access.
 
-* ``content``: A list of strings, the directive content for
-  customization (from the `"role" directive`_).  To be interpreted by
-  the role function.
+:code:`options`
+  A dictionary of directive options for customization (from the `role directive <http://docutils.sourceforge.net/docs/ref/rst/directives.html#role>`_), to be interpreted by the role function.  Used for additional attributes for the generated elements and other functionality.
+
+:code:`content`
+  A list of strings, the directive content for customization (from the `role directive <http://docutils.sourceforge.net/docs/ref/rst/directives.html#role>`_).  To be interpreted by the role function.
+
+.. Function attributes are described below (see `Specify Role Function Options and Content`_).  
+
 
 Role functions return a tuple of two values:
 
-* A list of nodes which will be inserted into the document tree at the
-  point where the interpreted role was encountered (can be an empty
-  list).
+* A list of nodes which will be inserted into the document tree at the point where the interpreted role was encountered (can be an empty list).
 
-* A list of system messages, which will be inserted into the document tree
-  immediately after the end of the current block (can also be empty).
+* A list of system messages, which will be inserted into the document tree immediately after the end of the current block (can also be empty).
 
 
 *****************************************
 Specify Role Function Options and Content
 *****************************************
 Function attributes are for customization, and are interpreted by the
-`"role" directive`_.  If unspecified, role function attributes are
-assumed to have the value ``None``.  Two function attributes are
-recognized:
+`role directive <http://docutils.sourceforge.net/docs/ref/rst/directives.html#role>`_.  
 
-- ``options``: The option specification.  All role functions
-  implicitly support the "class" option, unless disabled with an
-  explicit ``{'class': None}``.
+If unspecified, :code:`role` function attributes are assumed to have the value :code:`None`.  Two function attributes are recognized:
 
-  An option specification must be defined detailing the options
-  available to the "role" directive.  An option spec is a mapping of
-  option name to conversion function; conversion functions are applied
-  to each option value to check validity and convert them to the
-  expected type.  Python's built-in conversion functions are often
-  usable for this, such as ``int``, ``float``, and ``bool`` (included
-  in Python from version 2.2.1).  Other useful conversion functions
-  are included in the ``docutils.parsers.rst.directives`` package.
-  For further details, see `Creating reStructuredText Directives`_.
+:code:`options`
+  The option specification.  All role functions implicitly support the "class" option, unless disabled with an explicit :code:`{'class': None}`.
 
-- ``content``: A boolean; true if "role" directive content is allowed.
-  Role functions must handle the case where content is required but
-  not supplied (an empty content list will be supplied).
+  An option specification must be defined detailing the options available to the :code:`role` directive.  An option spec is a mapping of option name to conversion function; conversion functions are applied to each option value to check validity and convert them to the expected type.  
 
-  As of this writing, no roles accept directive content.
+  Python's built-in conversion functions are often usable for this, such as :code:`int`, :code:`float`, and :code:`bool` (included in Python from version 2.2.1).  Other useful conversion functions are included in the :code:`docutils.parsers.rst.directives` package. For further details, see `Creating reStructuredText Directives <http://docutils.sourceforge.net/docs/howto/rst-directives.html#specify-directive-arguments-options-and-content>`_.
 
-Note that unlike directives, the "arguments" function attribute is not
-supported for role customization.  Directive arguments are handled by
-the "role" directive itself.
+:code:`content`
+  A boolean; true if :code:`role` directive content is allowed. Role functions must handle the case where content is required but not supplied (an empty content list will be supplied).
 
-.. _"role" directive: ../ref/rst/directives.html#role
-.. _Creating reStructuredText Directives:
-   rst-directives.html#specify-directive-arguments-options-and-content
+.. important:: As of this writing, no roles accept directive content.
 
+Note that unlike directives, the "arguments" function attribute is not supported for role customization.  Directive arguments are handled by the "role" directive itself.
 
 *****************
 Register the Role
