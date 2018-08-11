@@ -6,7 +6,6 @@ From http://docutils.sourceforge.net/docs/howto/rst-roles.html
 
 Interpreted text roles are an extension mechanism for inline markup in reStructuredText.  This document aims to make the creation of new roles as easy and understandable as possible.
 
-
 ************************
 Define the Role Function
 ************************
@@ -22,7 +21,6 @@ The :code:`role` function creates and returns inline elements (nodes) and does a
     role_fn.options = ...
     role_fn.content = ...
 
-
 The role function parameters are as follows:
 
 :code:`name`
@@ -34,7 +32,7 @@ The role function parameters are as follows:
 :code:`text`
   The interpreted text content.
 
-:code:`lineno``
+:code:`lineno`
   The line number where the interpreted text begins.
 
 :code:`inliner`
@@ -48,13 +46,11 @@ The role function parameters are as follows:
 
 .. Function attributes are described below (see `Specify Role Function Options and Content`_).  
 
-
 Role functions return a tuple of two values:
 
 * A list of nodes which will be inserted into the document tree at the point where the interpreted role was encountered (can be an empty list).
 
 * A list of system messages, which will be inserted into the document tree immediately after the end of the current block (can also be empty).
-
 
 *****************************************
 Specify Role Function Options and Content
@@ -76,35 +72,26 @@ If unspecified, :code:`role` function attributes are assumed to have the value :
 
 .. important:: As of this writing, no roles accept directive content.
 
-Note that unlike directives, the "arguments" function attribute is not supported for role customization.  Directive arguments are handled by the "role" directive itself.
+Note that unlike directives, the :code:`arguments` function attribute is not supported for role customization.  Directive arguments are handled by the :code:`role` directive itself.
 
 *****************
 Register the Role
 *****************
 
-If the role is a general-use addition to the Docutils core, it must be
-registered with the parser and language mappings added:
+If the role is a general-use addition to the Docutils core, it must be registered with the parser and language mappings added:
 
 1. Register the new role using the canonical name::
 
        from docutils.parsers.rst import roles
        roles.register_canonical_role(name, role_function)
 
-   This code is normally placed immediately after the definition of
-   the role funtion.
+   This code is normally placed immediately after the definition of the role funtion.
 
-2. Add an entry to the ``roles`` dictionary in
-   ``docutils/parsers/rst/languages/en.py`` for the role, mapping the
-   English name to the canonical name (both lowercase).  Usually the
-   English name and the canonical name are the same.  Abbreviations
-   and other aliases may also be added here.
+2. Add an entry to the :code:`roles` dictionary in :code:`docutils/parsers/rst/languages/en.py` for the role, mapping the English name to the canonical name (both lowercase).  Usually the English name and the canonical name are the same.  Abbreviations and other aliases may also be added here.
 
-3. Update all the other language modules as well.  For languages in
-   which you are proficient, please add translations.  For other
-   languages, add the English role name plus "(translation required)".
+3. Update all the other language modules as well.  For languages in which you are proficient, please add translations.  For other languages, add the English role name plus "(translation required)".
 
-If the role is application-specific, use the ``register_local_role``
-function::
+If the role is application-specific, use the :code:`register_local_role` function::
 
     from docutils.parsers.rst import roles
     roles.register_local_role(name, role_function)
@@ -115,40 +102,24 @@ Examples
 ********
 
 For the most direct and accurate information, "Use the Source, Luke!".
-All standard roles are documented in `reStructuredText Interpreted
-Text Roles`_, and the source code implementing them is located in the
-``docutils/parsers/rst/roles.py`` module.  Several representative
-roles are described below.
 
+All standard roles are documented in `reStructuredText Interpreted Text Roles <http://docutils.sourceforge.net/docs/ref/rst/roles.html>`_, and the source code implementing them is located in the :code:`docutils/parsers/rst/roles.py` module.  Several representative roles are described below.
 
 Generic Roles
 =============
-
-Many roles simply wrap a given element around the text.  There's a
-special helper function, ``register_generic_role``, which generates a
-role function from the canonical role name and node class::
+Many roles simply wrap a given element around the text.  There's a special helper function, :code:`register_generic_role`, which generates a role function from the canonical role name and node class::
 
     register_generic_role('emphasis', nodes.emphasis)
 
-For the implementation of ``register_generic_role``, see the
-``docutils.parsers.rst.roles`` module.
-
+For the implementation of :code:`register_generic_role`, see the :code:`docutils.parsers.rst.roles` module.
 
 RFC Reference Role
 ==================
-This role allows easy references to RFCs_ (Request For Comments documents) by automatically providing the base URL, http://www.faqs.org/rfcs/, and appending the RFC document itself (rfcXXXX.html, where XXXX is the RFC number).  For example:
+This role allows easy references to RFCs (Request For Comments documents) by automatically providing the base URL, :code:`http://www.faqs.org/rfcs/`, and appending the RFC document itself (rfcXXXX.html, where XXXX is the RFC number).  For example:
 
 .. code-block:: rst
 
     See :RFC:`2822` for information about email headers.
-
-This is equivalent to:
-
-.. code-block:: rst
-
-    See `RFC 2822`__ for information about email headers.
-
-    __ http://www.faqs.org/rfcs/rfc2822.html
 
 Here is the implementation of the role:
 
@@ -202,6 +173,7 @@ See Also
 
 .. seealso::
 
-  - Standard roles are described in `reStructuredText Interpreted Text Roles`_.  
-  - See the `Interpreted Text`_ section in the `reStructuredText Markup Specification`_ for syntax details.
+  - `Creating reStructuredText Interpreted Text Roles <http://docutils.sourceforge.net/docs/howto/rst-roles.html>`_
+  - `reStructuredText Interpreted Text Roles <http://docutils.sourceforge.net/docs/ref/rst/roles.html>`_
+  - `Interpreted Text <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#interpreted-text>`_ 
 

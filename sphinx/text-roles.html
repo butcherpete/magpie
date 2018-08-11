@@ -118,7 +118,7 @@
 <dd>A string containing the enitre interpreted text input, including the role and markup.  Return it as a <code class="code docutils literal notranslate"><span class="pre">problematic</span></code> node linked to a system message if a problem is encountered.</dd>
 <dt><code class="code docutils literal notranslate"><span class="pre">text</span></code></dt>
 <dd>The interpreted text content.</dd>
-<dt><code class="code docutils literal notranslate"><span class="pre">lineno`</span></code></dt>
+<dt><code class="code docutils literal notranslate"><span class="pre">lineno</span></code></dt>
 <dd>The line number where the interpreted text begins.</dd>
 <dt><code class="code docutils literal notranslate"><span class="pre">inliner</span></code></dt>
 <dd>The <code class="code docutils literal notranslate"><span class="pre">docutils.parsers.rst.states.Inliner</span></code> object that called <code class="code docutils literal notranslate"><span class="pre">role_fn</span></code>.  It contains the several attributes useful for error reporting and document tree access.</dd>
@@ -151,34 +151,25 @@
 <p class="first admonition-title">Important</p>
 <p class="last">As of this writing, no roles accept directive content.</p>
 </div>
-<p>Note that unlike directives, the “arguments” function attribute is not supported for role customization.  Directive arguments are handled by the “role” directive itself.</p>
+<p>Note that unlike directives, the <code class="code docutils literal notranslate"><span class="pre">arguments</span></code> function attribute is not supported for role customization.  Directive arguments are handled by the <code class="code docutils literal notranslate"><span class="pre">role</span></code> directive itself.</p>
 </div>
 <div class="section" id="register-the-role">
 <h2>Register the Role<a class="headerlink" href="#register-the-role" title="Permalink to this headline">¶</a></h2>
-<p>If the role is a general-use addition to the Docutils core, it must be
-registered with the parser and language mappings added:</p>
+<p>If the role is a general-use addition to the Docutils core, it must be registered with the parser and language mappings added:</p>
 <ol class="arabic">
 <li><p class="first">Register the new role using the canonical name:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="k">import</span> <span class="n">roles</span>
 <span class="n">roles</span><span class="o">.</span><span class="n">register_canonical_role</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">role_function</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This code is normally placed immediately after the definition of
-the role funtion.</p>
+<p>This code is normally placed immediately after the definition of the role funtion.</p>
 </li>
-<li><p class="first">Add an entry to the <code class="docutils literal notranslate"><span class="pre">roles</span></code> dictionary in
-<code class="docutils literal notranslate"><span class="pre">docutils/parsers/rst/languages/en.py</span></code> for the role, mapping the
-English name to the canonical name (both lowercase).  Usually the
-English name and the canonical name are the same.  Abbreviations
-and other aliases may also be added here.</p>
+<li><p class="first">Add an entry to the <code class="code docutils literal notranslate"><span class="pre">roles</span></code> dictionary in <code class="code docutils literal notranslate"><span class="pre">docutils/parsers/rst/languages/en.py</span></code> for the role, mapping the English name to the canonical name (both lowercase).  Usually the English name and the canonical name are the same.  Abbreviations and other aliases may also be added here.</p>
 </li>
-<li><p class="first">Update all the other language modules as well.  For languages in
-which you are proficient, please add translations.  For other
-languages, add the English role name plus “(translation required)”.</p>
+<li><p class="first">Update all the other language modules as well.  For languages in which you are proficient, please add translations.  For other languages, add the English role name plus “(translation required)”.</p>
 </li>
 </ol>
-<p>If the role is application-specific, use the <code class="docutils literal notranslate"><span class="pre">register_local_role</span></code>
-function:</p>
+<p>If the role is application-specific, use the <code class="code docutils literal notranslate"><span class="pre">register_local_role</span></code> function:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="k">import</span> <span class="n">roles</span>
 <span class="n">roles</span><span class="o">.</span><span class="n">register_local_role</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">role_function</span><span class="p">)</span>
 </pre></div>
@@ -186,32 +177,20 @@ function:</p>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<p>For the most direct and accurate information, “Use the Source, Luke!”.
-All standard roles are documented in <a href="#id3"><span class="problematic" id="id4">`reStructuredText Interpreted
-Text Roles`_</span></a>, and the source code implementing them is located in the
-<code class="docutils literal notranslate"><span class="pre">docutils/parsers/rst/roles.py</span></code> module.  Several representative
-roles are described below.</p>
+<p>For the most direct and accurate information, “Use the Source, Luke!”.</p>
+<p>All standard roles are documented in <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/roles.html">reStructuredText Interpreted Text Roles</a>, and the source code implementing them is located in the <code class="code docutils literal notranslate"><span class="pre">docutils/parsers/rst/roles.py</span></code> module.  Several representative roles are described below.</p>
 <div class="section" id="generic-roles">
 <h3>Generic Roles<a class="headerlink" href="#generic-roles" title="Permalink to this headline">¶</a></h3>
-<p>Many roles simply wrap a given element around the text.  There’s a
-special helper function, <code class="docutils literal notranslate"><span class="pre">register_generic_role</span></code>, which generates a
-role function from the canonical role name and node class:</p>
+<p>Many roles simply wrap a given element around the text.  There’s a special helper function, <code class="code docutils literal notranslate"><span class="pre">register_generic_role</span></code>, which generates a role function from the canonical role name and node class:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">register_generic_role</span><span class="p">(</span><span class="s1">&#39;emphasis&#39;</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">emphasis</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For the implementation of <code class="docutils literal notranslate"><span class="pre">register_generic_role</span></code>, see the
-<code class="docutils literal notranslate"><span class="pre">docutils.parsers.rst.roles</span></code> module.</p>
+<p>For the implementation of <code class="code docutils literal notranslate"><span class="pre">register_generic_role</span></code>, see the <code class="code docutils literal notranslate"><span class="pre">docutils.parsers.rst.roles</span></code> module.</p>
 </div>
 <div class="section" id="rfc-reference-role">
 <h3>RFC Reference Role<a class="headerlink" href="#rfc-reference-role" title="Permalink to this headline">¶</a></h3>
-<p>This role allows easy references to <a class="reference external" href="http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=rfc&amp;action=Search&amp;sourceid=Mozilla-search">RFCs</a> (Request For Comments documents) by automatically providing the base URL, <a class="reference external" href="http://www.faqs.org/rfcs/">http://www.faqs.org/rfcs/</a>, and appending the RFC document itself (rfcXXXX.html, where XXXX is the RFC number).  For example:</p>
+<p>This role allows easy references to RFCs (Request For Comments documents) by automatically providing the base URL, <code class="code docutils literal notranslate"><span class="pre">http://www.faqs.org/rfcs/</span></code>, and appending the RFC document itself (rfcXXXX.html, where XXXX is the RFC number).  For example:</p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>See <span class="na">:RFC:</span><span class="nv">`2822`</span> for information about email headers.
-</pre></div>
-</div>
-<p>This is equivalent to:</p>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>See <span class="s">`RFC 2822`__</span> for information about email headers.
-
-__ http://www.faqs.org/rfcs/rfc2822.html
 </pre></div>
 </div>
 <p>Here is the implementation of the role:</p>
@@ -295,8 +274,9 @@ __ http://www.faqs.org/rfcs/rfc2822.html
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <ul class="last simple">
-<li>Standard roles are described in <a href="#id5"><span class="problematic" id="id6">`reStructuredText Interpreted Text Roles`_</span></a>.</li>
-<li>See the <a href="#id7"><span class="problematic" id="id8">`Interpreted Text`_</span></a> section in the <a href="#id9"><span class="problematic" id="id10">`reStructuredText Markup Specification`_</span></a> for syntax details.</li>
+<li><a class="reference external" href="http://docutils.sourceforge.net/docs/howto/rst-roles.html">Creating reStructuredText Interpreted Text Roles</a></li>
+<li><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/roles.html">reStructuredText Interpreted Text Roles</a></li>
+<li><a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#interpreted-text">Interpreted Text</a></li>
 </ul>
 </div>
 </div>
