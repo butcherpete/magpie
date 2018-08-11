@@ -377,16 +377,19 @@ first argument. The possible targets are based closely on the
 <tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">&quot;</span></code></td>
 <td>Double quotes</td>
 </tr>
-<tr class="row-odd"><td>`</td>
+<tr class="row-odd"><td>:code:<a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a></td>
 <td>Back ticks</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">w</span></code></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">-</span></code></td>
+<td>Sphinx code markup</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">w</span></code></td>
 <td>Words</td>
 </tr>
-<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">W</span></code></td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">W</span></code></td>
 <td>WORDS</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">s</span></code></td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">s</span></code></td>
 <td>Sentences</td>
 </tr>
 </tbody>
@@ -418,6 +421,21 @@ one could consider them a slight shortcut for <code class="docutils literal notr
 <p>A <code class="docutils literal notranslate"><span class="pre">p</span></code> represents a <em>paragraph</em>. This behaves similarly to <code class="docutils literal notranslate"><span class="pre">w</span></code>,
 <code class="docutils literal notranslate"><span class="pre">W</span></code>, and <code class="docutils literal notranslate"><span class="pre">s</span></code> above; however, newlines are sometimes added and/or
 removed.</p>
+</div>
+</div>
+<div class="section" id="customization">
+<h2>Customization<a class="headerlink" href="#customization" title="Permalink to this headline">¶</a></h2>
+<p>To determine the ASCII code to use,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ :echo char2nr<span class="o">(</span><span class="s2">&quot;-&quot;</span><span class="o">)</span>.
+</pre></div>
+</div>
+<p>Use a global variable for globally available replacements.</p>
+<div class="literal-block-wrapper docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">vimrc</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>let g:surround_45 = &quot;:code:`\r`&quot;
+let g:surround_61 = &quot;&lt;%= \r %&gt;&quot;
+</pre></div>
+</div>
 </div>
 </div>
 </div>
