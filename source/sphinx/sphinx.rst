@@ -19,4 +19,5 @@ Sphinx Development
   react
   todolist
   tasks
+  text-roles
 
