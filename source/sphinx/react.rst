@@ -7,7 +7,6 @@ Adaptive Modern Product Documentaiton
   - https://hackernoon.com/adaptive-modern-product-documentation-7d792fd8696d
   - https://gist.github.com/hishnash/933ce146289faf88dd633c249eb5f228
 
-
 **************
 Tabs Directive
 **************
