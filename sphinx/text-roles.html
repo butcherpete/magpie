@@ -97,7 +97,6 @@
   <div class="section" id="creating-restructuredtext-interpreted-text-roles">
 <h1>Creating reStructuredText Interpreted Text Roles<a class="headerlink" href="#creating-restructuredtext-interpreted-text-roles" title="Permalink to this headline">¶</a></h1>
 <p>Interpreted text roles are an extension mechanism for inline markup in reStructuredText.  This document aims to make the creation of new roles as easy and understandable as possible.</p>
-<p>Standard roles are described in <a href="#id1"><span class="problematic" id="id2">`reStructuredText Interpreted Text Roles`_</span></a>.  See the <a href="#id3"><span class="problematic" id="id4">`Interpreted Text`_</span></a> section in the <a href="#id5"><span class="problematic" id="id6">`reStructuredText Markup Specification`_</span></a> for syntax details.</p>
 <div class="section" id="define-the-role-function">
 <h2>Define the Role Function<a class="headerlink" href="#define-the-role-function" title="Permalink to this headline">¶</a></h2>
 <p>The role function creates and returns inline elements (nodes) and does
@@ -205,7 +204,7 @@ function:</p>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>For the most direct and accurate information, “Use the Source, Luke!”.
-All standard roles are documented in <a href="#id7"><span class="problematic" id="id8">`reStructuredText Interpreted
+All standard roles are documented in <a href="#id1"><span class="problematic" id="id2">`reStructuredText Interpreted
 Text Roles`_</span></a>, and the source code implementing them is located in the
 <code class="docutils literal notranslate"><span class="pre">docutils/parsers/rst/roles.py</span></code> module.  Several representative
 roles are described below.</p>
@@ -222,58 +221,100 @@ role function from the canonical role name and node class:</p>
 </div>
 <div class="section" id="rfc-reference-role">
 <h3>RFC Reference Role<a class="headerlink" href="#rfc-reference-role" title="Permalink to this headline">¶</a></h3>
-<p>This role allows easy references to <a class="reference external" href="http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=rfc&amp;action=Search&amp;sourceid=Mozilla-search">RFCs</a> (Request For Comments
-documents) by automatically providing the base URL,
-<a class="reference external" href="http://www.faqs.org/rfcs/">http://www.faqs.org/rfcs/</a>, and appending the RFC document itself
-(rfcXXXX.html, where XXXX is the RFC number).  For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>See :RFC:`2822` for information about email headers.
+<p>This role allows easy references to <a class="reference external" href="http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=rfc&amp;action=Search&amp;sourceid=Mozilla-search">RFCs</a> (Request For Comments documents) by automatically providing the base URL, <a class="reference external" href="http://www.faqs.org/rfcs/">http://www.faqs.org/rfcs/</a>, and appending the RFC document itself (rfcXXXX.html, where XXXX is the RFC number).  For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>See <span class="na">:RFC:</span><span class="nv">`2822`</span> for information about email headers.
 </pre></div>
 </div>
 <p>This is equivalent to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>See `RFC 2822`__ for information about email headers.
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>See <span class="s">`RFC 2822`__</span> for information about email headers.
 
 __ http://www.faqs.org/rfcs/rfc2822.html
 </pre></div>
 </div>
 <p>Here is the implementation of the role:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rfc_reference_role</span><span class="p">(</span><span class="n">role</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">inliner</span><span class="p">,</span>
-                       <span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="n">content</span><span class="o">=</span><span class="p">[]):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">rfcnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">rfcnum</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span>
-    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="n">msg</span> <span class="o">=</span> <span class="n">inliner</span><span class="o">.</span><span class="n">reporter</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
-            <span class="s1">&#39;RFC number must be a number greater than or equal to 1; &#39;</span>
-            <span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot; is invalid.&#39;</span> <span class="o">%</span> <span class="n">text</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">lineno</span><span class="p">)</span>
-        <span class="n">prb</span> <span class="o">=</span> <span class="n">inliner</span><span class="o">.</span><span class="n">problematic</span><span class="p">(</span><span class="n">rawtext</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">prb</span><span class="p">],</span> <span class="p">[</span><span class="n">msg</span><span class="p">]</span>
-    <span class="c1"># Base URL mainly used by inliner.rfc_reference, so this is correct:</span>
-    <span class="n">ref</span> <span class="o">=</span> <span class="n">inliner</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">rfc_base_url</span> <span class="o">+</span> <span class="n">inliner</span><span class="o">.</span><span class="n">rfc_url</span> <span class="o">%</span> <span class="n">rfcnum</span>
-    <span class="n">set_classes</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
-    <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">reference</span><span class="p">(</span><span class="n">rawtext</span><span class="p">,</span> <span class="s1">&#39;RFC &#39;</span> <span class="o">+</span> <span class="n">utils</span><span class="o">.</span><span class="n">unescape</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="n">refuri</span><span class="o">=</span><span class="n">ref</span><span class="p">,</span>
-                           <span class="o">**</span><span class="n">options</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">],</span> <span class="p">[]</span>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="highlight"><pre><span></span>  <span class="k">def</span> <span class="nf">rfc_reference_role</span><span class="p">(</span><span class="n">role</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">inliner</span><span class="p">,</span>
+                         <span class="n">options</span><span class="o">=</span><span class="p">{},</span> <span class="n">content</span><span class="o">=</span><span class="p">[]):</span>
 
-<span class="n">register_canonical_role</span><span class="p">(</span><span class="s1">&#39;rfc-reference&#39;</span><span class="p">,</span> <span class="n">rfc_reference_role</span><span class="p">)</span>
+      <span class="c1"># The interpreted text itself should contain the RFC number.</span>
+      <span class="c1"># The try clause verifies by converting it to an integer.</span>
+      <span class="k">try</span><span class="p">:</span>
+          <span class="n">rfcnum</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+          <span class="k">if</span> <span class="n">rfcnum</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+              <span class="k">raise</span> <span class="ne">ValueError</span>
+
+      <span class="c1"># If the conversion fails, the except clause is executed: a system</span>
+      <span class="c1"># message is generated, the entire interpreted text construct (in</span>
+      <span class="c1"># rawtext) is wrapped in a problematic node (linked to the</span>
+      <span class="c1"># system message), and the two are returned.</span>
+      <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+          <span class="n">msg</span> <span class="o">=</span> <span class="n">inliner</span><span class="o">.</span><span class="n">reporter</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+              <span class="s1">&#39;RFC number must be a number greater than or equal to 1; &#39;</span>
+              <span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot; is invalid.&#39;</span> <span class="o">%</span> <span class="n">text</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="n">lineno</span><span class="p">)</span>
+          <span class="n">prb</span> <span class="o">=</span> <span class="n">inliner</span><span class="o">.</span><span class="n">problematic</span><span class="p">(</span><span class="n">rawtext</span><span class="p">,</span> <span class="n">rawtext</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span>
+          <span class="k">return</span> <span class="p">[</span><span class="n">prb</span><span class="p">],</span> <span class="p">[</span><span class="n">msg</span><span class="p">]</span>
+      <span class="c1"># Base URL mainly used by inliner.rfc_reference, so this is correct:</span>
+      <span class="n">ref</span> <span class="o">=</span> <span class="n">inliner</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">rfc_base_url</span> <span class="o">+</span> <span class="n">inliner</span><span class="o">.</span><span class="n">rfc_url</span> <span class="o">%</span> <span class="n">rfcnum</span>
+
+      <span class="c1"># The ``options`` function parameter, a dictionary, may contain a</span>
+      <span class="c1"># &quot;class&quot; customization attribute; it is interpreted and replaced</span>
+      <span class="c1"># with a &quot;classes&quot; attribute by the ``set_classes()`` function.  The</span>
+      <span class="c1"># resulting &quot;classes&quot; attribute is passed through to the &quot;reference&quot;</span>
+      <span class="c1"># element node constructor.</span>
+      <span class="n">set_classes</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+
+      <span class="c1"># RFC reference is constructed from a stock URI, set as refuri attribute</span>
+      <span class="c1"># of a reference element</span>
+      <span class="n">node</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">reference</span><span class="p">(</span><span class="n">rawtext</span><span class="p">,</span> <span class="s1">&#39;RFC &#39;</span> <span class="o">+</span> <span class="n">utils</span><span class="o">.</span><span class="n">unescape</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="n">refuri</span><span class="o">=</span><span class="n">ref</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
+      <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">],</span> <span class="p">[]</span>
+
+  <span class="n">register_canonical_role</span><span class="p">(</span><span class="s1">&#39;rfc-reference&#39;</span><span class="p">,</span> <span class="n">rfc_reference_role</span><span class="p">)</span>
 </pre></div>
+</td></tr></table></div>
 </div>
-<p>Noteworthy in the code above are:</p>
-<ol class="arabic simple">
-<li>The interpreted text itself should contain the RFC number.  The
-<code class="docutils literal notranslate"><span class="pre">try</span></code> clause verifies by converting it to an integer.  If the
-conversion fails, the <code class="docutils literal notranslate"><span class="pre">except</span></code> clause is executed: a system
-message is generated, the entire interpreted text construct (in
-<code class="docutils literal notranslate"><span class="pre">rawtext</span></code>) is wrapped in a <code class="docutils literal notranslate"><span class="pre">problematic</span></code> node (linked to the
-system message), and the two are returned.</li>
-<li>The RFC reference itself is constructed from a stock URI, set as
-the “refuri” attribute of a “reference” element.</li>
-<li>The <code class="docutils literal notranslate"><span class="pre">options</span></code> function parameter, a dictionary, may contain a
-“class” customization attribute; it is interpreted and replaced
-with a “classes” attribute by the <code class="docutils literal notranslate"><span class="pre">set_classes()</span></code> function.  The
-resulting “classes” attribute is passed through to the “reference”
-element node constructor.</li>
-</ol>
+</div>
+<div class="section" id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li>Standard roles are described in <a href="#id3"><span class="problematic" id="id4">`reStructuredText Interpreted Text Roles`_</span></a>.</li>
+<li>See the <a href="#id5"><span class="problematic" id="id6">`Interpreted Text`_</span></a> section in the <a href="#id7"><span class="problematic" id="id8">`reStructuredText Markup Specification`_</span></a> for syntax details.</li>
+</ul>
 </div>
 </div>
 </div>

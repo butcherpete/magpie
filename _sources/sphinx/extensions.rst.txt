@@ -12,12 +12,12 @@ Sphinx is extensible at several levels:
 - Then, it is possible to register custom reStructuredText roles and directives, extending the markup. 
 - And finally, there are so-called “hook points” at strategic places throughout the build process, where an extension can register a hook and run specialized code.
 - When the extension is loaded, Sphinx imports this module and executes its :code:`setup()` function, which notifies Sphinx of everything the extension offers.
-- The configuration file itself can be treated as an extension if it contains a setup() function. All other extensions to load must be listed in the `extensions configuration <http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-extensions>` value.
+- The configuration file itself can be treated as an extension if it contains a setup() function. All other extensions to load must be listed in the `extensions configuration <http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-extensions>`_ value.
 
 ************************************
 Discovery of Builders by Entry Point
 ************************************
-`Builder extensions <http://www.sphinx-doc.org/en/master/glossary.html#term-builder>` can be discovered by means of `entry points <https://setuptools.readthedocs.io/en/latest/setuptools.html#dynamic-discovery-of-services-and-plugins>` so that they do not have to be listed in the extensions configuration value.
+`Builder extensions <http://www.sphinx-doc.org/en/master/glossary.html#term-builder>`_ can be discovered by means of `entry points <https://setuptools.readthedocs.io/en/latest/setuptools.html#dynamic-discovery-of-services-and-plugins>`_ so that they do not have to be listed in the extensions configuration value.
 
 Builder extensions should define an entry point in the :code:`sphinx.builders` group. The name of the entry point needs to match your builder’s name attribute, which is the name passed to the :code:`sphinx-build -b` option. The entry point value should equal the dotted name of the extension module. 
 
@@ -42,7 +42,7 @@ Extension Metadata
 The :code:`setup(`) function can return a dictionary. This is treated by Sphinx as metadata of the extension. Metadata keys currently recognized are:
 
 :code:`version` 
-  A string that identifies the extension version. It is used for extension version requirement checking (see `needs_extensions <http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-needs_extensions>`) and informational purposes. If not given, "unknown version" is substituted.
+  A string that identifies the extension version. It is used for extension version requirement checking (see `needs_extensions <http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-needs_extensions>`_) and informational purposes. If not given, "unknown version" is substituted.
 
 :code:`env_version` 
   An integer that identifies the version of env data structure if the extension stores any data to environment. It is used to detect the data structure has been changed from last build. The extensions have to increment the version when data structure has changed. If not given, Sphinx considers the extension does not stores any data to environment.

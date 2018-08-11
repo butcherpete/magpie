@@ -1,13 +1,13 @@
-==================================================
+##################################################
  Creating reStructuredText Interpreted Text Roles
-==================================================
+##################################################
 
 Interpreted text roles are an extension mechanism for inline markup in reStructuredText.  This document aims to make the creation of new roles as easy and understandable as possible.
 
-Standard roles are described in `reStructuredText Interpreted Text Roles`_.  See the `Interpreted Text`_ section in the `reStructuredText Markup Specification`_ for syntax details.
 
+************************
 Define the Role Function
-========================
+************************
 
 The role function creates and returns inline elements (nodes) and does
 any additional processing required.  Its signature is as follows:
@@ -59,9 +59,9 @@ Role functions return a tuple of two values:
   immediately after the end of the current block (can also be empty).
 
 
+*****************************************
 Specify Role Function Options and Content
-=========================================
-
+*****************************************
 Function attributes are for customization, and are interpreted by the
 `"role" directive`_.  If unspecified, role function attributes are
 assumed to have the value ``None``.  Two function attributes are
@@ -96,8 +96,9 @@ the "role" directive itself.
    rst-directives.html#specify-directive-arguments-options-and-content
 
 
+*****************
 Register the Role
-=================
+*****************
 
 If the role is a general-use addition to the Docutils core, it must be
 registered with the parser and language mappings added:
@@ -127,8 +128,9 @@ function::
     roles.register_local_role(name, role_function)
 
 
+********
 Examples
-========
+********
 
 For the most direct and accurate information, "Use the Source, Luke!".
 All standard roles are documented in `reStructuredText Interpreted
@@ -138,7 +140,7 @@ roles are described below.
 
 
 Generic Roles
--------------
+=============
 
 Many roles simply wrap a given element around the text.  There's a
 special helper function, ``register_generic_role``, which generates a
@@ -151,29 +153,40 @@ For the implementation of ``register_generic_role``, see the
 
 
 RFC Reference Role
-------------------
+==================
+This role allows easy references to RFCs_ (Request For Comments documents) by automatically providing the base URL, http://www.faqs.org/rfcs/, and appending the RFC document itself (rfcXXXX.html, where XXXX is the RFC number).  For example:
 
-This role allows easy references to RFCs_ (Request For Comments
-documents) by automatically providing the base URL,
-http://www.faqs.org/rfcs/, and appending the RFC document itself
-(rfcXXXX.html, where XXXX is the RFC number).  For example::
+.. code-block:: rst
 
     See :RFC:`2822` for information about email headers.
 
-This is equivalent to::
+This is equivalent to:
+
+.. code-block:: rst
 
     See `RFC 2822`__ for information about email headers.
 
     __ http://www.faqs.org/rfcs/rfc2822.html
 
-Here is the implementation of the role::
+Here is the implementation of the role:
+
+.. code-block:: python 
+  :linenos:
 
     def rfc_reference_role(role, rawtext, text, lineno, inliner,
                            options={}, content=[]):
+
+        # The interpreted text itself should contain the RFC number.  
+        # The try clause verifies by converting it to an integer.  
         try:
             rfcnum = int(text)
             if rfcnum <= 0:
                 raise ValueError
+
+        # If the conversion fails, the except clause is executed: a system
+        # message is generated, the entire interpreted text construct (in
+        # rawtext) is wrapped in a problematic node (linked to the
+        # system message), and the two are returned.
         except ValueError:
             msg = inliner.reporter.error(
                 'RFC number must be a number greater than or equal to 1; '
@@ -182,29 +195,31 @@ Here is the implementation of the role::
             return [prb], [msg]
         # Base URL mainly used by inliner.rfc_reference, so this is correct:
         ref = inliner.document.settings.rfc_base_url + inliner.rfc_url % rfcnum
+
+        # The ``options`` function parameter, a dictionary, may contain a
+        # "class" customization attribute; it is interpreted and replaced
+        # with a "classes" attribute by the ``set_classes()`` function.  The
+        # resulting "classes" attribute is passed through to the "reference"
+        # element node constructor.
         set_classes(options)
-        node = nodes.reference(rawtext, 'RFC ' + utils.unescape(text), refuri=ref,
-                               **options)
+
+        # RFC reference is constructed from a stock URI, set as refuri attribute
+        # of a reference element
+        node = nodes.reference(rawtext, 'RFC ' + utils.unescape(text), refuri=ref, **options)
         return [node], []
 
     register_canonical_role('rfc-reference', rfc_reference_role)
 
-Noteworthy in the code above are:
 
-1. The interpreted text itself should contain the RFC number.  The
-   ``try`` clause verifies by converting it to an integer.  If the
-   conversion fails, the ``except`` clause is executed: a system
-   message is generated, the entire interpreted text construct (in
-   ``rawtext``) is wrapped in a ``problematic`` node (linked to the
-   system message), and the two are returned.
-
-2. The RFC reference itself is constructed from a stock URI, set as
-   the "refuri" attribute of a "reference" element.
-
-3. The ``options`` function parameter, a dictionary, may contain a
-   "class" customization attribute; it is interpreted and replaced
-   with a "classes" attribute by the ``set_classes()`` function.  The
-   resulting "classes" attribute is passed through to the "reference"
-   element node constructor.
 
 .. _RFCs: http://foldoc.doc.ic.ac.uk/foldoc/foldoc.cgi?query=rfc&action=Search&sourceid=Mozilla-search
+
+********
+See Also
+********
+
+.. seealso::
+
+  - Standard roles are described in `reStructuredText Interpreted Text Roles`_.  
+  - See the `Interpreted Text`_ section in the `reStructuredText Markup Specification`_ for syntax details.
+
