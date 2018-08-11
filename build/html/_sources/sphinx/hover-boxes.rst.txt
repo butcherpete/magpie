@@ -20,16 +20,15 @@ Worth research:
 - http://docutils.sourceforge.net/docutils/parsers/rst/roles.py
 - The term role may be built in the Sphinx glossary defintion.
 
-**********
-To Do List
-**********
+To Do Items 
+============
 
-- Understand how a role specifies a new CSS class.
-- Understand how a role is built. Many improvements can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.
-- Understand how/when substitutions occur. May effect custom role builds.
-- Extend custom role to specify a unique CSS class.
-- Extend custom role to use JavaScript (if possible).
-- Define CSS class. 
+.. todo:: Understand how a role specifies a new CSS class.
+.. todo:: Understand how a role is built. Many improvements can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.
+.. todo:: Understand how/when substitutions occur. May effect custom role builds.
+.. todo:: Extend custom role to specify a unique CSS class.
+.. todo:: Extend custom role to use JavaScript (if possible).
+.. todo:: Define CSS class. 
 
 ******************
 Existing Roles

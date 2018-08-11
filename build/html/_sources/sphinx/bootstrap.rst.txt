@@ -7,12 +7,9 @@ Bootstrap & Sphinx
 **********
 Goals
 **********
-Customize theme based on the `Sphinx Bootstrap Theme <https://github.com/butcherpete/sphinx-template>`_.
+.. todo:: Customize theme based on the `Sphinx Bootstrap Theme <https://github.com/butcherpete/sphinx-template>`_.
 
 
-
-To Do List
-==========
 
 
 **********

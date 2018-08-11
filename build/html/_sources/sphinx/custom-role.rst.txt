@@ -9,17 +9,12 @@ Goals
 **********
 Define custom roles.
 
-Text line.
-
-To Do List
-==========
-
-|check| `Creating Custom Link Roles <http://protips.readthedocs.io/link-roles.html>`_
-
-|check| Test gist https://gist.github.com/shimizukawa/3718712 
-
-- Create custom role that copies the existing :code:`term` role.
-- Find out how to write custom HTML. The role changes how HTML is written.
+To Do Items 
+===========
+.. todo:: `Creating Custom Link Roles <http://protips.readthedocs.io/link-roles.html>`_
+.. todo:: Test gist https://gist.github.com/shimizukawa/3718712 
+.. todo::  Create custom role that copies the existing :code:`term` role.
+.. todo:: Find out how to write custom HTML. The role changes how HTML is written.
 
 
 ************************
