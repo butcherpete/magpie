@@ -159,7 +159,7 @@
 <h2>Set Up Function<a class="headerlink" href="#set-up-function" title="Permalink to this headline">¶</a></h2>
 <p>The new elements are added in the extension’s setup function. Let us create a new Python module called <code class="code docutils literal notranslate"><span class="pre">todo.py</span></code> and add the setup function:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -228,7 +228,7 @@
 <p class="last">Many extensions will not have to create their own node classes and work fine with the nodes already provided by docutils and Sphinx.</p>
 </div>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-number">Listing 16 </span><span class="caption-text">Node Class Definitions in todo.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 17 </span><span class="caption-text">Node Class Definitions in todo.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -263,7 +263,7 @@
 <p>A directive class is a class deriving usually from <code class="code docutils literal notranslate"><span class="pre">docutils.parsers.rst.Directive</span></code>.</p>
 <p>The directive interface is also covered in detail in the <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">docutils documentation</a>; the important thing is that the class should have attributes that configure the allowed markup, and a run method that returns a list of nodes.</p>
 <div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-number">Listing 17 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">todolist</span></code> Directive Class Definitions in <code class="code docutils literal notranslate"><span class="pre">todo.py</span></code></span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 18 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">todolist</span></code> Directive Class Definitions in <code class="code docutils literal notranslate"><span class="pre">todo.py</span></code></span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -283,7 +283,7 @@
 </td></tr></table></div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-number">Listing 18 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">todo</span></code> Directive Class Definitions in <code class="code docutils literal notranslate"><span class="pre">todo.py</span></code></span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 19 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">todo</span></code> Directive Class Definitions in <code class="code docutils literal notranslate"><span class="pre">todo.py</span></code></span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -390,7 +390,7 @@
 <p>Since we store information from source files in the environment, which is persistent, it may become out of date when the source file changes.</p>
 <p>Therefore, before each source file is read, the environment’s records of it are cleared, and the <code class="code docutils literal notranslate"><span class="pre">env-purge-doc</span></code> event gives extensions a chance to do the same.</p>
 <div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-number">Listing 19 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">env-purge-doc</span></code> Event</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 20 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">env-purge-doc</span></code> Event</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -411,7 +411,7 @@
 </div>
 <p>The other handler belongs to the <code class="code docutils literal notranslate"><span class="pre">doctree-resolved</span></code> event. This event is emitted at the end of phase 3 and allows custom resolving to be done:</p>
 <div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-number">Listing 20 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">doctree-resolved</span></code> Event</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 21 </span><span class="caption-text"><code class="code docutils literal notranslate"><span class="pre">doctree-resolved</span></code> Event</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -516,7 +516,7 @@
 <div class="section" id="everything">
 <h2>Everything<a class="headerlink" href="#everything" title="Permalink to this headline">¶</a></h2>
 <div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-number">Listing 21 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 22 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id8" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
   2
   3

@@ -185,7 +185,9 @@ All targets are currently just one character.
 +--------------+--------------------------------+
 | ``"``        | Double quotes                  |
 +--------------+--------------------------------+
-| \`           | Back ticks                     |
+| :code:```    | Back ticks                     |
++--------------+--------------------------------+
+| :code:`-`    | Sphinx code markup             |
 +--------------+--------------------------------+
 | ``w``        | Words                          |
 +--------------+--------------------------------+
@@ -228,3 +230,20 @@ one could consider them a slight shortcut for ``ysi`` (``cswb`` ==
 A ``p`` represents a *paragraph*. This behaves similarly to ``w``,
 ``W``, and ``s`` above; however, newlines are sometimes added and/or
 removed.
+
+Customization
+-------------
+To determine the ASCII code to use, 
+
+.. code-block:: bash
+
+  $ :echo char2nr("-").  
+
+Use a global variable for globally available replacements.
+
+.. code-block:: none
+  :caption: vimrc
+
+  let g:surround_45 = ":code:`\r`"
+  let g:surround_61 = "<%= \r %>"
+
