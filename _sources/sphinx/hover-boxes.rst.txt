@@ -27,9 +27,15 @@ And generates the following HTML:
 
 .. code-block:: html 
 
-  <a class= "glossy reference">
+  <a class="glossy reference" title="variable-definition">term</a>
 
+  <div class="glossy">term 
+    <span class="hover-box">variable-definition</span>
+  </div>
 
+  <a href="#" class="glossy reference">term <span>variable-definition</span></a>
+
+The term variable is replace with the definition.
 
 Term
 ============
@@ -43,7 +49,11 @@ And generates the following HTML:
 
 .. code-block:: html 
 
-  <a class="reference internal" href="../../other/glossary.html#term-internal-link" id="yui_3_17_2_1_1534018420860_591"><span class="xref std std-term">term</span></a>
+  <a class="glossy reference internal" 
+    href="../../other/glossary.html#term-internal-link" 
+    id="yui_3_17_2_1_1534018420860_591">
+    <span class="xref std std-term">term</span>
+  </a>
 
 Ref
 ============
