@@ -4,5 +4,11 @@
 Metadata
 ########
 
-- Parse metadata
-- Generate Tags
+********
+Overview
+********
+
+To Do Items
+===========
+.. todo:: Learn to parse metadata
+.. todo:: Learn to generate tags

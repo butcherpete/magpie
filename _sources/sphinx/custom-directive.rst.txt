@@ -11,9 +11,7 @@ Goals
 **********
 Define custom directives and roles. 
 
-|check| Add links to documenation.
-
-- Do Sphinx tutorial: `Tutoral: Writing a Simple Extension <http://www.sphinx-doc.org/en/master/extdev/tutorial.html>`_.
+.. todo:: Do Sphinx tutorial: `Tutoral: Writing a Simple Extension <http://www.sphinx-doc.org/en/master/extdev/tutorial.html>`_.
 
 
 

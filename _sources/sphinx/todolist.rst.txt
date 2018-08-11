@@ -16,14 +16,11 @@ For that, we will need to add the following elements to Sphinx:
 - A new config value :code:`todo_include_todos` (config value names should start with the extension name, in order to stay unique) that controls whether todo entries make it into the output.
 - New event handlers: one for the `doctree-resolved event <http://www.sphinx-doc.org/en/master/extdev/appapi.html#event-doctree-resolved>`_, to replace the todo and todolist nodes, and one for `env-purge-doc <http://www.sphinx-doc.org/en/master/extdev/appapi.html#event-env-purge-doc>`_ (the reason for that will be covered later).
 
-.. todo::  A todo item.
 
 *****************
 Important Objects
 *****************
 Key APIs used to write extensions:
-
-.. todo:: A second todo item
 
 .. list-table:: Important Objects
   :header-rows: 1
@@ -63,9 +60,6 @@ Key APIs used to write extensions:
 Set Up Function
 ***************
 The new elements are added in the extension’s setup function. Let us create a new Python module called :code:`todo.py` and add the setup function:
-
-.. todo:: A third todo item
-
 
 .. code-block:: python
   :caption: todo.py

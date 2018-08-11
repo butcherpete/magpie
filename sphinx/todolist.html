@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="JavaScript" href="../javascript/javascript.html" />
+    <link rel="next" title="To Do List" href="tasks.html" />
     <link rel="prev" title="Adaptive Modern Product Documentaiton" href="react.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -109,17 +109,9 @@
 <li>A new config value <code class="code docutils literal notranslate"><span class="pre">todo_include_todos</span></code> (config value names should start with the extension name, in order to stay unique) that controls whether todo entries make it into the output.</li>
 <li>New event handlers: one for the <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/appapi.html#event-doctree-resolved">doctree-resolved event</a>, to replace the todo and todolist nodes, and one for <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/appapi.html#event-env-purge-doc">env-purge-doc</a> (the reason for that will be covered later).</li>
 </ul>
-<div class="admonition" id="todo-0">
-<p class="first admonition-title">Todo</p>
-<p class="last">A todo item.</p>
-</div>
 <div class="section" id="important-objects">
 <h2>Important Objects<a class="headerlink" href="#important-objects" title="Permalink to this headline">¶</a></h2>
 <p>Key APIs used to write extensions:</p>
-<div class="admonition" id="todo-1">
-<p class="first admonition-title">Todo</p>
-<p class="last">A second todo item</p>
-</div>
 <table border="1" class="docutils" id="id1">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Important Objects</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -166,10 +158,6 @@
 <div class="section" id="set-up-function">
 <h2>Set Up Function<a class="headerlink" href="#set-up-function" title="Permalink to this headline">¶</a></h2>
 <p>The new elements are added in the extension’s setup function. Let us create a new Python module called <code class="code docutils literal notranslate"><span class="pre">todo.py</span></code> and add the setup function:</p>
-<div class="admonition" id="todo-2">
-<p class="first admonition-title">Todo</p>
-<p class="last">A third todo item</p>
-</div>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-number">Listing 15 </span><span class="caption-text">todo.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -829,19 +817,99 @@
 </div>
 <div class="admonition">
 <p class="first admonition-title">Todo</p>
-<p class="last">A todo item.</p>
+<p class="last">Customize theme based on the <a class="reference external" href="https://github.com/butcherpete/sphinx-template">Sphinx Bootstrap Theme</a>.</p>
 </div>
-<p>(The original entry is located in sphinx/todolist.rst, line 19 and can be found <a class="reference external" href="#todo-0"><em>here</em></a>.)</p>
+<p>(The original entry is located in sphinx/bootstrap.rst, line 102 and can be found <a class="reference external" href="bootstrap.html#todo-0"><em>here</em></a>.)</p>
 <div class="admonition">
 <p class="first admonition-title">Todo</p>
-<p class="last">A second todo item</p>
+<p class="last">Do Sphinx tutorial: <a class="reference external" href="http://www.sphinx-doc.org/en/master/extdev/tutorial.html">Tutoral: Writing a Simple Extension</a>.</p>
 </div>
-<p>(The original entry is located in sphinx/todolist.rst, line 26 and can be found <a class="reference external" href="#todo-1"><em>here</em></a>.)</p>
+<p>(The original entry is located in sphinx/custom-directive.rst, line 106 and can be found <a class="reference external" href="custom-directive.html#todo-0"><em>here</em></a>.)</p>
 <div class="admonition">
 <p class="first admonition-title">Todo</p>
-<p class="last">A third todo item</p>
+<p class="last"><a class="reference external" href="http://protips.readthedocs.io/link-roles.html">Creating Custom Link Roles</a></p>
 </div>
-<p>(The original entry is located in sphinx/todolist.rst, line 67 and can be found <a class="reference external" href="#todo-2"><em>here</em></a>.)</p>
+<p>(The original entry is located in sphinx/custom-role.rst, line 106 and can be found <a class="reference external" href="custom-role.html#todo-0"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Test gist <a class="reference external" href="https://gist.github.com/shimizukawa/3718712">https://gist.github.com/shimizukawa/3718712</a></p>
+</div>
+<p>(The original entry is located in sphinx/custom-role.rst, line 107 and can be found <a class="reference external" href="custom-role.html#todo-1"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Create custom role that copies the existing <code class="code docutils literal notranslate"><span class="pre">term</span></code> role.</p>
+</div>
+<p>(The original entry is located in sphinx/custom-role.rst, line 108 and can be found <a class="reference external" href="custom-role.html#todo-2"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Find out how to write custom HTML. The role changes how HTML is written.</p>
+</div>
+<p>(The original entry is located in sphinx/custom-role.rst, line 109 and can be found <a class="reference external" href="custom-role.html#todo-3"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Understand how a role specifies a new CSS class.</p>
+</div>
+<p>(The original entry is located in sphinx/hover-boxes.rst, line 118 and can be found <a class="reference external" href="hover-boxes.html#todo-0"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Understand how a role is built. Many improvements can be made changing how Sphinx builds a directive/role in HTML and assigns CSS.</p>
+</div>
+<p>(The original entry is located in sphinx/hover-boxes.rst, line 119 and can be found <a class="reference external" href="hover-boxes.html#todo-1"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Understand how/when substitutions occur. May effect custom role builds.</p>
+</div>
+<p>(The original entry is located in sphinx/hover-boxes.rst, line 120 and can be found <a class="reference external" href="hover-boxes.html#todo-2"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Extend custom role to specify a unique CSS class.</p>
+</div>
+<p>(The original entry is located in sphinx/hover-boxes.rst, line 121 and can be found <a class="reference external" href="hover-boxes.html#todo-3"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Extend custom role to use JavaScript (if possible).</p>
+</div>
+<p>(The original entry is located in sphinx/hover-boxes.rst, line 122 and can be found <a class="reference external" href="hover-boxes.html#todo-4"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Define CSS class.</p>
+</div>
+<p>(The original entry is located in sphinx/hover-boxes.rst, line 123 and can be found <a class="reference external" href="hover-boxes.html#todo-5"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Learn to parse metadata</p>
+</div>
+<p>(The original entry is located in sphinx/metadata.rst, line 105 and can be found <a class="reference external" href="metadata.html#todo-0"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Learn to generate tags</p>
+</div>
+<p>(The original entry is located in sphinx/metadata.rst, line 106 and can be found <a class="reference external" href="metadata.html#todo-1"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Import docutils include files for special characters</p>
+</div>
+<p>(The original entry is located in sphinx/themes.rst, line 111 and can be found <a class="reference external" href="themes.html#todo-0"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Fork sphinx-bootstrap-theme.</p>
+</div>
+<p>(The original entry is located in sphinx/themes.rst, line 112 and can be found <a class="reference external" href="themes.html#todo-1"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Fork pyramid-sphinx-themes.</p>
+</div>
+<p>(The original entry is located in sphinx/themes.rst, line 113 and can be found <a class="reference external" href="themes.html#todo-2"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Update using Bootstrap CSS.</p>
+</div>
+<p>(The original entry is located in sphinx/themes.rst, line 114 and can be found <a class="reference external" href="themes.html#todo-3"><em>here</em></a>.)</p>
+<div class="admonition">
+<p class="first admonition-title">Todo</p>
+<p class="last">Rewrite Theme Templates.</p>
+</div>
+<p>(The original entry is located in sphinx/themes.rst, line 115 and can be found <a class="reference external" href="themes.html#todo-4"><em>here</em></a>.)</p>
 </div>
 </div>
 

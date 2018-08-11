@@ -16,15 +16,11 @@ Create a custom documentation theme that utilizes Jinja templates, Bootstrap CSS
 To Do List
 **********
 
-|check| Import docutils include files for special characters
-
-|check| Fork sphinx-bootstrap-theme.
-
-Fork pyramid-sphinx-themes.
-
-Update using Bootstrap CSS.
-
-Rewrite Theme Templates.
+.. todo:: Import docutils include files for special characters
+.. todo:: Fork sphinx-bootstrap-theme.
+.. todo:: Fork pyramid-sphinx-themes.
+.. todo:: Update using Bootstrap CSS.
+.. todo:: Rewrite Theme Templates.
 
 ****************
 Bootstrap-Sphinx

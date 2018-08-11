@@ -18,4 +18,5 @@ Sphinx Development
   multiple-repos
   react
   todolist
+  tasks
 
