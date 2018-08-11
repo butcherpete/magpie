@@ -147,6 +147,7 @@ The directive interface is also covered in detail in the `docutils documentation
           return [todolist('')]
 
 
+
 .. code-block:: python
   :caption: :code:`todo` Directive Class Definitions in :code:`todo.py` 
   :linenos:
@@ -230,6 +231,7 @@ The other handler belongs to the :code:`doctree-resolved` event. This event is e
   :linenos:
 
   def process_todo_nodes(app, doctree, fromdocname):
+      # If config value is false, all todo and todolist nodes are removed
       if not app.config.todo_include_todos:
           for node in doctree.traverse(todo):
               node.parent.remove(node)
@@ -244,8 +246,12 @@ The other handler belongs to the :code:`doctree-resolved` event. This event is e
               continue
   
           content = []
-  
+          # Todolist nodes are replaced by a list of todo entries, complete with 
+          # backlinks to the location where they come from. List items are composed
+          # of the nodes from the todo entry and docutils nodes created on the fly:
           for todo_info in env.todo_all_todos:
+
+              # a paragraph for each entry, containing text that gives the location
               para = nodes.paragraph()
               filename = env.doc2path(todo_info['docname'], base=None)
               description = (
@@ -253,10 +259,14 @@ The other handler belongs to the :code:`doctree-resolved` event. This event is e
                   (filename, todo_info['lineno']))
               para += nodes.Text(description, description)
   
-              # Create a reference
+              # Create a link (reference node containing an italic node) with 
+              # the backreference
               newnode = nodes.reference('', '')
               innernode = nodes.emphasis(_('here'), _('here'))
               newnode['refdocname'] = todo_info['docname']
+
+              # Reference URI is built depending on the builder and 
+              # appends the todo node's ID as an anchor name
               newnode['refuri'] = app.builder.get_relative_uri(
                   fromdocname, todo_info['docname'])
               newnode['refuri'] += '#' + todo_info['target']['refid']
