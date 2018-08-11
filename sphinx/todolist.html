@@ -451,7 +451,17 @@
 37
 38
 39
-40</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_todo_nodes</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">doctree</span><span class="p">,</span> <span class="n">fromdocname</span><span class="p">):</span>
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_todo_nodes</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">doctree</span><span class="p">,</span> <span class="n">fromdocname</span><span class="p">):</span>
+    <span class="c1"># If config value is false, all todo and todolist nodes are removed</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">todo_include_todos</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">doctree</span><span class="o">.</span><span class="n">traverse</span><span class="p">(</span><span class="n">todo</span><span class="p">):</span>
             <span class="n">node</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
@@ -466,8 +476,12 @@
             <span class="k">continue</span>
 
         <span class="n">content</span> <span class="o">=</span> <span class="p">[]</span>
-
+        <span class="c1"># Todolist nodes are replaced by a list of todo entries, complete with</span>
+        <span class="c1"># backlinks to the location where they come from. List items are composed</span>
+        <span class="c1"># of the nodes from the todo entry and docutils nodes created on the fly:</span>
         <span class="k">for</span> <span class="n">todo_info</span> <span class="ow">in</span> <span class="n">env</span><span class="o">.</span><span class="n">todo_all_todos</span><span class="p">:</span>
+
+            <span class="c1"># a paragraph for each entry, containing text that gives the location</span>
             <span class="n">para</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">paragraph</span><span class="p">()</span>
             <span class="n">filename</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">doc2path</span><span class="p">(</span><span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">],</span> <span class="n">base</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
             <span class="n">description</span> <span class="o">=</span> <span class="p">(</span>
@@ -475,10 +489,14 @@
                 <span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;lineno&#39;</span><span class="p">]))</span>
             <span class="n">para</span> <span class="o">+=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">description</span><span class="p">,</span> <span class="n">description</span><span class="p">)</span>
 
-            <span class="c1"># Create a reference</span>
+            <span class="c1"># Create a link (reference node containing an italic node) with</span>
+            <span class="c1"># the backreference</span>
             <span class="n">newnode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">reference</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
             <span class="n">innernode</span> <span class="o">=</span> <span class="n">nodes</span><span class="o">.</span><span class="n">emphasis</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;here&#39;</span><span class="p">),</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;here&#39;</span><span class="p">))</span>
             <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refdocname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">]</span>
+
+            <span class="c1"># Reference URI is built depending on the builder and</span>
+            <span class="c1"># appends the todo node&#39;s ID as an anchor name</span>
             <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">get_relative_uri</span><span class="p">(</span>
                 <span class="n">fromdocname</span><span class="p">,</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;docname&#39;</span><span class="p">])</span>
             <span class="n">newnode</span><span class="p">[</span><span class="s1">&#39;refuri&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="n">todo_info</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">][</span><span class="s1">&#39;refid&#39;</span><span class="p">]</span>
