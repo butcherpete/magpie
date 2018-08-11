@@ -185,9 +185,13 @@ All targets are currently just one character.
 +--------------+--------------------------------+
 | ``"``        | Double quotes                  |
 +--------------+--------------------------------+
-| :code:```    | Back ticks                     |
+| :code:`\``   | Back ticks                     |
 +--------------+--------------------------------+
 | :code:`-`    | Sphinx code markup             |
++--------------+--------------------------------+
+| :code:`=`    | Sphinx link                    |
++--------------+--------------------------------+
+| :code:`\``   | Back ticks                     |
 +--------------+--------------------------------+
 | ``w``        | Words                          |
 +--------------+--------------------------------+
@@ -233,17 +237,17 @@ removed.
 
 Customization
 -------------
-To determine the ASCII code to use, 
+To determine the ASCII code run the following in the vim command line. 
 
-.. code-block:: bash
+.. code-block:: none 
 
-  $ :echo char2nr("-").  
+  :echo char2nr("-").  
 
 Use a global variable for globally available replacements.
 
 .. code-block:: none
   :caption: vimrc
 
-  let g:surround_45 = ":code:`\r`"
-  let g:surround_61 = "<%= \r %>"
+  let g:surround_45 = ":code:`\r`" # -
+  let g:surround_61 = "` <\r>`_"  # =
 
