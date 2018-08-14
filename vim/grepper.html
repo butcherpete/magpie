@@ -106,11 +106,15 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep <span class="o">[</span>options<span class="o">]</span> pattern <span class="o">[</span>files<span class="o">]</span>
 </pre></div>
 </div>
-<p>For each match, return a filename, line number, and line contents.</p>
+<p>For each match in the specified file, return a filename, line number, and line contents:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ grep -RIn Waldo goldrush.txt
 
 goldrush.txt:6:Waldo is studying his clipboard.
 goldrush.txt:10:The penny farthing is <span class="m">10</span> paces ahead of Waldo.
+</pre></div>
+</div>
+<p>Search all files in the specified directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ grep -R string dir/
 </pre></div>
 </div>
 <div class="section" id="useful-options">
@@ -161,9 +165,41 @@ goldrush.txt:10:The penny farthing is <span class="m">10</span> paces ahead of W
 <tr><td class="option-group">
 <kbd><span class="option">-F</span></kbd></td>
 <td>Use list of fixed strings (fgrep)</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--color <var>always</var></span></kbd></td>
+<td>Highlight for readability</td></tr>
 </tbody>
 </table>
-<p>– color always   Highlight for readability</p>
+</div>
+</div>
+<div class="section" id="git-grep">
+<h2>Git Grep<a class="headerlink" href="#git-grep" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://git-scm.com/docs/git-grep">https://git-scm.com/docs/git-grep</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git grep <span class="o">[</span>options<span class="o">]</span> pattern <span class="o">[</span>files<span class="o">]</span>
+</pre></div>
+</div>
+<p>Looks for time_t in all tracked .c and .h files in the working directory and its subdirectories.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git grep <span class="s1">&#39;time_t&#39;</span> -- <span class="s1">&#39;*.[ch]&#39;</span>
+</pre></div>
+</div>
+<p>Looks for a line that has #define and either MAX_PATH or PATH_MAX.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git grep -e <span class="s1">&#39;#define&#39;</span> --and <span class="se">\(</span> -e MAX_PATH -e PATH_MAX <span class="se">\)</span>
+</pre></div>
+</div>
+<p>Looks for a line that has NODE or Unexpected in files that have lines that match both.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git grep --all-match -e NODE -e Unexpected
+</pre></div>
+</div>
+<p>Looks for solution, excluding files in Documentation.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git grep solution -- :^Documentation
+</pre></div>
+</div>
+<p>For each match in the specified file, return a filename, line number, and line contents:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git grep -RIn Waldo goldrush.txt
+
+goldrush.txt:6:Waldo is studying his clipboard.
+goldrush.txt:10:The penny farthing is <span class="m">10</span> paces ahead of Waldo.
+</pre></div>
 </div>
 </div>
 </div>
