@@ -8,6 +8,7 @@ Vim
   :maxdepth: 1
 
   vim_bookmarks
+  grepper 
   vim_buffers
   vim_command_line
   vim_explorer
