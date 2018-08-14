@@ -95,14 +95,25 @@
     <div class="col-md-12 content">
       
   <div class="section" id="grepper">
-<h1>Grepper<a class="headerlink" href="#grepper" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id2">Grepper</a><a class="headerlink" href="#grepper" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
 <ul class="simple">
-<li>grep</li>
-<li>git-grep</li>
-<li>Ripgrep</li>
+<li><a class="reference internal" href="#grepper" id="id2">Grepper</a><ul>
+<li><a class="reference internal" href="#grep" id="id3">Grep</a><ul>
+<li><a class="reference internal" href="#useful-options" id="id4">Useful Options</a></li>
 </ul>
+</li>
+<li><a class="reference internal" href="#git-grep" id="id5">Git Grep</a></li>
+<li><a class="reference internal" href="#rip-grep" id="id6">Rip Grep</a></li>
+<li><a class="reference internal" href="#quickfix-list" id="id7">Quickfix List</a></li>
+<li><a class="reference internal" href="#id1" id="id8">Grepper</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="grep">
-<h2>Grep<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Grep</a><a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep <span class="o">[</span>options<span class="o">]</span> pattern <span class="o">[</span>files<span class="o">]</span>
 </pre></div>
 </div>
@@ -118,7 +129,7 @@ goldrush.txt:10:The penny farthing is <span class="m">10</span> paces ahead of W
 </pre></div>
 </div>
 <div class="section" id="useful-options">
-<h3>Useful Options<a class="headerlink" href="#useful-options" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4">Useful Options</a><a class="headerlink" href="#useful-options" title="Permalink to this headline">¶</a></h3>
 <table class="docutils option-list" frame="void" rules="none">
 <col class="option" />
 <col class="description" />
@@ -173,7 +184,7 @@ goldrush.txt:10:The penny farthing is <span class="m">10</span> paces ahead of W
 </div>
 </div>
 <div class="section" id="git-grep">
-<h2>Git Grep<a class="headerlink" href="#git-grep" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Git Grep</a><a class="headerlink" href="#git-grep" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://git-scm.com/docs/git-grep">https://git-scm.com/docs/git-grep</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git grep <span class="o">[</span>options<span class="o">]</span> pattern <span class="o">[</span>files<span class="o">]</span>
 </pre></div>
@@ -201,6 +212,79 @@ goldrush.txt:6:Waldo is studying his clipboard.
 goldrush.txt:10:The penny farthing is <span class="m">10</span> paces ahead of Waldo.
 </pre></div>
 </div>
+</div>
+<div class="section" id="rip-grep">
+<h2><a class="toc-backref" href="#id6">Rip Grep</a><a class="headerlink" href="#rip-grep" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md">https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md</a></p>
+<p>ripgrep is a command line tool that searches your files for patterns that you give it. ripgrep behaves as if reading each file line by line. If a line matches the pattern provided to ripgrep, then that line will be printed. If a line does not match the pattern, then the line is not printed.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rg <span class="o">[</span>options<span class="o">]</span> pattern <span class="o">[</span>files<span class="o">]</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ rg -H --no-heading --vimgrep Waldo goldrush.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="quickfix-list">
+<h2><a class="toc-backref" href="#id7">Quickfix List</a><a class="headerlink" href="#quickfix-list" title="Permalink to this headline">¶</a></h2>
+<p>Load the files into the quickfix list and search using <code class="code docutils literal notranslate"><span class="pre">:grep</span></code> command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ nvim *.txt
+
+:grep -RIn Waldo .
+
+:!grep -n -RIn Waldo . /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">|</span> tee /var/folders/2n/9qt5qxhj2ql9l_1qzfb4c2kc0000gn/T/nvimcK
+wocL/4
+./goldrush.txt:6:Waldo is studying his clipboard.
+./goldrush.txt:10:The penny farthing is <span class="m">10</span> paces ahead of Waldo.
+./department-store.txt:1:Waldo is beside the boot counter.
+./department-store.txt:7:EvilWaldo <span class="o">(</span>in black/yellow<span class="o">)</span> is beside the glove counter.
+
+<span class="o">(</span><span class="m">1</span> of <span class="m">4</span><span class="o">)</span>: Waldo is studying his clipboard.
+Press ENTER or <span class="nb">type</span> <span class="nb">command</span> to <span class="k">continue</span>
+</pre></div>
+</div>
+<p>You can navigate the quickfix list using <code class="code docutils literal notranslate"><span class="pre">:cnext</span></code>, <code class="code docutils literal notranslate"><span class="pre">:cprev</span></code>, <code class="code docutils literal notranslate"><span class="pre">:cfirst</span></code>, <code class="code docutils literal notranslate"><span class="pre">:clast</span></code>.</p>
+</div>
+<div class="section" id="id1">
+<h2><a class="toc-backref" href="#id8">Grepper</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Use multiple tools.</p>
+<ol class="arabic simple">
+<li>Open file.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ nvim *.txt
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Open file.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:Grepper
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>Tab through the opitons:</li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:Grepper
+
+grep -RIn <span class="nv">$*</span> .&gt;
+ack --noheading --column&gt;
+ag --vimgrep&gt;
+git grep -nI&gt;
+rg -H --no-heading --vimgrep&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>Specify the query and press <code class="code docutils literal notranslate"><span class="pre">&lt;CR&gt;</span></code>:</li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -RIn <span class="nv">$*</span> .&gt; Waldo
+</pre></div>
+</div>
+</div></blockquote>
 </div>
 </div>
 
