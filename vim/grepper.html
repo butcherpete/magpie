@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Vim &#8212; Magpie 0.1 documentation</title>
+    <title>Grepper &#8212; Magpie 0.1 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/my-styles.css" type="text/css" />
@@ -20,8 +20,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Vim Bookmarks" href="vim_bookmarks.html" />
-    <link rel="prev" title="Film Noir" href="../film/film_noir.html" />
+    <link rel="next" title="Vim Buffers" href="vim_buffers.html" />
+    <link rel="prev" title="Vim Bookmarks" href="vim_bookmarks.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -46,7 +46,7 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="#">Vim</a></li>
+                <li><a href="index.html">Vim</a></li>
                 <li><a href="../sphinx/sphinx">Sphinx</a></li>
             
             
@@ -61,7 +61,7 @@
       aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../git/notes.html">Git Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../film/film.html">Film</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Vim</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Vim</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sphinx/sphinx.html">Sphinx Development</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../javascript/javascript.html">JavaScript</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
@@ -94,32 +94,77 @@
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="vim">
-<h1>Vim<a class="headerlink" href="#vim" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="vim_bookmarks.html">Vim Bookmarks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="grepper.html">Grepper</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_buffers.html">Vim Buffers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_command_line.html">Vim Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_explorer.html">File Explorer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_folding.html">Vim Folding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_html.html">Vim HTML</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_javascript.html">Vim JavaScript &amp; Node</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_misc.html">Vim Miscellany</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_moving.html">Vim Getting Around</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_rest.html">Vim Restructured Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_search.html">Vim Search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_spellcheck.html">Vim Spellchecking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_starters.html">Vim Starters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_substituting.html">Vim Substituting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_surround.html">Vim Surround</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_text_objects.html">Vim Text Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_unimpaired.html">Vim Unimpaired</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_visual_blocks.html">Visual Mode</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_windows.html">Vim Windows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vim_yanking.html">Vim Yanking</a></li>
+  <div class="section" id="grepper">
+<h1>Grepper<a class="headerlink" href="#grepper" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>grep</li>
+<li>git-grep</li>
+<li>Ripgrep</li>
 </ul>
+<div class="section" id="grep">
+<h2>Grep<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep <span class="o">[</span>options<span class="o">]</span> pattern <span class="o">[</span>files<span class="o">]</span>
+</pre></div>
+</div>
+<p>For each match, return a filename, line number, and line contents.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ grep -RIn Waldo goldrush.txt
+
+goldrush.txt:6:Waldo is studying his clipboard.
+goldrush.txt:10:The penny farthing is <span class="m">10</span> paces ahead of Waldo.
+</pre></div>
+</div>
+<div class="section" id="useful-options">
+<h3>Useful Options<a class="headerlink" href="#useful-options" title="Permalink to this headline">¶</a></h3>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-v</span></kbd></td>
+<td>Print lines that do not match</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-l</span></kbd></td>
+<td>Print filenames not the lines</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-L</span></kbd></td>
+<td>Print filename that do not contain lines</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-c</span></kbd></td>
+<td>Print count of matching lines</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-n</span></kbd></td>
+<td>Print matching line number</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-i</span></kbd></td>
+<td>Case insenstive</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-w</span></kbd></td>
+<td>Match complete word only</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-x</span></kbd></td>
+<td>Match complete lines only</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-r</span></kbd></td>
+<td>Recursive</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-A <var>N</var></span></kbd></td>
+<td>Print next N lines</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-B <var>N</var></span></kbd></td>
+<td>Print previous N lines</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-C <var>N</var></span></kbd></td>
+<td>Print previous and next N lines</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-E</span></kbd></td>
+<td>Use extended regular expressions (egrep)</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-F</span></kbd></td>
+<td>Use list of fixed strings (fgrep)</td></tr>
+</tbody>
+</table>
+<p>– color always   Highlight for readability</p>
+</div>
 </div>
 </div>
 
@@ -136,7 +181,7 @@
         <br/>
         
 <div id="sourcelink">
-  <a href="../_sources/vim/index.rst.txt"
+  <a href="../_sources/vim/grepper.rst.txt"
      rel="nofollow">Source</a>
 </div>
       
