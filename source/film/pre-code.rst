@@ -421,164 +421,164 @@ Pre-Code Film
 1933
 ****
 
-- :emhasis:`42nd Street`
-- :emhasis:`A Shriek in the Night`
-- :emhasis:`After Tonight`
-- :emhasis:`Air Hostess`
-- :emhasis:`Ann Carver’s Profession`
-- :emhasis:`Ann Vickers`
-- :emhasis:`Another Language`
-- :emhasis:`Baby Face`
-- :emhasis:`The Barbarian`
-- :emhasis:`Beauty for Sale`
-- :emhasis:`Bed of Roses`
-- :emhasis:`The Bitter Tea of General Yen`
-- :emhasis:`Blind Adventure`
-- :emhasis:`Blondie Johnson`
-- :emhasis:`Blood Money`
-- :emhasis:`Bombshell`
-- :emhasis:`The Bowery`
-- :emhasis:`Brief Moment`
-- :emhasis:`Broadway Through a Keyhole`
-- :emhasis:`Broadway to Hollywood`
-- :emhasis:`Bureau of Missing Persons`
-- :emhasis:`Cavalcade`
-- :emhasis:`Central Airport`
-- :emhasis:`Child of Manhattan`
-- :emhasis:`Christopher Strong`
-- :emhasis:`College Coach`
-- :emhasis:`College Humor`
-- :emhasis:`Convention City*`
-- :emhasis:`Counsellor at Law`
-- :emhasis:`Dancing Lady`
-- :emhasis:`Day of Reckoning`
-- :emhasis:`Design for Living`
-- :emhasis:`The Devil’s Brother`
-- :emhasis:`Dinner at Eight`
-- :emhasis:`Diplomaniacs`
-- :emhasis:`Doctor Bull`
-- :emhasis:`Double Harness`
-- :emhasis:`Duck Soup`
-- :emhasis:`The Eagle and the Hawk`
-- :emhasis:`Ecstasy`
-- :emhasis:`The Emperor Jones`
-- :emhasis:`Employees’ Entrance`
-- :emhasis:`Ever in My Heart`
-- :emhasis:`Ex-Lady`
-- :emhasis:`Female`
-- :emhasis:`Flying Devils`
-- :emhasis:`Flying Down to Rio`
-- :emhasis:`Footlight Parade`  ★★★★
-- :emhasis:`From Hell to Heaven`
-- :emhasis:`Gabriel Over the White House`
-- :emhasis:`Gambling Ship`
-- :emhasis:`Girl Without a Room`
-- :emhasis:`Going Hollywood`
-- :emhasis:`Gold Diggers of 1933` ★★★★★
-- :emhasis:`Goodbye Again`
-- :emhasis:`Goodbye Love`
-- :emhasis:`Hallelujah, I’m a Bum`
-- :emhasis:`Hard to Handle`
-- :emhasis:`Havana Widows`
-- :emhasis:`Hell Below`
-- :emhasis:`Hello, Sister!`
-- :emhasis:`Heroes for Sale`
-- :emhasis:`Hold Your Man`
-- :emhasis:`Hoop-La`
-- :emhasis:`Hot Pepper`
-- :emhasis:`The House on 56th Street`
-- :emhasis:`I Am Suzanne!`
-- :emhasis:`I Cover the Waterfront`
-- :emhasis:`I’m No Angel`
-- :emhasis:`The Invisible Man`
-- :emhasis:`International House`
-- :emhasis:`It’s Great to Be Alive`
-- :emhasis:`Jennie Gerhardt`
-- :emhasis:`King Kong`
-- :emhasis:`The Kiss Before the Mirror`
-- :emhasis:`Ladies They Talk About`
-- :emhasis:`Lady Killer` ★★★
-- :emhasis:`Laughter in Hell`
-- :emhasis:`The Life of Jimmy Dolan`
-- :emhasis:`Lilly Turner`
-- :emhasis:`The Little Giant`
-- :emhasis:`Man’s Castle`
-- :emhasis:`The Masquerader`
-- :emhasis:`The Mayor of Hell` ★★★
-- :emhasis:`Meet the Baron`
-- :emhasis:`Melody Cruise`
-- :emhasis:`Men Must Fight`
-- :emhasis:`Midnight Club`
-- :emhasis:`Midnight Mary`
-- :emhasis:`Morning Glory`
-- :emhasis:`Murders in the Zoo`
-- :emhasis:`Myrt and Marge`
-- :emhasis:`Mystery of the Wax Museum`
-- :emhasis:`My Weakness`
-- :emhasis:`Night Flight`
-- :emhasis:`One Sunday Afternoon`
-- :emhasis:`Only Yesterday`
-- :emhasis:`Our Betters`
-- :emhasis:`Parachute Jumper`
-- :emhasis:`Parole Girl`
-- :emhasis:`The Past of Mary Holmes`
-- :emhasis:`Peg o’ My Heart`
-- :emhasis:`Penthouse`
-- :emhasis:`Perfect Understanding`
-- :emhasis:`Pick-Up`
-- :emhasis:`Picture Snatcher` ★★★
-- :emhasis:`The Power and the Glory`
-- :emhasis:`Private Detective 62`
-- :emhasis:`The Private Life of Henry VIII`
-- :emhasis:`The Prizefighter and the Lady`
-- :emhasis:`Queen Christina`
-- :emhasis:`Rafter Romance`
-- :emhasis:`The Right to Romance`
-- :emhasis:`Roman Scandals`
-- :emhasis:`Sailor’s Luck`
-- :emhasis:`Saturday’s Millions`
-- :emhasis:`Scarlet River`
-- :emhasis:`Secret of the Blue Room`
-- :emhasis:`Secrets`
-- :emhasis:`Sensation Hunters`
-- :emhasis:`Shanghai Madness`
-- :emhasis:`She Done Him Wrong`
-- :emhasis:`She Had to Say Yes`
-- :emhasis:`Should Ladies Behave`
-- :emhasis:`The Silver Cord`
-- :emhasis:`The Sin of Nora Moran`
-- :emhasis:`Sitting Pretty`
-- :emhasis:`So This is Africa`
-- :emhasis:`Sons of the Desert`
-- :emhasis:`The Secret of Madame Blanche`
-- :emhasis:`The Song of Songs`
-- :emhasis:`Stage Mother`
-- :emhasis:`State Fair`
-- :emhasis:`The Story of Temple Drake`
-- :emhasis:`Supernatural`
-- :emhasis:`This Day and Age`
-- :emhasis:`Three Cornered Moon`
-- :emhasis:`To the Last Man`
-- :emhasis:`Today We Live`
-- :emhasis:`Too Much Harmony`
-- :emhasis:`Topaze`
-- :emhasis:`Torch Singer`
-- :emhasis:`Turn Back the Clock`
-- :emhasis:`The Vampire Bat`
-- :emhasis:`Voltaire`
-- :emhasis:`The Warrior’s Husband`
-- :emhasis:`West of Singapore*`
-- :emhasis:`When Ladies Meet`
-- :emhasis:`Whistling in the Dark`
-- :emhasis:`The White Sister`
-- :emhasis:`White Woman`
-- :emhasis:`Wild Boys of the Road`
-- :emhasis:`The Woman Accused`
-- :emhasis:`The Working Man`
-- :emhasis:`The World Changes`
-- :emhasis:`The World Gone Mad`
-- :emhasis:`You Made Me Love You`
-- :emhasis:`Zoo in Budapest`
+- :emphasis:`42nd Street`
+- :emphasis:`A Shriek in the Night`
+- :emphasis:`After Tonight`
+- :emphasis:`Air Hostess`
+- :emphasis:`Ann Carver’s Profession`
+- :emphasis:`Ann Vickers`
+- :emphasis:`Another Language`
+- :emphasis:`Baby Face`
+- :emphasis:`The Barbarian`
+- :emphasis:`Beauty for Sale`
+- :emphasis:`Bed of Roses`
+- :emphasis:`The Bitter Tea of General Yen`
+- :emphasis:`Blind Adventure`
+- :emphasis:`Blondie Johnson`
+- :emphasis:`Blood Money`
+- :emphasis:`Bombshell`
+- :emphasis:`The Bowery`
+- :emphasis:`Brief Moment`
+- :emphasis:`Broadway Through a Keyhole`
+- :emphasis:`Broadway to Hollywood`
+- :emphasis:`Bureau of Missing Persons`
+- :emphasis:`Cavalcade`
+- :emphasis:`Central Airport`
+- :emphasis:`Child of Manhattan`
+- :emphasis:`Christopher Strong`
+- :emphasis:`College Coach`
+- :emphasis:`College Humor`
+- :emphasis:`Convention City*`
+- :emphasis:`Counsellor at Law`
+- :emphasis:`Dancing Lady`
+- :emphasis:`Day of Reckoning`
+- :emphasis:`Design for Living`
+- :emphasis:`The Devil’s Brother`
+- :emphasis:`Dinner at Eight`
+- :emphasis:`Diplomaniacs`
+- :emphasis:`Doctor Bull`
+- :emphasis:`Double Harness`
+- :emphasis:`Duck Soup`
+- :emphasis:`The Eagle and the Hawk`
+- :emphasis:`Ecstasy`
+- :emphasis:`The Emperor Jones`
+- :emphasis:`Employees’ Entrance`
+- :emphasis:`Ever in My Heart`
+- :emphasis:`Ex-Lady`
+- :emphasis:`Female`
+- :emphasis:`Flying Devils`
+- :emphasis:`Flying Down to Rio`
+- :emphasis:`Footlight Parade`  ★★★★
+- :emphasis:`From Hell to Heaven`
+- :emphasis:`Gabriel Over the White House`
+- :emphasis:`Gambling Ship`
+- :emphasis:`Girl Without a Room`
+- :emphasis:`Going Hollywood`
+- :emphasis:`Gold Diggers of 1933` ★★★★★
+- :emphasis:`Goodbye Again`
+- :emphasis:`Goodbye Love`
+- :emphasis:`Hallelujah, I’m a Bum`
+- :emphasis:`Hard to Handle`
+- :emphasis:`Havana Widows`
+- :emphasis:`Hell Below`
+- :emphasis:`Hello, Sister!`
+- :emphasis:`Heroes for Sale`
+- :emphasis:`Hold Your Man`
+- :emphasis:`Hoop-La`
+- :emphasis:`Hot Pepper`
+- :emphasis:`The House on 56th Street`
+- :emphasis:`I Am Suzanne!`
+- :emphasis:`I Cover the Waterfront`
+- :emphasis:`I’m No Angel`
+- :emphasis:`The Invisible Man`
+- :emphasis:`International House`
+- :emphasis:`It’s Great to Be Alive`
+- :emphasis:`Jennie Gerhardt`
+- :emphasis:`King Kong`
+- :emphasis:`The Kiss Before the Mirror`
+- :emphasis:`Ladies They Talk About`
+- :emphasis:`Lady Killer` ★★★
+- :emphasis:`Laughter in Hell`
+- :emphasis:`The Life of Jimmy Dolan`
+- :emphasis:`Lilly Turner`
+- :emphasis:`The Little Giant`
+- :emphasis:`Man’s Castle`
+- :emphasis:`The Masquerader`
+- :emphasis:`The Mayor of Hell` ★★★
+- :emphasis:`Meet the Baron`
+- :emphasis:`Melody Cruise`
+- :emphasis:`Men Must Fight`
+- :emphasis:`Midnight Club`
+- :emphasis:`Midnight Mary`
+- :emphasis:`Morning Glory`
+- :emphasis:`Murders in the Zoo`
+- :emphasis:`Myrt and Marge`
+- :emphasis:`Mystery of the Wax Museum`
+- :emphasis:`My Weakness`
+- :emphasis:`Night Flight`
+- :emphasis:`One Sunday Afternoon`
+- :emphasis:`Only Yesterday`
+- :emphasis:`Our Betters`
+- :emphasis:`Parachute Jumper`
+- :emphasis:`Parole Girl`
+- :emphasis:`The Past of Mary Holmes`
+- :emphasis:`Peg o’ My Heart`
+- :emphasis:`Penthouse`
+- :emphasis:`Perfect Understanding`
+- :emphasis:`Pick-Up`
+- :emphasis:`Picture Snatcher` ★★★
+- :emphasis:`The Power and the Glory`
+- :emphasis:`Private Detective 62`
+- :emphasis:`The Private Life of Henry VIII`
+- :emphasis:`The Prizefighter and the Lady`
+- :emphasis:`Queen Christina`
+- :emphasis:`Rafter Romance`
+- :emphasis:`The Right to Romance`
+- :emphasis:`Roman Scandals`
+- :emphasis:`Sailor’s Luck`
+- :emphasis:`Saturday’s Millions`
+- :emphasis:`Scarlet River`
+- :emphasis:`Secret of the Blue Room`
+- :emphasis:`Secrets`
+- :emphasis:`Sensation Hunters`
+- :emphasis:`Shanghai Madness`
+- :emphasis:`She Done Him Wrong`
+- :emphasis:`She Had to Say Yes`
+- :emphasis:`Should Ladies Behave`
+- :emphasis:`The Silver Cord`
+- :emphasis:`The Sin of Nora Moran`
+- :emphasis:`Sitting Pretty`
+- :emphasis:`So This is Africa`
+- :emphasis:`Sons of the Desert`
+- :emphasis:`The Secret of Madame Blanche`
+- :emphasis:`The Song of Songs`
+- :emphasis:`Stage Mother`
+- :emphasis:`State Fair`
+- :emphasis:`The Story of Temple Drake`
+- :emphasis:`Supernatural`
+- :emphasis:`This Day and Age`
+- :emphasis:`Three Cornered Moon`
+- :emphasis:`To the Last Man`
+- :emphasis:`Today We Live`
+- :emphasis:`Too Much Harmony`
+- :emphasis:`Topaze`
+- :emphasis:`Torch Singer`
+- :emphasis:`Turn Back the Clock`
+- :emphasis:`The Vampire Bat`
+- :emphasis:`Voltaire`
+- :emphasis:`The Warrior’s Husband`
+- :emphasis:`West of Singapore*`
+- :emphasis:`When Ladies Meet`
+- :emphasis:`Whistling in the Dark`
+- :emphasis:`The White Sister`
+- :emphasis:`White Woman`
+- :emphasis:`Wild Boys of the Road`
+- :emphasis:`The Woman Accused`
+- :emphasis:`The Working Man`
+- :emphasis:`The World Changes`
+- :emphasis:`The World Gone Mad`
+- :emphasis:`You Made Me Love You`
+- :emphasis:`Zoo in Budapest`
 
 ****
 1934
