@@ -1,8 +1,9 @@
 #######
-Grepper
+Greps
 #######
 
 .. contents::
+  :depth:2
 
 ****
 Grep
@@ -133,6 +134,9 @@ You can navigate the quickfix list using :code:`:cnext`, :code:`:cprev`, :code:`
 Grepper
 *******
 
+Tab Through Tools
+=================
+
 Use multiple tools.
 
 1. Open file.
@@ -166,4 +170,13 @@ Use multiple tools.
 
     grep -RIn $* .> Waldo
 
+Search for Current Word
+=======================
+
+.. code-block:: bash
+
+  :Grepper -cword
+
+  grep -RIn $* .> '\bWaldo\b'
+  Found 3 matches.
 

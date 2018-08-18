@@ -10,3 +10,4 @@ Film
   film_italiani
   film_jidaigeki
   film_noir
+  pre-code 
