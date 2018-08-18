@@ -12,7 +12,7 @@ Pre-Code Film
 - :emphasis:`Africa Speaks!`
 - :emphasis:`All Quiet on the Western Front`
 - :emphasis:`Animal Crackers` ★★★
-- :emphasis:`Anna Christie`
+- :emphasis:`Anna Christie` +
 - :emphasis:`The Bad Man`
 - :emphasis:`The Big House`
 - :emphasis:`The Big Pond`
@@ -180,7 +180,7 @@ Pre-Code Film
 - :emphasis:`Five Star Final`
 - :emphasis:`Frankenstein` ★★★★
 - :emphasis:`Friends and Lovers`
-- :emphasis:`The Front Page`
+- :emphasis:`The Front Page` + 
 - :emphasis:`The Gay Diplomat`
 - :emphasis:`Girls About Town`
 - :emphasis:`Girls Demand Excitement`
@@ -219,7 +219,7 @@ Pre-Code Film
 - :emphasis:`Man of the World`
 - :emphasis:`The Man Who Came Back`
 - :emphasis:`Manhattan Parade`
-- :emphasis:`Mata Hari`
+- :emphasis:`Mata Hari` + 
 - :emphasis:`Millie`
 - :emphasis:`The Millionaire`
 - :emphasis:`The Miracle Woman`
@@ -292,7 +292,7 @@ Pre-Code Film
 - :emphasis:`Blessed Event`
 - :emphasis:`Blonde Venus`
 - :emphasis:`Blondie of the Follies`
-- :emphasis:`The Cabin in the Cotton`
+- :emphasis:`The Cabin in the Cotton` + 
 - :emphasis:`Call Her Savage`
 - :emphasis:`The Crowd Roars`
 - :emphasis:`Cynara`
@@ -312,12 +312,12 @@ Pre-Code Film
 - :emphasis:`Freaks` ★★★★★
 - :emphasis:`Frisco Jenny` ★★
 - :emphasis:`Girl Crazy`
-- :emphasis:`Grand Hotel`
+- :emphasis:`Grand Hotel` +
 - :emphasis:`The Greeks Had a Word for Them`
 - :emphasis:`The Half Naked Truth`
 - :emphasis:`The Hatchet Man`
 - :emphasis:`Hell’s Highway`
-- :emphasis:`Hell’s House`
+- :emphasis:`Hell’s House` +
 - :emphasis:`High Pressure`
 - :emphasis:`Hold ‘Em Jail`
 - :emphasis:`Horse Feathers`
@@ -327,7 +327,7 @@ Pre-Code Film
 - :emphasis:`Impatient Maiden`
 - :emphasis:`Island of Lost Souls`
 - :emphasis:`Jewel Robbery`
-- :emphasis:`The Kid from Spain`
+- :emphasis:`The Kid from Spain` + 
 - :emphasis:`Klondike`
 - :emphasis:`Kongo`
 - :emphasis:`Lady and Gent`
@@ -370,7 +370,7 @@ Pre-Code Film
 - :emphasis:`Polly of the Circus`
 - :emphasis:`Prestige`
 - :emphasis:`Probation`
-- :emphasis:`The Purchase Price`
+- :emphasis:`The Purchase Price` ★★
 - :emphasis:`Rain`
 - :emphasis:`Rasputin and the Empress`
 - :emphasis:`Red Dust` ★★★★
@@ -387,7 +387,7 @@ Pre-Code Film
 - :emphasis:`Sky Devils`
 - :emphasis:`Skyscraper Souls`
 - :emphasis:`Smilin’ Through`
-- :emphasis:`So Big!`
+- :emphasis:`So Big!` ★★
 - :emphasis:`Speak Easily`
 - :emphasis:`Strange Interlude`
 - :emphasis:`Strange Justice`
@@ -410,7 +410,7 @@ Pre-Code Film
 - :emphasis:`Week-Ends Only`
 - :emphasis:`Westward Passage`
 - :emphasis:`The Wet Parade`
-- :emphasis:`What Price Hollywood?`
+- :emphasis:`What Price Hollywood?` +
 - :emphasis:`White Zombie`
 - :emphasis:`Wild Girl`
 - :emphasis:`The Wiser Sex`
@@ -421,7 +421,7 @@ Pre-Code Film
 1933
 ****
 
-- :emphasis:`42nd Street`
+- :emphasis:`42nd Street` +
 - :emphasis:`A Shriek in the Night`
 - :emphasis:`After Tonight`
 - :emphasis:`Air Hostess`
@@ -436,7 +436,7 @@ Pre-Code Film
 - :emphasis:`Blind Adventure`
 - :emphasis:`Blondie Johnson`
 - :emphasis:`Blood Money`
-- :emphasis:`Bombshell`
+- :emphasis:`Bombshell` +
 - :emphasis:`The Bowery`
 - :emphasis:`Brief Moment`
 - :emphasis:`Broadway Through a Keyhole`
@@ -454,7 +454,7 @@ Pre-Code Film
 - :emphasis:`Day of Reckoning`
 - :emphasis:`Design for Living`
 - :emphasis:`The Devil’s Brother`
-- :emphasis:`Dinner at Eight`
+- :emphasis:`Dinner at Eight` +
 - :emphasis:`Diplomaniacs`
 - :emphasis:`Doctor Bull`
 - :emphasis:`Double Harness`
@@ -482,8 +482,8 @@ Pre-Code Film
 - :emphasis:`Havana Widows`
 - :emphasis:`Hell Below`
 - :emphasis:`Hello, Sister!`
-- :emphasis:`Heroes for Sale`
-- :emphasis:`Hold Your Man`
+- :emphasis:`Heroes for Sale` ★★★★
+- :emphasis:`Hold Your Man` +
 - :emphasis:`Hoop-La`
 - :emphasis:`Hot Pepper`
 - :emphasis:`The House on 56th Street`
@@ -500,7 +500,7 @@ Pre-Code Film
 - :emphasis:`Lady Killer` ★★★
 - :emphasis:`Laughter in Hell`
 - :emphasis:`The Life of Jimmy Dolan`
-- :emphasis:`Lilly Turner`
+- :emphasis:`Lilly Turner` ★★
 - :emphasis:`The Little Giant`
 - :emphasis:`Man’s Castle`
 - :emphasis:`The Masquerader`
@@ -531,7 +531,7 @@ Pre-Code Film
 - :emphasis:`Private Detective 62`
 - :emphasis:`The Private Life of Henry VIII`
 - :emphasis:`The Prizefighter and the Lady`
-- :emphasis:`Queen Christina`
+- :emphasis:`Queen Christina` +
 - :emphasis:`Rafter Romance`
 - :emphasis:`The Right to Romance`
 - :emphasis:`Roman Scandals`
@@ -572,7 +572,7 @@ Pre-Code Film
 - :emphasis:`Whistling in the Dark`
 - :emphasis:`The White Sister`
 - :emphasis:`White Woman`
-- :emphasis:`Wild Boys of the Road`
+- :emphasis:`Wild Boys of the Road`  ★★★★
 - :emphasis:`The Woman Accused`
 - :emphasis:`The Working Man`
 - :emphasis:`The World Changes`
@@ -609,10 +609,10 @@ Pre-Code Film
 - :emphasis:`Four Frightened People`
 - :emphasis:`Fugitive Lovers`
 - :emphasis:`Gambling Lady`
-- :emphasis:`The Gay Bride`
-- :emphasis:`The Gay Divorcee`
+- :emphasis:`The Gay Bride` 
+- :emphasis:`The Gay Divorcee` +
 - :emphasis:`George White’s Scandals`
-- :emphasis:`The Girl from Missouri`
+- :emphasis:`The Girl from Missouri` +
 - :emphasis:`Hat, Coat and Glove`
 - :emphasis:`Heat Lightning`
 - :emphasis:`He Was Her Man`
@@ -645,14 +645,14 @@ Pre-Code Film
 - :emphasis:`Nana`
 - :emphasis:`No Greater Glory`
 - :emphasis:`Now I’ll Tell`
-- :emphasis:`Of Human Bondage`
+- :emphasis:`Of Human Bondage` +
 - :emphasis:`Once to Every Woman`
 - :emphasis:`Operator 13`
 - :emphasis:`The Painted Veil`
 - :emphasis:`Palooka`
 - :emphasis:`Riptide`
 - :emphasis:`The Road to Ruin`
-- :emphasis:`Sadie McKee`
+- :emphasis:`Sadie McKee` +
 - :emphasis:`The Scarlet Empress`
 - :emphasis:`Search for Beauty`
 - :emphasis:`She Loves Me Not`
