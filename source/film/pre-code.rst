@@ -1,0 +1,681 @@
+.. include:: <isopub.txt>
+
+#############
+Pre-Code Film
+#############
+
+****
+1930
+****
+
+- :emphasis:`A Devil With Women`
+- :emphasis:`Africa Speaks!`
+- :emphasis:`All Quiet on the Western Front`
+- :emphasis:`Animal Crackers`
+- :emphasis:`Anna Christie`
+- :emphasis:`The Bad Man`
+- :emphasis:`The Big House`
+- :emphasis:`The Big Pond`
+- :emphasis:`The Big Trail`
+- :emphasis:`Billy the Kid`
+- :emphasis:`The Bishop Murder Case`
+- :emphasis:`The Blue Angel`
+- :emphasis:`Born Reckless`
+- :emphasis:`Bride of the Regiment`
+- :emphasis:`Bright Lights`
+- :emphasis:`Call of the Flesh`
+- :emphasis:`Captain Thunder`
+- :emphasis:`Charley’s Aunt`
+- :emphasis:`Chasing Rainbows`
+- :emphasis:`Cheer Up and Smile*`
+- :emphasis:`Children of Pleasure`
+- :emphasis:`City Girl`
+- :emphasis:`Clancy in Wall Street`
+- :emphasis:`Conspiracy`
+- :emphasis:`The Cuckoos`
+- :emphasis:`Danger Lights`
+- :emphasis:`The Dawn Patrol`
+- :emphasis:`The Devil to Pay!`
+- :emphasis:`The Devil’s Holiday`
+- :emphasis:`Dixiana`
+- :emphasis:`The Divorcee`
+- :emphasis:`Doorway to Hell`
+- :emphasis:`Doughboys`
+- :emphasis:`Du Barry, Woman of Passion`
+- :emphasis:`Fast and Loose`
+- :emphasis:`Feet First`
+- :emphasis:`Follow Thru`
+- :emphasis:`Golden Dawn`
+- :emphasis:`Good News`
+- :emphasis:`Hell Harbor`
+- :emphasis:`Hell’s Angels`
+- :emphasis:`Hell’s Heroes`
+- :emphasis:`Hold Everything`
+- :emphasis:`Holiday`
+- :emphasis:`In Gay Madrid`
+- :emphasis:`Inside the Lines`
+- :emphasis:`Just Imagine`
+- :emphasis:`King of Jazz`
+- :emphasis:`Kismet`
+- :emphasis:`Ladies Love Brutes`
+- :emphasis:`Ladies of Leisure`
+- :emphasis:`The Lash`
+- :emphasis:`Laughter`
+- :emphasis:`Leathernecking`
+- :emphasis:`Let’s Go Native`
+- :emphasis:`Let Us Be Gay`
+- :emphasis:`The Life of the Party`
+- :emphasis:`Liliom`
+- :emphasis:`Loose Ankles`
+- :emphasis:`The Lottery Bride`
+- :emphasis:`Madame Satan`
+- :emphasis:`Mammy`
+- :emphasis:`The Man from Blankley’s`
+- :emphasis:`Manslaughter`
+- :emphasis:`The Matrimonial Bed`
+- :emphasis:`Men Without Women`
+- :emphasis:`Min and Bill`
+- :emphasis:`Moby Dick`
+- :emphasis:`Monte Carlo`
+- :emphasis:`Morocco`
+- :emphasis:`New Moon`
+- :emphasis:`No, No, Nanette`
+- :emphasis:`Not So Dumb`
+- :emphasis:`The Office Wife`
+- :emphasis:`One Romantic Night`
+- :emphasis:`Our Blushing Brides`
+- :emphasis:`Outward Bound`
+- :emphasis:`Paid`
+- :emphasis:`Paramount on Parade`
+- :emphasis:`Peacock Alley`
+- :emphasis:`Puttin’ on the Ritz`
+- :emphasis:`Queen High`
+- :emphasis:`Raffles`
+- :emphasis:`Reaching for the Moon`
+- :emphasis:`Redemption`
+- :emphasis:`Renegades`
+- :emphasis:`Road to Paradise`
+- :emphasis:`Romance`
+- :emphasis:`The Rogue Song`
+- :emphasis:`Rough Romance`
+- :emphasis:`The Royal Family of Broadway`
+- :emphasis:`The Runaway Bride`
+- :emphasis:`Safety in Numbers`
+- :emphasis:`Sarah and Son`
+- :emphasis:`The Second Floor Mystery`
+- :emphasis:`She Couldn’t Say No`
+- :emphasis:`Show Girl in Hollywood`
+- :emphasis:`The Silver Horde`
+- :emphasis:`Sin Takes a Holiday`
+- :emphasis:`The Sins of the Children`
+- :emphasis:`Sinners’ Holiday`
+- :emphasis:`Slightly Scarlet`
+- :emphasis:`Son of the Gods`
+- :emphasis:`Song of the Flame`
+- :emphasis:`Song of the West`
+- :emphasis:`The Spoilers`
+- :emphasis:`Street of Chance`
+- :emphasis:`Strictly Unconventional`
+- :emphasis:`Sunny`
+- :emphasis:`Sweet Kitty Bellairs`
+- :emphasis:`They Learned About Women`
+- :emphasis:`Three Faces East`
+- :emphasis:`Tol’able David`
+- :emphasis:`True to the Navy`
+- :emphasis:`The Truth About Youth`
+- :emphasis:`Under a Texas Moon`
+- :emphasis:`Up the River`
+- :emphasis:`The Unholy Three`
+- :emphasis:`The Vagabond King`
+- :emphasis:`Viennese Nights`
+- :emphasis:`The Virtuous Sin`
+- :emphasis:`War Nurse`
+- :emphasis:`What a Widow!`
+- :emphasis:`The Woman Racket`
+- :emphasis:`Whoopee!`
+- :emphasis:`Young Man of Manhattan`
+
+****
+1931
+****
+
+- :emphasis:`A Connecticut Yankee`
+- :emphasis:`A Free Soul`
+- :emphasis:`A Holy Terror`
+- :emphasis:`Alexander Hamilton`
+- :emphasis:`Ambassador Bill`
+- :emphasis:`An American Tragedy`
+- :emphasis:`Arizona`
+- :emphasis:`Arrowsmith`
+- :emphasis:`Bachelor Apartment`
+- :emphasis:`Bad Company`
+- :emphasis:`Bad Girl`
+- :emphasis:`The Bad Sister`
+- :emphasis:`Big Business Girl`
+- :emphasis:`The Blonde Captive`
+- :emphasis:`Blonde Crazy`  ★★★★
+- :emphasis:`Body and Soul`
+- :emphasis:`Born to Love`
+- :emphasis:`Bought!`
+- :emphasis:`Captain Applejack`
+- :emphasis:`Caught Plastered`
+- :emphasis:`The Cheat`
+- :emphasis:`Cimarron`
+- :emphasis:`City Streets`
+- :emphasis:`The Common Law`
+- :emphasis:`Confessions of a Co-Ed`
+- :emphasis:`Cracked Nuts`
+- :emphasis:`The Criminal Code`
+- :emphasis:`Dance, Fools, Dance`
+- :emphasis:`Delicious`
+- :emphasis:`Dirigible`
+- :emphasis:`Dishonored`
+- :emphasis:`Dr. Jekyll and Mr. Hyde`
+- :emphasis:`Dracula`
+- :emphasis:`The Easiest Way`
+- :emphasis:`Expensive Women`
+- :emphasis:`Fifty Million Frenchmen`
+- :emphasis:`Fighting Caravans`
+- :emphasis:`Five and Ten`
+- :emphasis:`Five Star Final`
+- :emphasis:`Frankenstein`
+- :emphasis:`Friends and Lovers`
+- :emphasis:`The Front Page`
+- :emphasis:`The Gay Diplomat`
+- :emphasis:`Girls About Town`
+- :emphasis:`Girls Demand Excitement`
+- :emphasis:`God’s Gift to Women`
+- :emphasis:`Goldie`
+- :emphasis:`The Great Lover`
+- :emphasis:`The Guilty Generation`
+- :emphasis:`Guilty Hands`
+- :emphasis:`The Guardsman`
+- :emphasis:`Hell Divers`
+- :emphasis:`His Woman`
+- :emphasis:`Honor Among Lovers`
+- :emphasis:`Hush Money`
+- :emphasis:`I Take This Woman`
+- :emphasis:`Indiscreet`
+- :emphasis:`Ingagi`
+- :emphasis:`Inspiration`
+- :emphasis:`Iron Man`
+- :emphasis:`It Pays to Advertise`
+- :emphasis:`Kept Husbands`
+- :emphasis:`Kick In`
+- :emphasis:`Kiki`
+- :emphasis:`Ladies’ Man`
+- :emphasis:`Ladies of the Big House`
+- :emphasis:`The Lady Refuses`
+- :emphasis:`The Last Flight`
+- :emphasis:`Laughing Sinners`
+- :emphasis:`Little Caesar`
+- :emphasis:`Lonely Wives`
+- :emphasis:`M`
+- :emphasis:`The Mad Genius`
+- :emphasis:`The Mad Parade`
+- :emphasis:`Madchen in Uniform`
+- :emphasis:`The Maltese Falcon`
+- :emphasis:`Maker of Men`
+- :emphasis:`Man of the World`
+- :emphasis:`The Man Who Came Back`
+- :emphasis:`Manhattan Parade`
+- :emphasis:`Mata Hari`
+- :emphasis:`Millie`
+- :emphasis:`The Millionaire`
+- :emphasis:`The Miracle Woman`
+- :emphasis:`Monkey Business`
+- :emphasis:`Morals for Women`
+- :emphasis:`Never the Twain Shall Meet`
+- :emphasis:`Night Nurse` ★★★★
+- :emphasis:`No Limit`
+- :emphasis:`Once a Lady`
+- :emphasis:`Other Men’s Women`
+- :emphasis:`Palmy Days`
+- :emphasis:`Peach-O-Reno`
+- :emphasis:`Platinum Blonde`
+- :emphasis:`Possessed`
+- :emphasis:`Private Lives`
+- :emphasis:`The Public Enemy` ★★★★
+- :emphasis:`Quick Millions`
+- :emphasis:`The Road to Singapore`
+- :emphasis:`Safe in Hell`  ★★★★
+- :emphasis:`The Secret Six`
+- :emphasis:`The Sin of Madelon Claudet`
+- :emphasis:`The Sin Ship`
+- :emphasis:`Sit Tight`
+- :emphasis:`Six Cylinder Love`
+- :emphasis:`Smart Money`
+- :emphasis:`Smart Woman`
+- :emphasis:`The Smiling Lieutenant`
+- :emphasis:`Son of India`
+- :emphasis:`The Squaw Man`
+- :emphasis:`Strangers May Kiss`
+- :emphasis:`Street Scene`
+- :emphasis:`Strictly Dishonorable`
+- :emphasis:`Surrender`
+- :emphasis:`Susan Lenox [Her Fall and Rise]`
+- :emphasis:`Svengali`
+- :emphasis:`Tarnished Lady`
+- :emphasis:`Ten Cents a Dance`
+- :emphasis:`Tonight or Never`
+- :emphasis:`Trader Horn`
+- :emphasis:`Transatlantic`
+- :emphasis:`The Unholy Garden`
+- :emphasis:`Up Pops the Devil`
+- :emphasis:`Waterloo Bridge`
+- :emphasis:`Women of All Nations`
+
+****
+1932
+****
+
+- :emphasis:`20,000 Years in Sing Sing` ★★★★
+- :emphasis:`A Bill of Divorcement`
+- :emphasis:`A Farewell to Arms`
+- :emphasis:`A Successful Calamity`
+- :emphasis:`Afraid to Talk (AKA Merry-Go-Round)`
+- :emphasis:`After Tomorrow`
+- :emphasis:`The Age of Consent`
+- :emphasis:`Air Mail`
+- :emphasis:`Alias the Doctor`
+- :emphasis:`American Madness`
+- :emphasis:`The Animal Kingdom`
+- :emphasis:`Are You Listening?`
+- :emphasis:`Arsène Lupin`
+- :emphasis:`As You Desire Me`
+- :emphasis:`Back Street`
+- :emphasis:`The Beast of the City`
+- :emphasis:`The Big Broadcast`
+- :emphasis:`Big City Blues`
+- :emphasis:`The Big Timer`
+- :emphasis:`Bird of Paradise`
+- :emphasis:`Blessed Event`
+- :emphasis:`Blonde Venus`
+- :emphasis:`Blondie of the Follies`
+- :emphasis:`The Cabin in the Cotton`
+- :emphasis:`Call Her Savage`
+- :emphasis:`The Crowd Roars`
+- :emphasis:`Cynara`
+- :emphasis:`The Dark Horse`
+- :emphasis:`The Devil Is Driving`
+- :emphasis:`Devil and the Deep`
+- :emphasis:`Disorderly Conduct`
+- :emphasis:`Divorce in the Family`
+- :emphasis:`Doctor X`
+- :emphasis:`Downstairs`
+- :emphasis:`Emma`
+- :emphasis:`Faithless`
+- :emphasis:`Fast Life`
+- :emphasis:`The First Year`
+- :emphasis:`Flesh`
+- :emphasis:`Forbidden`
+- :emphasis:`Freaks` ★★★★★
+- :emphasis:`Frisco Jenny` ★★
+- :emphasis:`Girl Crazy`
+- :emphasis:`Grand Hotel`
+- :emphasis:`The Greeks Had a Word for Them`
+- :emphasis:`The Half Naked Truth`
+- :emphasis:`The Hatchet Man`
+- :emphasis:`Hell’s Highway`
+- :emphasis:`Hell’s House`
+- :emphasis:`High Pressure`
+- :emphasis:`Hold ‘Em Jail`
+- :emphasis:`Horse Feathers`
+- :emphasis:`Hot Saturday`
+- :emphasis:`I Am a Fugitive from a Chain Gang`
+- :emphasis:`If I Had a Million`
+- :emphasis:`Impatient Maiden`
+- :emphasis:`Island of Lost Souls`
+- :emphasis:`Jewel Robbery`
+- :emphasis:`The Kid from Spain`
+- :emphasis:`Klondike`
+- :emphasis:`Kongo`
+- :emphasis:`Lady and Gent`
+- :emphasis:`Lady with a Past`
+- :emphasis:`Lawyer Man`
+- :emphasis:`Letty Lynton`
+- :emphasis:`Life Begins`
+- :emphasis:`The Lost Squadron`
+- :emphasis:`Love Affair`
+- :emphasis:`Love is a Racket`
+- :emphasis:`Love Me Tonight`
+- :emphasis:`Madame Butterfly`
+- :emphasis:`Madame Racketeer`
+- :emphasis:`Man Wanted`
+- :emphasis:`The Man Who Played God`
+- :emphasis:`The Mask of Fu Manchu`
+- :emphasis:`The Match King`
+- :emphasis:`Me and My Gal`
+- :emphasis:`Merrily We Go to Hell`
+- :emphasis:`Million Dollar Legs`
+- :emphasis:`The Miracle Man`
+- :emphasis:`Mr. Robinson Crusoe`
+- :emphasis:`The Most Dangerous Game`
+- :emphasis:`The Mouthpiece`
+- :emphasis:`The Mummy`
+- :emphasis:`Murders in the Rue Morgue`
+- :emphasis:`New Morals for Old`
+- :emphasis:`Night After Night`
+- :emphasis:`Night World`
+- :emphasis:`No Man of Her Own`
+- :emphasis:`No More Orchids`
+- :emphasis:`No One Man`
+- :emphasis:`The Old Dark House`
+- :emphasis:`One Hour with You`
+- :emphasis:`One Way Passage`
+- :emphasis:`Panama Flo`
+- :emphasis:`Payment Deferred`
+- :emphasis:`The Penguin Pool Murder`
+- :emphasis:`The Phantom President`
+- :emphasis:`Polly of the Circus`
+- :emphasis:`Prestige`
+- :emphasis:`Probation`
+- :emphasis:`The Purchase Price`
+- :emphasis:`Rain`
+- :emphasis:`Rasputin and the Empress`
+- :emphasis:`Red Dust` ★★★★
+- :emphasis:`Red-Headed Woman` ★★★★
+- :emphasis:`The Rich Are Always With Us`
+- :emphasis:`Scarface: Shame of a Nation`
+- :emphasis:`Scarlet Dawn`
+- :emphasis:`Shanghai Express`
+- :emphasis:`Shopworn`
+- :emphasis:`The Sign of the Cross`
+- :emphasis:`The Silent Witness`
+- :emphasis:`Silver Dollar`
+- :emphasis:`Sinners in the Sun`
+- :emphasis:`Sky Devils`
+- :emphasis:`Skyscraper Souls`
+- :emphasis:`Smilin’ Through`
+- :emphasis:`So Big!`
+- :emphasis:`Speak Easily`
+- :emphasis:`Strange Interlude`
+- :emphasis:`Strange Justice`
+- :emphasis:`The Strange Love of Molly Louvain`
+- :emphasis:`Symphony of Six Million`
+- :emphasis:`Tarzan the Ape Man`
+- :emphasis:`Taxi!`
+- :emphasis:`Tess of the Storm Country`
+- :emphasis:`Thirteen Women`
+- :emphasis:`The Thirteenth Guest`
+- :emphasis:`This Is the Night`
+- :emphasis:`The Reckless Age`
+- :emphasis:`Three on a Match`  ★★★★★
+- :emphasis:`Three Wise Girls`
+- :emphasis:`Trouble in Paradise`
+- :emphasis:`Two Kinds of Women`
+- :emphasis:`Under 18`
+- :emphasis:`Vanity Fair`
+- :emphasis:`Weekend Marriage`
+- :emphasis:`Week-Ends Only`
+- :emphasis:`Westward Passage`
+- :emphasis:`The Wet Parade`
+- :emphasis:`What Price Hollywood?`
+- :emphasis:`White Zombie`
+- :emphasis:`Wild Girl`
+- :emphasis:`The Wiser Sex`
+- :emphasis:`Winner Take All`
+- :emphasis:`Young America`
+
+****
+1933
+****
+
+- :emhasis:`42nd Street`
+- :emhasis:`A Shriek in the Night`
+- :emhasis:`After Tonight`
+- :emhasis:`Air Hostess`
+- :emhasis:`Ann Carver’s Profession`
+- :emhasis:`Ann Vickers`
+- :emhasis:`Another Language`
+- :emhasis:`Baby Face`
+- :emhasis:`The Barbarian`
+- :emhasis:`Beauty for Sale`
+- :emhasis:`Bed of Roses`
+- :emhasis:`The Bitter Tea of General Yen`
+- :emhasis:`Blind Adventure`
+- :emhasis:`Blondie Johnson`
+- :emhasis:`Blood Money`
+- :emhasis:`Bombshell`
+- :emhasis:`The Bowery`
+- :emhasis:`Brief Moment`
+- :emhasis:`Broadway Through a Keyhole`
+- :emhasis:`Broadway to Hollywood`
+- :emhasis:`Bureau of Missing Persons`
+- :emhasis:`Cavalcade`
+- :emhasis:`Central Airport`
+- :emhasis:`Child of Manhattan`
+- :emhasis:`Christopher Strong`
+- :emhasis:`College Coach`
+- :emhasis:`College Humor`
+- :emhasis:`Convention City*`
+- :emhasis:`Counsellor at Law`
+- :emhasis:`Dancing Lady`
+- :emhasis:`Day of Reckoning`
+- :emhasis:`Design for Living`
+- :emhasis:`The Devil’s Brother`
+- :emhasis:`Dinner at Eight`
+- :emhasis:`Diplomaniacs`
+- :emhasis:`Doctor Bull`
+- :emhasis:`Double Harness`
+- :emhasis:`Duck Soup`
+- :emhasis:`The Eagle and the Hawk`
+- :emhasis:`Ecstasy`
+- :emhasis:`The Emperor Jones`
+- :emhasis:`Employees’ Entrance`
+- :emhasis:`Ever in My Heart`
+- :emhasis:`Ex-Lady`
+- :emhasis:`Female`
+- :emhasis:`Flying Devils`
+- :emhasis:`Flying Down to Rio`
+- :emhasis:`Footlight Parade`  ★★★★
+- :emhasis:`From Hell to Heaven`
+- :emhasis:`Gabriel Over the White House`
+- :emhasis:`Gambling Ship`
+- :emhasis:`Girl Without a Room`
+- :emhasis:`Going Hollywood`
+- :emhasis:`Gold Diggers of 1933` ★★★★★
+- :emhasis:`Goodbye Again`
+- :emhasis:`Goodbye Love`
+- :emhasis:`Hallelujah, I’m a Bum`
+- :emhasis:`Hard to Handle`
+- :emhasis:`Havana Widows`
+- :emhasis:`Hell Below`
+- :emhasis:`Hello, Sister!`
+- :emhasis:`Heroes for Sale`
+- :emhasis:`Hold Your Man`
+- :emhasis:`Hoop-La`
+- :emhasis:`Hot Pepper`
+- :emhasis:`The House on 56th Street`
+- :emhasis:`I Am Suzanne!`
+- :emhasis:`I Cover the Waterfront`
+- :emhasis:`I’m No Angel`
+- :emhasis:`The Invisible Man`
+- :emhasis:`International House`
+- :emhasis:`It’s Great to Be Alive`
+- :emhasis:`Jennie Gerhardt`
+- :emhasis:`King Kong`
+- :emhasis:`The Kiss Before the Mirror`
+- :emhasis:`Ladies They Talk About`
+- :emhasis:`Lady Killer` ★★★
+- :emhasis:`Laughter in Hell`
+- :emhasis:`The Life of Jimmy Dolan`
+- :emhasis:`Lilly Turner`
+- :emhasis:`The Little Giant`
+- :emhasis:`Man’s Castle`
+- :emhasis:`The Masquerader`
+- :emhasis:`The Mayor of Hell` ★★★
+- :emhasis:`Meet the Baron`
+- :emhasis:`Melody Cruise`
+- :emhasis:`Men Must Fight`
+- :emhasis:`Midnight Club`
+- :emhasis:`Midnight Mary`
+- :emhasis:`Morning Glory`
+- :emhasis:`Murders in the Zoo`
+- :emhasis:`Myrt and Marge`
+- :emhasis:`Mystery of the Wax Museum`
+- :emhasis:`My Weakness`
+- :emhasis:`Night Flight`
+- :emhasis:`One Sunday Afternoon`
+- :emhasis:`Only Yesterday`
+- :emhasis:`Our Betters`
+- :emhasis:`Parachute Jumper`
+- :emhasis:`Parole Girl`
+- :emhasis:`The Past of Mary Holmes`
+- :emhasis:`Peg o’ My Heart`
+- :emhasis:`Penthouse`
+- :emhasis:`Perfect Understanding`
+- :emhasis:`Pick-Up`
+- :emhasis:`Picture Snatcher` ★★★
+- :emhasis:`The Power and the Glory`
+- :emhasis:`Private Detective 62`
+- :emhasis:`The Private Life of Henry VIII`
+- :emhasis:`The Prizefighter and the Lady`
+- :emhasis:`Queen Christina`
+- :emhasis:`Rafter Romance`
+- :emhasis:`The Right to Romance`
+- :emhasis:`Roman Scandals`
+- :emhasis:`Sailor’s Luck`
+- :emhasis:`Saturday’s Millions`
+- :emhasis:`Scarlet River`
+- :emhasis:`Secret of the Blue Room`
+- :emhasis:`Secrets`
+- :emhasis:`Sensation Hunters`
+- :emhasis:`Shanghai Madness`
+- :emhasis:`She Done Him Wrong`
+- :emhasis:`She Had to Say Yes`
+- :emhasis:`Should Ladies Behave`
+- :emhasis:`The Silver Cord`
+- :emhasis:`The Sin of Nora Moran`
+- :emhasis:`Sitting Pretty`
+- :emhasis:`So This is Africa`
+- :emhasis:`Sons of the Desert`
+- :emhasis:`The Secret of Madame Blanche`
+- :emhasis:`The Song of Songs`
+- :emhasis:`Stage Mother`
+- :emhasis:`State Fair`
+- :emhasis:`The Story of Temple Drake`
+- :emhasis:`Supernatural`
+- :emhasis:`This Day and Age`
+- :emhasis:`Three Cornered Moon`
+- :emhasis:`To the Last Man`
+- :emhasis:`Today We Live`
+- :emhasis:`Too Much Harmony`
+- :emhasis:`Topaze`
+- :emhasis:`Torch Singer`
+- :emhasis:`Turn Back the Clock`
+- :emhasis:`The Vampire Bat`
+- :emhasis:`Voltaire`
+- :emhasis:`The Warrior’s Husband`
+- :emhasis:`West of Singapore*`
+- :emhasis:`When Ladies Meet`
+- :emhasis:`Whistling in the Dark`
+- :emhasis:`The White Sister`
+- :emhasis:`White Woman`
+- :emhasis:`Wild Boys of the Road`
+- :emhasis:`The Woman Accused`
+- :emhasis:`The Working Man`
+- :emhasis:`The World Changes`
+- :emhasis:`The World Gone Mad`
+- :emhasis:`You Made Me Love You`
+- :emhasis:`Zoo in Budapest`
+
+****
+1934
+****
+
+- :emphasis:`A Modern Hero`
+- :emphasis:`The Affairs of Cellini`
+- :emphasis:`All of Me`
+- :emphasis:`Bachelor Bait`
+- :emphasis:`The Barretts of Wimpole Street`
+- :emphasis:`Belle of the Nineties`
+- :emphasis:`The Big Shakedown`
+- :emphasis:`The Black Cat`
+- :emphasis:`Black Moon`
+- :emphasis:`Bolero`
+- :emphasis:`Born to be Bad`
+- :emphasis:`Bottoms Up`
+- :emphasis:`Carolina`
+- :emphasis:`The Cat and the Fiddle`
+- :emphasis:`Chained`
+- :emphasis:`Cleopatra`
+- :emphasis:`Dames`   ★★★★★
+- :emphasis:`Dr. Monica`
+- :emphasis:`Fashions of 1934`
+- :emphasis:`Finishing School`
+- :emphasis:`Fog Over Frisco`
+- :emphasis:`Forsaking All Others`
+- :emphasis:`Four Frightened People`
+- :emphasis:`Fugitive Lovers`
+- :emphasis:`Gambling Lady`
+- :emphasis:`The Gay Bride`
+- :emphasis:`The Gay Divorcee`
+- :emphasis:`George White’s Scandals`
+- :emphasis:`The Girl from Missouri`
+- :emphasis:`Hat, Coat and Glove`
+- :emphasis:`Heat Lightning`
+- :emphasis:`He Was Her Man`
+- :emphasis:`Hi, Nellie!`
+- :emphasis:`Hips, Hips, Hooray!`
+- :emphasis:`Hollywood Party`
+- :emphasis:`The House of Rothschild`
+- :emphasis:`Imitation of Life`
+- :emphasis:`It Happened One Night` ★★★★
+- :emphasis:`Jimmy the Gent`
+- :emphasis:`Laughing Boy`
+- :emphasis:`Lazy River`
+- :emphasis:`The Life of Vergie Winters`
+- :emphasis:`Liliom`
+- :emphasis:`Little Man, What Now?`
+- :emphasis:`Little Miss Marker`
+- :emphasis:`The Lost Patrol`
+- :emphasis:`Mandalay`
+- :emphasis:`Manhattan Love Song`
+- :emphasis:`Manhattan Melodrama`
+- :emphasis:`Massacre`
+- :emphasis:`Men in White`
+- :emphasis:`The Merry Widow`
+- :emphasis:`Midnight`
+- :emphasis:`Midnight Alibi`
+- :emphasis:`Moulin Rouge`
+- :emphasis:`Murder at the Vanities`
+- :emphasis:`Murder on the Blackboard`
+- :emphasis:`The Mystery of Mr. X`
+- :emphasis:`Nana`
+- :emphasis:`No Greater Glory`
+- :emphasis:`Now I’ll Tell`
+- :emphasis:`Of Human Bondage`
+- :emphasis:`Once to Every Woman`
+- :emphasis:`Operator 13`
+- :emphasis:`The Painted Veil`
+- :emphasis:`Palooka`
+- :emphasis:`Riptide`
+- :emphasis:`The Road to Ruin`
+- :emphasis:`Sadie McKee`
+- :emphasis:`The Scarlet Empress`
+- :emphasis:`Search for Beauty`
+- :emphasis:`She Loves Me Not`
+- :emphasis:`Side Streets`
+- :emphasis:`Six of a Kind`
+- :emphasis:`Smarty`
+- :emphasis:`Social Register`
+- :emphasis:`Spitfire`
+- :emphasis:`Stand Up and Cheer!`
+- :emphasis:`Stingaree`
+- :emphasis:`Strictly Dynamite`
+- :emphasis:`Success at Any Price`
+- :emphasis:`Tarzan and His Mate`
+- :emphasis:`The Thin Man` ★★
+- :emphasis:`Thirty Day Princess`
+- :emphasis:`This Man is Mine`
+- :emphasis:`The Trumpet Blows`
+- :emphasis:`Twentieth Century`
+- :emphasis:`Twenty Million Sweethearts`
+- :emphasis:`Two Alone`
+- :emphasis:`Upperworld`
+- :emphasis:`Viva Villa!`
+- :emphasis:`We’re Not Dressing`
+- :emphasis:`West of the Divide`
+- :emphasis:`Wharf Angel`
+- :emphasis:`Wonder Bar`
