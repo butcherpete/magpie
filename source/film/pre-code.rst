@@ -11,7 +11,7 @@ Pre-Code Film
 - :emphasis:`A Devil With Women`
 - :emphasis:`Africa Speaks!`
 - :emphasis:`All Quiet on the Western Front`
-- :emphasis:`Animal Crackers`
+- :emphasis:`Animal Crackers` ★★★
 - :emphasis:`Anna Christie`
 - :emphasis:`The Bad Man`
 - :emphasis:`The Big House`
@@ -27,7 +27,7 @@ Pre-Code Film
 - :emphasis:`Captain Thunder`
 - :emphasis:`Charley’s Aunt`
 - :emphasis:`Chasing Rainbows`
-- :emphasis:`Cheer Up and Smile*`
+- :emphasis:`Cheer Up and Smile`
 - :emphasis:`Children of Pleasure`
 - :emphasis:`City Girl`
 - :emphasis:`Clancy in Wall Street`
@@ -171,14 +171,14 @@ Pre-Code Film
 - :emphasis:`Dirigible`
 - :emphasis:`Dishonored`
 - :emphasis:`Dr. Jekyll and Mr. Hyde`
-- :emphasis:`Dracula`
+- :emphasis:`Dracula` ★★★
 - :emphasis:`The Easiest Way`
 - :emphasis:`Expensive Women`
 - :emphasis:`Fifty Million Frenchmen`
 - :emphasis:`Fighting Caravans`
 - :emphasis:`Five and Ten`
 - :emphasis:`Five Star Final`
-- :emphasis:`Frankenstein`
+- :emphasis:`Frankenstein` ★★★★
 - :emphasis:`Friends and Lovers`
 - :emphasis:`The Front Page`
 - :emphasis:`The Gay Diplomat`
@@ -214,7 +214,7 @@ Pre-Code Film
 - :emphasis:`The Mad Genius`
 - :emphasis:`The Mad Parade`
 - :emphasis:`Madchen in Uniform`
-- :emphasis:`The Maltese Falcon`
+- :emphasis:`The Maltese Falcon` ★★
 - :emphasis:`Maker of Men`
 - :emphasis:`Man of the World`
 - :emphasis:`The Man Who Came Back`
@@ -223,7 +223,7 @@ Pre-Code Film
 - :emphasis:`Millie`
 - :emphasis:`The Millionaire`
 - :emphasis:`The Miracle Woman`
-- :emphasis:`Monkey Business`
+- :emphasis:`Monkey Business`  ★★★
 - :emphasis:`Morals for Women`
 - :emphasis:`Never the Twain Shall Meet`
 - :emphasis:`Night Nurse` ★★★★
@@ -350,7 +350,7 @@ Pre-Code Film
 - :emphasis:`Million Dollar Legs`
 - :emphasis:`The Miracle Man`
 - :emphasis:`Mr. Robinson Crusoe`
-- :emphasis:`The Most Dangerous Game`
+- :emphasis:`The Most Dangerous Game` ★★★★
 - :emphasis:`The Mouthpiece`
 - :emphasis:`The Mummy`
 - :emphasis:`Murders in the Rue Morgue`
@@ -458,10 +458,10 @@ Pre-Code Film
 - :emphasis:`Diplomaniacs`
 - :emphasis:`Doctor Bull`
 - :emphasis:`Double Harness`
-- :emphasis:`Duck Soup`
+- :emphasis:`Duck Soup`  ★★★★★
 - :emphasis:`The Eagle and the Hawk`
 - :emphasis:`Ecstasy`
-- :emphasis:`The Emperor Jones`
+- :emphasis:`The Emperor Jones`  ★★★★
 - :emphasis:`Employees’ Entrance`
 - :emphasis:`Ever in My Heart`
 - :emphasis:`Ex-Lady`
@@ -494,7 +494,7 @@ Pre-Code Film
 - :emphasis:`International House`
 - :emphasis:`It’s Great to Be Alive`
 - :emphasis:`Jennie Gerhardt`
-- :emphasis:`King Kong`
+- :emphasis:`King Kong`  ★★★★★
 - :emphasis:`The Kiss Before the Mirror`
 - :emphasis:`Ladies They Talk About`
 - :emphasis:`Lady Killer` ★★★
@@ -509,7 +509,7 @@ Pre-Code Film
 - :emphasis:`Melody Cruise`
 - :emphasis:`Men Must Fight`
 - :emphasis:`Midnight Club`
-- :emphasis:`Midnight Mary`
+- :emphasis:`Midnight Mary` ★★★
 - :emphasis:`Morning Glory`
 - :emphasis:`Murders in the Zoo`
 - :emphasis:`Myrt and Marge`
@@ -662,7 +662,7 @@ Pre-Code Film
 - :emphasis:`Social Register`
 - :emphasis:`Spitfire`
 - :emphasis:`Stand Up and Cheer!`
-- :emphasis:`Stingaree`
+- :emphasis:`Stingaree` ★★
 - :emphasis:`Strictly Dynamite`
 - :emphasis:`Success at Any Price`
 - :emphasis:`Tarzan and His Mate`
