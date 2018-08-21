@@ -8,3 +8,4 @@ JavaScript
   :maxdepth: 1
 
   repl 
+  debug-js
