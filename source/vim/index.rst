@@ -9,6 +9,7 @@ Vim
 
   vim_bookmarks
   grepper 
+  minpac
   vim_buffers
   vim_command_line
   vim_explorer

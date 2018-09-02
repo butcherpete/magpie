@@ -9,3 +9,5 @@ JavaScript
 
   repl 
   debug-js
+  react 
+  learning 
