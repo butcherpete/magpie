@@ -7,7 +7,7 @@ Patterns
 
   grepper
   ack 
-  substitutions
+  substitution
   matching
 
 

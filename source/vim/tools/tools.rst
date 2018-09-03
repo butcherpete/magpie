@@ -5,7 +5,6 @@ Tools
 .. toctree::
   :maxdepth: 1
 
-  vim_moving
   vim_bookmarks
   vim_buffers
   vim_command_line
