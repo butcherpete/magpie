@@ -1,9 +1,3 @@
-.. include:: <isopub.txt>
- 
-***
-Vim
-***
-
 .. toctree::
   :maxdepth: 2
 
