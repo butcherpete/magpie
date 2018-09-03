@@ -10,6 +10,6 @@ Vim
   editing/editing
   moving/moving
   language/language
-  searching/searching
+  patterns/patterns
   system/system
   tools/tools
