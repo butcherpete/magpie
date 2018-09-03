@@ -5,11 +5,11 @@ Vim
 ***
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
 
   editing/editing
   moving/moving
   language/language
-  searching/searching
+  patterns/patterns
   system/system
   tools/tools
