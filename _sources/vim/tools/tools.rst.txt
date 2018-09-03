@@ -1,0 +1,15 @@
+####################
+Tools
+####################
+
+.. toctree::
+  :maxdepth: 1
+
+  vim_moving
+  vim_bookmarks
+  vim_buffers
+  vim_command_line
+  vim_folding
+  vim_misc
+  vim_spellcheck
+  vim_windows
