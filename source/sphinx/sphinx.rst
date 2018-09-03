@@ -20,4 +20,5 @@ Sphinx Development
   todolist
   tasks
   text-roles
+  theme2
 
