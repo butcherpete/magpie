@@ -5,20 +5,9 @@ Sphinx Development
 .. toctree::
   :maxdepth: 2
 
-  themes 
-  external-links
-  custom-role 
-  custom-directive 
-  bootstrap 
-  extensions 
-  hover-boxes
-  jinja 
-  js-custom 
-  metadata 
-  multiple-repos
-  react
-  todolist
-  tasks
-  text-roles
-  theme2
-
+  grp-1/grp-1
+  grp-2/grp-2
+  grp-3/grp-3
+  grp-4/grp-4
+  grp-5/grp-5
+  grp-6/grp-6
