@@ -151,6 +151,123 @@ $ touch source/_templates/layout.html
 </div>
 </div>
 </div>
+<div class="section" id="layout-html">
+<h2>Layout HTML<a class="headerlink" href="#layout-html" title="Permalink to this headline">¶</a></h2>
+<p>Finally, edit your override file <code class="code docutils literal notranslate"><span class="pre">source/_templates/layout.html</span></code>:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span>{% extends &quot;basic/layout.html&quot; %}
+
+{% if theme_bootstrap_version == &quot;3&quot; %}
+  {% set bootstrap_version, navbar_version = &quot;3.3.7&quot;, &quot;&quot; %}
+  {% set bs_span_prefix = &quot;col-md-&quot; %}
+{% else %}
+  {% set bootstrap_version, navbar_version = &quot;2.3.2&quot;, &quot;-2&quot; %}
+  {% set bs_span_prefix = &quot;span&quot; %}
+{% endif %}
+
+{% set script_files = script_files + [
+    &#39;_static/js/jquery-1.11.0.min.js&#39;,
+    &#39;_static/js/jquery-fix.js&#39;,
+    &#39;_static/bootstrap-&#39; + bootstrap_version + &#39;/js/bootstrap.min.js&#39;,
+    &#39;_static/bootstrap-sphinx.js&#39;
+  ]
+%}
+
+{%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and sidebars %}
+
+{%- set bs_content_width = render_sidebar and &quot;9&quot; or &quot;12&quot;%}
+
+{%- block doctype -%}
+&lt;!DOCTYPE html&gt;
+{%- endblock %}
+
+{# Sidebar: Rework into our Bootstrap nav section. #}
+{% macro navBar() %}
+{% include &quot;navbar&quot; + navbar_version + &quot;.html&quot; %}
+{% endmacro %}
+
+{% if theme_bootstrap_version == &quot;3&quot; %}
+  {%- macro bsidebar() %}
+      {%- if render_sidebar %}
+      &lt;div class=&quot;{{ bs_span_prefix }}3&quot;&gt;
+        &lt;div id=&quot;sidebar&quot; class=&quot;bs-sidenav&quot; role=&quot;complementary&quot;&gt;
+          {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+          {%- endfor %}
+        &lt;/div&gt;
+      &lt;/div&gt;
+      {%- endif %}
+  {%- endmacro %}
+{% else %}
+  {%- macro bsidebar() %}
+      {%- if render_sidebar %}
+      &lt;div class=&quot;{{ bs_span_prefix }}3&quot;&gt;
+        &lt;div id=&quot;sidebar&quot; class=&quot;bs-sidenav well&quot; data-spy=&quot;affix&quot;&gt;
+          {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+          {%- endfor %}
+        &lt;/div&gt;
+      &lt;/div&gt;
+      {%- endif %}
+  {%- endmacro %}
+{% endif %}
+
+{%- block extrahead %}
+&lt;meta charset=&#39;utf-8&#39;&gt;
+&lt;meta http-equiv=&#39;X-UA-Compatible&#39; content=&#39;IE=edge,chrome=1&#39;&gt;
+&lt;meta name=&#39;viewport&#39; content=&#39;width=device-width, initial-scale=1.0, maximum-scale=1&#39;&gt;
+&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;
+{% endblock %}
+
+{# Silence the sidebar&#39;s, relbar&#39;s #}
+{% block header %}{% endblock %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block sidebarsourcelink %}{% endblock %}
+
+{%- block content %}
+{{ navBar() }}
+&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
+    &lt;div class=&quot;{{ bs_span_prefix }}{{ bs_content_width }} content&quot;&gt;
+      {% block body %}{% endblock %}
+    &lt;/div&gt;
+    {% block sidebar2 %} {# possible location for sidebar #} {% endblock %}
+  &lt;/div&gt;
+&lt;/div&gt;
+{%- endblock %}
+
+{%- block footer %}
+&lt;footer class=&quot;footer&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;p class=&quot;pull-right&quot;&gt;
+      &lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;
+      {% if theme_source_link_position == &quot;footer&quot; %}
+        &lt;br/&gt;
+        {% include &quot;sourcelink.html&quot; %}
+      {% endif %}
+    &lt;/p&gt;
+    &lt;p&gt;
+    {%- if show_copyright %}
+      {%- if hasdoc(&#39;copyright&#39;) %}
+        {% trans path=pathto(&#39;copyright&#39;), copyright=copyright|e %}&amp;copy; &lt;a href=&quot;{{ path }}&quot;&gt;Copyright&lt;/a&gt; {{ copyright }}.{% endtrans %}&lt;br/&gt;
+      {%- else %}
+        {% trans copyright=copyright|e %}&amp;copy; Copyright {{ copyright }}.{% endtrans %}&lt;br/&gt;
+      {%- endif %}
+    {%- endif %}
+    {%- if last_updated %}
+      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}&lt;br/&gt;
+    {%- endif %}
+    {%- if show_sphinx %}
+      {% trans sphinx_version=sphinx_version|e %}Created using &lt;a href=&quot;http://sphinx-doc.org/&quot;&gt;Sphinx&lt;/a&gt; {{ sphinx_version }}.{% endtrans %}&lt;br/&gt;
+    {%- endif %}
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+{%- endblock %}
+</pre></div>
+</div>
+</div>
 </div>
 
 
