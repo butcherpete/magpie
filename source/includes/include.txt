@@ -1,2 +1,3 @@
 .. |rst| replace:: reStructuredText 
+.. |greek| replace:: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor non elit at euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in lacinia magna. Aliquam venenatis aliquam dolor, ac cursus elit convallis a. Duis eu aliquam nisl. Praesent ut lacinia urna. Ut nec libero id orci aliquam feugiat. In semper augue sit amet ultrices porta. Phasellus eget aliquet erat, eget vehicula ipsum.
 
