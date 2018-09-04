@@ -30,6 +30,18 @@ div.toctree-wrapper > ul > li.toctree-l1 {
    font-size: 16px;
    padding-left: 0px;
 }
+div.toctree-wrapper > ul > li.toctree-l1:first-child:before {
+      content: '';
+      height: 1.2em;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      background:#e95420;  
+}
+
+
+
 
 div.toctree-wrapper > ul > li.toctree-l1 > a {
   color: #fff;
