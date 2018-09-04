@@ -9,6 +9,5 @@ Tools
   vim_buffers
   vim_command_line
   vim_folding
-  vim_misc
   vim_spellcheck
   vim_windows
