@@ -17,7 +17,7 @@ A 21th change
   .. toctree::
     :maxdepth: 2
   
-    git/notes
+    git/git
     film/film
     vim/index
     sphinx/sphinx

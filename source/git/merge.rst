@@ -1,8 +1,8 @@
 .. include:: <isopub.txt>
  
-##########
-Git Notes
-##########
+###############
+Merge Conflicts
+###############
 
 Resolve merge conflict in favor of one file or the other:
 
