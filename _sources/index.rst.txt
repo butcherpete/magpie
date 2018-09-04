@@ -8,7 +8,7 @@
 ###################
 Seventh Son
 ###################
-A 20th change
+A 21th change
 
 |greek|
 
@@ -32,3 +32,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+* :doc:`glossary`
