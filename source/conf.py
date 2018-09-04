@@ -125,7 +125,7 @@ html_static_path = ['_static']
 
 html_context = { 
    'css_files': ['_static/css/my-styles.css'],
-   }
+    }
 
 
 def setup(app):
