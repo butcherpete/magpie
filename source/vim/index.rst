@@ -15,5 +15,6 @@ Vim Notes
     moving/moving
     language/language
     patterns/patterns
+    registers/registers
     system/system
     tools/tools
