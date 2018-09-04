@@ -32,8 +32,6 @@ div.toctree-wrapper > ul > li.toctree-l1 {
 }
 
 
-
-
 div.toctree-wrapper > ul > li.toctree-l1 > a {
   color: #fff;
   background-color: #e95420;
@@ -60,5 +58,5 @@ div.toctree-wrapper > ul > li > ul > li.toctree-l2 {
 }
 
 div.experiment {
-  background-color: off-white;
+  background-color: yellow;
   }
