@@ -22,17 +22,19 @@ div.toctree-wrapper > ul {
 div.toctree-wrapper > ul > li.toctree-l1 {
    width: 250px;
    min-height: 250px;
-   border: 1px solid #e95420;;
+   border: 1px solid #e95420;
    display: inline-block;
-   margin: 5px;
+   margin: 15px;
    color: #000;
    font-weight: 800;
    font-size: 16px;
-   padding-left: 10px;
+   padding-left: 0px;
 }
 
 div.toctree-wrapper > ul > li.toctree-l1 > a {
-    color: #000;
+  color: #fff;
+  background-color: #e95420;
+  padding-left: 10px;
 }
 
 div.toctree-wrapper > ul > li > ul {
@@ -47,10 +49,10 @@ div.toctree-wrapper > ul > li > ul > li.toctree-l2 {
    font-size: 14px;
    display: list-item;
    padding-left: 10px;
-   margin-left: 0px;
+   margin-left: 10px;
    list-style-type: disc;
 }
 
 div.experiment {
-  background-color: orange;
-}
+  background-color: off-white;
+  }
