@@ -4,6 +4,9 @@
 Ack
 ##########
 
+.. contents::
+  :local:
+  :depth: 1
 
 Ack Searches
 ------------

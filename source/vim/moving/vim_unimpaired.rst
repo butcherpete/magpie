@@ -9,6 +9,11 @@ This plugin provides several pairs of bracket maps.
 
 `tpope/vim-unimpaired <https://github.com/tpope/vim-unimpaired/tree/master/doc>`__
 
+.. contents::
+  :local:
+  :depth: 1
+
+
 .. code-block:: rest
 
    :help unimpaired

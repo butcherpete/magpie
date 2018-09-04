@@ -6,6 +6,11 @@ Visual Mode
 Visual mode is a flexible and easy way to select a piece of text for an
 operator. It is the only way to select a block of text. 
 
+.. contents::
+  :local:
+  :depth: 1
+
+
 Entering and Exiting Visual Modes
 ---------------------------------
 

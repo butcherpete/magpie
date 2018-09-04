@@ -5,6 +5,9 @@
 Vim Miscellany
 ##############
 
+.. contents::
+  :local:
+  :depth: 1
 
 Useful Commands
 ---------------

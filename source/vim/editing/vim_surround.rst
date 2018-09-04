@@ -9,6 +9,11 @@ HTML tags. They are closely related to what Vim refers to as
 \|text-objects|. Provided are mappings to allow for removing, changing,
 and adding surroundings. 
 
+.. contents::
+  :local:
+  :depth: 1
+
+
 Introduction
 ------------
 

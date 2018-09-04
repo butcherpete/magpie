@@ -2,6 +2,10 @@
 Minpac
 ######
 
+.. contents::
+  :local:
+  :depth: 1
+
 ************
 Add Packages
 ************
