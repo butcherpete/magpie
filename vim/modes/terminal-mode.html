@@ -102,10 +102,15 @@
 </div>
 <div class="section" id="launch-the-shell">
 <h2>Launch the Shell<a class="headerlink" href="#launch-the-shell" title="Permalink to this headline">¶</a></h2>
+<p>You can supply a command to the Terminal emulator.</p>
 <div class="highlight-vim notranslate"><div class="highlight"><pre><span></span><span class="p">:</span>terminal
 <span class="p">:</span><span class="k">te</span>
 <span class="p">:</span>terminal <span class="k">top</span>
 <span class="p">:</span>terminal rails server
+</pre></div>
+</div>
+<p>To open nvim in Terminal mode:</p>
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span>$ nvim <span class="p">+</span>terminal
 </pre></div>
 </div>
 </div>
@@ -114,11 +119,13 @@
 <p>To activate terminal mode, press <code class="code docutils literal notranslate"><span class="pre">i</span></code>, <code class="code docutils literal notranslate"><span class="pre">a</span></code>, <code class="code docutils literal notranslate"><span class="pre">I</span></code>, or <code class="code docutils literal notranslate"><span class="pre">A</span></code>.</p>
 <p>In Normal mode, these commands switch to Insert mode.</p>
 </div>
-<div class="section" id="switch-between-terminal-and-normal">
-<h2>Switch Between Terminal and Normal<a class="headerlink" href="#switch-between-terminal-and-normal" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span>Esc<span class="p">&gt;</span>
+<div class="section" id="switch-back-to-normal-mode">
+<h2>Switch Back to Normal Mode<a class="headerlink" href="#switch-back-to-normal-mode" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span>C<span class="p">-</span>\<span class="p">&gt;&lt;</span>C<span class="p">-</span><span class="k">n</span><span class="p">&gt;</span>
+<span class="p">&lt;</span>Esc<span class="p">&gt;</span>
 </pre></div>
 </div>
+<p>Set mapping to escape Terminal mode.</p>
 </div>
 <div class="section" id="open-terminal-buffers-in-windows">
 <h2>Open Terminal Buffers in Windows<a class="headerlink" href="#open-terminal-buffers-in-windows" title="Permalink to this headline">¶</a></h2>
