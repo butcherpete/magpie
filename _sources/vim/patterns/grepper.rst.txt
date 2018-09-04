@@ -3,7 +3,8 @@ Greps
 #######
 
 .. contents::
-  :depth:2
+  :local:
+  :depth: 1
 
 ****
 Grep
