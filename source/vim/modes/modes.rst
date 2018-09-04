@@ -21,6 +21,8 @@ Modes
 .. toctree::
   :maxdepth: 1
 
-  visual-mode 
   command-mode 
   insert-mode 
+  terminal-mode
+  visual-mode 
+
