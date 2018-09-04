@@ -23,7 +23,6 @@ Terminal Mode
 ********
 Overview
 ********
-"Terminal mode is only available in terminal buffers, where you can activate the mode by pressing i, a, I, or A. In a regular text buffer, these same commands would switch to Insert mode, but that mode is not available in a terminal buffer."
 
 http://vimcasts.org/episodes/neovim-terminal/
 
@@ -37,6 +36,14 @@ Launch the Shell
   :te
   :terminal top
   :terminal rails server
+
+
+**********************
+Activate Terminal Mode
+**********************
+To activate terminal mode, press :code:`i`, :code:`a`, :code:`I`, or :code:`A`. 
+
+In Normal mode, these commands switch to Insert mode.
 
 **********************************
 Switch Between Terminal and Normal
