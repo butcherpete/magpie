@@ -1,6 +1,10 @@
+.. include:: /includes/include.txt
+
 ##################
 Sphinx Development
 ##################
+
+|greek|
 
 .. toctree::
   :maxdepth: 2
