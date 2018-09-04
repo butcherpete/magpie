@@ -19,3 +19,4 @@ Vim Notes
     registers/registers
     tools/tools
     language/language
+    vimscript/vimscript
