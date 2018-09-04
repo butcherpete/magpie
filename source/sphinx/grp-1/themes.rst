@@ -1,8 +1,11 @@
 .. include:: <isopub.txt>
+.. include:: /includes/include.txt
 
 #########################
 Themes and Templates
 #########################
+
+|greek|
 
 **********
 Goals

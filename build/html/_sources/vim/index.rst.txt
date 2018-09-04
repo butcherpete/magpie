@@ -1,3 +1,11 @@
+.. include:: /includes/include.txt
+
+#########
+Vim Notes
+#########
+
+|greek|
+
 .. toctree::
   :maxdepth: 2
 

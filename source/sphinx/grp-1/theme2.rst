@@ -11,15 +11,14 @@
 :languages: english
 :orphan:
 :nocomments:
-.. .. include:: /includes/include.txt
+
+.. include:: /includes/include.txt
 
 ################
 Themes Again
 ################
 
-.. container:: abstract
- 
-  |greek|
+|greek|
 
 ********
 Overview
