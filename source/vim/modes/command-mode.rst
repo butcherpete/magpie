@@ -1,25 +1,28 @@
-:date: 2018-09-03 
-:version: 1
-:author: tes 
-:information-type: api 
-:platform: demand
-:product: vim 
-:description: |greek| 
-:audience: external
-:tags: tag1, tag2, tag3 
-:keywords: keyword1, keyword2, keyword3 
-:languages: english
-:orphan:
-:nocomments:
-.. include:: /includes/include.txt
+.. include:: <isopub.txt>
 
-##################
+#################
 Command Line Mode
-##################
+#################
 
-|greek|
+A crib of Vim tips and tricks. 
 
-********
-Overview
-********
+Exiting the shell returns to vim.
+
+To run Linux commands within Vim using the bang commmand:
+
+.. code-block:: rest
+
+   :! command
+
+To start a specific shell within Vim use the band command:
+
+.. code-block:: rest
+
+   :! bash
+
+Or:
+
+.. code-block:: rest
+
+   :sh[ell]
 

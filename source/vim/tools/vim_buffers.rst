@@ -1,10 +1,14 @@
 .. include:: <isopub.txt>
  
+###########
 Vim Buffers
-===========
+###########
 
 A crib of Vim tips and tricks. 
 
+.. contents::
+  :local:
+  :depth: 1
 
 Navigating the Buffer List
 --------------------------

@@ -1,9 +1,15 @@
 .. include:: <isopub.txt>
  
+###########
 Vim Folding
-===========
+###########
 
+.. contents::
+  :local:
+  :depth: 1
 
+Overview
+--------
 http://vimcasts.org/episodes/how-to-fold/
 
 https://github.com/nelstrom/vim-markdown-folding

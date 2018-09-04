@@ -1,8 +1,12 @@
 .. include:: <isopub.txt>
  
+#################
 Vim Spellchecking
-=================
+#################
 
+.. contents::
+  :local:
+  :depth: 1
 
 http://vimcasts.org/episodes/spell-checking/
 

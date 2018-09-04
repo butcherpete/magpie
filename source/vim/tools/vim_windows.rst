@@ -1,10 +1,15 @@
 .. include:: <isopub.txt>
- 
 
+###########
 Vim Windows
-===========
+###########
 
 A crib of Vim tips and tricks. 
+
+.. contents::
+  :local:
+  :depth: 1
+
 
 Opening Split Windows
 ---------------------

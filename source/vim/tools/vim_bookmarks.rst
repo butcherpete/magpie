@@ -4,6 +4,9 @@
 Vim Bookmarks
 #############
 
+.. contents::
+  :local:
+  :depth: 1
 
 ********
 Overview
