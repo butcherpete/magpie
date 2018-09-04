@@ -39,38 +39,25 @@ any additional processing required.  Its signature is as follows:
 
 The role function parameters are as follows:
 
-* ``name``: The local name of the interpreted role, the role name
-  actually used in the document.
+* ``name``: The local name of the interpreted role, the role name actually used in the document.
 
-* ``rawtext``: A string containing the enitre interpreted text input,
-  including the role and markup.  Return it as a ``problematic`` node
-  linked to a system message if a problem is encountered.
+* ``rawtext``: A string containing the enitre interpreted text input, including the role and markup.  Return it as a ``problematic`` node linked to a system message if a problem is encountered.
 
 * ``text``: The interpreted text content.
 
 * ``lineno``: The line number where the interpreted text begins.
 
-* ``inliner``: The ``docutils.parsers.rst.states.Inliner`` object that
-  called role_fn.  It contains the several attributes useful for error
-  reporting and document tree access.
+* ``inliner``: The ``docutils.parsers.rst.states.Inliner`` object that called role_fn.  It contains the several attributes useful for error reporting and document tree access.
 
-* ``options``: A dictionary of directive options for customization
-  (from the `"role" directive`_), to be interpreted by the role
-  function.  Used for additional attributes for the generated elements
-  and other functionality.
+* ``options``: A dictionary of directive options for customization (from the `"role" directive`), to be interpreted by the role function.  Used for additional attributes for the generated elements and other functionality.
 
-* ``content``: A list of strings, the directive content for
-  customization (from the `"role" directive`_).  To be interpreted by
-  the role function.
+* ``content``: A list of strings, the directive content for customization (from the `"role" directive`).  To be interpreted by the role function.
 
 Role functions return a tuple of two values:
 
-* A list of nodes which will be inserted into the document tree at the
-  point where the interpreted role was encountered (can be an empty
-  list).
+* A list of nodes which will be inserted into the document tree at the= point where the interpreted role was encountered (can be an empty list).
 
-* A list of system messages, which will be inserted into the document tree
-  immediately after the end of the current block (can also be empty).
+* A list of system messages, which will be inserted into the document tree immediately after the end of the current block (can also be empty).
 
 ****************************
 Generic Cross Reference Role
