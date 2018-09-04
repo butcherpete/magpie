@@ -30,6 +30,8 @@ http://vimcasts.org/episodes/neovim-terminal/
 Launch the Shell
 ****************
 
+You can supply a command to the Terminal emulator.
+
 .. code-block:: vim
 
   :terminal
@@ -37,6 +39,12 @@ Launch the Shell
   :terminal top
   :terminal rails server
 
+
+To open nvim in Terminal mode:
+
+.. code-block:: vim
+
+  $ nvim +terminal
 
 **********************
 Activate Terminal Mode
@@ -46,12 +54,15 @@ To activate terminal mode, press :code:`i`, :code:`a`, :code:`I`, or :code:`A`.
 In Normal mode, these commands switch to Insert mode.
 
 **********************************
-Switch Between Terminal and Normal
+Switch Back to Normal Mode
 **********************************
 
 .. code-block:: vim
 
+  <C-\><C-n>
   <Esc> 
+
+Set mapping to escape Terminal mode.
 
 ********************************
 Open Terminal Buffers in Windows
