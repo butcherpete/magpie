@@ -3,7 +3,7 @@
 :author: tes 
 :information-type: api 
 :platform: demand
-:product: |api|
+:product: 
 :description: |greek| 
 :audience: external
 :tags: tag1, tag2, tag3 
@@ -85,6 +85,7 @@ http://www.sphinx-doc.org/en/stable/markup/misc.html#file-wide-metadata
 
   :page_template: custom/index.html
   <your normal index.rst content>
+
 ***********
 Layout HTML
 ***********
@@ -206,4 +207,3 @@ Finally, edit your override file :code:`source/_templates/layout.html`:
   {%- endblock %}
 
 
-.. seealso::
