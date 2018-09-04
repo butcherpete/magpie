@@ -98,6 +98,57 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor non elit at euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in lacinia magna. Aliquam venenatis aliquam dolor, ac cursus elit convallis a. Duis eu aliquam nisl. Praesent ut lacinia urna. Ut nec libero id orci aliquam feugiat. In semper augue sit amet ultrices porta. Phasellus eget aliquet erat, eget vehicula ipsum.</p>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>“Terminal mode is only available in terminal buffers, where you can activate the mode by pressing i, a, I, or A. In a regular text buffer, these same commands would switch to Insert mode, but that mode is not available in a terminal buffer.”</p>
+<p><a class="reference external" href="http://vimcasts.org/episodes/neovim-terminal/">http://vimcasts.org/episodes/neovim-terminal/</a></p>
+</div>
+<div class="section" id="launch-the-shell">
+<h2>Launch the Shell<a class="headerlink" href="#launch-the-shell" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span><span class="p">:</span>terminal
+<span class="p">:</span><span class="k">te</span>
+<span class="p">:</span>terminal <span class="k">top</span>
+<span class="p">:</span>terminal rails server
+</pre></div>
+</div>
+</div>
+<div class="section" id="switch-between-terminal-and-normal">
+<h2>Switch Between Terminal and Normal<a class="headerlink" href="#switch-between-terminal-and-normal" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span>Esc<span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="open-terminal-buffers-in-windows">
+<h2>Open Terminal Buffers in Windows<a class="headerlink" href="#open-terminal-buffers-in-windows" title="Permalink to this headline">¶</a></h2>
+<p>Run the commands:</p>
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span><span class="p">:</span>split
+<span class="p">:</span><span class="k">te</span>
+</pre></div>
+</div>
+<p>The table summarizes commands:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Command</th>
+<th class="head">Effect</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">:terminal</span> <span class="pre">{cmd}</span></code></td>
+<td>Create terminal buffer in current window</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">:split</span> <span class="pre">|</span> <span class="pre">terminal</span> <span class="pre">{cmd}</span></code></td>
+<td>Create terminal buffer in horizontal split</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">:vsplit</span> <span class="pre">|</span> <span class="pre">terminal</span> <span class="pre">{cmd}</span></code></td>
+<td>Create terminal buffer in vertical split</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">:tabedit</span> <span class="pre">|</span> <span class="pre">terminal</span> <span class="pre">{cmd}</span></code></td>
+<td>Create terminal buffer in new tab page</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
