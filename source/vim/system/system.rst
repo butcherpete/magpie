@@ -1,5 +1,5 @@
 ####################
-System Settings
+Starters
 ####################
 
 .. toctree::
@@ -7,4 +7,4 @@ System Settings
 
   minpac
   vim_starters 
-
+  vim_misc

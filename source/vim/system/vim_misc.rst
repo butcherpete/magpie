@@ -1,8 +1,9 @@
 .. include:: <isopub.txt>
  
 
+##############
 Vim Miscellany
-==============
+##############
 
 
 Useful Commands

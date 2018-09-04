@@ -1,7 +1,8 @@
 .. include:: <isopub.txt>
  
-Vim Starters
-============
+############
+VIMRC File
+############
 
 
 Getting Information and Help To get information:
@@ -9,9 +10,6 @@ Getting Information and Help To get information:
 .. code-block:: rest
 
    :version
-
-.vimrc
-------
 
 To open vimrc within Vim:
 

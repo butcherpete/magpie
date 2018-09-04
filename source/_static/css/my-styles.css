@@ -37,7 +37,7 @@ div.toctree-wrapper > ul > li.toctree-l1 {
 div.toctree-wrapper > ul > li.toctree-l1 > a {
   color: #fff;
   background-color: #e95420;
-  display: inline-block;
+  display: block;
   padding-left: 10px;
 }
 
