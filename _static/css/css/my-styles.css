@@ -42,16 +42,6 @@ div.toctree-wrapper > ul > li.toctree-l1 > a {
 }
 
 
-div.toctree-wrapper > ul > li.toctree-l1 > a:first-child:before {
-      content: '';
-      height: 1.2em;
-      position: absolute;
-      left: 0;
-      right: 0;
-      z-index: -1;
-      background:red;  
-}
-
 
 div.toctree-wrapper > ul > li > ul {
     padding-top: 10px;
