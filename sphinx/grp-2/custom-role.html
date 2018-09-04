@@ -143,31 +143,18 @@ any additional processing required.  Its signature is as follows:</p>
 </div>
 <p>The role function parameters are as follows:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The local name of the interpreted role, the role name
-actually used in the document.</li>
-<li><code class="docutils literal notranslate"><span class="pre">rawtext</span></code>: A string containing the enitre interpreted text input,
-including the role and markup.  Return it as a <code class="docutils literal notranslate"><span class="pre">problematic</span></code> node
-linked to a system message if a problem is encountered.</li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The local name of the interpreted role, the role name actually used in the document.</li>
+<li><code class="docutils literal notranslate"><span class="pre">rawtext</span></code>: A string containing the enitre interpreted text input, including the role and markup.  Return it as a <code class="docutils literal notranslate"><span class="pre">problematic</span></code> node linked to a system message if a problem is encountered.</li>
 <li><code class="docutils literal notranslate"><span class="pre">text</span></code>: The interpreted text content.</li>
 <li><code class="docutils literal notranslate"><span class="pre">lineno</span></code>: The line number where the interpreted text begins.</li>
-<li><code class="docutils literal notranslate"><span class="pre">inliner</span></code>: The <code class="docutils literal notranslate"><span class="pre">docutils.parsers.rst.states.Inliner</span></code> object that
-called role_fn.  It contains the several attributes useful for error
-reporting and document tree access.</li>
-<li><code class="docutils literal notranslate"><span class="pre">options</span></code>: A dictionary of directive options for customization
-(from the <a href="#id10"><span class="problematic" id="id11">`&quot;role&quot; directive`_</span></a>), to be interpreted by the role
-function.  Used for additional attributes for the generated elements
-and other functionality.</li>
-<li><code class="docutils literal notranslate"><span class="pre">content</span></code>: A list of strings, the directive content for
-customization (from the <a href="#id12"><span class="problematic" id="id13">`&quot;role&quot; directive`_</span></a>).  To be interpreted by
-the role function.</li>
+<li><code class="docutils literal notranslate"><span class="pre">inliner</span></code>: The <code class="docutils literal notranslate"><span class="pre">docutils.parsers.rst.states.Inliner</span></code> object that called role_fn.  It contains the several attributes useful for error reporting and document tree access.</li>
+<li><code class="docutils literal notranslate"><span class="pre">options</span></code>: A dictionary of directive options for customization (from the <cite>“role” directive</cite>), to be interpreted by the role function.  Used for additional attributes for the generated elements and other functionality.</li>
+<li><code class="docutils literal notranslate"><span class="pre">content</span></code>: A list of strings, the directive content for customization (from the <cite>“role” directive</cite>).  To be interpreted by the role function.</li>
 </ul>
 <p>Role functions return a tuple of two values:</p>
 <ul class="simple">
-<li>A list of nodes which will be inserted into the document tree at the
-point where the interpreted role was encountered (can be an empty
-list).</li>
-<li>A list of system messages, which will be inserted into the document tree
-immediately after the end of the current block (can also be empty).</li>
+<li>A list of nodes which will be inserted into the document tree at the= point where the interpreted role was encountered (can be an empty list).</li>
+<li>A list of system messages, which will be inserted into the document tree immediately after the end of the current block (can also be empty).</li>
 </ul>
 </div>
 <div class="section" id="generic-cross-reference-role">
