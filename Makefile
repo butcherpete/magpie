@@ -1,6 +1,7 @@
 # Minimal makefile for Sphinx documentation
 #
 
+#  cp -r $(SOURCEDIR)/_static/css $(BUILDDIR)/_static/
 # Put it first so that "make" without argument is like "make help".
 
 GH_PAGES_SOURCES = source Makefile
@@ -23,7 +24,7 @@ help:
 .ONESHELL:
 gh-pages:
 	rm -rf /tmp/gh-pages
-cp -r $(SOURCEDIR)/_static/css $(BUILDDIR)/_static/css
+	cp -r $(SOURCEDIR)/_static/css $(BUILDDIR)/_static/css
 	cp -r $(BUILDDIR)/html /tmp/gh-pages 
 	git checkout gh-pages 
 	rm -rf *
