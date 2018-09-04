@@ -3,6 +3,9 @@
 Vim Getting Around
 ==================
 
+.. contents::
+  :local:
+  :depth: 1
 
 Up-Down Motions
 ---------------

@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tools" href="../tools/tools.html" />
+    <link rel="next" title="Editing" href="../editing/editing.html" />
     <link rel="prev" title="VIMRC File" href="vim_starters.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -95,13 +95,24 @@
       
   <div class="section" id="vim-miscellany">
 <h1>Vim Miscellany<a class="headerlink" href="#vim-miscellany" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#useful-commands" id="id1">Useful Commands</a></li>
+<li><a class="reference internal" href="#markdown-preview" id="id2">Markdown Preview</a></li>
+<li><a class="reference internal" href="#fenced-code-blocks" id="id3">Fenced Code Blocks</a></li>
+<li><a class="reference internal" href="#reading-microsoft-word-files" id="id4">Reading Microsoft Word Files</a></li>
+<li><a class="reference internal" href="#pandoc" id="id5">Pandoc</a></li>
+<li><a class="reference internal" href="#urls" id="id6">URLs</a></li>
+<li><a class="reference internal" href="#emojis" id="id7">Emojis</a></li>
+</ul>
+</div>
 <div class="section" id="useful-commands">
-<h2>Useful Commands<a class="headerlink" href="#useful-commands" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1">Useful Commands</a><a class="headerlink" href="#useful-commands" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://stackoverflow.com/questions/1276403/simple-vim-commands-you-wish-youd-known-earlier">Stackoverflow: Simple Vim commands you wish you’d known
 earlier</a></p>
 </div>
 <div class="section" id="markdown-preview">
-<h2>Markdown Preview<a class="headerlink" href="#markdown-preview" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Markdown Preview</a><a class="headerlink" href="#markdown-preview" title="Permalink to this headline">¶</a></h2>
 <p>I installed grip using homebrew. Grip provides the Github flavored
 markdown formatting.</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>$ grip filename.md
@@ -109,7 +120,7 @@ markdown formatting.</p>
 </div>
 </div>
 <div class="section" id="fenced-code-blocks">
-<h2>Fenced Code Blocks<a class="headerlink" href="#fenced-code-blocks" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Fenced Code Blocks</a><a class="headerlink" href="#fenced-code-blocks" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Esc</span></code> + <em>n</em> + <code class="docutils literal notranslate"><span class="pre">i</span></code> + <code class="docutils literal notranslate"><span class="pre">~</span></code> + <code class="docutils literal notranslate"><span class="pre">Esc</span></code></p>
 <p>For example <code class="docutils literal notranslate"><span class="pre">5i~Esc</span></code>.</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>Code Sample
@@ -117,7 +128,7 @@ markdown formatting.</p>
 </div>
 </div>
 <div class="section" id="reading-microsoft-word-files">
-<h2>Reading Microsoft Word Files<a class="headerlink" href="#reading-microsoft-word-files" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Reading Microsoft Word Files</a><a class="headerlink" href="#reading-microsoft-word-files" title="Permalink to this headline">¶</a></h2>
 <p>To view the content of <code class="docutils literal notranslate"><span class="pre">.docx</span></code> in Vim by adding the following to your
 <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code>.</p>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>&quot;use docx2txt.pl to allow VIm to view the text content of a .docx file directly.
@@ -131,7 +142,7 @@ command-line argument to vim, but not of those read using
 <code class="docutils literal notranslate"><span class="pre">:r</span> <span class="pre">file.docx</span></code>.</p>
 </div>
 <div class="section" id="pandoc">
-<h2>Pandoc<a class="headerlink" href="#pandoc" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Pandoc</a><a class="headerlink" href="#pandoc" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://vimcasts.org/episodes/using-external-filter-commands-to-reformat-html/">Vimcast 64:Using external filter commands to reformat
 HTML</a></p>
 <p>Use the bang Ex command to filter the contents of the current buffer
@@ -141,7 +152,7 @@ through a pandoc pipeline:</p>
 </div>
 </div>
 <div class="section" id="urls">
-<h2>URLs<a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">URLs</a><a class="headerlink" href="#urls" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="26%" />
@@ -160,7 +171,7 @@ through a pandoc pipeline:</p>
 </table>
 </div>
 <div class="section" id="emojis">
-<h2>Emojis<a class="headerlink" href="#emojis" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">Emojis</a><a class="headerlink" href="#emojis" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.webpagefx.com/tools/emoji-cheat-sheet/">http://www.webpagefx.com/tools/emoji-cheat-sheet/</a></p>
 </div>
 </div>

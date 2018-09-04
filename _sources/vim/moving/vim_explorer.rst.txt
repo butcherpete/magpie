@@ -3,6 +3,9 @@
 File Explorer
 =============
 
+.. contents::
+  :local:
+  :depth: 1
 
 Exploring the Filesystem
 ------------------------

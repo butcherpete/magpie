@@ -9,7 +9,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 h2, .h2,  {
 
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .footer {
@@ -38,7 +38,7 @@ a.headerlink {
 
 div.topic {
   border: 1px solid #e95420;
-  background: #f5f5f5;
+  background: aliceblue;
 }
 
 div.toctree-wrapper > ul {

@@ -11,10 +11,11 @@ Vim Notes
   .. toctree::
     :maxdepth: 2
   
+    system/system
     editing/editing
     moving/moving
-    language/language
+    modes/modes
     patterns/patterns
     registers/registers
-    system/system
     tools/tools
+    language/language

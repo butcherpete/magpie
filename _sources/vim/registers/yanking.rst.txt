@@ -1,10 +1,14 @@
 .. include:: <isopub.txt>
  
-Vim Yanking
-===========
+###########
+Yanking
+###########
 
 A crib of Vim tips and tricks. 
 
+.. contents::
+  :local:
+  :depth: 1
 
 System Clipboard / Quoteplus Register
 -------------------------------------

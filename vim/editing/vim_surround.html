@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Vim Text Objects" href="vim_text_objects.html" />
+    <link rel="next" title="Text Objects" href="vim_text_objects.html" />
     <link rel="prev" title="Changes" href="vim_substituting.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -100,12 +100,21 @@ surroundings. Examples of surroundings include parentheses, quotes, and
 HTML tags. They are closely related to what Vim refers to as
 |text-objects|. Provided are mappings to allow for removing, changing,
 and adding surroundings.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#introduction" id="id2">Introduction</a></li>
+<li><a class="reference internal" href="#mappings" id="id3">Mappings</a></li>
+<li><a class="reference internal" href="#visual-mode-surroundings" id="id4">Visual Mode Surroundings</a></li>
+<li><a class="reference internal" href="#targets" id="id5">Targets</a></li>
+<li><a class="reference internal" href="#customization" id="id6">Customization</a></li>
+</ul>
+</div>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/tpope/vim-surround">surround-vim</a></p>
 </div>
 <div class="section" id="mappings">
-<h2>Mappings<a class="headerlink" href="#mappings" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">Mappings</a><a class="headerlink" href="#mappings" title="Permalink to this headline">¶</a></h2>
 <p><em>surround-mappings</em></p>
 <ul class="simple">
 <li>Delete surroundings: <code class="docutils literal notranslate"><span class="pre">ds</span></code></li>
@@ -294,7 +303,7 @@ place it on a line of its own.</p>
 </div>
 </div>
 <div class="section" id="visual-mode-surroundings">
-<h2>Visual Mode Surroundings<a class="headerlink" href="#visual-mode-surroundings" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Visual Mode Surroundings</a><a class="headerlink" href="#visual-mode-surroundings" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div>In visual mode, a simple “S” with an argument wraps the selection.
 This is referred to as the <em>vS</em> mapping, although ordinarily there
@@ -326,7 +335,7 @@ block selected past the end of the line, so two maps were needed).</div></blockq
 </table>
 </div>
 <div class="section" id="targets">
-<h2>Targets<a class="headerlink" href="#targets" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Targets</a><a class="headerlink" href="#targets" title="Permalink to this headline">¶</a></h2>
 <p><em>surround-targets</em></p>
 <p>The Vim Surround <code class="docutils literal notranslate"><span class="pre">ds</span></code> and <code class="docutils literal notranslate"><span class="pre">cs</span></code> commands both take a target as their
 first argument. The possible targets are based closely on the
@@ -429,7 +438,7 @@ removed.</p>
 </div>
 </div>
 <div class="section" id="customization">
-<h2>Customization<a class="headerlink" href="#customization" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6">Customization</a><a class="headerlink" href="#customization" title="Permalink to this headline">¶</a></h2>
 <p>To determine the ASCII code run the following in the vim command line.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>:echo char2nr(&quot;-&quot;).
 </pre></div>

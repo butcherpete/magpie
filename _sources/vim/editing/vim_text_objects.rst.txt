@@ -1,9 +1,12 @@
 .. include:: <isopub.txt>
  
 
-Vim Text Objects
+Text Objects
 ================
 
+.. contents::
+  :local:
+  :depth: 1
 
 HTML Tags
 ---------
