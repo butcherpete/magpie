@@ -9,5 +9,4 @@ Editing
   vim_surround
   vim_text_objects
   vim_visual_blocks
-  vim_yanking
 

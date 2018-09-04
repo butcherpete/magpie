@@ -1,22 +1,21 @@
 .. include:: <isopub.txt>
  
+#############
 Vim Bookmarks
-=============
-
-This vim plugin allows toggling bookmarks per line. A quickfix window
-gives access to all bookmarks. Annotations can be added as well. These
-are special bookmarks with a comment attached. They are useful for
-preparing code reviews. All bookmarks will be restored on the next
-startup. 
+#############
 
 
-Resources
----------
+********
+Overview
+********
+This vim plugin allows toggling bookmarks per line. A quickfix window gives access to all bookmarks. Annotations can be added as well. These are special bookmarks with a comment attached. They are useful for preparing code reviews. All bookmarks will be restored on the next startup. 
+
 
 `vim-bookmarks <https://github.com/MattesGroeger/vim-bookmarks>`__
 
+*********
 Bookmarks
----------
+*********
 
 +----------+---------------------+----------------------------------+
 | Shortcut | Command             | Action                           |
@@ -24,8 +23,9 @@ Bookmarks
 | ``mm``   | ``:BookmarkToggle`` | Toggle bookmark at current line. |
 +----------+---------------------+----------------------------------+
 
+***********
 Annotations
------------
+***********
 
 +----------+-----------------------+---------------------------------------------+
 | Shortcut | Command               | Action                                      |
@@ -33,8 +33,9 @@ Annotations
 | ``mi``   | ``:BookmarkAnnotate`` | Add/edit/remove annotation at current line. |
 +----------+-----------------------+---------------------------------------------+
 
+**********
 Navigation
-----------
+**********
 
 +----------+-----------------------+-----------------------------------------+
 | Shortcut | Command               | Action                                  |
@@ -58,8 +59,9 @@ Navigation
 |          | ``:BookmarkLoad``     | Load bookmarks from a file.             |
 +----------+-----------------------+-----------------------------------------+
 
+************************
 Saving Bookmarks to File
-------------------------
+************************
 
 +-------------------+-------------------------------+
 | Command           | Action                        |
@@ -67,8 +69,9 @@ Saving Bookmarks to File
 | ``:BookmarkSave`` | Save all bookmarks to a file. |
 +-------------------+-------------------------------+
 
+***************************
 Loading Bookmarks from File
----------------------------
+***************************
 
 +-------------------+-----------------------------+
 | Command           | Action                      |
