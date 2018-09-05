@@ -97,8 +97,38 @@
 <h1>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="build-environment-api">
+<h2>Build Environment API<a class="headerlink" href="#build-environment-api" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.sphinx-doc.org/en/stable/markup/misc.html#metadata">http://www.sphinx-doc.org/en/stable/markup/misc.html#metadata</a></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">class</span><span class="o">.</span><span class="n">sphinx</span><span class="o">.</span><span class="n">environment</span><span class="o">.</span><span class="n">BuildEnviroment</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>metdata</dt>
+<dd>Dictionary mapping docnames to metadata.</dd>
+</dl>
+<p>File metadata is stored in <code class="code docutils literal notranslate"><span class="pre">env.metadata[docname]</span></code> and <code class="code docutils literal notranslate"><span class="pre">doctree[0]</span></code>.</p>
+</div>
+<div class="section" id="file-wide-metadata">
+<h2>File-Wide Metadata<a class="headerlink" href="#file-wide-metadata" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.sphinx-doc.org/en/stable/markup/misc.html#metadata">http://www.sphinx-doc.org/en/stable/markup/misc.html#metadata</a></p>
+<blockquote>
+<div><p>A field list near the top of a file is parsed by docutils as the <em>docinfo</em>, which is normally used to record the author, date of publication, and other metadata.</p>
+<p>In Sphinx, a field list preceding any other markup is moved from the docinfo to the Sphinx environment as document metadata and is not displayed in the output; a field list appearing after the document title will be part of the docinfo as normal and will be displayed in the output.</p>
+<p>At the moment, these metadata fields are recognized:</p>
+<dl class="docutils">
+<dt>tocdepth</dt>
+<dd>The maximum depth for a table of contents of this file.</dd>
+<dt>nocomments</dt>
+<dd>If set, the web application won’t display a comment form for a page generated from this source file.</dd>
+<dt>orphan</dt>
+<dd>If set, warnings about this file not being included in any toctree will be suppressed.</dd>
+</dl>
+</div></blockquote>
+</div>
 <div class="section" id="to-do-items">
-<h3>To Do Items<a class="headerlink" href="#to-do-items" title="Permalink to this headline">¶</a></h3>
+<h2>To Do Items<a class="headerlink" href="#to-do-items" title="Permalink to this headline">¶</a></h2>
 <div class="admonition" id="todo-0">
 <p class="first admonition-title">Todo</p>
 <p class="last">Learn to parse metadata</p>
@@ -106,7 +136,6 @@
 <div class="admonition" id="todo-1">
 <p class="first admonition-title">Todo</p>
 <p class="last">Learn to generate tags</p>
-</div>
 </div>
 </div>
 </div>
