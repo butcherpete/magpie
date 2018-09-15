@@ -11,3 +11,4 @@ JavaScript
   debug-js
   react 
   learning 
+  handlebars 
