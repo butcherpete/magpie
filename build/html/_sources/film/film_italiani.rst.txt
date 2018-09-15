@@ -86,13 +86,13 @@ la memoria collettiva del Paese tra il 1942 e il 1978.
 -  *Le mani sulla città*, regia di Francesco Rosi (1963) ★★★
 -  *Otto e mezzo*, regia di Federico Fellini (1963) ★★★★★
 -  *Il Gattopardo*, regia di Luchino Visconti (1963) ★★★
--  *La donna scimmia*, regia di Marco Ferreri (1963)
+-  *La donna scimmia*, regia di Marco Ferreri (1963) ★★
 -  *Chi lavora è perduto (In capo al mondo)*, regia di Tinto Brass
    (1963)
 -  *La vita agra*, regia di Carlo Lizzani (1964)
 -  *I pugni in tasca*, regia di Marco Bellocchio (1965) ★★★★
 -  *Io la conoscevo bene*, regia di Antonio Pietrangeli (1965) ★★★★
--  *Comizi d’amore*, regia di Pier Paolo Pasolini (1965)
+-  *Comizi d’amore*, regia di Pier Paolo Pasolini (1965) ★★★
 -  *Signore & signori*, regia di Pietro Germi (1966)
 -  *Uccellacci e uccellini*, regia di Pier Paolo Pasolini (1966)
 -  *La battaglia di Algeri*, regia di Gillo Pontecorvo (1966) ★★★★★
@@ -101,7 +101,7 @@ la memoria collettiva del Paese tra il 1942 e il 1978.
 -  *Banditi a Milano*, regia di Carlo Lizzani (1968)
 -  *Il medico della mutua*, regia di Luigi Zampa (1968)
 -  *Indagine su un cittadino al di sopra, regia di ogni sospetto*, regia
-   di Elio Petri (1970) Criterion
+   di Elio Petri (1970) ★★★
 -  *Il conformista*, regia di Bernardo Bertolucci (1970) ★★★★★
 -  *L’udienza*, regia di Marco Ferreri (1971)
 -  *Diario di un maestro*, regia di Vittorio De Seta (1972)
