@@ -22,6 +22,7 @@ A 21th change
     vim/index
     sphinx/sphinx
     javascript/javascript
+    zsh/zsh
 
 
 
