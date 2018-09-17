@@ -7,8 +7,7 @@ JavaScript
 .. toctree::
   :maxdepth: 1
 
-  repl 
-  debug-js
-  react 
+  node/node
+  react/react
   learning 
-  handlebars 
+  tools/tools
