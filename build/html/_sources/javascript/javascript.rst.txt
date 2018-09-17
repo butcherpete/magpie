@@ -4,6 +4,8 @@
 JavaScript
 **********
 
+|greek|
+
 .. toctree::
   :maxdepth: 2
 
