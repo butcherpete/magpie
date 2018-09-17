@@ -100,6 +100,31 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor non elit at euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in lacinia magna. Aliquam venenatis aliquam dolor, ac cursus elit convallis a. Duis eu aliquam nisl. Praesent ut lacinia urna. Ut nec libero id orci aliquam feugiat. In semper augue sit amet ultrices porta. Phasellus eget aliquet erat, eget vehicula ipsum.</div>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>“Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.”</p>
+</div>
+<div class="section" id="babelrc">
+<h2>Babelrc<a class="headerlink" href="#babelrc" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://babeljs.io/docs/en/next/config-files#file-relative-configuration">https://babeljs.io/docs/en/next/config-files#file-relative-configuration</a></p>
+<blockquote>
+<div>Babel loads <code class="code docutils literal notranslate"><span class="pre">.babelrc</span></code> (and <code class="code docutils literal notranslate"><span class="pre">.babelrc.js</span></code> / <code class="code docutils literal notranslate"><span class="pre">package.json#babel</span></code>) files by searching up the directory structure starting from the “filename” being compiled. This can be powerful because it allows you to create independent configurations for subsections of a repository. File-relative configurations are also merged over top of project-wide config values, making them potentially useful for specific overrides, though that can also be accomplished through “overrides”.</div></blockquote>
+<p>The <code class="code docutils literal notranslate"><span class="pre">.babelrc</span></code>  defines two presets for the compiler to use:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;presets&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;es2015&quot;</span><span class="p">,</span> <span class="s2">&quot;react&quot;</span><span class="p">],</span>
+  <span class="s2">&quot;plugins&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s2">&quot;transform-es2015-destructuring&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;transform-es2015-parameters&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;transform-object-rest-spread&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://babeljs.io/docs/en/next/config-files">https://babeljs.io/docs/en/next/config-files</a></li>
+<li><a class="reference external" href="https://sebastiandedeyne.com/whats-in-our-babelrc">https://sebastiandedeyne.com/whats-in-our-babelrc</a></li>
+</ul>
 </div>
 </div>
 
