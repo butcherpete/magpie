@@ -8,6 +8,6 @@ JavaScript
   :maxdepth: 2
 
   node/node
+  frameworks/frameworks
   react/react
-  learning 
   tools/tools
