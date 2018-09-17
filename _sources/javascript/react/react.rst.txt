@@ -13,4 +13,5 @@ https://reactjs.org/docs/getting-started.html
     next-js
     react-router
     redux
+    semantic-ui 
     virtual-dom
