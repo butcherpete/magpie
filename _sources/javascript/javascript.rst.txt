@@ -5,7 +5,7 @@ JavaScript
 **********
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
 
   node/node
   react/react

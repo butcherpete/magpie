@@ -5,7 +5,7 @@ Film
 ****
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
 
   film_italiani
   film_jidaigeki
