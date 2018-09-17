@@ -18,14 +18,6 @@
 Frameworks
 ################
 
-.. container:: abstract
- 
-  |greek|
-
-********
-Overview
-********
-
 .. container:: experiment
 
   .. toctree::
