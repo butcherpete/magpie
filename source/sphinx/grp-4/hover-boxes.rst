@@ -92,7 +92,7 @@ http://www.sphinx-doc.org/en/master/_modules/sphinx/addnodes.html#abbreviation
 
 :abbr:`LIFO (last-in, first-out)`
 
-:hover:`LIFO (last-in, first-out)`
+.. :hover:`LIFO (last-in, first-out)`
 
 
 .. code-block:: python

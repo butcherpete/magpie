@@ -3,7 +3,7 @@
 :author: tes 
 :information-type: api 
 :platform: demand
-:product: |api|
+:product: 
 :description: |greek| 
 :audience: external
 :tags: tag1, tag2, tag3 
@@ -134,4 +134,3 @@ Calling the partial is done through the partial call syntax:
 
   {{> myPartial }}
 
-.. seealso::
