@@ -18,9 +18,10 @@
 Zsh
 ################
 
-.. container:: abstract
  
-  |greek|
+|greek|
+
+https://code.joejag.com/2014/why-zsh.html
 
 .. container:: experiment
 
