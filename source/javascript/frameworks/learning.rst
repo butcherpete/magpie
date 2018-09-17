@@ -19,6 +19,7 @@ Other Priorities
 ****************
 
 https://edgecoders.com/which-javascript-frameworks-should-you-learn-in-2018-ecea9a27617d
+
 I think there are far more important skills to learn to become a more in-demand developer:
 
 - Learn everything you can about the JavaScript language itself, its bad parts and good parts, and all the modern features it recently gained. Learn how to build and use the various data structures in JavaScript.
