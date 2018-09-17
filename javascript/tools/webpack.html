@@ -104,7 +104,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor non eli
 <p><a class="reference external" href="https://webpack.js.org/concepts/">https://webpack.js.org/concepts/</a></p>
 <blockquote>
 <div>At its core, webpack is a <em>static module bundler</em> for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles.</div></blockquote>
-<p>Webpack is a build tool that can be run from the command line via a JavaScript configuration file (<code class="code docutils literal notranslate"><span class="pre">webpack-config.js</span></code>).</p>
+<p>Webpack is a build tool that can be run from the command line via a JavaScript configuration file (<code class="code docutils literal notranslate"><span class="pre">webpack.config.js</span></code>).</p>
 <ul class="simple">
 <li>Webpack enable JavaScript code to be compiled.</li>
 <li>Webpack allows npm packages to be used with browser code.</li>
@@ -116,10 +116,62 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor non eli
 <li>Built-in watch option.</li>
 </ul>
 </div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>A configuration file is not required.</p>
+<p>By default, webpack
+- Uses <code class="code docutils literal notranslate"><span class="pre">src/index</span></code> as the entry point of your project.
+- Outputs the result to <code class="code docutils literal notranslate"><span class="pre">dist/main.js</span></code> minified and optimized for production.</p>
+<p>To overwrite and extend basic functionality, define a <code class="code docutils literal notranslate"><span class="pre">webpack.config.js</span></code> in the root directory.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;entry&quot;</span><span class="o">:</span> <span class="s2">&quot;src/index.js&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;output&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;path&quot;</span><span class="o">:</span> <span class="nx">__dirname</span><span class="o">+</span><span class="s1">&#39;/static&#39;</span><span class="p">,</span>
+        <span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;[name].[chunkhash:8].js&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;devtool&quot;</span><span class="o">:</span> <span class="s2">&quot;source-map&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;module&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;rules&quot;</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;enforce&quot;</span><span class="o">:</span> <span class="s2">&quot;pre&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;test&quot;</span><span class="o">:</span> <span class="sr">/\.(js|jsx)$/</span><span class="p">,</span>
+                <span class="s2">&quot;exclude&quot;</span><span class="o">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+                <span class="s2">&quot;use&quot;</span><span class="o">:</span> <span class="s2">&quot;eslint-loader&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;test&quot;</span><span class="o">:</span> <span class="sr">/\.(js|jsx)$/</span><span class="p">,</span>
+                <span class="s2">&quot;exclude&quot;</span><span class="o">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+                <span class="s2">&quot;use&quot;</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;loader&quot;</span><span class="o">:</span> <span class="s2">&quot;babel-loader&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;options&quot;</span><span class="o">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;presets&quot;</span><span class="o">:</span> <span class="p">[</span>
+                            <span class="s2">&quot;env&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;react&quot;</span>
+                        <span class="p">]</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;test&quot;</span><span class="o">:</span> <span class="sr">/\.scss$/</span><span class="p">,</span>
+                <span class="s2">&quot;use&quot;</span><span class="o">:</span> <span class="p">[</span>
+                    <span class="s2">&quot;style-loader&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;css-loader&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sass-loader&quot;</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://webpack.js.org/">https://webpack.js.org/</a></li>
+<li><a class="reference external" href="https://generatewebpackconfig.netlify.com/">Generate Custom Webpack Configuration</a></li>
+<li><a class="reference external" href="https://webpack.jakoblind.no/">Visual Tool for Creating Webpack Configs</a></li>
 </ul>
 </div>
 </div>
