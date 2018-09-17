@@ -1,4 +1,4 @@
-.. include:: <isopub.txt>
+.. include:: /includes/include.txt
  
 **********
 JavaScript

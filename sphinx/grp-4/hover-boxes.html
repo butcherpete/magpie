@@ -47,6 +47,7 @@
           <ul class="nav navbar-nav">
             
                 <li><a href="../../vim/index.html">Vim</a></li>
+                <li><a href="../../javascript/javascript.html">JavaScript</a></li>
                 <li><a href="../sphinx">Sphinx</a></li>
             
             
@@ -183,15 +184,14 @@
 <h2>Abbreviation-Based Role<a class="headerlink" href="#abbreviation-based-role" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.sphinx-doc.org/en/master/_modules/sphinx/addnodes.html#abbreviation">http://www.sphinx-doc.org/en/master/_modules/sphinx/addnodes.html#abbreviation</a></p>
 <p><abbr title="last-in, first-out">LIFO</abbr></p>
-<p><a href="#id1"><span class="problematic" id="id2">:hover:`LIFO (last-in, first-out)`</span></a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">abbreviation</span><span class="p">(</span><span class="n">nodes</span><span class="o">.</span><span class="n">Inline</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">TextElement</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;Node for abbreviations with explanations.&quot;&quot;&quot;</span>
 </pre></div>
 </div>
 <p>Where is this from?</p>
 <p><code class="file docutils literal notranslate"><span class="pre">sphinx/roles.py</span></code></p>
-<div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-number">Listing 11 </span><span class="caption-text">sphinx/roles.py</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 11 </span><span class="caption-text">sphinx/roles.py</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -224,8 +224,8 @@
 </div>
 <p>First Attempt</p>
 <p>WARNING: extension ‘hover’ has no setup() function; is it really a Sphinx extension module?</p>
-<div class="literal-block-wrapper docutils container" id="id4">
-<div class="code-block-caption"><span class="caption-number">Listing 12 </span><span class="caption-text">hover.py</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-number">Listing 12 </span><span class="caption-text">hover.py</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -265,15 +265,15 @@
 </td></tr></table></div>
 </div>
 <p>Second Attempt</p>
-<div class="literal-block-wrapper docutils container" id="id5">
-<div class="code-block-caption"><span class="caption-number">Listing 13 </span><span class="caption-text">Second Attempt</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Listing 13 </span><span class="caption-text">Second Attempt</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">register_generic_role</span><span class="p">(</span><span class="s1">&#39;hover&#39;</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">abbr</span><span class="p">)</span>
 </pre></div>
 </td></tr></table></div>
 </div>
 <p>Third Attempt</p>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-number">Listing 14 </span><span class="caption-text">Third Attempt</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-number">Listing 14 </span><span class="caption-text">Third Attempt</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
