@@ -23,6 +23,7 @@ Themes Again
 ********
 Overview
 ********
+
 - https://stackoverflow.com/questions/14622698/customize-sphinxdoc-theme
 - https://github.com/sphinx-doc/sphinx/blob/master/doc/templating.rst 
 - `Page-specific Template Overrides <https://stackoverflow.com/questions/13209597/override-html-page-template-for-a-specific-sphinx-document>`_
@@ -73,6 +74,7 @@ http://jinja.pocoo.org/docs/2.10/templates/#template-objects
 
 HTML Template
 =============
+
 .. code-block:: html
 
   {% extends layout_template %  }
@@ -92,7 +94,7 @@ Layout HTML
 
 Finally, edit your override file :code:`source/_templates/layout.html`:
 
-.. code-block:: py
+.. code-block:: python
 
   {% extends "basic/layout.html" %}
   
