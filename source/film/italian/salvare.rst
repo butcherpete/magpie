@@ -1,18 +1,29 @@
-.. include:: <isopub.txt>
- 
-#############
-Film Italiani
-#############
+:date: 2018-09-17 
+:version: 1
+:author: tes 
+:information-type: api 
+:platform: demand
+:product: 
+:description: |greek| 
+:audience: external
+:tags: tag1, tag2, tag3 
+:keywords: keyword1, keyword2, keyword3 
+:languages: english
+:orphan:
+:nocomments:
 
-A catalog of Italian films I have seen or want to see. 
+.. include:: /includes/include.txt
 
-
-****************************
+############################
 100 film italiani da salvare
-****************************
+############################
 
 Ecco i cento film italiani da salvare. Le pellicole che hanno cambiato
 la memoria collettiva del Paese tra il 1942 e il 1978.
+
+*****
+1940s
+*****
 
 -  *Quattro passi fra le nuvole*, regia di Alessandro Blasetti (1942)
    YouTube
@@ -28,6 +39,11 @@ la memoria collettiva del Paese tra il 1942 e il 1978.
 -  *Cielo sulla palude*, regia di Augusto Genina (1949)
 -  *Stromboli, terra di Dio*, regia di Roberto Rossellini (1949) ★★★★
 -  *Catene*, regia di Raffaello Matarazzo (1949) ★★★
+
+*****
+1950s
+*****
+
 -  *Il cammino della speranza*, regia di Pietro Germi (1950)
 -  *Domenica d’agosto*, regia di Luciano Emmer (1950)
 -  *Cronaca di un amore*, regia di Michelangelo Antonioni (1950) ★★★
@@ -67,6 +83,10 @@ la memoria collettiva del Paese tra il 1942 e il 1978.
 -  *Arrangiatevi!*, regia di Mauro Bolognini (1959)
 -  *La grande guerra*, regia di Mario Monicelli (1959)
 -  *I magliari*, regia di Francesco Rosi (1959)
+
+*****
+1960s
+*****
 -  *Tutti a casa*, regia di Luigi Comencini (1960)
 -  *La dolce vita*, regia di Federico Fellini (1960) ★★★★★
 -  *Rocco e i suoi fratelli*, regia di Luchino Visconti (1960) ★★★★★
@@ -100,6 +120,10 @@ la memoria collettiva del Paese tra il 1942 e il 1978.
 -  *Dillinger è morto*, regia di Marco Ferreri (1968) ★★
 -  *Banditi a Milano*, regia di Carlo Lizzani (1968)
 -  *Il medico della mutua*, regia di Luigi Zampa (1968)
+
+*****
+1970s
+*****
 -  *Indagine su un cittadino al di sopra, regia di ogni sospetto*, regia
    di Elio Petri (1970) ★★★
 -  *Il conformista*, regia di Bernardo Bertolucci (1970) ★★★★★
@@ -120,7 +144,7 @@ la memoria collettiva del Paese tra il 1942 e il 1978.
 -  *L’albero degli zoccoli*, regia di Ermanno Olmi (1978) ★★★★★
 
 ***************
-Not on the list
+Other Films
 ***************
 
 1940s
@@ -211,3 +235,5 @@ Not on the list
 1984
 ====
 -  *Kaos*, regia di Taviani (1984) ★★★
+
+
