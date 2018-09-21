@@ -116,13 +116,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor non eli
 <li>Built-in watch option.</li>
 </ul>
 </div>
-<div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<p>A configuration file is not required.</p>
-<p>By default, webpack
-- Uses <code class="code docutils literal notranslate"><span class="pre">src/index</span></code> as the entry point of your project.
-- Outputs the result to <code class="code docutils literal notranslate"><span class="pre">dist/main.js</span></code> minified and optimized for production.</p>
-<p>To overwrite and extend basic functionality, define a <code class="code docutils literal notranslate"><span class="pre">webpack.config.js</span></code> in the root directory.</p>
+<div class="section" id="webpack-configuration">
+<h2>Webpack Configuration<a class="headerlink" href="#webpack-configuration" title="Permalink to this headline">¶</a></h2>
+<p>The a <code class="code docutils literal notranslate"><span class="pre">webpack.config.js</span></code> enables you to overwrite and extend basic functionality. It’s not required.</p>
+<p>To load the default config, compile the code, and output a bundle file that can be loaded in the browser, run the command:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span> <span class="p">.</span><span class="o">/</span><span class="nx">node_modules</span><span class="o">/</span><span class="p">.</span><span class="nx">bin</span><span class="o">/</span><span class="nx">webpack</span>
+</pre></div>
+</div>
+<p>By default, webpack</p>
+<ul class="simple">
+<li>Uses <code class="code docutils literal notranslate"><span class="pre">src/index</span></code> as the entry point of your project.</li>
+<li>Outputs the result to <code class="code docutils literal notranslate"><span class="pre">dist/main.js</span></code> minified and optimized for production.</li>
+</ul>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;mode&quot;</span><span class="o">:</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span>
     <span class="s2">&quot;entry&quot;</span><span class="o">:</span> <span class="s2">&quot;src/index.js&quot;</span><span class="p">,</span>
@@ -164,6 +169,38 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor non eli
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="command-line-interface">
+<h2>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://webpack.js.org/api/cli/">https://webpack.js.org/api/cli/</a></p>
+<blockquote>
+<div>For proper usage and easy distribution of this configuration, webpack can be configured with <code class="code docutils literal notranslate"><span class="pre">webpack.config.js</span></code>. Any parameters sent to the CLI will map to a corresponding parameter in the config file.</div></blockquote>
+</div>
+<div class="section" id="debugging">
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://webpack.js.org/api/cli/#debug-options">https://webpack.js.org/api/cli/#debug-options</a></p>
+</div>
+<div class="section" id="sourcemaps">
+<h2>Sourcemaps<a class="headerlink" href="#sourcemaps" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://blog.teamtreehouse.com/introduction-source-maps">https://blog.teamtreehouse.com/introduction-source-maps</a></p>
+<blockquote>
+<div>A source map provides a way of mapping code within a compressed file back to it’s original position in a source file. This means that – with the help of a bit of software – you can easily debug your applications even after your assets have been optimized. The Chrome and Firefox developer tools both ship with built-in support for source maps.</div></blockquote>
+<p><a class="reference external" href="https://webpack.js.org/configuration/devtool/">https://webpack.js.org/configuration/devtool/</a></p>
+<p>Devtool enables you to choose a style of  <a class="reference external" href="https://blog.teamtreehouse.com/introduction-source-maps">source mapping</a> used to enhance the debugging process. These values can affect build and rebuild speed dramatically. Sourcemaps enable you to match code errors to your file structure.</p>
+<blockquote>
+<div>With sourcemaps enabled, webpack generates additional code (sometimes inline and sometimes in a separate file) that maps the generated code back to the original file structure. That’s helpful when debugging, because tools like Chrome DevTools enables you to inspect the original code rather than the compile code.</div></blockquote>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">baseConfig</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">output</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="nx">devtool</span><span class="o">:</span> <span class="s1">&#39;source-map&#39;</span><span class="p">,</span>
+  <span class="nx">plugins</span><span class="o">:</span> <span class="p">[]</span>
+  <span class="p">})</span>
+</pre></div>
+</div>
+<div class="section" id="developer-tool-support">
+<h3>Developer Tool Support<a class="headerlink" href="#developer-tool-support" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>Note: Support for source maps is enabled by default in Firefox’s developer tools. You may need to enable support manually in Chrome. To do this, launch the Chrome dev tools and open the Settings pane (cog in the bottom right corner). In the General tab make sure that Enable JS source maps and Enable CSS source maps are both ticked.</div></blockquote>
 </div>
 </div>
 <div class="section" id="resources">
