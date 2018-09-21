@@ -1,4 +1,4 @@
-:date: 2018-09-16 
+:date: 2018-09-21 
 :version: 1
 :author: tes 
 :information-type: api 
@@ -15,16 +15,16 @@
 .. include:: /includes/include.txt
 
 ################
-Tools
+Create React App
 ################
 
-.. container:: experiment
+.. container:: abstract
+ 
+  |greek|
 
-  .. toctree::
-    :maxdepth: 2
-  
-    babel 
-    handlebars 
-    jquery
-    webpack
-    devtools
+********
+Overview
+********
+
+https://github.com/facebook/create-react-app?files=1
+https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md
