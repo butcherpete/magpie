@@ -29,4 +29,5 @@ http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-sh
   .. toctree::
     :maxdepth: 2
 
-    count.rst
+    count
+    zsh-skills
