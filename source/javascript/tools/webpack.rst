@@ -40,7 +40,6 @@ Webpack is a build tool that can be run from the command line via a JavaScript c
 - Webpack dev server.
 - Built-in watch option.
 
-
 *********************
 Webpack Configuration
 *********************
@@ -107,7 +106,19 @@ https://webpack.js.org/api/cli/
 
   For proper usage and easy distribution of this configuration, webpack can be configured with :code:`webpack.config.js`. Any parameters sent to the CLI will map to a corresponding parameter in the config file.
 
+The CLI is great for debugging issues and working with small projects.
 
+To generate a bundle:
+
+.. code-block:: javascript
+
+  $ node_modules/ .bin/webpack --entry ./src/entry.js --output-filename output.js --output-path ./ 
+
+
+
+*******
+Loaders
+*******
 
 *********
 Debugging
@@ -117,7 +128,6 @@ https://webpack.js.org/api/cli/#debug-options
 **********
 Sourcemaps
 **********
-
 https://blog.teamtreehouse.com/introduction-source-maps
 
   A source map provides a way of mapping code within a compressed file back to it’s original position in a source file. This means that – with the help of a bit of software – you can easily debug your applications even after your assets have been optimized. The Chrome and Firefox developer tools both ship with built-in support for source maps.

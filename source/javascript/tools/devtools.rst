@@ -1,4 +1,4 @@
-:date: 2018-09-16 
+:date: 2018-09-21 
 :version: 1
 :author: tes 
 :information-type: api 
@@ -14,17 +14,15 @@
 
 .. include:: /includes/include.txt
 
-################
-Tools
-################
+######################
+Chrome Developer Tools
+######################
 
-.. container:: experiment
+.. container:: abstract
+ 
+  |greek|
 
-  .. toctree::
-    :maxdepth: 2
-  
-    babel 
-    handlebars 
-    jquery
-    webpack
-    devtools
+**********************
+Resources
+**********************
+https://developers.google.com/web/tools/chrome-devtools/
