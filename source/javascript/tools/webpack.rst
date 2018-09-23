@@ -210,6 +210,53 @@ Open browser at: http://localhost:8080
 *******
 Loaders
 *******
+  Loaders are node modules that import files of various types into browser acceptable formats like JS and stylesheets. Further loaders also allow importing such files into JS via “require” or “import” in ES6.
+
+
+Chaining Loaders
+================
+Multiple loaders can be chained together to work on the same file type. 
+
+- Chain from left to right.
+- Separate loaders with :code:`!`
+
+For example, use two loaders (css-loader and style-loader) to dump our CSS file (:code:`myCssFile.css`) into the  :code:`<style>CSS content</style>` tag in our HTML:
+
+.. code-block:: javascript
+
+  module: {
+   loaders: [{
+    test: /\.css$/,
+    loader: ‘style!css’ <--(short for style-loader!css-loader)
+   }]
+
+What happens:
+
+  1. Webpack searches for CSS files dependencies inside the modules. That is Webpack checks to see if a JS file has “require(myCssFile.css)”. If it finds the dependency, then the Webpack gives that file first to the “css-loader”
+  
+  2. css-loader loads all the CSS and CSS’ own dependencies (i.e @import otherCSS) into JSON. Webpack then passes the result to “style-loader”.
+  
+  3. style-loader to take the JSON and add it to a style tag — <style>CSS contents</style> and inserts the tag into the index.html file.
+
+
+Loaders Configuration
+=====================
+  Loaders themselves can be configured to work differently by passing parameters.
+  
+  In the example below, we are configuring url-loader to use DataURLs for images less than 1024 bytes and use URL for images that are larger than 1024 bytes. We can do this by passing “limit” parameter in the following two ways:
+
+.. code-block:: json
+
+  //Option 1: Use "?" just like in URLs
+  { test: /\.png$/,
+    loader: "url-loader?limit=1024"
+  },
+
+  //Option 2: Use "query" property
+  { test: /\.png$/,
+    loader: "url-loader",
+    query: {limit: 1024}
+  },
 
 *********
 Debugging
