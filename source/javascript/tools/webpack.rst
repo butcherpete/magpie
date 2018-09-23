@@ -212,7 +212,6 @@ Loaders
 *******
   Loaders are node modules that import files of various types into browser acceptable formats like JS and stylesheets. Further loaders also allow importing such files into JS via “require” or “import” in ES6.
 
-
 Chaining Loaders
 ================
 Multiple loaders can be chained together to work on the same file type. 
