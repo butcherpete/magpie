@@ -125,6 +125,30 @@ Debugging
 *********
 https://webpack.js.org/api/cli/#debug-options
 
+Command-line option for debugging webpack:
+
+.. code-block:: javascript
+
+  --debug
+
+Command-line option for debugging webpack:
+
+.. code-block:: javascript
+
+  --display-error-details
+
+This enables you to see Node.js code in Chrome DevTools.
+
+.. code-block:: javascript
+
+  --inspect
+
+To learn more, see https://nodejs.org/en/docs/inspector
+
+Webpack Bundle Analyzer
+=======================
+https://www.npmjs.com/package/webpack-bundle-analyzer
+
 **********
 Sourcemaps
 **********
