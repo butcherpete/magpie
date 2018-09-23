@@ -127,19 +127,85 @@ By default, webpack
 **********************
 Command Line Interface
 **********************
+Use the CLI to generate production builds. Compare with Webpack-dev-sderver
+
 https://webpack.js.org/api/cli/
 
   For proper usage and easy distribution of this configuration, webpack can be configured with :code:`webpack.config.js`. Any parameters sent to the CLI will map to a corresponding parameter in the config file.
 
 The CLI is great for debugging issues and working with small projects.
 
-To generate a bundle:
+
+Option 1:
+=========
 
 .. code-block:: javascript
 
   $ node_modules/ .bin/webpack --entry ./src/entry.js --output-filename output.js --output-path ./ 
 
+Option 2:
+=========
+.. code-block:: javascript
 
+  //Install it globally
+  npm install webpack --g
+
+  //Generate bundle using webpack.config.js 
+  $ webpack 
+
+
+Option 3:
+=========
+
+.. code-block:: javascript
+
+  //Install it locally & add it to package.json
+  npm install webpack --save
+
+  //Add it to package.json's script 
+  “scripts”: {
+   “build”: “webpack --config webpack.config.prod.js -p”,
+   ...
+   }
+
+  //Use it by running the following:
+   $ npm run build
+
+******************
+Webpack Dev Server
+******************
+https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9
+
+An Express node.js server that runs on port 8080.
+
+- Enables live reloading
+- Enables hot module replacement (HMR)
+
+
+Option 1
+========
+.. code-block:: javascript
+
+  //Install it globally
+  npm install webpack-dev-server --save
+
+  //Use it at the terminal
+  $ webpack-dev-server --inline --hot
+
+Option 2
+========
+Open browser at: http://localhost:8080
+
+.. code-block:: javascript
+
+  // Add it to package.json's script 
+  
+  “scripts”: {
+   “start”: “webpack-dev-server --inline --hot”,
+   ...
+   }
+  // Use it by running 
+  $ npm start
 
 *******
 Loaders
