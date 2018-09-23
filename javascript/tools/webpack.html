@@ -281,9 +281,9 @@ $ npm start
 <p>What happens:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li>Webpack searches for CSS files dependencies inside the modules. That is Webpack checks to see if a JS file has “require(myCssFile.css)”. If it finds the dependency, then the Webpack gives that file first to the “css-loader”</li>
-<li>css-loader loads all the CSS and CSS’ own dependencies (i.e &#64;import otherCSS) into JSON. Webpack then passes the result to “style-loader”.</li>
-<li>style-loader to take the JSON and add it to a style tag — &lt;style&gt;CSS contents&lt;/style&gt; and inserts the tag into the index.html file.</li>
+<li>Webpack searches for CSS files dependencies inside the modules. That is Webpack checks to see if a JS file has <code class="code docutils literal notranslate"><span class="pre">require(myCssFile.css)</span></code>. If it finds the dependency, then the Webpack gives that file first to the <code class="code docutils literal notranslate"><span class="pre">css-loader</span></code>.</li>
+<li><code class="code docutils literal notranslate"><span class="pre">css-loader</span></code> loads all the CSS and CSS’ own dependencies (i.e <code class="code docutils literal notranslate"><span class="pre">&#64;import</span> <span class="pre">otherCSS</span></code>) into JSON. Webpack then passes the result to <code class="code docutils literal notranslate"><span class="pre">style-loader</span></code>.</li>
+<li><code class="code docutils literal notranslate"><span class="pre">style-loader</span></code> to take the JSON and add it to a style tag — <code class="code docutils literal notranslate"><span class="pre">&lt;style&gt;CSS</span> <span class="pre">contents&lt;/style&gt;</span></code> and inserts the tag into the <code class="code docutils literal notranslate"><span class="pre">index.html</span></code> file.</li>
 </ol>
 </div></blockquote>
 </div>
@@ -365,6 +365,28 @@ $ npm start
 <h3>Developer Tool Support<a class="headerlink" href="#developer-tool-support" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div>Note: Support for source maps is enabled by default in Firefox’s developer tools. You may need to enable support manually in Chrome. To do this, launch the Chrome dev tools and open the Settings pane (cog in the bottom right corner). In the General tab make sure that Enable JS source maps and Enable CSS source maps are both ticked.</div></blockquote>
+</div>
+</div>
+<div class="section" id="plugins">
+<h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
+<p>Unlike loaders, which work at the at the <em>individual file</em> level during or before the bundle is generated, plugins work at <em>bundle level or chunk level</em> and usually work at the end of the bundle generation process.</p>
+<p>Some plugins (e.g. <code class="code docutils literal notranslate"><span class="pre">commonsChunksPlugins</span></code>) modify how the bundles themselves are created.</p>
+<p>For example, <code class="code docutils literal notranslate"><span class="pre">uglifyJSPlugin</span></code> takes the <code class="code docutils literal notranslate"><span class="pre">bundle.js</span></code> and minimizes and obfuscates the contents to decrease the file size.</p>
+<p>Similarly <code class="code docutils literal notranslate"><span class="pre">extract-text-webpack-plugin</span></code> internally uses <code class="code docutils literal notranslate"><span class="pre">css-loader</span></code> and <code class="code docutils literal notranslate"><span class="pre">style-loader</span></code> to gather all the CSS into one place and finally extracts the result into a separate external <code class="code docutils literal notranslate"><span class="pre">styles.css</span></code> file and includes the link to <code class="code docutils literal notranslate"><span class="pre">style.css</span></code> into <code class="code docutils literal notranslate"><span class="pre">index.html</span></code>.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">//webpack.config.js</span>
+<span class="c1">//Take all the .css files, combine their contents and it extract them to a single &quot;styles.css&quot;</span>
+<span class="kd">var</span> <span class="nx">ETP</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;extract-text-webpack-plugin&quot;</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="o">:</span> <span class="p">{</span>
+ <span class="nx">loaders</span><span class="o">:</span> <span class="p">[</span>
+  <span class="p">{</span><span class="nx">test</span><span class="o">:</span> <span class="sr">/\.css$/</span><span class="p">,</span> <span class="nx">loader</span><span class="o">:</span><span class="nx">ETP</span><span class="p">.</span><span class="nx">extract</span><span class="p">(</span><span class="s2">&quot;style-loader&quot;</span><span class="p">,</span><span class="s2">&quot;css-loader&quot;</span><span class="p">)</span> <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">},</span>
+<span class="nx">plugins</span><span class="o">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">ExtractTextPlugin</span><span class="p">(</span><span class="s2">&quot;styles.css&quot;</span><span class="p">)</span> <span class="c1">//Extract to styles.css file</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="resources">
