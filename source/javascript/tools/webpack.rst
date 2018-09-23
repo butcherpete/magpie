@@ -152,7 +152,7 @@ https://webpack.js.org/api/cli/#debug-options
 
 Command-line options for debugging webpack:
 
-.. list-tool:: Debug Options
+.. list-table:: Debug Options
   :header-rows: 1
 
   * - Parameter
