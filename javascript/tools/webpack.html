@@ -116,6 +116,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor non eli
 <li>Built-in watch option.</li>
 </ul>
 </div>
+<div class="section" id="package-json-scripts">
+<h2>Package.json Scripts<a class="headerlink" href="#package-json-scripts" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://medium.com/&#64;rajaraodv/webpack-the-confusing-parts-58712f8fcad9">https://medium.com/&#64;rajaraodv/webpack-the-confusing-parts-58712f8fcad9</a></p>
+<p>Create bundles using scripts:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>“scripts”: {
+ //npm run build to build production bundles
+ “build”: “webpack --config webpack.config.prod.js”,
+
+ //npm run dev to generate development bundles and run dev. server
+ “dev”: “webpack-dev-server”
+}
+</pre></div>
+</div>
+</div>
 <div class="section" id="webpack-configuration">
 <h2>Webpack Configuration<a class="headerlink" href="#webpack-configuration" title="Permalink to this headline">¶</a></h2>
 <p>The a <code class="code docutils literal notranslate"><span class="pre">webpack.config.js</span></code> enables you to overwrite and extend basic functionality. It’s not required.</p>
@@ -188,19 +202,36 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor non eli
 <div class="section" id="debugging">
 <h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://webpack.js.org/api/cli/#debug-options">https://webpack.js.org/api/cli/#debug-options</a></p>
-<p>Command-line option for debugging webpack:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">debug</span>
-</pre></div>
-</div>
-<p>Command-line option for debugging webpack:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">display</span><span class="o">-</span><span class="nx">error</span><span class="o">-</span><span class="nx">details</span>
-</pre></div>
-</div>
-<p>This enables you to see Node.js code in Chrome DevTools.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="nx">inspect</span>
-</pre></div>
-</div>
-<p>To learn more, see <a class="reference external" href="https://nodejs.org/en/docs/inspector">https://nodejs.org/en/docs/inspector</a></p>
+<p>Command-line options for debugging webpack:</p>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Debug Options</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameter</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">--debug</span></code></td>
+<td>Switches loaders to debug mode:</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">--display-error-details</span></code></td>
+<td>Displays details about errors.</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">--progress</span></code></td>
+<td>Prints compiliation progress.</td>
+</tr>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">--devtool</span></code></td>
+<td>Define <a class="reference external" href="https://webpack.js.org/configuration/devtool/">source map type</a> for the bundled resources.</td>
+</tr>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">--inspect</span></code></td>
+<td>Enables you to see Node.js code in Chrome DevTools. To learn more, see <a class="reference external" href="https://nodejs.org/en/docs/inspector">https://nodejs.org/en/docs/inspector</a></td>
+</tr>
+</tbody>
+</table>
 <div class="section" id="webpack-bundle-analyzer">
 <h3>Webpack Bundle Analyzer<a class="headerlink" href="#webpack-bundle-analyzer" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://www.npmjs.com/package/webpack-bundle-analyzer">https://www.npmjs.com/package/webpack-bundle-analyzer</a></p>

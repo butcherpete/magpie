@@ -40,6 +40,25 @@ Webpack is a build tool that can be run from the command line via a JavaScript c
 - Webpack dev server.
 - Built-in watch option.
 
+
+********************
+Package.json Scripts
+********************
+https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9
+
+Create bundles using scripts:
+
+.. code-blocK:: javascript
+
+   “scripts”: {
+    //npm run build to build production bundles
+    “build”: “webpack --config webpack.config.prod.js”,
+
+    //npm run dev to generate development bundles and run dev. server
+    “dev”: “webpack-dev-server”
+   }
+
+
 *********************
 Webpack Configuration
 *********************
@@ -51,6 +70,9 @@ To load the default config, compile the code, and output a bundle file that can 
 
   $ ./node_modules/.bin/webpack
 
+
+  
+  
 By default, webpack
 
 - Uses :code:`src/index` as the entry point of your project.
@@ -99,6 +121,9 @@ By default, webpack
       }
   }
 
+
+
+
 **********************
 Command Line Interface
 **********************
@@ -125,25 +150,23 @@ Debugging
 *********
 https://webpack.js.org/api/cli/#debug-options
 
-Command-line option for debugging webpack:
+Command-line options for debugging webpack:
 
-.. code-block:: javascript
+.. list-table:: Debug Options
+  :header-rows: 1
 
-  --debug
-
-Command-line option for debugging webpack:
-
-.. code-block:: javascript
-
-  --display-error-details
-
-This enables you to see Node.js code in Chrome DevTools.
-
-.. code-block:: javascript
-
-  --inspect
-
-To learn more, see https://nodejs.org/en/docs/inspector
+  * - Parameter
+    - Description
+  * - :code:`--debug`
+    - Switches loaders to debug mode:
+  * - :code:`--display-error-details`
+    - Displays details about errors.
+  * - :code:`--progress`
+    - Prints compiliation progress.
+  * - :code:`--devtool`
+    - Define `source map type <https://webpack.js.org/configuration/devtool/>`_ for the bundled resources.
+  * - :code:`--inspect`
+    - Enables you to see Node.js code in Chrome DevTools. To learn more, see https://nodejs.org/en/docs/inspector
 
 Webpack Bundle Analyzer
 =======================
