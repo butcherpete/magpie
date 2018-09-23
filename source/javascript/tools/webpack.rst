@@ -233,11 +233,11 @@ For example, use two loaders (css-loader and style-loader) to dump our CSS file 
 
 What happens:
 
-  1. Webpack searches for CSS files dependencies inside the modules. That is Webpack checks to see if a JS file has “require(myCssFile.css)”. If it finds the dependency, then the Webpack gives that file first to the “css-loader”
+  1. Webpack searches for CSS files dependencies inside the modules. That is Webpack checks to see if a JS file has :code:`require(myCssFile.css)`. If it finds the dependency, then the Webpack gives that file first to the :code:`css-loader`.
   
-  2. css-loader loads all the CSS and CSS’ own dependencies (i.e @import otherCSS) into JSON. Webpack then passes the result to “style-loader”.
+  2. :code:`css-loader` loads all the CSS and CSS’ own dependencies (i.e :code:`@import otherCSS`) into JSON. Webpack then passes the result to :code:`style-loader`.
   
-  3. style-loader to take the JSON and add it to a style tag — <style>CSS contents</style> and inserts the tag into the index.html file.
+  3. :code:`style-loader` to take the JSON and add it to a style tag — :code:`<style>CSS contents</style>` and inserts the tag into the :code:`index.html` file.
 
 
 Loaders Configuration
@@ -311,6 +311,33 @@ Developer Tool Support
 ======================
 
   Note: Support for source maps is enabled by default in Firefox’s developer tools. You may need to enable support manually in Chrome. To do this, launch the Chrome dev tools and open the Settings pane (cog in the bottom right corner). In the General tab make sure that Enable JS source maps and Enable CSS source maps are both ticked.
+
+*******
+Plugins
+*******
+Unlike loaders, which work at the at the :emphasis:`individual file` level during or before the bundle is generated, plugins work at :emphasis:`bundle level or chunk level` and usually work at the end of the bundle generation process. 
+
+Some plugins (e.g. :code:`commonsChunksPlugins`) modify how the bundles themselves are created.
+
+For example, :code:`uglifyJSPlugin` takes the :code:`bundle.js` and minimizes and obfuscates the contents to decrease the file size.
+
+Similarly :code:`extract-text-webpack-plugin` internally uses :code:`css-loader` and :code:`style-loader` to gather all the CSS into one place and finally extracts the result into a separate external :code:`styles.css` file and includes the link to :code:`style.css` into :code:`index.html`.
+
+.. code-block:: javascript
+
+  //webpack.config.js
+  //Take all the .css files, combine their contents and it extract them to a single "styles.css"
+  var ETP = require("extract-text-webpack-plugin");
+  
+  module: {
+   loaders: [
+    {test: /\.css$/, loader:ETP.extract("style-loader","css-loader") }
+    ]
+  },
+  plugins: [
+      new ExtractTextPlugin("styles.css") //Extract to styles.css file
+    ]
+  }
 
 *********
 Resources
