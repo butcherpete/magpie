@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Extensions &#8212; Magpie 0.1 documentation</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/css/my-styles.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Custom Directives" href="../grp-3/grp-3.html" />
+    <link rel="prev" title="Creating reStructuredText Interpreted Text Roles" href="text-roles.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html">
+          Magpie</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../../vim/index.html">Vim</a></li>
+                <li><a href="../../javascript/javascript.html">JavaScript</a></li>
+                <li><a href="../sphinx">Sphinx</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../git/git.html">Git Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../film/film.html">Film</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vim/index.html">Vim Notes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../sphinx.html">Sphinx Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../javascript/javascript.html">JavaScript</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../zsh/zsh.html">Zsh</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="extensions">
+<h1>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h1>
+<p>An <a class="reference internal" href="../../glossary/glossary.html#term-extension"><span class="xref std std-term">extension</span></a> is simply a Python module. When an extension is loaded, Sphinx imports this module and executes its setup() function, which in turn notifies Sphinx of everything the extension offers – see the extension tutorial for examples.</p>
+<p>Sphinx is extensible at several levels:</p>
+<ul class="simple">
+<li>You can add new builders to support new output formats or actions on the parsed documents.</li>
+<li>Then, it is possible to register custom reStructuredText roles and directives, extending the markup.</li>
+<li>And finally, there are so-called “hook points” at strategic places throughout the build process, where an extension can register a hook and run specialized code.</li>
+<li>When the extension is loaded, Sphinx imports this module and executes its <code class="code docutils literal notranslate"><span class="pre">setup()</span></code> function, which notifies Sphinx of everything the extension offers.</li>
+<li>The configuration file itself can be treated as an extension if it contains a setup() function. All other extensions to load must be listed in the <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-extensions">extensions configuration</a> value.</li>
+</ul>
+<div class="section" id="discovery-of-builders-by-entry-point">
+<h2>Discovery of Builders by Entry Point<a class="headerlink" href="#discovery-of-builders-by-entry-point" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www.sphinx-doc.org/en/master/glossary.html#term-builder">Builder extensions</a> can be discovered by means of <a class="reference external" href="https://setuptools.readthedocs.io/en/latest/setuptools.html#dynamic-discovery-of-services-and-plugins">entry points</a> so that they do not have to be listed in the extensions configuration value.</p>
+<p>Builder extensions should define an entry point in the <code class="code docutils literal notranslate"><span class="pre">sphinx.builders</span></code> group. The name of the entry point needs to match your builder’s name attribute, which is the name passed to the <code class="code docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-b</span></code> option. The entry point value should equal the dotted name of the extension module.</p>
+<p>Here is an example of how an entry point for ‘mybuilder’ can be defined in the extension’s <code class="code docutils literal notranslate"><span class="pre">setup.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">setup</span><span class="p">(</span>
+    <span class="c1"># ...</span>
+    <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;sphinx.builders&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;mybuilder = my.extension.module&#39;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that it is still necessary to register the builder using <code class="code docutils literal notranslate"><span class="pre">add_builder(</span></code>) in the extension’s <code class="code docutils literal notranslate"><span class="pre">setup(</span></code>) function.</p>
+</div>
+<div class="section" id="extension-metadata">
+<h2>Extension Metadata<a class="headerlink" href="#extension-metadata" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="code docutils literal notranslate"><span class="pre">setup(</span></code>) function can return a dictionary. This is treated by Sphinx as metadata of the extension. Metadata keys currently recognized are:</p>
+<dl class="docutils">
+<dt><code class="code docutils literal notranslate"><span class="pre">version</span></code></dt>
+<dd>A string that identifies the extension version. It is used for extension version requirement checking (see <a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-needs_extensions">needs_extensions</a>) and informational purposes. If not given, “unknown version” is substituted.</dd>
+<dt><code class="code docutils literal notranslate"><span class="pre">env_version</span></code></dt>
+<dd>An integer that identifies the version of env data structure if the extension stores any data to environment. It is used to detect the data structure has been changed from last build. The extensions have to increment the version when data structure has changed. If not given, Sphinx considers the extension does not stores any data to environment.</dd>
+<dt><code class="code docutils literal notranslate"><span class="pre">parallel_read_safe</span></code></dt>
+<dd>A boolean that specifies if parallel reading of source files can be used when the extension is loaded. It defaults to <code class="code docutils literal notranslate"><span class="pre">False</span></code>, i.e. you have to explicitly specify your extension to be <code class="code docutils literal notranslate"><span class="pre">parallel-read-safe</span></code> after checking that it is.</dd>
+<dt><code class="code docutils literal notranslate"><span class="pre">parallel_write_safe</span></code></dt>
+<dd>A boolean that specifies if parallel writing of output files can be used when the extension is loaded. Since extensions usually don’t negatively influence the process, this defaults to <code class="code docutils literal notranslate"><span class="pre">True</span></code>.</dd>
+</dl>
+</div>
+<div class="section" id="creating-custom-link-roles">
+<h2>Creating Custom Link Roles<a class="headerlink" href="#creating-custom-link-roles" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://protips.readthedocs.io/link-roles.html">http://protips.readthedocs.io/link-roles.html</a></p>
+<p>The article describes a six-step process:</p>
+<ol class="arabic simple">
+<li>Create an <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory to hold extensions.</li>
+<li>Add a custom search path in the <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code> that includes the <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory.</li>
+<li>Create the extension (<code class="code docutils literal notranslate"><span class="pre">bemuse.py</span></code>).</li>
+<li>Add the extension to the  <code class="code docutils literal notranslate"><span class="pre">_extensions</span></code> directory.</li>
+<li>Add the extension to the <code class="code docutils literal notranslate"><span class="pre">extensions</span></code> list in the the <code class="code docutils literal notranslate"><span class="pre">conf.py</span></code>.</li>
+<li>Mark up text using the custom roles.</li>
+</ol>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../../_sources/sphinx/grp-2/extensions.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018, Todd Smith.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
