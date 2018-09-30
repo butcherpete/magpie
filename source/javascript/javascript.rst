@@ -13,3 +13,4 @@ JavaScript
   frameworks/frameworks
   react/react
   tools/tools
+  learning/learning
