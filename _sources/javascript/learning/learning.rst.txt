@@ -38,4 +38,9 @@ https://medium.com/javascript-scene/10-interview-questions-every-javascript-deve
 9. What are the pros and cons of monolithic vs microservice architectures?
 10. What is asynchronous programming, and why is it important in JavaScript?
 
+*********
+Resources
+*********
 
+- https://github.com/vvscode/js--interview-questions
+- https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95
