@@ -124,7 +124,7 @@ html_theme_options = {'navbar_pagenav': False, 'navbar_links': [("Vim", "vim/ind
 html_static_path = ['_static']
 
 html_context = { 
-   'css_files': ['_static/css/my-styles.css'],
+   'css_files': ['_static/css/custom.min.css'],
     }
 
 
