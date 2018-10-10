@@ -8,7 +8,7 @@
 ###################
 Seventh Son
 ###################
-A 23rd change
+A 24th change
 
 |greek|
 
