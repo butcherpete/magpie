@@ -18,7 +18,7 @@ Film Noir
 -  *High Sierra*, directed by Raoul Walsh (1941) ★★
 -  *I Wake Up Screaming*, directed by H. Bruce Humberstone (1941)
 -  *Maltese Falcon*, directed by John Huston (1941) ★★★★★
--  *Suspicion*, directed by Alfred Hitchcock (1941)
+-  *Suspicion*, directed by Alfred Hitchcock (1941) ★★★
 
 1942
 ----
@@ -26,13 +26,11 @@ Film Noir
 -  *The Glass Key*, directed by Stuart Heisler (1942) ★★
 -  *This Gun For Hire*, directed by Frank Tuttle (1942)
 
-
-
 1943
 ----
 
 -  *The Fallen Sparrow*, directed by Richard Wallace (1943) 
--  *Journey into Fear*, directed by Norman Foster (1943) ★★★★
+-  *Journey into Fear*, directed by Norman Foster and Orson Welles (1943) ★★★★
 -  *The Seventh Victim*, directed by Mark Robson (1943) 
 -  *Shadow of a Doubt*, directed by Alfred Hitchcock (1943)
 
@@ -60,14 +58,14 @@ Film Noir
 -  *Mildred Pierce*, directed by Michael Curtiz (1945) ★★★ 
 -  *My Name Is Julia Ross*, directed by Joseph H. Lewis (1945) ★★
 -  *Scarlet Street*, directed by Fritz Lang (1945) ★★★★
--  *Spellbound*, directed by Alfred Hitchcock (1945)
+-  *Spellbound*, directed by Alfred Hitchcock (1945) 
 
 1946
 ----
 
 -  *Big Sleep*, directed by Howard Hawks (1946) ★★★★
 -  *Black Angel*, directed by Roy William Neill (1946)
--  *Blue Dahlia*, directed by George Marshall (1946)
+-  *Blue Dahlia*, directed by George Marshall (1946) ★★
 -  *Crack-Up*, directed by Irving Reis (1946)
 -  *Deadline at Dawn*, directed by Harold Clurman, screenplay by
    Clifford Odets (1946)
@@ -81,7 +79,7 @@ Film Noir
 -  *The Postman Always Rings Twice*, directed by Tay Garrett (1946) ★★★★
 -  *So Dark the Night*, directed by Joseph H. Lewis (1946)
 -  *Specter of the Rose*, directed by Ben Hecht (1946)
--  *Strange Love of Martha Ivers*, directed by Lewis Milestone (1946)
+-  *Strange Love of Martha Ivers*, directed by Lewis Milestone (1946) ★★★
 -  *The Stranger*, directed by Orson Welles (1946) ★★★★★
 -  *The Verdict*, directed by Don Siegel (1946)
 
@@ -100,6 +98,7 @@ Film Noir
 -  *Kiss of Death*, directed by Henry Hathaway (1947)
 -  *The Lady from Shanghai*, directed by Orson Welles (1947) ★★★★
 -  *Nightmare Alley*, directed by Edmund Golding (1947) ★★★★
+-  *Nightfall*, directed by Jacque Tourner (1947) ★★★
 -  *Odd Man Out*, directed by Carol Reed (1947) ★★★★
 -  *Out of the Past*, directed by Jacques Tourneur (1947) ★★★★
 -  *Possessed*, directed by Curtis Bernhardt (1947) ★★
@@ -149,6 +148,7 @@ Film Noir
 -  *House of Strangers*, directed by Joseph L. Mankiewicz (1949)
 -  *Impact*, directed by Arthur Lubin (1949)  ★★
 -  *Knock on Any Door*, directed by Nicholas Ray (1949)
+-  *Manhandled*, directed by Lewis R. Foster (1949) ★★
 -  *Obsession*, directed by Edward Dmytrk (1949) ★★★
 -  *Reckless Moment*, directed by Max Ophüls (1949)
 -  *Set-Up*, directed by Rober Wise (1949)
@@ -171,7 +171,7 @@ Film Noir
 -  *Caged*, directed by John Cromwell (1950)
 -  *Dark City*, directed by William Dieterle (1950)
 -  *The File on Thelma Jordan*, directed by Robert Siodmak (1950)
--  *House by the River*, directed by Fritz Lang (1950)
+-  *House by the River*, directed by Fritz Lang (1950) Public Domain
 -  *In a Lonely Place*, directed by Nicholas Ray (1950) ★★★★★
 -  *Kiss Tomorrow Goodbye*, directed by Gordon Douglas (1950)
 -  *The Lawless*, directed by Joseph Losey (1950)
@@ -215,10 +215,10 @@ Film Noir
 -  *Deadline - U.S.A.*, directed by Richard Brooks (1952) 
 -  *Don’t Bother To Knock*, directed by Roy Ward Baker (1952) ★★★
 -  *Kansas City Confidential*, directed by Phil Karlson (1952) ★★★
--  *Macao*, directed by Josef von Sternberg, Nicholas Ray (1952)
+-  *Macao*, directed by Josef von Sternberg, Nicholas Ray (1952) ★★
 -  *Narrow Margin*, directed by Richard Fleischer (1952) ★★★
 -  *Scandal Sheet*, directed by Phil Karlson (1952)
--  *Sudden Fear*, directed by David Miller (1952)
+-  *Sudden Fear*, directed by David Miller (1952) ★★★
 -  *The Sniper*, directed by Edward Dmytryk (1952) ★★★
 
 1953
@@ -237,11 +237,11 @@ Film Noir
 1954
 ----
 
--  *Crime Wave*, directed by Andre DeToth (1954)
+-  *Crime Wave*, directed by Andre DeToth (1954) Sterling Hayden!
 -  *Drive a Crooked Road*, directed by Richard Quine (1954)
 -  *House of Bamboo*, directed by Samuel Fuller (1955)
 -  *Human Desire*, directed by Fritz Lang (1954)
--  *Naked Alibi*, directed by Jerry Hopper (1954)
+-  *Naked Alibi*, directed by Jerry Hopper (1954) Sterling Hayden! Gloria Grahame!
 -  *Pushover*, directed by Richard Quine (1954)
 -  *Shield for Murder*, directed by Howard W. Koch, Edmond O'Brien (1954)
 
@@ -261,6 +261,7 @@ Film Noir
 1956
 ----
 
+-  *The Come On*, directed by Russell Birdwell (1956)  Sterling Hayden
 -  *The Harder They Fall*, directed by Mark Robson (1956) ★★★★
 -  *The Killing*, directed by Stanley Kubrick (1956) ★★★★
 -  *The Killer Is Loose*, directed by Budd Boetticher (1956)
