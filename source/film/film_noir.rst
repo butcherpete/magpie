@@ -67,8 +67,7 @@ Film Noir
 -  *Black Angel*, directed by Roy William Neill (1946)
 -  *Blue Dahlia*, directed by George Marshall (1946) ★★
 -  *Crack-Up*, directed by Irving Reis (1946)
--  *Deadline at Dawn*, directed by Harold Clurman, screenplay by
-   Clifford Odets (1946)
+-  *Deadline at Dawn*, directed by Harold Clurman, screenplay by Clifford Odets (1946)
 -  *Decoy*, directed by Jack Bernhard (1946)
 -  *Gilda*, directed by Charles Vidor (1946) ★★★
 -  *The Killers*, directed by Robert Siodmak (1946) ★★★
@@ -88,7 +87,7 @@ Film Noir
 
 -  *Body and Soul*, directed by Robert Rossen (1947)
 -  *Born to Kill*, directed by Robert Wise (1947)
--  *Brute Force*, directed by Jules Dassin (1947) ★★★
+-  *Brute Force*, directed by Jules Dassin (1947) ★★★★
 -  *Crossfire*, directed by Edward Dmytryk (1947) ★★★
 -  *Dark Passage*, directed by Delmer Davies (1947) ★★
 -  *Dead Reckoning*, directed by John Cromwell (1947) 
@@ -98,7 +97,6 @@ Film Noir
 -  *Kiss of Death*, directed by Henry Hathaway (1947)
 -  *The Lady from Shanghai*, directed by Orson Welles (1947) ★★★★
 -  *Nightmare Alley*, directed by Edmund Golding (1947) ★★★★
--  *Nightfall*, directed by Jacque Tourner (1947) ★★★
 -  *Odd Man Out*, directed by Carol Reed (1947) ★★★★
 -  *Out of the Past*, directed by Jacques Tourneur (1947) ★★★★
 -  *Possessed*, directed by Curtis Bernhardt (1947) ★★
@@ -118,8 +116,7 @@ Film Noir
 -  *Call Northside 777*, directed by Henry Hathaway (1948)
 -  *Cry of the City*, directed by Robert Siodmak (1948) ★★★
 -  *Force of Evil*, directed by Abraham Polonsky (1948) ★★★★
--  *He Walked by Night*, directed by Alred L. Werker, Anthony Mann
-   (1948) ★★★
+-  *He Walked by Night*, directed by Alred L. Werker, Anthony Mann (1948) ★★★
 -  *I Walk Alone*, directed by Byron Hakin (1948)
 -  *Key Largo*, directed by John Huston (1948) ★★
 -  *Hollow Triumph*, a.k.a *The Scar*, directed by Steve Sekely (1948) 
@@ -181,8 +178,7 @@ Film Noir
 -  *No Man of Her Own*, directed by Mitchell Leisen (1950)
 -  *No Way Out*, directed by Joseph L. Mankiewicz (1950)
 -  *Panic in the Streets*, directed by Elia Kazan (1950)
--  *Sound of Fury* (aka *Try and Get Me*), directed by Cy Endfield
-   (1950) ★★★
+-  *Sound of Fury* (aka *Try and Get Me*), directed by Cy Endfield (1950) ★★★
 -  *Sunset Boulevard*, directed by Billy Wilder (1950) ★★★★★
 -  *Union Station*, directed by Rudolph Maté (1950)
 -  *Where Danger Lives*, directed by John Farrow (1950)
@@ -210,11 +206,10 @@ Film Noir
 ----
 
 -  *Angel Face*, directed by Otto Preminger (1952)
--  *Clash By Night*, directed by Fritz Lang, screenplay by Clifford
-   Odets (1952) ★★★
+-  *Clash By Night*, directed by Fritz Lang, screenplay by Clifford Odets (1952) ★★★
 -  *Deadline - U.S.A.*, directed by Richard Brooks (1952) 
 -  *Don’t Bother To Knock*, directed by Roy Ward Baker (1952) ★★★
--  *Kansas City Confidential*, directed by Phil Karlson (1952) ★★★
+-  *Kansas City Confidential*, directed by Phil Karlson (1952) ★★★★
 -  *Macao*, directed by Josef von Sternberg, Nicholas Ray (1952) ★★
 -  *Narrow Margin*, directed by Richard Fleischer (1952) ★★★
 -  *Scandal Sheet*, directed by Phil Karlson (1952)
@@ -241,7 +236,7 @@ Film Noir
 -  *Drive a Crooked Road*, directed by Richard Quine (1954)
 -  *House of Bamboo*, directed by Samuel Fuller (1955)
 -  *Human Desire*, directed by Fritz Lang (1954)
--  *Naked Alibi*, directed by Jerry Hopper (1954) Sterling Hayden! Gloria Grahame!
+-  *Naked Alibi*, directed by Jerry Hopper (1954) ★★★
 -  *Pushover*, directed by Richard Quine (1954)
 -  *Shield for Murder*, directed by Howard W. Koch, Edmond O'Brien (1954)
 
@@ -268,15 +263,12 @@ Film Noir
 -  *While the City Sleeps*, directed by Fritz Lang (1956) ★★
 -  *Wrong Man*, directed by Alfred Hitchcock (1956)
 
-
 1957
 ----
 
 -  *Burglar*, directed by Paul Wendkos (1957)
--  *Nightfall*, directed by Jacques Tourneur (1957)
--  *Sweet Smell of Success*, directed by Alexander Mackendrick (1957)
-   ★★★★★
-
+-  *Nightfall*, directed by Jacques Tourneur (1957) ★★
+-  *Sweet Smell of Success*, directed by Alexander Mackendrick (1957) ★★★★★
 
 1958
 ----
@@ -284,7 +276,6 @@ Film Noir
 -  *Murder By Contract*, directed by Irving Lerner (1958)
 -  *The Lineup*, directed by Don Siegel (1958)
 -  *Touch of Evil*, directed by Orson Welles (1958) ★★★★★
-
 
 1959
 ----
