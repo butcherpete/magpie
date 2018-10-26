@@ -111,7 +111,7 @@ Film Noir
 ----
 
 -  *The Big Clock*, directed by John Farrow (1948)
--  *Blonde Ice*, directed by Jack Bernhard (1948)
+-  *Blonde Ice*, directed by Jack Bernhard (1948) *
 -  *Bodyguard*, directed by Richard Fleischer (1948)
 -  *Call Northside 777*, directed by Henry Hathaway (1948)
 -  *Cry of the City*, directed by Robert Siodmak (1948) ★★★
@@ -136,7 +136,7 @@ Film Noir
 -  *Beyond the Forest*, directed by King Vidor (1949)
 -  *The Big Steal*, directed by Don Siegel (1949)
 -  *Border Incident*, directed by Anthony Mann (1949) ★★
--  *The Bribe*, directed by Robert Z. Leonard (1949) ★★
+-  *The Bribe*, directed by Robert Z. Leonard (1949) ★
 -  *Caught*, directed by Max Orphuls (1949)
 -  *Criss Cross*, directed by Robert Siodmak (1949) ★★★
 -  *The Crooked Way*, directed by Robert Florey (1949)
@@ -200,6 +200,7 @@ Film Noir
 -  *On Dangerous Ground*, directed by Nicholas Ray, Ida Lupino (1951) ★★★
 -  *The Prowler*, directed by Joseph Losey (1951) ★★★★★
 -  *The Racket*, directed by John Cromwell, Nicholas Ray (1951)
+-  *Strangers on a Train*, directed by Alfred Hitchcock (1951) ★★★★★
 -  *Tomorrow Is Another Day*, directed by Felix E. Feist (1951)
 
 1952
